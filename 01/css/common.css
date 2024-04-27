@@ -1,0 +1,242 @@
+/* font */
+@font-face{
+    font-family: 'NanumGothicLight';
+    src: url("../font/NanumGothicLight.woff");
+}
+@font-face{
+    font-family: 'NanumGothic';
+    src: url("../font/NanumGothic.woff");
+}
+@font-face{
+    font-family: 'NanumGothicBold';
+    src: url("../font/NanumGothicBold.woff");
+}
+@font-face{
+    font-family: 'NanumGothicExtraBold';
+    src: url("../font/NanumGothicExtraBold.woff");
+}
+
+/* css reset */
+html, body, div, img, p, span, h1, h2, ul, li, dl, dt, dd, form, fieldset, legend, input, button, table, thead, tbody, th, tr, td, option, select, textarea{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+body{
+    -webkit-font-smoothing: subpixel-antialiased;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 공지사항, 교사지침서, 코디상담자료, 교사교육, 신입교육 페이지 header */
+.header{
+    position: relative;
+    width: 1280px;
+    height: 170px;
+}
+.home{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    top: 66px;
+    left: 92px;
+}
+.offline-button{
+    position: absolute;
+    top: 63px;
+    left: 155px;
+}
+.offline-button img{
+    height: 35px;
+}
+.home img{
+    width: 100%;
+}
+.header h1{
+    position: relative;
+    width: 151px;
+    font-family: 'NanumGothic';
+    font-size: 40px;
+    font-weight: bold;
+    color: #0E2E53;
+    top: 30px;
+    margin: auto;
+}
+.notice_wrap{
+    position: relative;
+    width: 334px;
+    height: 35px;
+    background: url(../images/m_Notice.png) no-repeat;
+    background-size: contain;
+    top: -10px;
+    left: 796px;
+    font-family: 'NanumGothic';
+    font-size: 13px;
+    font-weight: bold;
+    color: #464646;
+    line-height: 35px;
+}
+.notice_wrap > div{
+    width: 280px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.red_txt{
+    color: #E8380D;
+}
+.notice_more{
+    position: absolute;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/m_more_btn.png) no-repeat;
+    background-size: contain;
+    top: 6px;
+    right: 8px;
+}
+.logout{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    top: -45px;
+    left: 1164.7px;
+}
+.logout img{
+    width: 100%;
+}
+
+/* 진단평가 리포트, 부모상담 페이지 header */
+.header2{
+    position: relative;
+    width: 1280px;
+    height: 170px;
+}
+.date_txt{
+    position: absolute;
+    top: 79px;
+    left: 122px;
+    font-family: 'NanumGothic';
+    font-size: 15px;
+    font-weight: bold;
+    color: #0E2E53;
+}
+.cal_icon{
+    display: inline-block;
+    width: 15px;
+    vertical-align: text-top;
+    margin-right: 5px;
+}
+.cal_icon img{
+    width: 100%;
+}
+.tit_txt{
+      position: absolute;
+    top: 69px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'NanumGothic';
+    font-size: 26px;
+    font-weight: bold;
+    color: #0E2E53;
+}
+.time_txt{
+    position: absolute;
+    top: 79px;
+    left: 122px;
+    font-family: 'NanumGothic';
+    font-size: 15px;
+    font-weight: bold;
+    color: #0E2E53;
+}
+.people_icon{
+    display: inline-block;
+    width: 10px;
+    vertical-align: text-top;
+    margin-right: 5px;
+}
+.people_icon img{
+    width: 100%;
+}
+.people_txt{
+    border-right: 1px solid #707070;
+    margin-right: 13px;
+    padding-right: 13px;
+}
+.alarm_icon{
+    display: inline-block;
+    width: 13px;
+    vertical-align: text-top;
+    margin-right: 5px;
+}
+.alarm_icon img{
+    width: 100%;
+}
+
+.time_header_wrap{
+    position: relative;
+    width: 1116px;
+    height: 56px;
+    background-color: #F2BF89;
+    margin: 0 auto 24px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.time_header_wrap div{
+    width: 320px;
+    margin: auto;
+}
+.time_header_wrap div p{
+    display: inline-block;
+}
+.date_sel_left{
+    width: 12px;
+    height: 20px;
+    line-height: 63px;
+}
+.date_sel_left img{
+    width: 100%;
+}
+.date_title{
+    font-family: 'NanumGothicExtraBold';
+    font-size: 22px;
+    font-weight: 800;
+    color: #3B3B3B;
+    line-height: 63px;
+    margin: 0 57px;
+}
+.date_sel_right{
+    width: 12px;
+    height: 20px;
+    line-height: 63px;
+}
+.date_sel_right img{
+    width: 100%;
+}
+.time_header_wrap span{
+    position: absolute;
+    font-family: 'NanumGothic';
+    font-size: 15px;
+    font-weight: bold;
+    color: #3B3B3B;
+    top: 20px;
+    right: 30px;
+}

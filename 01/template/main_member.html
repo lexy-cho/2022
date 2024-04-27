@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>토탈시스템</title>
+	<!-- <link rel="stylesheet" href="../css/common.css"> -->
+	<!-- <link rel="stylesheet" href="../css/member.css"> -->
+	<link rel="stylesheet" href="../css/newLayout.css">
+	<script src="../js/jquery-3.5.1.js"></script>
+	<script src="../js/common.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			// 리딩토탈 & 교과토탈 Tab 토글
+			$(".tabNav button").click(function () {
+				$(".tabNav span").removeClass("on");
+				$(this).parent("span").addClass("on");
+				var activeTab = $(this).attr("data-name");
+				$('.tabData').hide();
+				$('.tData' + activeTab).show();
+			});
+
+			// 달력 왼쪽, 오른쪽 화살표 눌렀을 시 이미지 색 변경
+			$(".cal_arrow_left img").on("click", function () {
+				$(".cal_arrow_left img").attr("src", "../images/left_press_1.png");
+				setTimeout(function () {
+					$(".cal_arrow_left img").attr("src", "../images/left_1.png");
+				}, 200);
+			});
+			$(".cal_arrow_right img").on("click", function () {
+				$(".cal_arrow_right img").attr("src", "../images/right_press_1.png");
+				setTimeout(function () {
+					$(".cal_arrow_right img").attr("src", "../images/right_1.png");
+				}, 200);
+			});
+
+			//검색창에 커서가 있을 시 돋보기 사라지고 커서 없으면 나타나고
+			$(".search_wrap > input").mouseover(function () {
+				$(".search_icon").hide();
+			});
+			$(".search_wrap > input").mouseout(function () {
+				$(".search_icon").show();
+			});
+
+			// 계약번호, 아동명, 전화번호, 수업요일, 수업시간, 수업과목/진도, 납부현황 오름차순 또는 내림차순 정렬
+			$(".info_table_wrap th").on("click", function () {
+
+				var ss = $(this).find("span").hasClass("arrow_down")
+				$(".info_table_wrap th > span").removeClass("arrow_up");
+				$(".info_table_wrap th > span").addClass("arrow_down");
+
+				var p_sort_type = "A";
+				if (ss) {
+					$(this).find("span").removeClass("arrow_down").addClass("arrow_up");
+				} else {
+					p_sort_type = "D";
+					$(this).find("span").removeClass("arrow_up").addClass("arrow_down");
+				}
+				;
+				var p_sort_code = $(this).find("span").attr("data-sort");
+				$("input[name=p_sort_code]").val(p_sort_code);
+				$("input[name=p_sort_type]").val(p_sort_type);
+				init(current_mon);
+
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- Wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<div id="header">
+			<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+			<h1>회원 상세 정보</h1>
+			<button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+		</div>
+		<!-- //header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section>
+				<!-- Page Layout -->
+				<div class="memberLayout">
+					<h2>
+						기본 정보
+						<span class="right">계약번호 <em class="info_cont_num">20201201123</em></span>
+					</h2>
+					<div class="tvs">
+						<table>
+							<tbody>
+								<tr>
+									<th>계약자명</th>
+									<td class="info_cust_name">정국헌</td>
+									<th>생년월일</th>
+									<td class="info_cust_repre_num">800329</td>
+									<th>전화번호</th>
+									<td class="info_cust_hp_no">010-0000-0000</td>
+								</tr>
+								<tr>
+									<th>아동명</th>
+									<td class="info_child_name">정용찬</td>
+									<th>생년월일</th>
+									<td class="info_child_repre_num">170619</td>
+									<th>관계</th>
+									<td class="info_rel_name">자</td>
+								</tr>
+								<tr>
+									<th>주소</th>
+									<td colspan="3" class="long info_addr">(06135) 경기도 의정부시 망원로 45번길 30 진산은빛마을 29차
+										104-202(호원동)</td>
+									<th>수업기간</th>
+									<td class="info_item">2020.12 ~ 2020.01</td>
+								</tr>
+								<tr>
+									<th>과목/진도</th>
+									<td colspan="3" class="long info_assign_mont">PE-048(49개월) 교활</td>
+									<th>수업상태</th>
+									<td class="info_edu_gubun_name">수업중</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2>수업이력</h2>
+					<div class="tls info_table_wrap">
+						<table>
+							<thead>
+								<th>계약번호</th>
+								<th>구매상품</th>
+								<th>아동 명</th>
+								<th>생년월일</th>
+								<th>수업여부</th>
+								<th>수업타입</th>
+								<th>수업과목</th>
+								<th>수업 기간</th>
+								<th>수업상태</th>
+							</thead>
+							<tbody class="tbody">
+								<tr>
+									<td>20201201123</td>
+									<td>PE 048 2 회 (49 개월 ) 교활</td>
+									<td>박다슬기</td>
+									<td>170619</td>
+									<td class="classEnd">Y</td>
+									<td>방문수업</td>
+									<td>리딩토탈_PR</td>
+									<td>2020.00~2020.00</td>
+									<td>수업 중</td>
+								</tr>
+								<tr>
+									<td>20201201123</td>
+									<td>PE 048 2 회 (49 개월 ) 교활</td>
+									<td>박초롱</td>
+									<td>170619</td>
+									<td class="classEnd n">N</td>
+									<td>화상수업</td>
+									<td>리딩토탈_PR</td>
+									<td>2020.00~2020.00</td>
+									<td>종료</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //page Layout -->
+			</section>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //Wrap -->
+</body>
+
+</html>

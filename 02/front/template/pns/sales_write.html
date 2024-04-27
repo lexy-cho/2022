@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>판매관리</h2><span><em>생산/판매</em><strong>판매관리 등록</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<h3>판매정보</h3>
+							<!-- Write -->
+							<div class="tws">
+								<table>
+									<colgroup>
+										<col width="154"/>
+										<col width="*"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>일시</th>
+											<td><input type="text" class="cal" placeholder="일자 선택"  /></td>
+										</tr>
+										<tr>
+											<th>작기</th>
+											<td>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="" selected>Interlocking Unit</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th>작목</th>
+											<td>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="" selected>딸기</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th>품종</th>
+											<td>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="" selected>기타</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th>거래처</th>
+											<td>
+												<input type="text"/><button class="btnM line ml1" id="basicBtn1">찾기</button>
+											</td>
+										</tr>
+										<tr>
+											<th>판매량</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>단가</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>금액</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>비고</th>
+											<td><input type="text"/></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--//Write -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="bbs_list.html" class="btnL line">취소</a>
+								<a href="bbs_view.html" class="btnL">등록</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("basicBtn1","popDim","basicPop1");
+				popupClose("basicPopClose1","popDim","basicPop1");
+				popupClose("basicPopClose2","popDim","basicPop1");
+			});
+		</script>
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none;">
+			<!-- 기본 팝업 -->
+			<div class="basicPop partnerPop" id="basicPop1">
+				<h1 class="tt">거래처 찾기</h1>
+				<button class="btnPClose" id="basicPopClose2">닫기</button>
+				<div class="pBack">
+					<!-- List search -->
+					<div class="listSearch">
+						<div class="gridSet">
+							<div class="gridItem">
+								<label>구분</label>
+								<span class="selectSet w100">
+									<select name="" id="">
+										<option value="" selected>거래처명</option>
+									</select>
+								</span>
+								<input type="text" class="w214"/>
+							</div>
+						</div>
+						<span class="btn">
+							<button class="btnM">검색</button>
+						</span>
+					</div>
+					<!--//List search-->
+					<!-- List -->
+					<div class="tls">
+						<table>
+							<colgroup>
+								<col width="50"/>
+								<col width="150"/>
+								<col width="100"/>
+								<col width="*"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>no</th>
+									<th>거래처명</th>
+									<th>대표자명</th>
+									<th>비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--Loop-->
+								<tr>
+									<td class="no">3</td>
+									<td>AAA</td>
+									<td>강감찬</td>
+									<td></td>
+								</tr>
+								<!--//Loop-->
+								<tr>
+									<td class="no">2</td>
+									<td>AAA</td>
+									<td>강감찬</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="no">1</td>
+									<td>AAA</td>
+									<td>강감찬</td>
+									<td>비고내용입니다. 비고내용입니다. 비고내용입니다.</td>
+								</tr>
+								<!-- 데이터 없을 경우 -->
+								<tr><td colspan="4" class="noneData">등록된 데이터가 없습니다.</td></tr>
+								<!-- //데이터 없을 경우 -->
+							</tbody>
+						</table>
+					</div>
+					<!--//List -->
+				</div>
+				<div class="pBtn">
+					<button class="btnM line">취소</button>
+					<button class="btnM" id="basicPopClose1">전송</a></button>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //Data 팝업 -->
+	</body>
+</html>

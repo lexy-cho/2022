@@ -1,0 +1,6 @@
+<svg id="ic_main_appdown" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <path id="패스_139" data-name="패스 139" d="M0,0H20V20H0Z" fill="none"/>
+  <path id="패스_140" data-name="패스 140" d="M4,3.6V17.452a.586.586,0,0,0,.879.506l12.238-7.037a.459.459,0,0,0,0-.8L4.879,3.089A.586.586,0,0,0,4,3.6Z" transform="translate(-0.696 -0.523)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="선_56" data-name="선 56" x1="8.674" y2="9.5" transform="translate(3.775 7.608)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="선_57" data-name="선 57" x2="8.674" y2="9.5" transform="translate(3.775 2.891)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>

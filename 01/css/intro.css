@@ -1,0 +1,26 @@
+/* content */
+.intro_all_wrap{
+    position: relative;
+    width: 1280px;
+    height: 800px;
+    background-color: #0B3861;
+    overflow: hidden;
+}
+.intro_ci_wrap{
+    position: relative;
+    width: 142px;
+    height: 165px;
+    top: 300px;
+    margin: auto;
+}
+.intro_ci_wrap img{
+    width: 100%;
+}
+.intro_title_txt{
+    position: relative;
+    font-family: 'NanumGothic';
+    font-size: 16px;
+    color: #B8B8B8;
+    text-align: center;
+    top: 316px;
+}

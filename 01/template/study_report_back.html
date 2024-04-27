@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../js/common.js"></script>
+		<script>
+			$(document).ready(function(){
+				google.charts.load('current', {'packages':['bar']});
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
+					var data = google.visualization.arrayToDataTable([
+						['', '박다희 아동', '사용자 평균'],
+						['MM.DD', 45, 23.5],
+						['MM.DD', 45, 23.5],
+						['MM.DD', 45, 23.5],
+						['MM.DD', 45, 23.5],
+						['MM.DD', 45, 23.5],
+						['MM.DD', 45, 23.5],
+						['MM.DD', 45, 23.5]
+					]);
+					var options = {
+						title: ' ',
+						colors: ['#6c5dd3', '#a0d7e7'],
+						legend : {position: 'none'},
+						bar: {groupWidth: "15%"},
+						vAxis: {
+							format: '#m',
+							viewWindowMode:'explicit',
+							viewWindow: {
+									min: 0,
+									max: 60
+							}
+						}
+					};
+					var chart = new google.charts.Bar(document.getElementById('chart1'));
+					chart.draw(data, google.charts.Bar.convertOptions(options));
+				}
+				// Tab 토글
+				$(".lineTabNav button").click(function () {
+					$(".lineTabNav span").removeClass("on");
+					$(this).parent("span").addClass("on");
+					var activeTab = $(this).attr("data-name");
+					$('.tabData').hide();
+					$('.tData' + activeTab).show();
+
+					google.charts.load('current', {'packages':['bar']});
+					google.charts.setOnLoadCallback(drawChart2);
+					function drawChart2() {
+						var data = google.visualization.arrayToDataTable([
+							['', '박다희 아동', '사용자 평균'],
+							['1주차', 45, 23.5],
+							['2주차', 45, 23.5],
+							['3주차', 45, 23.5],
+							['4주차', 45, 23.5],
+							['5주차', 45, 23.5]
+						]);
+						var options = {
+							title: ' ',
+							colors: ['#6c5dd3', '#a0d7e7'],
+							legend : {position: 'none'},
+							bar: {groupWidth: "15%"},
+							vAxis: {
+								format: '#m',
+								viewWindowMode:'explicit',
+								viewWindow: {
+										min: 0,
+										max: 60
+								}
+							}
+						};
+						var chart2 = new google.charts.Bar(document.getElementById('chart2'));
+						chart2.draw(data, google.charts.Bar.convertOptions(options));
+					}
+					google.charts.setOnLoadCallback(drawChart3);
+					function drawChart3() {
+						var data = google.visualization.arrayToDataTable([
+							['', '박다희 아동', '사용자 평균'],
+							['1월', 45, 23.5],
+							['2월', 45, 23.5],
+							['3월', 45, 23.5],
+							['4월', 45, 23.5],
+							['5월', 45, 23.5],
+							['6월', 45, 23.5],
+							['7월', 45, 23.5],
+							['8월', 45, 23.5],
+							['9월', 45, 23.5],
+							['10월', 45, 23.5],
+							['11월', 45, 23.5],
+							['12월', 45, 23.5],
+						]);
+						var options = {
+							title: ' ',
+							colors: ['#6c5dd3', '#a0d7e7'],
+							legend : {position: 'none'},
+							bar: {groupWidth: "20%"},
+							vAxis: {
+								format: '#m',
+								viewWindowMode:'explicit',
+								viewWindow: {
+										min: 0,
+										max: 60
+								}
+							}
+						};
+						var chart3 = new google.charts.Bar(document.getElementById('chart3'));
+						chart3.draw(data, google.charts.Bar.convertOptions(options));
+					}
+				});
+			});
+		</script>
+	</head>
+  <body>
+    <!-- Wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+				<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+        <h1>교과토탈 학습 리포트</h1>
+        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+      </div>
+      <!-- //header -->
+      <hr/>
+      <!-- container -->
+      <div id="container">
+        <section>
+          <!-- Page Layout -->
+          <div class="studyReport">
+						<div class="studyInfo">
+							<em>박다희 아동</em><em>월요일 10:00</em><em>교과토탈 048 PL</em>
+						</div>
+						<!------------------------------------------------>
+						<div class="srTit">
+							<h2>출석현황</h2>
+							<span class="calendar_wrap">
+								<button class="cal_arrow_left"><img src="../images/left_1.png" alt="이전달"></button>
+								<em class="cal_txt">2022.03</em>
+								<button class="cal_arrow_right"><img src="../images/right_1.png" alt="다음달"></button>
+							</span>
+						</div>
+						<div class="attendance">
+							<table>
+								<thead>
+									<tr>
+										<th>월</th>
+										<th>화</th>
+										<th>수</th>
+										<th>목</th>
+										<th>금</th>
+										<th>토</th>
+										<th>일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><span></span></td>
+										<td class="check"><span>1</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td class="check"><span>2</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>3</span></td>
+										<td><span>4</span></td>
+										<td><span>5</span></td>
+										<td><span>6</span></td>
+									</tr>
+									<tr>
+										<td><span>7</span></td>
+										<td><span>8</span></td>
+										<td><span>9</span></td>
+										<td><span>10</span></td>
+										<td><span>11</span></td>
+										<td><span>12</span></td>
+										<td><span>13</span></td>
+									</tr>
+									<tr>
+										<td><span>14</span></td>
+										<td><span>15</span></td>
+										<td class="check"><span>16</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td class="check"><span>17</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>18</span></td>
+										<td><span>19</span></td>
+										<td><span>20</span></td>
+									</tr>
+									<tr>
+										<td><span>21</span></td>
+										<td><span>22</span></td>
+										<td><span>23</span></td>
+										<td><span>24</span></td>
+										<td class="check"><span>25</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td class="check"><span>26</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>27</span></td>
+									</tr>
+									<tr>
+										<td><span>28</span></td>
+										<td><span>29</span></td>
+										<td><span>30</span></td>
+										<td><span>31</span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!------------------------------------------------>
+						<h2>이용 시간 통계</h2>
+						<!-- tab -->
+						<div class="lineTabNav">
+							<nav>
+								<span class="on"><button data-name="0">일 별 통계</button></span>
+								<span><button data-name="1">주간통계</button></span>
+								<span><button data-name="2">월간통계</button></span>
+							</nav>
+							<strong>모든 통계는 매일 00 시를 기준으로 집계됩니다</strong>
+						</div>
+						<!--// tab -->
+						<div class="tabLayout">
+								<span class="legend">
+									<em>박다희 아동</em>
+									<em>사용자 평균</em>
+								</span>
+								<!---->
+								<div class="tabData tData0">
+									<span class="chartSort">
+										<button class="on">국어</button>
+										<button>수학</button>
+										<button>영어</button>
+									</span>
+									<span class="chartDate">
+										<em>2022년</em>
+										<span class="selectSet">
+											<select>
+												<option>3 월</option>
+											</select>
+										</span>
+										<span class="selectSet">
+											<select>
+												<option>1 주</option>
+												<option>2 주</option>
+												<option>3 주</option>
+												<option>4 주</option>
+												<option>5 주</option>
+											</select>
+										</span>
+									</span>
+									<div class="chartArea" id="chart1"></div>
+								</div>
+								<!---->
+								<div class="tabData tData1" style="display:none;">
+									<span class="chartSort">
+										<button class="on">국어</button>
+										<button>수학</button>
+										<button>영어</button>
+									</span>
+									<span class="chartDate">
+										<em>2022년</em>
+										<span class="selectSet">
+											<select>
+												<option>3 월</option>
+											</select>
+										</span>
+									</span>
+									<div class="chartArea" id="chart2"></div>
+								</div>
+								<!---->
+								<div class="tabData tData2" style="display:none;">
+									<span class="chartSort">
+										<button class="on">국어</button>
+										<button>수학</button>
+										<button>영어</button>
+									</span>
+									<span class="chartDate"><em>2022년</em></span>
+									<div class="chartArea" id="chart3"></div>
+								</div>
+								<!---->
+						</div>
+						<!------------------------------------------------>
+						<div class="srTit">
+							<h2>인증평가 리포트</h2>
+							<span class="sort">
+								<span class="selectSet">
+									<select name="" id="">
+										<option value="">국어</option>
+										<option value="">수학</option>
+										<option value="">영어</option>
+									</select>
+								</span>
+								<span class="selectSet">
+									<select name="" id="">
+										<option value="">1단계</option>
+										<option value="">2단계</option>
+										<option value="">3단계</option>
+									</select>
+								</span>
+								<span class="selectSet">
+									<select name="" id="">
+										<option value="">1차 평가 (yyyy.mm.dd)</option>
+										<option value="">2차 평가 (yyyy.mm.dd)</option>
+										<option value="">3차 평가 (yyyy.mm.dd)</option>
+									</select>
+								</span>
+							</span>
+						</div>
+						<div class="testReport">
+								인증평가 리포트
+						</div>
+						<!------------------------------------------------>
+          </div>
+          <!-- //page Layout -->
+        </section>
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //Wrap -->
+  </body>
+</html>

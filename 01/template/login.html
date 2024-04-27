@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/common.js"></script>
+	</head>
+  <body>
+		<div id="wrap" class="loginCase">
+      <div class="login_wrap">
+        <h1>교과토탈 로그인</h1>
+        <form action="" method="POST">
+          <fieldset>
+            <legend>로그인</legend>
+            <div class="input_id_wrap">
+                <input type="text" placeholder="사번">
+                <input type="password" placeholder="주민번호 뒷자리">
+            </div>
+            <button type="button" class="btn_login">로그인</button>
+            <div class="checkArea">
+              <span class="checkSet"><input type="checkbox" name="radio1" id="radio1"><label for="radio1"><i></i>로그인 상태 유지</label></span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+		<!-- 앱 접근권한 -->
+		<div class="popDim" style="display:block;">
+	    <div class="basicPop appAccessPop" style="display:block;">
+        <div class="pBack">
+					<h1>
+						앱 접근권한 안내
+						<span>서비스 이용을 위해 권한 허용이 필요합니다.</span>
+					</h1>
+					<div>
+						<p>필수 접근권한</p>
+						<dl class="access1">
+							<dt>저장공간</dt>
+							<dd>콘텐츠를 읽거나, 내용을 수정 · 삭제하기 위한 권한입니다.</dd>
+						</dl>
+						<dl class="access2">
+							<dt>카메라</dt>
+							<dd>사진을 촬영하거나 동영상을 녹화하기 위한 권한입니다.</dd>
+						</dl>
+						<dl class="access3">
+							<dt>마이크</dt>
+							<dd>오디오 녹음을 위한 권한입니다.</dd>
+						</dl>
+					</div>
+        </div>
+        <div class="pBtn tC">
+        	<button class="ok">확인</button>
+        </div>
+			</div>
+		</div>
+		<!-- //앱 접근권한 -->
+    <script>
+  		$(document).ready(function(){
+				$('.appAccessPop .ok').click(function(){
+					$('.popDim').fadeOut();
+					$('.appAccessPop').fadeOut();
+				});
+			});
+		</script>
+  </body>
+</html>

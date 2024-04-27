@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../js/common.js"></script>
+		<script>
+			$(document).ready(function(){
+			});
+		</script>
+	</head>
+  <body>
+    <!-- Wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+				<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+        <h1>OT 보고</h1>
+        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+      </div>
+      <!-- //header -->
+      <hr/>
+      <!-- container -->
+      <div id="container">
+        <section>
+          <!-- Page Layout -->
+          <div class="otReportView">
+						<div class="tvs">
+							<table>
+								<colgroup>
+									<col width="240">
+									<col width="370">
+									<col width="240">
+									<col width="370">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>아동 명</th>
+										<td>박다슬기</td>
+										<th>핸드폰</th>
+										<td>010-1234-5678</td>
+									</tr>
+									<tr>
+										<th>교육 과목명</th>
+										<td>교과토탈 48-83PL(리딩)</td>
+										<th>주소</th>
+										<td>서울 금천구 독산동</td>
+									</tr>
+									<tr>
+										<th>OT 과목</th>
+										<td>교과토탈 PL 교과토탈 PL-01</td>
+										<th>상세주소</th>
+										<td>2동 1404호</td>
+									</tr>
+									<tr class="noteTr">
+										<th>비고<span class="small">(교육관련 전달사항)</span></th>
+										<td>테스트 건</td>
+										<th></th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>OT 진행일</th>
+										<td>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">2022년</option>
+													<option value="">2021년</option>
+													<option value="">2020년</option>
+												</select>
+											</span>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">00월</option>
+													<option value="">01월</option>
+												</select>
+											</span>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">00일</option>
+													<option value="">01일</option>
+												</select>
+											</span>
+										</td>
+										<th rowspan="8">팀 반납 사유</th>
+										<td rowspan="8" class="textareaData">
+											<textarea placeholder="팀 반납사유"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th>OT 진행 시간</th>
+										<td>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">17시</option>
+													<option value="">18시</option>
+												</select>
+											</span>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">30분</option>
+													<option value="">40분</option>
+												</select>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th>팀 반납 처리가능 여부</th>
+										<td>
+											<div class="tabRadio">
+												<span class="tabItem">
+													<input type="radio" name="rad" id="y" checked>
+													<label for="y">Y</label>
+												</span>
+												<span class="tabItem">
+													<input type="radio" name="rad" id="n">
+													<label for="n">N</label>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>OT 결과</th>
+										<td>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">교육 진행</option>
+												</select>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th>교사 활동 자료</th>
+										<td>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">활동 자료</option>
+												</select>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th>교육 시간</th>
+										<td>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">20분</option>
+												</select>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th>교육 요일</th>
+										<td>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">월요일</option>
+													<option value="">화요일</option>
+													<option value="">수요일</option>
+												</select>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th>교육 시작 시간</th>
+										<td>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">17시</option>
+													<option value="">18시</option>
+												</select>
+											</span>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="">30분</option>
+													<option value="">40분</option>
+												</select>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btnArea">
+							<button class="btnCancel" onclick="location.href='ot_report.html'">취소</button>
+							<button class="btnReport" onclick="location.href='ot_report.html'">보고</button>
+						</div>
+          </div>
+          <!-- //page Layout -->
+        </section>
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //Wrap -->
+  </body>
+</html>

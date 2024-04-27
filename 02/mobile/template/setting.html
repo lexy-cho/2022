@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전</button>
+					<h1>환경설정</h1>
+					<button class="btnNav">메뉴여닫기</button>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu -->
+			<div id="snb">
+				<section>
+					<div class="c-menu c-menu--slide-right">
+						<div class="back" data-include="include/snb.html"></div>
+					</div>
+					<div class="c-mask"></div><!-- /c-mask -->
+				</section>
+			</div>
+			<!-- //Sub Menu -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div class="setting"><!-- class 없어도 유지 -->
+							<ul>
+								<li>
+									<strong>앱 알림 설정</strong>
+									<em>알림 서비스의 수신 여부를 설정</em>
+									<span class="toggleSet">
+										<input type="checkbox" id="push" />
+										<label for="push"><!----></label>
+									</span>
+								</li>
+								<li>
+									<strong>자동 로그인 설정</strong>
+									<em>자동로그인인 경우에만 앱 알림서비스 연동이 가능합니다.</em>
+									<span class="toggleSet">
+										<input type="checkbox" id="push2" />
+										<label for="push2"><!----></label>
+									</span>
+								</li>
+								<li>
+									<strong>양액정보 표시</strong>
+									<em>메인화면에 수집된 양액정보 표시</em>
+									<span class="toggleSet">
+										<input type="checkbox" id="push3" />
+										<label for="push3"><!----></label>
+									</span>
+								</li>
+								<li>
+									<strong>환경정보 표시</strong>
+									<em>메인화면에 하우스 내 외부 수집된 환경정보 표시</em>
+									<span class="toggleSet">
+										<input type="checkbox" id="push4" />
+										<label for="push4"><!----></label>
+									</span>
+								</li>
+								<li>
+									<strong>생산정보 표시</strong>
+									<em>메인화면에 최근 3일간의 생산량을 표시</em>
+									<span class="toggleSet">
+										<input type="checkbox" id="push5" />
+										<label for="push5"><!----></label>
+									</span>
+								</li>
+								<li>
+									<strong>생육정보 표시</strong>
+									<em>메인화면에 최근 조상항목을 표시</em>
+									<span class="toggleSet">
+										<input type="checkbox" id="push6" />
+										<label for="push6"><!----></label>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

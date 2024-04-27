@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>작업자관리</h2><span><em>회원관리</em><strong>작업자관리</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<h3>작업자 기본정보</h3>
+							<!-- View -->
+							<div class="tvs">
+								<table>
+									<colgroup>
+										<col width="154"/>
+										<col width="40%"/>
+										<col width="154"/>
+										<col width="*"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>사용자 ID</th>
+											<td colspan="3">abcd123</td>
+										</tr>
+										<tr>
+											<th>이름</th>
+											<td colspan="3">홍길동</td>
+										</tr>
+										<tr>
+											<th>연락처</th>
+											<td>02-1234-5678</td>
+											<th>모바일</th>
+											<td>010-1234-4567</td>
+										</tr>
+										<tr>
+											<th>이메일</th>
+											<td>aaa@aaa.com</td>
+											<th>가입일시</th>
+											<td>2021-02-18 12:12:12</td>
+										</tr>
+										<tr>
+											<th>비고</th>
+											<td colspan="3">비고 내용은 비로란에 입력한 정보 그대로 노출됩니다.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--//View -->
+							<h3>농장정보</h3>
+							<!-- List -->
+			        <div class="tls">
+			          <table>
+			            <colgroup>
+			              <col width="70">
+				            <col width="*">
+			              <col width="100">
+			              <col width="100">
+			              <col width="140">
+			              <col width="140">
+			              <col width="160">
+			              <col width="130">
+			            </colgroup>
+			            <thead>
+			              <tr>
+											<th>No</th>
+											<th>작기</th>
+											<th>하우스</th>
+											<th>구역</th>
+											<th>작목</th>
+											<th>품종</th>
+											<th>등록일시</th>
+											<th>등록자</th>
+			              </tr>
+			            </thead>
+			            <tbody>
+			              <!--Loop-->
+			              <tr>
+			                <td class="no">22</td>
+											<td>2021-상반기 딸기</td>
+											<td>A동</td>
+											<td>A1동</td>
+											<td>딸기</td>
+											<td>기타</td>
+											<td>2021-02-15 12:12:12</td>
+											<td>Admin</td>
+			              </tr>
+			              <!--//Loop-->
+			              <tr>
+			                <td class="no">21</td>
+											<td>2021-상반기 딸기</td>
+											<td>A동</td>
+											<td>A1동</td>
+											<td>딸기</td>
+											<td>기타</td>
+											<td>2021-02-15 12:12:12</td>
+											<td>Admin</td>
+			              </tr>
+			              <tr>
+			                <td class="no">20</td>
+											<td>2021-상반기 딸기</td>
+											<td>A동</td>
+											<td>A1동</td>
+											<td>딸기</td>
+											<td>기타</td>
+											<td>2021-02-15 12:12:12</td>
+											<td>Admin</td>
+			              </tr>
+			              <!-- 데이터 없을 경우 -->
+			              <tr><td colspan="8" class="noneData">등록된 데이터가 없습니다.</td></tr>
+			              <!-- //데이터 없을 경우 -->
+			            </tbody>
+			          </table>
+			        </div>
+							<!--//List -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<button class="btnL line" id="alertBtn1">삭제</button>
+								<a href="worker_modify.html" class="btnL">수정</a>
+								<span class="right"><a href="worker.html" class="btnList">목록</a></span>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("alertBtn1","alertDim","alertPop1");
+				popupClose("alertPopClose1","popDim","alertPop1");
+			});
+		</script>
+		<!-- alert 팝업 -->
+		<div class="alertDim" style="display:none;">
+			<!-- 기본 팝업 -->
+			<div class="alertPop" id="alertPop1">
+				<div class="pBack">
+					<div class="pData">정말로 삭제하시겠습니까?</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM line" id="alertPopClose1">취소</button>
+					<a class="btnM" href="worker.html">확인</a>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //alert 팝업 -->
+	</body>
+</html>

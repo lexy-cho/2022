@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전</button>
+					<h1>회원가입</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu :: 회원가입 시 없음 -->
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div class="joinArea step2"><!-- class 없어도 유지 -->
+							<div class="joinStep">
+								<div>
+									<span><i>1</i><em>약관동의</em></span>
+									<span><i>2</i><em>사용자정보</em></span>
+								</div>
+								<span><i>3</i><em>가입완료</em></span>
+							</div>
+							<div class="tws">
+								<dl>
+									<dt>사용자 ID <sup>*</sup></dt>
+									<dd>
+										<span class="ipBtn">
+											<input type="text"/>
+											<button class="btnM line">중복확인</button>
+										</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>사용자 권한</dt>
+									<dd>
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>농장관리자</option>
+												<option value="">작업자</option>
+											</select>
+										</span>
+									</dd>
+								</dl>
+								<dl>
+									<dt>이름 <sup>*</sup></dt>
+									<dd><input type="text"/></dd>
+								</dl>
+								<dl>
+									<dt>소속</dt>
+									<dd><input type="text"/></dd>
+								</dl>
+								<dl>
+									<dt>직급</dt>
+									<dd><input type="text"/></dd>
+								</dl>
+								<dl>
+									<dt>연락처 <sup>*</sup></dt>
+									<dd><input type="text"/></dd>
+								</dl>
+								<dl>
+									<dt>모바일 <sup>*</sup></dt>
+									<dd><input type="text"/></dd>
+								</dl>
+								<dl>
+									<dt>이메일<sup>*</sup></dt>
+									<dd>
+										<div class="emailForm">
+											<input type="text" />
+											<em>@</em>
+											<input type="text" />
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>농장선택</dt>
+									<dd>
+										<span class="ipBtn">
+											<input type="text" disabled/>
+											<button class="btnM line">농장찾기</button>
+										</span>
+									</dd>
+								</dl>
+							</div>
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="join3.html" class="btnL">다음</a>
+								<a href="join.html" class="btnL white">이전</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("alertBtn1","alertDim","alertPop1");
+				popupClose("alertPopClose1","alertDim","alertPop1");
+			});
+		</script>
+		<!-- alert 팝업 -->
+		<div class="popDim" style="">
+			<!---->
+			<!-- 기본 팝업 -->
+			<div class="basicPop active" id="basicPop1">
+				<h1 class="tt">Data 기본 팝업</h1>
+				<button class="btnPClose" id="basicPopClose2">닫기</button>
+				<div class="pBack">
+					Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>Data 기본 팝업 내용<br/>
+				</div>
+				<div class="pBtn">
+					<button class="btnM line" id="basicPopClose1">취소</button>
+					<a href="category_view.html" class="btnM">등록</a>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+			<div class="alertPop farmPop" id="alertPop1">
+				<div class="pBack">
+					<div class="pData ttCase">
+						<strong>농장찾기</strong>
+						<div class="farmLocation">
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="no" class="label">광역시도</option><!-- 선택하세요만 색상 변경 > 반드시 value는 no 로 적용 -->
+									<option value="">Select Option 1</option>
+									<option value="">Select Option 2</option>
+									<option value="">Select Option 3</option>
+									<option value="">Select Option 4</option>
+								</select>
+							</span>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="no" class="label">시/군/구</option><!-- 선택하세요만 색상 변경 > 반드시 value는 no 로 적용 -->
+									<option value="">Select Option 1</option>
+									<option value="">Select Option 2</option>
+									<option value="">Select Option 3</option>
+									<option value="">Select Option 4</option>
+								</select>
+							</span>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="no" class="label">읍/면/동</option><!-- 선택하세요만 색상 변경 > 반드시 value는 no 로 적용 -->
+									<option value="">Select Option 1</option>
+									<option value="">Select Option 2</option>
+									<option value="">Select Option 3</option>
+									<option value="">Select Option 4</option>
+								</select>
+							</span>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="no" class="label">농장 선택</option><!-- 선택하세요만 색상 변경 > 반드시 value는 no 로 적용 -->
+									<option value="">Select Option 1</option>
+									<option value="">Select Option 2</option>
+									<option value="">Select Option 3</option>
+									<option value="">Select Option 4</option>
+								</select>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM" id="alertPopClose1">확인</button>
+					<button class="btnM line">취소</button>
+				</div>
+			</div>
+			<!---->
+		</div>
+		<!-- //alert 팝업 -->
+	</body>
+</html>

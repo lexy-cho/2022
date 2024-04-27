@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="226" height="49" viewBox="0 0 226 49">
+  <defs>
+    <filter id="사각형_1777" x="0" y="0" width="226" height="49" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.031"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_2728" data-name="그룹 2728" transform="translate(-80.5 -242.5)">
+    <g transform="matrix(1, 0, 0, 1, 80.5, 242.5)" filter="url(#사각형_1777)">
+      <rect id="사각형_1777-2" data-name="사각형 1777" width="223" height="46" transform="translate(1.5 0.5)" fill="#fff"/>
+    </g>
+    <g id="그룹_2648" data-name="그룹 2648" transform="translate(142.318 255)">
+      <g id="사각형_1090" data-name="사각형 1090" transform="translate(0 1.936)" fill="none" stroke="#0e2e53" stroke-width="2.5">
+        <rect width="23.113" height="19.811" stroke="none"/>
+        <rect x="1.25" y="1.25" width="20.613" height="17.311" fill="none"/>
+      </g>
+      <g id="그룹_1440" data-name="그룹 1440" transform="translate(5.897 0)">
+        <line id="선_597" data-name="선 597" y1="5.897" fill="none" stroke="#0e2e53" stroke-width="2.5"/>
+        <line id="선_598" data-name="선 598" y1="5.897" transform="translate(11.795)" fill="none" stroke="#0e2e53" stroke-width="2.5"/>
+      </g>
+      <line id="선_599" data-name="선 599" x2="21.378" transform="translate(1.106 8.846)" fill="none" stroke="#0e2e53" stroke-width="2.5"/>
+    </g>
+    <g id="그룹_2658" data-name="그룹 2658" transform="translate(120.01 250.466)">
+      <line id="선_600" data-name="선 600" y2="32.58" fill="none" stroke="#efefef" stroke-width="1"/>
+      <line id="선_601" data-name="선 601" y2="32.58" transform="translate(146.61)" fill="none" stroke="#efefef" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

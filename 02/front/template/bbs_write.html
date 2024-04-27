@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>생육관리</h2><span><em>영농관리</em><strong>생육관리 등록</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<h3>기본정보</h3>
+							<!-- Write -->
+							<div class="tws">
+								<table>
+									<colgroup>
+										<col width="154"/>
+										<col width="40%"/>
+										<col width="154"/>
+										<col width="*"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>조사일</th>
+											<td colspan="3"><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>하우스</th>
+											<td>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="" selected>Interlocking Unit</option>
+													</select>
+												</span>
+											</td>
+											<th>구역</th>
+											<td>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="" selected>Sector 1</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th>작목</th>
+											<td>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="" selected>Interlocking Unit</option>
+													</select>
+												</span>
+											</td>
+											<th>품종</th>
+											<td>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="" selected>Sector 1</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th>비고</th>
+											<td colspan="3"><textarea></textarea></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--//Write -->
+							<h3>생육정보</h3>
+							<div class="tws">
+								<table>
+									<colgroup>
+										<col width="154"/>
+										<col width="*"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>생장길이</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>두께</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>화방위치</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>화방수</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>엽폭</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>엽길이</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>적엽수</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>착과량</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>수확량</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>파일첨부</th>
+											<td>
+												<div class="fileAddSet">
+													<span class="fileFind">
+														<input type="file" id="file1" />
+														<label for="file1">File Search</label>
+													</span>
+													<div>
+														<ul>
+															<li><img src="../images/sampleImage.png" alt="" /><button>삭제</button></li>
+															<li><img src="../images/sampleImage.png" alt="" /><button>삭제</button></li>
+														</ul>
+														<span>
+															<button>이전</button>
+															<button>다음</button>
+														</span>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="bbs_list.html" class="btnL line">취소</a>
+								<a href="bbs_view.html" class="btnL">등록</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

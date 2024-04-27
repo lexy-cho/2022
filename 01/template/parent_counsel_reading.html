@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/billboard.css">
+    <!-- <link rel="stylesheet" href="../css/member.css"> -->
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+  		$(document).ready(function(){
+      });
+    </script>
+	</head>
+  <body>
+    <!-- Wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+				<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+        <h1>토탈시스템</h1>
+        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+      </div>
+      <!-- //header -->
+      <hr/>
+      <!-- container -->
+      <div id="container">
+        <section>
+          <!-- Page Layout -->
+          <div class="parentCounselSubject">
+						<h2><span class="right"><em>2021.06.25｜박다희 아동</em></span></h2>
+						<div class="tls orangeSt">
+							<table>
+								<thead>
+									<tr>
+										<th class="tit"></th>
+										<th colspan="2">북맵 활동</th>
+										<th>창의융합 활동</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>수업교재</th>
+										<td>
+											<div class="textbook">
+												<div class="tbImg"><img src="../images/sample_textbook.png" alt="교재"></div>
+												<span>이글이글 불 도깨비와 꽃님이</span>
+											</div>
+										</td>
+										<td>
+											<div class="textbook">
+												<div class="tbImg"><img src="../images/sample_textbook.png" alt="교재"></div>
+												<span>지하 10층 주방의 비밀</span>
+											</div>
+										</td>
+										<td>
+											<div class="textbook">
+												<div class="tbImg"><img src="../images/sample_textbook.png" alt="교재"></div>
+												<span>사람과 물건이 모이는 시장</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>수업결과</th>
+										<td><button class="btnMore">더보기</button></td>
+										<td><button class="btnMore">더보기</button></td>
+										<td><button class="btnMore">더보기</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="gridSet">
+							<div class="gridItem">
+								<div class="tls orangeSt">
+									<table>
+										<thead>
+											<tr>
+												<th>독서 논술 지표</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><div id="chart1" class="graphArea"></div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="gridItem">
+								<div class="tls orangeSt">
+									<table>
+										<thead>
+											<tr>
+												<th>역량 지표</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><div id="chart2" class="graphArea"></div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="gridItem">
+								<div class="tls orangeSt">
+									<table>
+										<thead>
+											<tr>
+												<th>수업 지표</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<!-- 그래프 일 경우 -->
+													<div id="chart3" class="graphArea"></div>
+													<!-- //그래프 일 경우 -->
+													<!-- 수업 지표가 하트 체크로 보일 때 창 -->
+													<div class="checkHeartWrap">
+							                <p>
+							                    <span class="heart_bar"></span>
+							                    <span class="heart_txt">참여지수</span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                </p>
+							                <p>
+							                    <span class="heart_bar"></span>
+							                    <span class="heart_txt">흥미지수</span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                </p>
+							                <p>
+							                    <span class="heart_bar"></span>
+							                    <span class="heart_txt">자기주도지수</span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                </p>
+							                <p>
+							                    <span class="heart_bar"></span>
+							                    <span class="heart_txt">완성지수</span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                </p>
+							                <p>
+							                    <span class="heart_bar"></span>
+							                    <span class="heart_txt">창의력지수</span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                    <span class="heart_off"></span>
+							                </p>
+							            </div>
+													<!-- //수업 지표가 하트 체크로 보일 때 창 -->
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!----------->
+						<div class="btnArea">
+			        <!-- 수업 지표가 차트로 보일 때 하단 버튼 -->
+			        <div class="btn_wrap" style="display:none;">
+			            <button type="button" class="send_ask">보내기</button>
+			        </div>
+			        <!-- //수업 지표가 차트로 보일 때 하단 버튼 -->
+			        <!-- 수업 지표가 하트 체크로 보일 때 하단 버튼 -->
+			        <div class="btn_wrap2">
+			            <button type="button" class="btn_save">저장</button>
+			            <button type="button">취소</button>
+			        </div>
+			        <!-- //수업 지표가 하트 체크로 보일 때 하단 버튼 -->
+						</div>
+						<!----------->
+          </div>
+          <!-- //page Layout -->
+        </section>
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //Wrap -->
+
+		<!-- Alert Popup -->
+		<div class="alertDim" style="display:none;">
+			<!-- 부모상담을 보냈습니다 팝업 -->
+			<div class="alertPop" id="alertSamplePop" style="display:none;">
+				<div class="pBack">
+					<div class="va">
+						<p>부모상담을 보냈습니다.</p>
+					</div>
+				</div>
+				<div class="pBtn tC">
+					<button class="longOk">확인</button>
+				</div>
+			</div>
+			<!-- //부모상담을 보냈습니다 팝업 -->
+			<!-- 부모상담을 보내겠습니까?  팝업 -->
+			<div class="alertPop" id="alertSamplePop2" style="display:none;">
+				<div class="pBack">
+					<div class="va">
+						<p>부모상담을 보내겠습니까?</p>
+					</div>
+				</div>
+        <div class="pBtn">
+          <button class="cancel">취소</button>
+          <button class="ok">보내기</button>
+        </div>
+			</div>
+			<!-- //부모상담을 보내겠습니까?  팝업 -->
+		</div>
+		<!-- //Alert Popup -->
+
+    <script>
+        $(document).ready(function(){
+            //하트 누르면 색바뀜, 처음부터 하나하나 채워져야함, 중간부터 채울 수 없음
+            $(".heart_off").on("click", function(){
+                $(this).css("background", "url(../images/heart_on.svg) no-repeat");
+            });
+
+            // 저장버튼 누르면 누른 값 만큼 차트로 바뀌고 하단 보내기 버튼만 나타나게
+            $(".btn_save").on("click", function(){
+                $(".checkHeartWrap").hide();
+                $(".chart3_wrap").show();
+                $(".btn_wrap2").hide();
+                $(".btn_wrap").show();
+            });
+
+            // 보내기 버튼 누르면 보내겠습니까? 팝업 뜨게
+            $(".send_ask").on("click", function(){
+                $(".alertDim").fadeIn();
+		            $("#alertSamplePop2").fadeIn();
+            });
+
+            // 보내겠습니까? 팝업에서 취소 누르면 팝업 닫히게
+            $("#alertSamplePop2 .cancel").on("click", function(){
+							$(".alertDim").fadeOut();
+							$("#alertSamplePop2").fadeOut();
+            });
+
+            // 보내겠습니까? 팝업에서 보내기 누르면 보냈습니다 팝업 뜨게
+            $("#alertSamplePop2 .ok").on("click", function(){
+								$("#alertSamplePop2").fadeOut();
+								$("#alertSamplePop").fadeIn();
+            });
+            $("#alertSamplePop .longOk").on("click", function(){
+							$(".alertDim").fadeOut();
+							$("#alertSamplePop").fadeOut();
+							$(".btn_wrap").hide();
+            });
+        });
+
+        // 독서 논술 지표 차트
+        var chart = bb.generate({
+        data: {
+            x: "x",
+            columns: [
+            ["x", "듣기", "말하기", "읽기", "쓰기"],
+            ["윤지훈", 10, 40, 11, 5],
+            ["주지훈", 15, 45, 5, 10],
+            ],
+            type: "radar",
+            labels: true
+        },
+        radar: {
+            axis: {
+            max: 48
+            },
+            level: {
+            depth: 10
+            },
+            direction: {
+            clockwise: true
+            }
+        },
+        bindto: "#chart1"
+        });
+
+        // 역량 지표 차트
+        var chart = bb.generate({
+        data: {
+            x: "x",
+            columns: [
+            ["x", "자기관리", "지식정보처리", "창의적 사고", "심미적 감성", "의사소통", "공동체"],
+            ["윤지훈", 10, 40, 11, 5, 10, 8],
+            ],
+            type: "radar",
+            labels: true
+        },
+        radar: {
+            axis: {
+            max: 48
+            },
+            level: {
+            depth: 5
+            },
+            direction: {
+            clockwise: true
+            }
+        },
+        bindto: "#chart2"
+        });
+
+        // 수업 지표 차트
+        var chart = bb.generate({
+        data: {
+            x: "x",
+            columns: [
+            ["x", "참여 지수", "흥미 지수", "자기주도 지수", "완성 지수", "창의력 지수"],
+            ["윤지훈", 1, 2, 2, 5, 3],
+            ],
+            type: "radar",
+            labels: true
+        },
+        radar: {
+            axis: {
+            max: 5
+            },
+            level: {
+            depth: 5
+            },
+            direction: {
+            clockwise: true
+            }
+        },
+        bindto: "#chart3"
+        });
+    </script>
+  </body>
+</html>

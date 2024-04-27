@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/common.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#cSetBtn').click(function(){
+					$('.cEndPop').fadeIn();
+				});
+				$('.cEndPop .btn button:first-child').click(function(){
+					$('.cEndPop').fadeOut();
+				});
+				$('#popBtn0').click(function(){
+					$('.alertDim').fadeIn();
+					$('#alertSamplePop').fadeIn();
+				});
+
+				$('.btnPrev').click(function(){
+					$('.alertDim').fadeIn();
+					$('#alertSamplePop2').fadeIn();
+				});
+				$('#studyHistoyBtn').click(function(){
+					$('.popDim').fadeIn();
+					$('.studyHistoyPop').fadeIn();
+				});
+				$('.alertPop .pBtn button:not(#alertSamplePop2 .ok, .giftEndPop .cancel), .basicPop .pBtn button:not(.giftPop .ok, .giftHistoryPop .ok)').click(function(){
+					$('.popDim, .alertDim').fadeOut();
+					$('.alertPop, .basicPop, .cEndPop').fadeOut();
+				});
+				$('#giftBtn').click(function(){
+					$('.popDim').fadeIn();
+					$('.giftPop').fadeIn()
+				});
+				$('.giftPop .ok').click(function(){
+					$('.alertDim').fadeIn();
+					$('.giftEndPop').fadeIn();
+				});
+				$('.giftEndPop .cancel').click(function(){
+					$('.alertDim').fadeOut();
+					$('.giftEndPop').fadeOut();
+				});
+				$('#ghistoryBtn').click(function(){
+					$('.giftHistoryPop').fadeIn();
+				});
+				$('.giftHistoryPop .ok').click(function(){
+					$('.giftHistoryPop').fadeOut();
+				});
+			})
+		</script>
+	</head>
+  <body>
+    <!-- Wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+				<button class="btnPrev">이전 화면으로 이동</button>
+        <h1>교과토탈 방문 수업</h1>
+        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+      </div>
+      <!-- //header -->
+      <hr/>
+      <!-- container -->
+      <div id="container">
+        <section>
+          <!-- Page Layout -->
+          <div class="studyVisiting">
+						<div class="studyInfo">
+							<div class="subject">
+								<strong>국어</strong>
+								<span>
+									<em>박다희 아동</em><em>월요일 10:00</em><em>교과토탈 048 PL</em>
+									<button id="giftBtn">선물하기</button>
+								</span>
+							</div>
+							<div class="currentState">
+								<strong>
+									<em>현재 학습 진도<i>1단계 (1)주</i></em>
+								</strong>
+								<div class="cInfo">
+									<dl class="ib">
+										<dt>IB학제</dt>
+										<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+									</dl>
+									<dl class="topic">
+										<dt>대주제</dt>
+										<dd>낱말 학습</dd>
+										<dt>소주제</dt>
+										<dd>탈것의 이름 알기</dd>
+									</dl>
+								</div>
+								<div class="cSet">
+									<button class="btnOrange" id="cSetBtn">학습완료</button>
+									<div class="cEndPop" style="display:none;">
+										<div>
+											<strong>1단계</strong>
+											<select>
+												<option>1주</option>
+											</select>
+											<span>
+												<em><input type="checkbox" /><label>4일차</label></em>
+												<em><input type="checkbox" /><label>5일차</label></em>
+											</span>
+										</div>
+										<span class="btn">
+											<button>취소</button>
+											<button id="popBtn0">확인</button>
+										</span>
+									</div>
+									<button class="btnOrange">진도 변경</button>
+								</div>
+							</div>
+						</div>
+						<!--방문 교육 결과-->
+						<div class="studySetting">
+							<h2>방문 교육</h2>
+							<p>방문 교육 결과를 작성합니다</p>
+							<a href="study_visiting_result.html" class="btnVResults">방문 교육 결과 작성</a>
+						</div>
+						<!--학습 등급 설정-->
+						<div class="studySetting levelCase">
+							<h2>
+								4일차 , 5 일차 학습 등급 설정
+								<button id="studyHistoyBtn">학습 등급 및 숙제 설정 내역</button>
+							</h2>
+							<p>현재 학습 진도의 4 일차 , 5 일차 학습 등급을 설정합니다</p>
+							<div>
+								<span><input type="Radio" id="levela" name="level" value="a" /><label for="levela">A</label></span>
+								<span><input type="radio" id="levelb" name="level" value="b" /><label for="levelb">B</label></span>
+							</div>
+						</div>
+						<!--숙제 설정-->
+						<div class="studySetting homeworkCase">
+							<h2>숙제 설정</h2>
+							<p>현재 학습 진도의 숙제를 설정합니다</p>
+							<div>
+								<span>
+									<em><input type="radio" id="homework11" name="homework1" value="1" /><label for="homework11">1일차 학습</label></em>
+									<em><input type="radio" id="homework12" name="homework1" value="2" /><label for="homework12">2일차 학습</label></em>
+									<em><input type="radio" id="homework13" name="homework1" value="3" /><label for="homework13">3일차 학습</label></em>
+									<em><input type="radio" id="homework14" name="homework1" value="4" /><label for="homework14">4일차 학습</label></em>
+								</span>
+								<span>
+									<em><input type="radio" id="homework21" name="homework2" value="21" /><label for="homework21">개념 애니쏭</label></em>
+									<em><input type="radio" id="homework22" name="homework2" value="22" /><label for="homework22">개념 팡팡</label></em>
+									<em><input type="radio" id="homework23" name="homework2" value="23" /><label for="homework23">개념 쑥쑥</label></em>
+								</span>
+							</div>
+						</div>
+						<div class="applyArea"><button>적용</button></div>
+          </div>
+          <!-- //page Layout -->
+        </section>
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //Wrap -->
+		<!-- Alert Popup -->
+		<div class="alertDim" style="display:none;">
+			<!-- 학습완료 설정 -->
+	    <div class="alertPop" id="alertSamplePop" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						<h1>학습완료 설정</h1>
+						<p>학습완료 설정을 하시겠습니까?</p>
+					</div>
+        </div>
+        <div class="pBtn">
+          <button class="cancel">취소</button>
+          <button class="ok">확인</button>
+        </div>
+	    </div>
+			<!-- 이전 클릭 시 -->
+	    <div class="alertPop" id="alertSamplePop2" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						<p>
+							학습 진도가 설정되지 않았습니다.<br/>
+							페이지 이동을 하시겠습니까?
+						</p>
+					</div>
+        </div>
+        <div class="pBtn">
+          <button class="cancel">취소</button>
+          <button class="ok" onclick="location.href='main.html';">확인</button>
+        </div>
+	    </div>
+			<!-- 선물하기 확인 시 -->
+	    <div class="alertPop giftEndPop" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						<h1>선물하기</h1>
+						<p>박다희 아동에게 선물을 보내시겠어요?</p>
+						<div class="choiced">
+							<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+							<strong>100</strong>
+						</div>
+						<p>박다희 아동에게 선물하기 이용 차감 내역</p>
+						<div class="choicedEnd">
+							<strong>아이템</strong> 1개 <em>(잔여 0개)</em><br/>
+							<strong>포인트</strong> 100 point <em>(잔여 900 point)</em>
+						</div>
+					</div>
+        </div>
+        <div class="pBtn">
+          <button class="cancel">취소</button>
+          <button class="ok">확인</button>
+        </div>
+	    </div>
+		</div>
+		<!-- //Alert Popup -->
+		<!-- Popup -->
+		<div class="popDim" style="display:none;">
+			<!-- 학습 등급 및 숙제 설정 내역-->
+	    <div class="basicPop studyHistoyPop" style="display:none;">
+        <div class="pBack">
+	        <h1>학습 등급 및 숙제 설정 내역</h1>
+					<div class="sort">
+						<select class="kind">
+							<option>학습 등급</option>
+							<option>숙제</option>
+						</select>
+						<span>
+							<select>
+								<option>1단계</option>
+								<option>2단계</option>
+							</select>
+							<select>
+								<option>전체</option>
+								<option>52주</option>
+							</select>
+						</span>
+					</div>
+					<div class="history">
+						<ul>
+							<li>
+								<strong>1단계<br/>(52주)</strong>
+								<div class="cInfo">
+									<dl class="ib">
+										<dt>IB학제</dt>
+										<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+									</dl>
+									<dl class="topic">
+										<dt>대주제</dt>
+										<dd>낱말 학습</dd>
+										<dt>소주제</dt>
+										<dd>탈것의 이름 알기</dd>
+									</dl>
+								</div>
+								<span>A</span>
+								<span class="date">yyyy.mm.dd</span>
+							</li>
+							<li>
+								<strong>1단계<br/>(52주)</strong>
+								<div class="cInfo">
+									<dl class="ib">
+										<dt>IB학제</dt>
+										<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+									</dl>
+									<dl class="topic">
+										<dt>대주제</dt>
+										<dd>낱말 학습</dd>
+										<dt>소주제</dt>
+										<dd>탈것의 이름 알기</dd>
+									</dl>
+								</div>
+								<span>개념 애니쏭</span>
+								<span class="date">yyyy.mm.dd</span>
+							</li>
+							<li>
+								<strong>1단계<br/>(52주)</strong>
+								<div class="cInfo">
+									<dl class="ib">
+										<dt>IB학제</dt>
+										<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+									</dl>
+									<dl class="topic">
+										<dt>대주제</dt>
+										<dd>낱말 학습</dd>
+										<dt>소주제</dt>
+										<dd>탈것의 이름 알기</dd>
+									</dl>
+								</div>
+								<span>A</span>
+								<span class="date">yyyy.mm.dd</span>
+							</li>
+							<li>
+								<strong>1단계<br/>(52주)</strong>
+								<div class="cInfo">
+									<dl class="ib">
+										<dt>IB학제</dt>
+										<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+									</dl>
+									<dl class="topic">
+										<dt>대주제</dt>
+										<dd>낱말 학습</dd>
+										<dt>소주제</dt>
+										<dd>탈것의 이름 알기</dd>
+									</dl>
+								</div>
+								<span>개념 애니쏭</span>
+								<span class="date">yyyy.mm.dd</span>
+							</li>
+							<li>
+								<strong>1단계<br/>(52주)</strong>
+								<div class="cInfo">
+									<dl class="ib">
+										<dt>IB학제</dt>
+										<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+									</dl>
+									<dl class="topic">
+										<dt>대주제</dt>
+										<dd>낱말 학습</dd>
+										<dt>소주제</dt>
+										<dd>탈것의 이름 알기</dd>
+									</dl>
+								</div>
+								<span>A</span>
+								<span class="date">yyyy.mm.dd</span>
+							</li>
+							<li>
+								<strong>1단계<br/>(52주)</strong>
+								<div class="cInfo">
+									<dl class="ib">
+										<dt>IB학제</dt>
+										<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+									</dl>
+									<dl class="topic">
+										<dt>대주제</dt>
+										<dd>낱말 학습</dd>
+										<dt>소주제</dt>
+										<dd>탈것의 이름 알기</dd>
+									</dl>
+								</div>
+								<span>개념 애니쏭</span>
+								<span class="date">yyyy.mm.dd</span>
+							</li>
+						</ul>
+					</div>
+        </div>
+        <div class="pBtn tC">
+        	<button class="ok">확인</button>
+        </div>
+	    </div>
+			<!-- //학습 등급 및 숙제 설정 내역 -->
+			<!-- 선물하기 -->
+	    <div class="basicPop giftPop" style="display:none;">
+				<h1>
+					박다희 아동에게 선물하기
+					<button id="ghistoryBtn">선물 내역</button>
+				</h1>
+        <div class="pBack">
+					<div class="giftItemChoice">
+						<div class="giftCtTab">
+							<span class="giftCt0 on"><button data-name="0">헤어</button></span>
+							<span class="giftCt1"><button data-name="1">얼굴</button></span>
+							<span class="giftCt2"><button data-name="2">상의</button></span>
+							<span class="giftCt3"><button data-name="3">하의</button></span>
+							<span class="giftCt4"><button data-name="4">악세사리</button></span>
+							<span class="giftCt5"><button data-name="5">신발</button></span>
+						</div>
+						<div class="giftItemList">
+							<div>
+								<ul class="giftItemData giData0">
+									<li><input type="radio" name="gil0" id="gil001" /><label><img src="../images/newImage/sample_gift1_01.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil002" /><label><img src="../images/newImage/sample_gift1_02.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil003" /><label><img src="../images/newImage/sample_gift1_03.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil004" /><label><img src="../images/newImage/sample_gift1_04.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil005" /><label><img src="../images/newImage/sample_gift1_05.png" alt="" /></label></li>
+									<li class="own"><input type="radio" name="gil0" id="gil006" disabled /><label><img src="../images/newImage/sample_gift1_06.png" alt="" /></label></li><!--보유한 아이템을 경우 class="own" 추가 -->
+									<li><input type="radio" name="gil0" id="gil007" /><label><img src="../images/newImage/sample_gift1_07.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil008" /><label><img src="../images/newImage/sample_gift1_08.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil009" /><label><img src="../images/newImage/sample_gift1_09.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil010" /><label><img src="../images/newImage/sample_gift1_10.png" alt="" /></label></li>
+									<li class="own"><input type="radio" name="gil0" id="gil011" disabled /><label><img src="../images/newImage/sample_gift1_11.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil012" /><label><img src="../images/newImage/sample_gift1_12.png" alt="" /></label></li>
+								</ul>
+								<ul class="giftItemData giData1" style="display:none;">
+									<li><input type="radio" name="gil1" id="gil101" /><label><img src="../images/newImage/sample_gift1_10.png" alt="" /></label></li>
+									<li><input type="radio" name="gil1" id="gil102" /><label><img src="../images/newImage/sample_gift1_07.png" alt="" /></label></li>
+								</ul>
+								<ul class="giftItemData giData2" style="display:none;">
+									<li><input type="radio" name="gil2" id="gil201" /><label><img src="../images/newImage/sample_gift2_01.png" alt="" /></label></li>
+									<li class="own"><input type="radio" name="gil2" id="gil202" disabled /><label><img src="../images/newImage/sample_gift2_02.png" alt="" /></label></li><!--보유한 아이템을 경우 class="own" 추가 -->
+									<li><input type="radio" name="gil2" id="gil203" /><label><img src="../images/newImage/sample_gift2_03.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil204" /><label><img src="../images/newImage/sample_gift2_04.png" alt="" /></label></li>
+									<li class="own"><input type="radio" name="gil2" id="gil205" disabled /><label><img src="../images/newImage/sample_gift2_05.png" alt="" /></label></li><!--보유한 아이템을 경우 class="own" 추가 -->
+									<li><input type="radio" name="gil2" id="gil206" /><label><img src="../images/newImage/sample_gift2_06.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil207" /><label><img src="../images/newImage/sample_gift2_07.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil208" /><label><img src="../images/newImage/sample_gift2_08.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil209" /><label><img src="../images/newImage/sample_gift2_09.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil210" /><label><img src="../images/newImage/sample_gift2_10.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil211" /><label><img src="../images/newImage/sample_gift2_11.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil212" /><label><img src="../images/newImage/sample_gift2_12.png" alt="" /></label></li>
+								</ul>
+								<ul class="giftItemData giData3" style="display:none;">
+									<li class="noLine">아이템 준비중입니다.</li>
+								</ul>
+								<ul class="giftItemData giData4" style="display:none;">
+									<li><input type="radio" name="gil5" id="gil401" /><label><img src="../images/newImage/sample_gift2_04.png" alt="" /></label></li>
+								</ul>
+								<ul class="giftItemData giData5" style="display:none;">
+									<li><input type="radio" name="gil5" id="gil501" /><label><img src="../images/newImage/sample_gift2_01.png" alt="" /></label></li>
+									<li><input type="radio" name="gil5" id="gil502" /><label><img src="../images/newImage/sample_gift1_02.png" alt="" /></label></li>
+									<li><input type="radio" name="gil5" id="gil503" /><label><img src="../images/newImage/sample_gift2_03.png" alt="" /></label></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!---->
+					<div class="pointChoice">
+						<strong>선물할 포인트</strong>
+						<span class="selectSet">
+							<select>
+								<option>-</option>
+								<option>100</option>
+								<option>200</option>
+								<option>300</option>
+								<option>400</option>
+								<option>500</option>
+								<option>600</option>
+								<option>700</option>
+								<option>800</option>
+								<option>900</option>
+								<option>1,000</option>
+							</select>
+						</span>
+						<div class="pointInfo">
+							<span>선물가능 포인트 <i>2,500</i></span>
+							<span class="right">선물 후 포인트 <i>1,500</i></span>
+						</div>
+						<span class="write"><textarea></textarea><span><em>0</em>/60</span></span>
+					</div>
+					<!---->
+        </div>
+        <div class="pBtn">
+        	<button class="cancel">닫기</button>
+        	<button class="ok">보내기</button>
+        </div>
+	    </div>
+			<!-- //선물하기 -->
+			<!-- 선물내역 -->
+	    <div class="basicPop giftHistoryPop" style="display:none;">
+        <div class="pBack">
+					<div class="sort">
+						<span class="selectSet">
+							<select>
+								<option>전체</option>
+								<option>아이템</option>
+								<option>포인트</option>
+							</select>
+						</span>
+					</div>
+					<div class="history">
+						<ul>
+							<li>
+								<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+								<strong>1,000</strong>
+								<em class="date">yyyy.mm.dd</em>
+								<p>이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심</p>
+							</li>
+							<li>
+								<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+								<strong>1,000</strong>
+								<em class="date">yyyy.mm.dd</em>
+								<p>이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심</p>
+							</li>
+							<li>
+								<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+								<strong>1,000</strong>
+								<em class="date">yyyy.mm.dd</em>
+								<p>이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심</p>
+							</li>
+							<li>
+								<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+								<strong>1,000</strong>
+								<em class="date">yyyy.mm.dd</em>
+								<p>이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심</p>
+							</li>
+							<li>
+								<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+								<strong>1,000</strong>
+								<em class="date">yyyy.mm.dd</em>
+								<p>이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심</p>
+							</li>
+							<li>
+								<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+								<strong>1,000</strong>
+								<em class="date">yyyy.mm.dd</em>
+								<p>이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심</p>
+							</li>
+							<li>
+								<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+								<strong>1,000</strong>
+								<em class="date">yyyy.mm.dd</em>
+								<p>이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심</p>
+							</li>
+							<li>
+								<span><img src="../images/newImage/sample_gift1_01.png" alt="" /></span>
+								<strong>1,000</strong>
+								<em class="date">yyyy.mm.dd</em>
+								<p>이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심히 하기! 이번주도 열심</p>
+							</li>
+						</ul>
+					</div>
+        </div>
+        <div class="pBtn tC">
+        	<button class="ok">확인</button>
+        </div>
+			</div>
+			<!-- //선물내역 -->
+		</div>
+		<!-- //Popup -->
+  </body>
+	<script>
+		$(document).ready(function(){
+			// Tab 토글
+			$(".giftCtTab button").click(function () {
+				$(".giftCtTab span").removeClass("on");
+				$(this).parent("span").addClass("on");
+				var activeTab = $(this).attr("data-name");
+				$('.giftItemData').hide();
+				$('.giftItemData.giData' + activeTab).show();
+			});
+		});
+	</script>
+</html>

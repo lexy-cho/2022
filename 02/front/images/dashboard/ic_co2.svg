@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="ic_co2" transform="translate(0.11 0.11)">
+    <circle id="타원_59" data-name="타원 59" cx="16" cy="16" r="16" transform="translate(-0.11 -0.11)" fill="#ffc80e"/>
+    <path id="패스_541" data-name="패스 541" d="M0,0H21.186V21.186H0Z" transform="translate(5.297 5.297)" fill="none"/>
+    <path id="패스_542" data-name="패스 542" d="M6.448,16.47A4.066,4.066,0,0,1,2.3,12.5,4.066,4.066,0,0,1,6.448,8.525a4.962,4.962,0,0,1,5.836-3.487,4.5,4.5,0,0,1,3.874,5.252h.883a3.09,3.09,0,0,1,0,6.179" transform="translate(5.027 4.716)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle id="타원_51" data-name="타원 51" cx="1" cy="1" r="1" transform="translate(11.89 17.89)" fill="#fff"/>
+    <circle id="타원_54" data-name="타원 54" cx="0.5" cy="0.5" r="0.5" transform="translate(18.89 18.89)" fill="#fff"/>
+    <ellipse id="타원_57" data-name="타원 57" cy="0.5" ry="0.5" transform="translate(19.89 21.89)" fill="#fff"/>
+    <circle id="타원_58" data-name="타원 58" cx="0.5" cy="0.5" r="0.5" transform="translate(4.89 11.89)" fill="#fff"/>
+    <circle id="타원_55" data-name="타원 55" cx="1" cy="1" r="1" transform="translate(16.89 14.89)" fill="#fff"/>
+    <circle id="타원_56" data-name="타원 56" cx="1" cy="1" r="1" transform="translate(7.89 9.89)" fill="#fff"/>
+    <circle id="타원_52" data-name="타원 52" cx="1.5" cy="1.5" r="1.5" transform="translate(13.89 19.89)" fill="#fff"/>
+    <ellipse id="타원_53" data-name="타원 53" cx="1.5" cy="1" rx="1.5" ry="1" transform="translate(22.89 9.89)" fill="#fff"/>
+  </g>
+</svg>

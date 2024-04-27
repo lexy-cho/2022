@@ -1,0 +1,686 @@
+@font-face {
+    font-family: 'NanumGothicExtraBold';
+    font-weight: bold;
+    src: url("../../font/NanumGothicExtraBold.woff2") format('woff2');
+}
+@font-face {
+    font-family: 'OTE2_YoonSofunny';
+    font-weight: bold;
+    src: url("../../font/oTE2_YoonSofunny.woff2") format('woff2');
+}
+.btnHome {
+    position:absolute;
+    top:2px;
+    right:2px;
+}
+body{
+    margin: 0px;
+}
+#header{
+    z-index: 10;
+    position: absolute;
+}
+
+#content > .writeBox
+{
+    top: 112px;
+    position: absolute;
+    z-index: 12;
+    left: 83px;
+    width: 1113.5px;
+    height: 632px;
+}
+#content > .bgWrite
+{
+    background: url(../../images/bookmap/main/51/bg.png) no-repeat;
+    width: 1280px;
+    height: 800px;
+    background-size: 100% 100%;
+    z-index: 5;
+    position: absolute;
+}
+.book
+{
+    position: absolute;
+}
+.book > .act
+{
+    background: url('../../images/bookmap/act.png') no-repeat;
+}
+.book > .inact
+{
+    background: url('../../images/bookmap/inact.png') no-repeat;
+}
+
+.bookBox1
+{
+    top: 18px;
+    left: 19px;
+}
+.bookBox1 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 107px;left: 170px;
+}
+.bookBox2
+{
+    top: 18px;
+    left: 229px;
+}
+.bookBox2 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 140px;left: 155px;
+}
+.bookBox3
+{
+    top: 18px;
+    left: 404px;
+}
+.bookBox3 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 139px;left: 128px;
+}
+.bookBox4
+{
+    top: 15px;
+    left: 575px;
+}
+.bookBox4 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 142px;left: 136px;
+}
+.bookBox5
+{
+    top: 18px;
+    left: 748px;
+}
+.bookBox5 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 139px;left: 98px;
+}
+.bookBox6
+{
+    top: 18px;
+    left: 884px;
+}
+.bookBox6 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 94px;left: 177px;
+}
+.bookBox7
+{
+    top: 157px;
+    left: 915px;
+}
+.bookBox7 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 100px;left: 146px;
+}
+.bookBox8
+{
+    top: 299px;
+    left: 917px;
+}
+.bookBox8 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 110px;left: 144px;
+}
+.bookBox9
+{
+    top: 430px;
+    left: 902px;
+}
+.bookBox9 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 150px;left: 159px;
+}
+.bookBox10
+{
+    top: 437px;
+    left: 783px;
+}
+.bookBox10 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 143px;left: 142px;
+}
+.bookBox11
+{
+    top: 440px;
+    left: 636px;
+}
+.bookBox11 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 140px;left: 103px;
+}
+.bookBox12
+{
+    top: 440px;
+    left: 479px;
+}
+.bookBox12 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 140px;left: 120px;
+}
+.bookBox13
+{
+    top: 440px;
+    left: 341px;
+}
+.bookBox13 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 140px;left: 96px;
+}
+.bookBox14
+{
+    top: 440px;
+    left: 163px;
+}
+.bookBox14 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 140px;left: 156px;
+}
+.bookBox15
+{
+    top: 416px;
+    left: 20px;
+}
+.bookBox15 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 163px;left: 96px;
+}
+.bookBox16
+{
+    top: 283px;
+    left: 18px;
+}
+.bookBox16 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 92px;left: 146px;
+}
+.bookBox17
+{
+    top: 127px;
+    left: 19px;
+}
+.bookBox17 > .icon
+{
+    width: 28px;height: 27px;position: absolute;top: 114px;left: 145px;
+}
+.monthTit{
+    position: relative;
+    width: 700px;
+    top: 35%;
+    margin: 0 auto;
+    text-align: center;
+}
+#pupBookmap
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+}
+#pupBookmap > .dim{
+    background: url('../../images/bookmap/popup/dim.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 21;
+    top: 0px;
+    left: 0px;
+}
+#pupBookmap > .mapView48{
+    background: url('../../images/bookmap/popup/48/movePupBookmap.png') no-repeat;
+    width: 1151px;
+    height: 359px;
+    position: absolute;
+    z-index: 21;
+    top: 441px;
+    left: 99px;
+}
+#pupBookmap > .mapView51,
+#pupBookmap > .mapView54,
+#pupBookmap > .mapView57{
+    background: url('../../images/bookmap/popup/51/movePupBookmap.png') no-repeat;
+    width: 1151px;
+    height: 359px;
+    position: absolute;
+    z-index: 21;
+    top: 441px;
+    left: 99px;
+}
+
+#pupBookmap > .mapView60,
+#pupBookmap > .mapView63,
+#pupBookmap > .mapView66,
+#pupBookmap > .mapView69 {
+    background: url('../../images/bookmap/popup/60/movePupBookmap.png') no-repeat;
+    width: 1151px;
+    height: 359px;
+    position: absolute;
+    z-index: 21;
+    top: 441px;
+    left: 99px;
+}
+
+#pupBookmap > .mapView72,
+#pupBookmap > .mapView75,
+#pupBookmap > .mapView78,
+#pupBookmap > .mapView81 {
+    background: url(../../images/bookmap/popup/72/movePupBookmap.png) no-repeat;
+    width: 1151px;
+    height: 470px;
+    position: absolute;
+    z-index: 21;
+    top: 329px;
+    left: 99px;
+}
+
+#pupBookmap > .mapView84,
+#pupBookmap > .mapView87,
+#pupBookmap > .mapView90,
+#pupBookmap > .mapView93,
+#pupBookmap > .mapView96,
+#pupBookmap > .mapView99{
+    background: url('../../images/bookmap/popup/84/movePupBookmap.png') no-repeat;
+    width: 1083px;
+    height: 514px; /* 공정현 수정 (100% --> 514px) */
+    position: absolute;
+    z-index: 21;
+    top: 286px;
+    left: 99px;
+}
+
+
+#pupBookmap > .mapView48 > .imgBook,
+#pupBookmap > .mapView51 > .imgBook,
+#pupBookmap > .mapView54 > .imgBook,
+#pupBookmap > .mapView57 > .imgBook{
+    position: absolute;
+    top: 108px;
+    left: 46px;
+}
+
+#pupBookmap > .mapView60 > .imgBook,
+#pupBookmap > .mapView63 > .imgBook,
+#pupBookmap > .mapView66 > .imgBook,
+#pupBookmap > .mapView69 > .imgBook,
+#pupBookmap > .mapView71 > .imgBook{
+    position: absolute;
+    top: 108px;
+    left: 46px;
+}
+
+#pupBookmap > .mapView69 > .imgBook > img{
+    width: 145px;
+    height: 185px;
+}
+
+
+
+#pupBookmap > .mapView84 > .imgBook,
+#pupBookmap > .mapView87 > .imgBook,
+#pupBookmap > .mapView90 > .imgBook,
+#pupBookmap > .mapView93 > .imgBook,
+#pupBookmap > .mapView96 > .imgBook,
+#pupBookmap > .mapView99 > .imgBook,
+#pupBookmap > .mapView72 > .imgBook,
+#pupBookmap > .mapView75 > .imgBook,
+#pupBookmap > .mapView78 > .imgBook,
+#pupBookmap > .mapView81 > .imgBook{
+    position: absolute;
+    top: 220px;
+    left: 45px;
+}
+
+#pupBookmap > .mapView48 > .titText,
+#pupBookmap > .mapView51 > .titText,
+#pupBookmap > .mapView54 > .titText,
+#pupBookmap > .mapView57 > .titText {
+    position: absolute;
+    top: 105px;
+    left: 220px;
+    margin-left:5px; /* 미영 추가 */
+}
+#pupBookmap > .mapView60 > .titText,
+#pupBookmap > .mapView63 > .titText,
+#pupBookmap > .mapView66 > .titText,
+#pupBookmap > .mapView69 > .titText{
+    position: absolute;
+    top: 105px;
+    left: 220px;
+    margin-left:5px; /* 미영 추가 */
+}
+#pupBookmap > .mapView84 > .titText,
+#pupBookmap > .mapView87 > .titText,
+#pupBookmap > .mapView90 > .titText,
+#pupBookmap > .mapView93 > .titText,
+#pupBookmap > .mapView96 > .titText,
+#pupBookmap > .mapView99 > .titText {
+    position: absolute;
+    top: 220px;
+    left: 262px;
+    margin-left: 5px;
+}
+
+#pupBookmap > .mapView72 > .titText,
+#pupBookmap > .mapView75 > .titText,
+#pupBookmap > .mapView78 > .titText,
+#pupBookmap > .mapView81 > .titText{
+    position: absolute;
+    top: 200px;
+    left: 224px;
+    margin-left: 5px;
+}
+/* [2021-03-04] updated by 정미영 */
+#pupBookmap > .mapView > .titText > .text{
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    border:4px solid #f4b318;;
+    background-color: #fefefe;
+    border-radius: 30px;
+    color: #e59e16;
+    font-size: 20px;
+    padding: 0 14px;
+    font-family: 'NanumGothicExtraBold';
+}
+#pupBookmap > .mapView > .titText > .titNo {
+    margin-right:8px;
+}
+/*#pupBookmap > .mapView > .titText > .titNo{
+    background: url('../../images/bookmap/popup/titNo.png') no-repeat;
+    width: 133px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 1.5px;
+    left: 7px;
+    font-size: 15px;
+    font-family: 'NanumGothicExtraBold';
+    text-align: center;
+    color: #e59e16;
+    padding-top: 7px;
+}
+#pupBookmap > .mapView > .titText > .titCont{
+    background: url('../../images/bookmap/popup/titCont.png') no-repeat;
+    width: 90px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 1.5px;
+    left: 151px;
+    font-size: 15px;
+    font-family: 'NanumGothicExtraBold';
+    text-align: center;
+    color: #e59e16;
+    padding-top: 7px;
+}*/
+#pupBookmap > .mapView48 > .titText > .titQuest,
+#pupBookmap > .mapView51 > .titText > .titQuest,
+#pupBookmap > .mapView54 > .titText > .titQuest,
+#pupBookmap > .mapView57 > .titText > .titQuest{
+    width: 450px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 41px;
+    left: 2px;
+    font-size: 32px;
+    font-family: 'OTE2_YoonSofunny';
+    padding-top: 5px;
+    line-height: 38px;
+    color: #3a3737;
+    margin-top:5px;  /* 미영 추가 */
+}
+
+#pupBookmap > .mapView60 > .titText > .titQuest,
+#pupBookmap > .mapView63 > .titText > .titQuest,
+#pupBookmap > .mapView66 > .titText > .titQuest,
+#pupBookmap > .mapView69 > .titText > .titQuest {
+    width: 450px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 41px;
+    left: 2px;
+    font-size: 32px;
+    font-family: 'OTE2_YoonSofunny';
+    padding-top: 5px;
+    line-height: 38px;
+    color: #3a3737;
+    margin-top:5px;  /* 미영 추가 */
+}
+#pupBookmap > .mapView84 > .titText > .titQuest,
+#pupBookmap > .mapView87 > .titText > .titQuest,
+#pupBookmap > .mapView90 > .titText > .titQuest,
+#pupBookmap > .mapView93 > .titText > .titQuest,
+#pupBookmap > .mapView96 > .titText > .titQuest,
+#pupBookmap > .mapView72 > .titText > .titQuest,
+#pupBookmap > .mapView75 > .titText > .titQuest,
+#pupBookmap > .mapView78 > .titText > .titQuest,
+#pupBookmap > .mapView81 > .titText > .titQuest,
+#pupBookmap > .mapView99 > .titText > .titQuest,
+#pupBookmap > .mapView93 > .titText > .titQuest,
+#pupBookmap > .mapView93 > .titText > .titQuest,
+#pupBookmap > .mapView93 > .titText > .titQuest{
+    width: 783px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 52px;
+    left: 2px;
+    font-size: 28px;
+    font-family: 'OTE2_YoonSofunny';
+    line-height: 38px;
+    color: #3a3737;
+}
+#pupBookmap > .mapView48 > .btnClose,
+#pupBookmap > .mapView51 > .btnClose,
+#pupBookmap > .mapView54 > .btnClose,
+#pupBookmap > .mapView57 > .btnClose{
+    position: absolute;
+    top: 243px;
+    left: 224px;
+}
+
+#pupBookmap > .mapView60 > .btnClose,
+#pupBookmap > .mapView63 > .btnClose,
+#pupBookmap > .mapView66 > .btnClose,
+#pupBookmap > .mapView69 > .btnClose {
+    position: absolute;
+    top: 271px;
+    left: 222px;
+}
+
+#pupBookmap > .mapView84 > .btnClose,
+#pupBookmap > .mapView87 > .btnClose,
+#pupBookmap > .mapView90 > .btnClose,
+#pupBookmap > .mapView93 > .btnClose,
+#pupBookmap > .mapView96 > .btnClose{
+    position: absolute;
+    top: 401px;
+    left: 262px;
+}
+
+#pupBookmap > .mapView48 > .btnConfirm,
+#pupBookmap > .mapView51 > .btnConfirm,
+#pupBookmap > .mapView54 > .btnConfirm,
+#pupBookmap > .mapView57 > .btnConfirm {
+    position: absolute;
+    top: 243px;
+    left: 382px;
+}
+
+#pupBookmap > .mapView60 > .btnConfirm,
+#pupBookmap > .mapView63 > .btnConfirm,
+#pupBookmap > .mapView66 > .btnConfirm,
+#pupBookmap > .mapView69 > .btnConfirm{
+    position: absolute;
+    top: 272px;
+    left: 382px;
+}
+
+
+#pupBookmap > .mapView84 > .btnConfirm,
+#pupBookmap > .mapView87 > .btnConfirm,
+#pupBookmap > .mapView90 > .btnConfirm,
+#pupBookmap > .mapView93 > .btnConfirm,
+#pupBookmap > .mapView96 > .btnConfirm {
+    position: absolute;
+    top: 401px;
+    left: 419px;
+}
+#pupBookmap > .mapView72 > .btnClose,
+#pupBookmap > .mapView75 > .btnClose,
+#pupBookmap > .mapView78 > .btnClose,
+#pupBookmap > .mapView81 > .btnClose {
+    position: absolute;
+    top: 389px;
+    left: 224px;
+}
+#pupBookmap > .mapView72 > .btnConfirm,
+#pupBookmap > .mapView75 > .btnConfirm,
+#pupBookmap > .mapView78 > .btnConfirm,
+#pupBookmap > .mapView81 > .btnConfirm{
+    position: absolute;
+    top: 389px;
+    left: 386px;
+}
+
+.bookBox5.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/5.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 174px;
+    height: 174px;
+}
+.bookBox6.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/6.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 209px;
+    height: 183px;
+}
+.bookBox7.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/7.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 179px;
+    height: 154px;
+}
+.bookBox8.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/8.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 179px;
+    height: 143px;
+}
+.bookBox9.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/9.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 193px;
+    height: 183px;
+}
+.bookBox10.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/10.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 178px;
+    height: 176px;
+}
+.bookBox11.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/11.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 142px;
+    height: 174px;
+}
+.bookBox12.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/12.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 153px;
+    height: 173px;
+}
+.bookBox13.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/13.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 152px;
+    height: 173px;
+}
+.bookBox14.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/14.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 189px;
+    height: 173px;
+}
+.bookBox15.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/15.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 208px;
+    height: 197px;
+}
+.bookBox16.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/16.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 180px;
+    height: 180px;
+}
+.bookBox17.lck:after {
+    content:'';
+    position:absolute;
+    background:url('../../images/bookmap/lock/17.png') no-repeat center center;
+    top: 0px;
+    left: 0px;
+    width: 179px;
+    height: 164px;
+}
+
+.btnMain{
+    top: 24px;
+    left: 1170px;
+}
+
+.ebook{
+    position: absolute;
+    top: 220px;
+    left: 45px;
+    background-image: url("../../images/button/ebook_play.png");
+    opacity: 80%;
+    background-repeat : no-repeat;
+    background-size : 115px;
+    background-position: center;
+    width: 145px;
+    height: 184px;
+}

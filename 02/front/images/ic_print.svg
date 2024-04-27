@@ -1,0 +1,10 @@
+<svg id="ic_print" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="패스_365" data-name="패스 365" d="M0,0H24V24H0Z" fill="none"/>
+  <path id="패스_366" data-name="패스 366" d="M17,18h2a2.136,2.136,0,0,0,2-2.25v-4.5A2.136,2.136,0,0,0,19,9H5a2.136,2.136,0,0,0-2,2.25v4.5A2.136,2.136,0,0,0,5,18H7" transform="translate(0 -1)" fill="none" stroke="#ffc80e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="패스_367" data-name="패스 367" d="M17,8V4.667A1.856,1.856,0,0,0,15,3H9A1.856,1.856,0,0,0,7,4.667V8" fill="none" stroke="#ffc80e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <rect id="사각형_6315" data-name="사각형 6315" width="10" height="9" rx="1" transform="translate(7 12)" fill="none" stroke="#ffc80e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <g id="그룹_320" data-name="그룹 320" transform="translate(0.046 -0.173)">
+    <path id="패스_368" data-name="패스 368" d="M9.429,15.173h4" transform="translate(0.526)" fill="none" stroke="#ffc80e" stroke-linecap="round" stroke-width="1.5"/>
+    <path id="패스_369" data-name="패스 369" d="M9.429,15.173h4" transform="translate(0.526 3)" fill="none" stroke="#ffc80e" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
+</svg>

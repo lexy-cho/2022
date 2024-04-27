@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전</button>
+					<h1>생육관리</h1>
+					<button class="btnNav">메뉴여닫기</button>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu -->
+			<div id="snb">
+				<section>
+					<div class="c-menu c-menu--slide-right">
+						<button class="c-close gnbClose">닫기</button>
+						<div class="back" data-include="include/snb.html"></div>
+					</div>
+					<div class="c-mask"></div><!-- /c-mask -->
+				</section>
+			</div>
+			<!-- //Sub Menu -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- Write -->
+							<div class="tws">
+					      <dl>
+					        <dt>작업일</dt>
+					        <dd><input type="text" class="cal" placeholder="일자 선택"  /></dd>
+					      </dl>
+								<h3>조사항목</h3>
+								<table>
+									<colgroup>
+										<col width="25%" />
+										<col width="30%" />
+										<col width="15%" />
+										<col width="30%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>조사항목</th>
+											<th>이번주</th>
+											<th>단위</th>
+											<th>지난주</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>생장길이</th>
+											<td><input type="text"/></td>
+											<td class="tC">cm</td>
+											<td class="tC">12.5</td>
+										</tr>
+										<tr>
+											<th>두께</th>
+											<td><input type="text"/></td>
+											<td class="tC">cm</td>
+											<td class="tC">3.2</td>
+										</tr>
+										<tr>
+											<th>옆길이</th>
+											<td><input type="text"/></td>
+											<td class="tC">cm</td>
+											<td class="tC">2.5</td>
+										</tr>
+										<tr>
+											<th>화방높이</th>
+											<td><input type="text"/></td>
+											<td class="tC">cm</td>
+											<td class="tC">10.5</td>
+										</tr>
+										<tr>
+											<th>화방수</th>
+											<td><input type="text"/></td>
+											<td class="tC">점</td>
+											<td class="tC">5</td>
+										</tr>
+										<tr>
+											<th>적엽수</th>
+											<td><input type="text"/></td>
+											<td class="tC">점</td>
+											<td class="tC">2</td>
+										</tr>
+										<tr>
+											<th>착과량</th>
+											<td><input type="text"/></td>
+											<td class="tC">개</td>
+											<td class="tC">12</td>
+										</tr>
+										<tr>
+											<th>수확량</th>
+											<td><input type="text"/></td>
+											<td class="tC">kg</td>
+											<td class="tC">1.3</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="fileSet">
+									<span class="fileFind">
+										<input type="file" id="file1" />
+										<label for="file1">사진선택</label>
+									</span> <!--파일선택 -->
+									<!-- <span class="loadIng">업로드 중</span>
+									<button class="loadFail">업로드 실패</button> -->
+									<div class="fileAddSet">
+										<div>
+											<ul>
+												<li><img src="../images/sampleImage.png" alt="" /><button>삭제</button></li>
+												<li><img src="../images/sampleImage.png" alt="" /><button>삭제</button></li>
+											</ul>
+											<span>
+												<button>이전</button>
+												<button>다음</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--//Write -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="growth_view.html" class="btnL">등록</a>
+								<a href="bbs_list.html" class="btnL white">취소</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

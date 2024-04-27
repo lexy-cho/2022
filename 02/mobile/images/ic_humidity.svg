@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic_humidity" transform="translate(0 -3)">
+    <circle id="타원_30" data-name="타원 30" cx="15" cy="15" r="15" transform="translate(0 3)" fill="#ffc80e"/>
+    <g id="그룹_161" data-name="그룹 161" transform="translate(6.478 9.478)">
+      <path id="패스_199" data-name="패스 199" d="M0,0H17.275V17.275H0Z" fill="none"/>
+      <path id="패스_200" data-name="패스 200" d="M9.478,2.308,5.915,5.871a5.039,5.039,0,1,0,7.126,0Zm0-2.036,4.581,4.581a6.478,6.478,0,1,1-9.162,0L9.478.272Zm0,12.761v-7.2a3.6,3.6,0,0,1,0,7.2Z" transform="translate(-0.841 -0.076)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

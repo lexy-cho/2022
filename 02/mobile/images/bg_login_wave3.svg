@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="560" height="129" viewBox="0 0 560 129">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_6409" data-name="사각형 6409" width="560" height="129" transform="translate(0 -0.001)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="bg_wave" transform="translate(0 0.001)" opacity="0.2" clip-path="url(#clip-path)">
+    <path id="패스_533" data-name="패스 533" d="M507.723,877.606s-152.508-31.281-332.571,24.33S-121.133,892.482-132.8,860.05s-2.064,165.321-2.064,165.321,85.936,219.054,95.794,219.054,528.9-89.566,528.9-89.566l32.04-177.795Z" transform="translate(78.55 -827.404)" fill="#ffeeb5" opacity="0.8"/>
+    <path id="패스_534" data-name="패스 534" d="M516,904.963s-160.787-60.9-340.85-5.217S-121.133,881.566-132.8,849.091s-2.064,174.254-2.064,174.254,85.936,219.346,95.794,219.346,528.9-89.685,528.9-89.685l32.04-178.032Z" transform="translate(78.549 -816.431)" fill="#ffc80e"/>
+  </g>
+</svg>

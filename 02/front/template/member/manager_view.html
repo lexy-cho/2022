@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>관리자관리</h2><span><em>회원관리</em><strong>관리자관리</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<h3>관리자 상세정보</h3>
+							<!-- View -->
+							<div class="tvs">
+								<table>
+									<colgroup>
+										<col width="154"/>
+										<col width="40%"/>
+										<col width="154"/>
+										<col width="*"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>사용자 ID</th>
+											<td colspan="3">abcd123</td>
+										</tr>
+										<tr>
+											<th>이름</th>
+											<td colspan="3">홍길동</td>
+										</tr>
+										<tr>
+											<th>소속</th>
+											<td>총무부</td>
+											<th>직급</th>
+											<td>과장</td>
+										</tr>
+										<tr>
+											<th>연락처</th>
+											<td>02-1234-5678</td>
+											<th>모바일</th>
+											<td>010-1234-4567</td>
+										</tr>
+										<tr>
+											<th>이메일</th>
+											<td colspan="3">aaa@aaa.com</td>
+										</tr>
+										<tr>
+											<th>상태</th>
+											<td colspan="3">승인대기</td>
+										</tr>
+										<tr>
+											<th>등록일자</th>
+											<td colspan="3">2021-02-18 12:12:12</td>
+										</tr>
+										<tr>
+											<th>비고</th>
+											<td colspan="3">비고 내용은 비로란에 입력한 정보 그대로 노출됩니다.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--//View -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<span class="left"><button class="btnL white" id="basicBtn1">관리자 승인</button></span>
+								<button class="btnL line">삭제</button>
+								<a href="manager_modify.html" class="btnL">수정</a>
+								<span class="right"><a href="manager.html" class="btnList">목록</a></span>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("basicBtn1","popDim","basicPop1");
+				popupClose("basicPopClose1","popDim","basicPop1");
+			});
+		</script>
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none;">
+			<!-- 기본 팝업 -->
+			<div class="basicPop managerPop" id="basicPop1">
+				<h1 class="tt">관리자 승인</h1>
+				<button class="btnPClose" id="basicPopClose1">닫기</button>
+				<div class="pBack">
+					<div><label>농장코드 : </label><input type="text" /> <button class="btnM">확인</button></div>
+					<p>관리자 승인을 하시겠습니까?</p>
+				</div>
+				<div class="pBtn">
+					<button class="btnM line">취소</button>
+					<a class="btnM" href="manager_view2.html">승인</a></a>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //Data 팝업 -->
+	</body>
+</html>

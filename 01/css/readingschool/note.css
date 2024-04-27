@@ -1,0 +1,151 @@
+
+#selectBoxArea {
+    background: url(../../images/readingschool/note/bg_select_area.png) no-repeat 100% 100%;
+	border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 112px;
+    height: 54px;
+    outline: none;
+    color: #312a20;
+    font-size: 19px; 
+    font-family: 'NanumSquareRoundBold';
+    font-weight: bold;
+    padding-left: 24px;
+    border: none;
+}
+#selectweek{
+    background: url(../../images/bookmap/report/bg_select_month.png) no-repeat 100% 100%;
+    border-radius: 0px;
+    appearance: none;
+    width: 112px;
+    height: 54px;
+    outline: none;
+    color: #312a20;
+    font-size: 19px;
+    font-family: 'NanumSquareRoundBold';
+    font-weight: bold;
+    padding-left: 24px;
+    border: none;
+    letter-spacing: -1px;
+    -webkit-appearance:none; /* 화살표 없애기 for chrome_엠피지오*/
+
+}
+.notes {
+    z-index: 0;
+    position: absolute;
+    top: 14%;
+    left: 3.2%;
+    width: 95.6%;
+    height: 86%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.notes a {
+	height: 281px;
+}
+/* 년도_주차 */
+.thumnamil_Y01_3{
+    width: 90%;
+    height: auto;
+    padding: 20px 20px;
+}
+.cardView
+{
+	position: relative;
+    width: 387px;
+    height: 273px;
+    border-radius: 6px;
+    margin-right: 18px;
+    margin-bottom: 17px;
+}
+.cardView > .banner-txt
+{
+    position: relative;
+    top: 239px;
+    left: 15px;
+}
+.cardView > .time-txt
+{  
+	position: relative;
+	top: 204px;
+	left: 15px;
+}
+.cardView > .banner-txt > .txtRegDt , .cardView > .time-txt > .txtRegDt 
+{
+    font-size: 12px;
+    color: #585450;
+    position: absolute;
+    left: 265px;
+    font-family: 'NanumSquareRound';
+}
+.cardView > .banner-txt > .sp_week_on
+{
+    width: 96px;
+    height: 28px;
+    padding-top: 9px;
+    top: -3px;
+    z-index: 10;
+    text-align: center;
+}
+.cardView > .time-txt > .sp_week_on
+{
+    width: 96px;
+    height: 28px;
+    padding-top: 6px;
+    z-index: 10;
+    text-align: center;
+}
+
+.type-write > .txtPortContent
+{
+    position: relative;
+    top: 15px;
+    left: 30px;
+}
+.type-write > .txtPortContent > .cont_tit
+{
+    font-size: 5px;
+    color: black;
+    font-weight: bolder;
+    font-family: 'Nanum Square Round OTF Bold';
+}
+.type-write > .txtPortContent > .cont_cont
+{
+    font-size: 3px;
+    color: black;
+    font-weight: bolder;
+    font-family: 'Nanum Square Round OTF Bold';
+    top: 29px;
+    position: absolute;
+    left: 0px;
+    width: 325px;
+    height: 165px;
+}
+.type-record > .txtPortContent > .cont_timer {
+	position: relative;
+    top: 40px;
+    left: 141px;
+    text-align: center;
+    font-size: 28px;
+    color: #514141;
+    font-family: 'NanumGothicExtraBold';
+}
+.search_sect
+{
+    position: absolute;
+    top: 80px;
+    left: 184px;
+    z-index: 15;
+}
+#uploadbtn
+{
+    background: url(../../images/button/school_btn.png) no-repeat;
+    width: 238px;
+    height: 59px;
+    position: absolute;
+    top: 33px;
+    left: 916px;
+}
+.scrollhidden {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}

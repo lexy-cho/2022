@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/chart/apexcharts.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+    <script type="text/javascript" src="../../js/chart/apexcharts.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>환경정보</h2><span><em>환경분석</em><strong>환경정보</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet">
+									<div class="gridItem short">
+										<label>작기</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>2021-</option>
+											</select>
+										</span>
+										<label class="center">하우스</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>A동</option>
+											</select>
+										</span>
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+							</div>
+							<!--//List search-->
+							<!-- tab-wrap -->
+							<div class="tabwrap">
+						    <!-- tab -->
+						    <div class="tabBack">
+					        <div class="tabNav">
+				            <nav>
+			                <ul>
+		                    <li class="on"><button class="newTab" data-name="0">온도 및 일사량 변화</button></li>
+		                    <li><button data-name="1">온도 및 습도 변화</button></li>
+		                    <li><button data-name="2">일일 온도 변화</button></li>
+		                    <li><button data-name="3">일일 습도 변화</button></li>
+			                </ul>
+				            </nav>
+					        </div>
+						    </div>
+						    <!--// tab -->
+						    <div class="tabLayout">
+						        <div class="tabData tData0" style="display:block;">
+											<div id="chart" class="chartLayout"></div>
+											<script>
+												var options = {
+														series: [{
+														name: "온도",
+														data: [3.3, 5.2, 9.2, 13.0, 16.0]
+													}, {
+														name: "일사량",
+														data: [100.0, 120.0, 180.0, 220.0, 350.0]
+													}],
+														chart: {
+														height: 400,
+														type: 'line',
+														zoom: {
+															enabled: false
+														},
+									          toolbar: {
+									            show: false
+									          }
+													},
+									        grid: {
+														show: true
+													},
+													dataLabels: {
+														enabled: false
+													},
+													stroke: {
+														curve: 'straight',
+														width: 3
+													},
+													colors: ['#f56600', '#00b136'],
+													xaxis: {
+														categories: ['01', '02', '03', '04', '05'],
+													},
+													yaxis: [
+														{
+															min: 0,
+															max: 21,
+															tickAmount: 4,
+															seriesName: '온도',
+															labels: {
+																style: {
+																	fontWeight: 600,
+																	colors: '#f56600'
+																}
+															},
+														},
+														{
+															min: 0,
+															max: 450,
+															opposite: true,
+															tickAmount: 4,
+															seriesName: '일사량',
+															labels: {
+																style: {
+																	fontWeight: 600,
+																	colors: '#00b136'
+																}
+															},
+														}
+													],
+									        legend: {
+									          height: 50
+									        }
+												};
+												var chart = new ApexCharts(document.querySelector("#chart"), options);
+												chart.render();
+											</script>
+											<!-- List -->
+							        <div class="tls dataSet">
+							          <table>
+							            <colgroup>
+							              <col width="90"/>
+								            <col span="5" width="*"/>
+							            </colgroup>
+							            <thead>
+							              <tr>
+															<th>월별</th>
+															<th>01</th>
+															<th>02</th>
+															<th>03</th>
+															<th>04</th>
+															<th>05</th>
+							              </tr>
+							            </thead>
+							            <tbody>
+							              <!--Loop-->
+							              <tr>
+							                <th>온도</th>
+															<td>3.3</td>
+															<td>5.2</td>
+															<td>9.2</td>
+															<td>13.0</td>
+															<td>16.0</td>
+							              </tr>
+							              <!--//Loop-->
+							              <tr>
+							                <th>일사량</th>
+															<td>100.0</td>
+															<td>120.0</td>
+															<td>180.0</td>
+															<td>220.0</td>
+															<td>350.0</td>
+							              </tr>
+							            </tbody>
+							          </table>
+							        </div>
+											<!--//List -->
+										</div>
+						        <div class="tabData tData1">
+											<div id="chart2" class="chartLayout"></div>
+											<script>
+											</script>
+											<!-- List -->
+							        <div class="tls dataSet">
+							          <table>
+							            <colgroup>
+							              <col width="90"/>
+								            <col span="5" width="*"/>
+							            </colgroup>
+							            <thead>
+							              <tr>
+															<th>월별</th>
+															<th>01</th>
+															<th>02</th>
+															<th>03</th>
+															<th>04</th>
+															<th>05</th>
+							              </tr>
+							            </thead>
+							            <tbody>
+							              <!--Loop-->
+							              <tr>
+							                <th>온도</th>
+															<td>3.3</td>
+															<td>5.2</td>
+															<td>9.2</td>
+															<td>13.0</td>
+															<td>16.0</td>
+							              </tr>
+							              <!--//Loop-->
+							              <tr>
+							                <th>습도</th>
+															<td>100.0</td>
+															<td>120.0</td>
+															<td>180.0</td>
+															<td>220.0</td>
+															<td>350.0</td>
+							              </tr>
+							            </tbody>
+							          </table>
+							        </div>
+											<!--//List -->
+										</div>
+						        <div class="tabData tData2">일일 온도 변화</div>
+						        <div class="tabData tData3">일일 습도 변화</div>
+						    </div>
+							</div>
+							<!-- //tab-wrap -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				$(".tabNav li button").click(function () {
+					var activeTab = $(this).attr("data-name");
+					if ( activeTab == 1) {
+						var options2 = {
+								series: [{
+								name: "온도",
+								data: [3.3, 5.2, 9.2, 13.0, 16.0]
+							}, {
+								name: "습도",
+								data: [100.0, 120.0, 180.0, 220.0, 350.0]
+							}],
+								chart: {
+								height: 400,
+								type: 'line',
+								zoom: {
+									enabled: false
+								},
+								toolbar: {
+									show: false
+								}
+							},
+							grid: {
+								show: true
+							},
+							dataLabels: {
+								enabled: false
+							},
+							stroke: {
+								curve: 'straight',
+								width: 3
+							},
+							colors: ['#f56600', '#0e7aff'],
+							xaxis: {
+								categories: ['01', '02', '03', '04', '05'],
+							},
+							yaxis: [
+								{
+									min: 0,
+									max: 21,
+									tickAmount: 4,
+									seriesName: '온도',
+									labels: {
+										style: {
+											fontWeight: 600,
+											colors: '#f56600'
+										}
+									},
+								},
+								{
+									min: 0,
+									max: 450,
+									opposite: true,
+									tickAmount: 4,
+									seriesName: '일사량',
+									labels: {
+										style: {
+											fontWeight: 600,
+											colors: '#00b136'
+										}
+									},
+								}
+							],
+							legend: {
+								height: 50
+							}
+						};
+						var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+						chart2.render();
+					}
+				}); /* Tab */
+			});
+		</script>
+	</body>
+</html>

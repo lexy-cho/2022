@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/find_pw.css">
+    <title>비밀번호 찾기</title>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div class="find_pw_all_wrap">
+        <p class="find_pw_title_txt">토탈스쿨 비밀번호 찾기</p>
+        <!-- 비밀번호 찾기 input -->
+        <div class="find_pw_form_wrap">
+                    <legend>비밀번호 찾기</legend>
+                    <div class="input_id_wrap">
+                        <input type="text" placeholder="사번">
+                    </div>
+                    <div class="input_mobile_wrap">
+                        <input type="tel" placeholder="휴대폰 번호('-'를 제외하고 입력해주세요.)">
+                        <button class="verification_code_btn">인증번호</button>
+                    </div>
+                    <div class="verification_code">
+                        <p class="verification_code_txt">인증번호</p>
+                        <input type="number">
+                    </div>
+            <div class="input_btn_wrap">
+                <button type="button">취소</button>
+                <button>확인</button>
+            </div>
+        </div>
+        <!-- 팝업창 -->
+        <div class="verification_code_popup_wrap">
+            <div class="verification_code_popup_bg"></div>
+            <div class="verification_code_popup">
+                <p>인증번호가 발송되었습니다.</p>
+                <button>확인</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

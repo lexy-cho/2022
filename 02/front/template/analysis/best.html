@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/chart/apexcharts.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+    <script type="text/javascript" src="../../js/chart/apexcharts.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>환경정보</h2><span><em>환경분석</em><strong>환경정보</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>비교분석</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>환경정보</option>
+												<option value="">생산량</option>
+												<option value="">생육 정보</option>
+											</select>
+										</span>
+										<label class="center">기간</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>일자 별</option>
+												<option value="">주차 별</option>
+												<option value="">월 별</option>
+											</select>
+										</span>
+										<label class="center">일자 선택</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>2021-11-11</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>작기</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>Season 1</option>
+											</select>
+										</span>
+										<label class="center">하우스</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>A동</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>구분</label>
+										<div class="checkCol">
+											<span class="checkSet">
+												<input type="checkbox" id="ch02"/>
+												<label for="ch02"><i></i>최고 온도</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch03"/>
+												<label for="ch03"><i></i>최저 온도</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch04"/>
+												<label for="ch04"><i></i>평균 온도</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch05"/>
+												<label for="ch05"><i></i>평균 습도</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch06"/>
+												<label for="ch06"><i></i>CO2</label>
+											</span>
+										</div>
+										<button class="btnChart" id="basicBtn1">차트</button>
+									</div>
+								</div>
+								<span class="btn">
+									<button class="btnM">검색</button>
+								</span>
+							</div>
+							<!--//List search-->
+							<!-- tab-wrap -->
+							<div class="tabwrap">
+						    <!-- tab -->
+						    <div class="tabBack">
+					        <div class="tabNav">
+				            <nav>
+			                <ul>
+		                    <li class="on"><button class="newTab" data-name="0">일자 별 정보</button></li>
+		                    <li><button data-name="1">주차 별 정보</button></li>
+		                    <li><button data-name="2">월 별 정보</button></li>
+			                </ul>
+				            </nav>
+					        </div>
+						    </div>
+						    <!--// tab -->
+						    <div class="tabLayout">
+						        <div class="tabData tData0" style="display:block;">
+											<!-- List -->
+							        <div class="tls dataSet wideCase">
+							          <table>
+							            <colgroup>
+							              <col width="100"/>
+								            <col span="20" width="80"/>
+							            </colgroup>
+							            <thead class="subHead">
+							              <tr>
+															<th rowspan="2">일 별</th>
+															<th colspan="2" class="dubTh">1 일차</th>
+															<th colspan="2" class="dubTh">2 일차</th>
+															<th colspan="2" class="dubTh">3 일차</th>
+															<th colspan="2" class="dubTh">4 일차</th>
+															<th colspan="2" class="dubTh">5 일차</th>
+															<th colspan="2" class="dubTh">6 일차</th>
+															<th colspan="2" class="dubTh">7 일차</th>
+															<th colspan="2" class="dubTh">8 일차</th>
+															<th colspan="2" class="dubTh">9 일차</th>
+															<th colspan="2" class="dubTh">10 일차</th>
+							              </tr>
+							              <tr class="subTh">
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+							              </tr>
+							            </thead>
+							            <tbody>
+							              <!--Loop-->
+							              <tr>
+							                <th>최고 온도</th>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+							              </tr>
+							              <!--//Loop-->
+							              <tr>
+							                <th>최저 온도</th>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+							              </tr>
+							              <tr>
+							                <th>평균 온도</th>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+							              </tr>
+							              <tr>
+							                <th>평균 습도</th>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+							              </tr>
+							              <tr>
+							                <th>CO2</th>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+							              </tr>
+							              <!-- 데이터 없을 경우 -->
+							              <tr><td colspan="21" class="noneData">등록된 데이터가 없습니다.</td></tr>
+							              <!-- //데이터 없을 경우 -->
+							            </tbody>
+							          </table>
+							        </div>
+											<!--//List -->
+										</div>
+						        <div class="tabData tData1">
+											<!-- List -->
+							        <div class="tls dataSet wideCase">
+							          <table>
+							            <colgroup>
+							              <col width="100"/>
+								            <col span="12" width="80"/>
+							            </colgroup>
+							            <thead class="subHead">
+							              <tr>
+															<th rowspan="2">주차 별</th>
+															<th colspan="2" class="dubTh">1 주차</th>
+															<th colspan="2" class="dubTh">2 주차</th>
+															<th colspan="2" class="dubTh">3 주차</th>
+															<th colspan="2" class="dubTh">4 주차</th>
+															<th colspan="2" class="dubTh">5 주차</th>
+															<th colspan="2" class="dubTh">6 주차</th>
+							              </tr>
+							              <tr class="subTh">
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+							              </tr>
+							            </thead>
+							            <tbody>
+							              <!-- 데이터 없을 경우 -->
+							              <tr><td colspan="13" class="noneData">등록된 데이터가 없습니다.</td></tr>
+							              <!-- //데이터 없을 경우 -->
+							            </tbody>
+							          </table>
+							        </div>
+											<!--//List -->
+										</div>
+						        <div class="tabData tData2">
+											<!-- List -->
+							        <div class="tls dataSet wideCase">
+							          <table>
+							            <colgroup>
+							              <col width="100"/>
+								            <col span="24" width="80"/>
+							            </colgroup>
+							            <thead class="subHead">
+							              <tr>
+															<th rowspan="2">월 별</th>
+															<th colspan="2" class="dubTh">1월</th>
+															<th colspan="2" class="dubTh">2월</th>
+															<th colspan="2" class="dubTh">3월</th>
+															<th colspan="2" class="dubTh">4월</th>
+															<th colspan="2" class="dubTh">5월</th>
+															<th colspan="2" class="dubTh">6월</th>
+															<th colspan="2" class="dubTh">7월</th>
+															<th colspan="2" class="dubTh">8월</th>
+															<th colspan="2" class="dubTh">9월</th>
+															<th colspan="2" class="dubTh">10월</th>
+															<th colspan="2" class="dubTh">11월</th>
+															<th colspan="2" class="dubTh">12월</th>
+							              </tr>
+							              <tr class="subTh">
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+															<th>우수 농가</th>
+															<th class="noLine">농가</th>
+							              </tr>
+							            </thead>
+							            <tbody>
+							              <!--Loop-->
+							              <tr>
+							                <th>최고 온도</th>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+															<td>3.3</td>
+															<td>5</td>
+							              </tr>
+							              <!--//Loop-->
+							              <tr>
+							                <th>최저 온도</th>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+															<td>1</td>
+							              </tr>
+							              <tr>
+							                <th>평균 온도</th>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+															<td>2</td>
+															<td>3</td>
+							              </tr>
+							              <tr>
+							                <th>평균 습도</th>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+															<td>3</td>
+															<td>50</td>
+							              </tr>
+							              <tr>
+							                <th>CO2</th>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+															<td>4</td>
+															<td>40</td>
+							              </tr>
+							              <!-- 데이터 없을 경우 -->
+							              <!-- <tr><td colspan="25" class="noneData">등록된 데이터가 없습니다.</td></tr> -->
+							              <!-- //데이터 없을 경우 -->
+							            </tbody>
+							          </table>
+							        </div>
+											<!--//List -->
+										</div>
+						    </div>
+							</div>
+							<!-- //tab-wrap -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none">
+			<!-- 기본 팝업 -->
+			<div class="basicPop chartPop" id="basicPop1">
+				<h1 class="tt">환경정보 비교분석</h1>
+				<button class="btnPClose" id="basicPopClose1">닫기</button>
+				<div class="pBack">
+					<div id="chart"></div>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //Data 팝업 -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("basicBtn1","popDim","basicPop1");
+				popupClose("basicPopClose1","popDim","basicPop1");
+				$("#basicBtn1").bind('tap click', function(){
+					var options = {
+							series: [{
+							name: "최고 온도",
+							data: [5,6,10,11,16,8,10]
+						}, {
+							name: "최저 온도",
+							data: [-1,-5,-10,-6,-4,-3,-1,]
+						}, {
+							name: "평균 온도",
+							data: [3,3,3,3,3,3,3,]
+						}, {
+							name: "평균 습도",
+							data: [1,2,3,2,1,3,2]
+						}, {
+							name: "CO2",
+							data: [3,3,4,3,4,3,4]
+						}],
+							chart: {
+							height: 450,
+							type: 'line',
+							zoom: {
+								enabled: false
+							},
+							toolbar: {
+								show: false
+							}
+						},
+						grid: {
+							show: true
+						},
+						dataLabels: {
+							enabled: false
+						},
+						stroke: {
+							curve: 'straight',
+							width: 3
+						},
+						colors: ['#4F81BD', '#BF4F4C', '#9BBB59', '#8064A2', '#4BACC6'],
+						xaxis: {
+							categories: ['11월 11일','11월 12일','11월 13일','11월 14일','11월 15일','11월 16일','11월 17일'],
+						},
+						yaxis: {
+							min: -20,
+							max: 20,
+							tickAmount: 4,
+							labels: {
+								style: {
+									fontWeight: 600,
+								}
+							},
+						},
+						legend: {
+							height: 50
+						}
+					};
+					var chart = new ApexCharts(document.querySelector("#chart"), options);
+					chart.render();
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>농가알림</h2><span><em>알림</em><strong>농가알림</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- View -->
+							<div class="tvs2">
+								<div class="tvsHead">
+									<strong>테스트 공지입니다. 테스트 공지입니다. 테스트 공지입니다.</strong>
+									<span class="date">2021-02-18 11:08:35</span>
+								</div>
+								<div class="tvsInfo">
+									<!-- <dl>
+										<dt>작성자 :</dt>
+										<dd class="pr1">홍길동 (000000)</dd>
+										<dt>마지막 수정자 :</dt>
+										<dd>홍길동 (000000)</dd>
+									</dl> -->
+									<dl class="right">
+										<dt>등록자</dt>
+										<dd>Admin</dd>
+									</dl>
+								</div>
+								<div class="tvsContents"><p>글 내용이 나온다면 이 부분에서 표기됩니다. 글 내용이 나온다면 이 부분에서 표기됩니다. 글 내용이 나온다면 이 부분에서 표기됩니다. 글 내용이 나온다면 이 부분에서 표기됩니다. 글 내용이 나온다면 이 부분에서 표기됩니다. 글 내용이 나온다면 이 부분에서 표기됩니다. 글 내용이 나온다면 이 부분에서 표기됩니다.</p></div>
+								<div class="tvsFile">
+									<div><span>첨부파일</span> <a href="" download>테스트.pdf</a><a href="" download>sampleImage.png</a></div>
+								</div>
+							</div>
+							<!--//View -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<span class="left"><button class="btnL white" id="basicBtn1">알림전송</button></span>
+								<button class="btnL line">삭제</button>
+								<a href="notice_write.html" class="btnL">수정</a>
+								<span class="right"><a href="notice.html" class="btnList">목록</a></span>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("basicBtn1","popDim","basicPop1");
+				popupClose("basicPopClose1","popDim","basicPop1");
+				popupClose("basicPopClose2","popDim","basicPop1");
+			});
+		</script>
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none;">
+			<!-- 기본 팝업 -->
+			<div class="basicPop smsPop" id="basicPop1">
+				<h1 class="tt">알림전송</h1>
+				<button class="btnPClose" id="basicPopClose2">닫기</button>
+				<div class="pBack">
+					<!-- List search -->
+					<div class="listSearch">
+						<div class="gridSet">
+							<div class="gridItem">
+								<label>하우스/구역</label>
+								<span class="selectSet w150">
+									<select name="" id="">
+										<option value="" selected>A동</option>
+									</select>
+								</span>
+								<span class="selectSet w150">
+									<select name="" id="">
+										<option value="" selected>A1동</option>
+									</select>
+								</span>
+								<label class="center">작목/품종</label>
+								<span class="selectSet w150">
+									<select name="" id="">
+										<option value="" selected>딸기</option>
+									</select>
+								</span>
+								<span class="selectSet w150">
+									<select name="" id="">
+										<option value="" selected>기타</option>
+									</select>
+								</span>
+							</div>
+						</div>
+						<div class="gridSet">
+							<div class="gridItem">
+								<label>구분</label>
+								<span class="selectSet w100">
+									<select name="" id="">
+										<option value="" selected>전체</option>
+									</select>
+								</span>
+								<input type="text" class="w214"/>
+							</div>
+						</div>
+						<span class="btn">
+							<button class="btnM">검색</button>
+						</span>
+					</div>
+					<!--//List search-->
+					<!-- List -->
+					<div class="tls">
+						<table>
+							<colgroup>
+								<col width="50"/>
+								<col width="120"/>
+								<col width="*"/>
+								<col width="120"/>
+								<col width="120"/>
+								<col width="120"/>
+								<col width="120"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										<span class="checkSet noLabel">
+											<input type="checkbox" id="ch1"/>
+											<label for="ch1"><i></i></label>
+										</span>
+									</th>
+									<th>이름</th>
+									<th>모바일</th>
+									<th>하우스</th>
+									<th>구역</th>
+									<th>작목</th>
+									<th>품종</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--Loop-->
+								<tr>
+									<td>
+										<span class="checkSet noLabel">
+											<input type="checkbox" id="ch2"/>
+											<label for="ch2"><i></i></label>
+										</span>
+									</td>
+									<td>강감찬</td>
+									<td>010-0000-0000</td>
+									<td>A동</td>
+									<td>A1동</td>
+									<td>딸기</td>
+									<td>기타</td>
+								</tr>
+								<!--//Loop-->
+								<tr>
+									<td>
+										<span class="checkSet noLabel">
+											<input type="checkbox" id="ch3"/>
+											<label for="ch3"><i></i></label>
+										</span>
+									</td>
+									<td>강감찬</td>
+									<td>010-0000-0000</td>
+									<td>A동</td>
+									<td>A1동</td>
+									<td>딸기</td>
+									<td>기타</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="checkSet noLabel">
+											<input type="checkbox" id="ch4"/>
+											<label for="ch4"><i></i></label>
+										</span>
+									</td>
+									<td>강감찬</td>
+									<td>010-0000-0000</td>
+									<td>A동</td>
+									<td>A1동</td>
+									<td>딸기</td>
+									<td>기타</td>
+								</tr>
+								<!-- 데이터 없을 경우 -->
+								<tr><td colspan="7" class="noneData">등록된 데이터가 없습니다.</td></tr>
+								<!-- //데이터 없을 경우 -->
+							</tbody>
+						</table>
+					</div>
+					<!--//List -->
+				</div>
+				<div class="pBtn">
+					<button class="btnM line">취소</button>
+					<button class="btnM" id="basicPopClose1">전송</a></button>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //Data 팝업 -->
+	</body>
+</html>

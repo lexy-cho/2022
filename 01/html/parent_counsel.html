@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/parent_counsel.css">
+    <link rel="stylesheet" href="../css/billboard.css">
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="all_wrap">
+        <!-- 헤더 -->
+        <div class="header2">
+            <p class="date_txt">
+                <span class="cal_icon">
+                    <img src="../images/header2_cal.png">
+                </span>
+                <span>1개월 1주</span>
+                <span class="people_icon2">
+                    <img src="../images/header2_people.png">
+                </span>
+                <span class="people_txt2">정용찬 아동</span>
+            </p>
+            <p class="tit_txt">리딩스쿨 부모 상담</p>
+            <div class="btn_close"></div>
+        </div>
+        <!-- //헤더 -->
+
+        <!-- 북맵 활동, 창의융합 활동 -->
+        <div class="activity_all_wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="empty_th"></th>
+                        <th colspan="4">북맵 활동</th>
+                        <th class="fix_width">창의융합 활동</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 북맵 활동의 수업 교재 추가 시 td fix_height 4개까지 추가 맨마지막 td 1개는 창의융합 활동 책, 북맵 활동의 책이 1~3개일 경우에 div book_tit_wrap 제거 -->
+                    <tr>
+                        <td class="txt_vertical">수업교재</td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap">
+                                <p class="book_img_wrap">
+                                    <img src="" alt="">
+                                </p>
+                                <p class="book_txt">고슴도치의 뾰족한 가시 가나다라마바</p>
+                            </div>
+                        </td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap">
+                                <p class="book_img_wrap">
+                                    <img src="" alt="">
+                                </p>
+                                <p class="book_txt">고슴도치의 뾰족한 가시 가나다라마바</p>
+                            </div>
+                        </td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap">
+                                <p class="book_img_wrap">
+                                    <img src="" alt="">
+                                </p>
+                                <p class="book_txt">고슴도치의 뾰족한 가시 가나다라마바</p>
+                            </div>
+                        </td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap">
+                                <p class="book_img_wrap">
+                                    <img src="" alt="">
+                                </p>
+                                <p class="book_txt">고슴도치의 뾰족한 가시 가나다라마바</p>
+                            </div>
+                        </td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap bg_other">
+                                <p class="book_img_wrap">
+                                    <img src="" alt="">
+                                </p>
+                                <p class="book_txt">너 때문에 화났어</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- //북맵 활동의 수업 교재 추가 시 td fix_height 4개까지 추가 맨마지막 td 1개는 창의융합 활동 책, 북맵 활동의 책이 1~3개일 경우에 div book_tit_wrap 제거 -->
+
+                    <!-- 북맵 활동의 수업 결과 추가 시 td fix_height 4개까지 추가 맨마지막 td 1개는 창의융합 활동 책, 북맵 활동의 책이 1~3개일 경우에 div book_tit_wrap 제거 -->
+                    <tr>
+                        <td class="txt_vertical2">수업결과</td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap">
+                                <p class="book_txt2">더보기<span></span></p>
+                            </div>
+                        </td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap">
+                                <p class="book_txt2">더보기<span></span></p>
+                            </div>
+                        </td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap">
+                                <p class="book_txt2">더보기<span></span></p>
+                            </div>
+                        </td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap">
+                                <p class="book_txt2">더보기<span></span></p>
+                            </div>
+                        </td>
+                        <td class="fix_height">
+                            <div class="book_tit_wrap bg_other">
+                                <p class="book_txt2">더보기<span></span></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- //북맵 활동의 수업 결과 추가 시 td fix_height 4개까지 추가 맨마지막 td 1개는 창의융합 활동 책, 북맵 활동의 책이 1~3개일 경우에 div book_tit_wrap 제거 -->
+                </tbody>
+            </table>
+        </div>
+        <!-- //북맵 활동, 창의융합 활동 -->
+
+        <!-- 차트 3개 전체 -->
+        <div class="all_chart_wrap">
+            <!-- 독서 논술 지표 차트 -->
+            <div class="chart1_wrap">
+                <p class="chart_tit">독서 논술 지표</p>
+                <div id="chart1"></div>
+            </div>
+            <!-- //독서 논술 지표 차트 -->
+
+            <!-- 역량 지표 차트 -->
+            <div class="chart2_wrap">
+                <p class="chart_tit">역량 지표</p>
+                <div id="chart2"></div>
+            </div>
+            <!-- //역량 지표 차트 -->
+
+            <!-- 수업 지표 차트 -->
+            <div class="chart3_wrap">
+                <p class="chart_tit">수업 지표</p>
+                <div id="chart3"></div>
+            </div>
+            <!-- //수업 지표 차트 -->
+        </div>
+        <!-- //차트 3개 전체 -->
+
+        <!-- 수업 지표가 하트 체크로 보일 때 창 -->
+        <div class="chart3_change_wrap">
+            <p class="chart_tit">수업 지표</p>
+            <div id="check_heart_wrap">
+                <p>
+                    <span class="heart_bar"></span>
+                    <span class="heart_txt">참여지수</span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                </p>
+                <p>
+                    <span class="heart_bar"></span>
+                    <span class="heart_txt">흥미지수</span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                </p>
+                <p>
+                    <span class="heart_bar"></span>
+                    <span class="heart_txt">자기주도지수</span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                </p>
+                <p>
+                    <span class="heart_bar"></span>
+                    <span class="heart_txt">완성지수</span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                </p>
+                <p>
+                    <span class="heart_bar"></span>
+                    <span class="heart_txt">창의력지수</span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                    <span class="heart_off"></span>
+                </p>
+            </div>
+        </div>
+        <!-- //수업 지표가 하트 체크로 보일 때 창 -->
+
+        <!-- 수업 지표가 차트로 보일 때 하단 버튼 -->
+        <div class="btn_wrap">
+            <button type="button" class="send_ask">보내기</button>
+        </div>
+        <!-- //수업 지표가 차트로 보일 때 하단 버튼 -->
+
+        <!-- 수업 지표가 하트 체크로 보일 때 하단 버튼 -->
+        <div class="btn_wrap2">
+            <button type="button" class="btn_save">저장</button>
+            <button type="button">취소</button>
+        </div>
+        <!-- //수업 지표가 하트 체크로 보일 때 하단 버튼 -->
+
+        <!-- 부모상담을 보냈습니다 팝업 -->
+        <div class="send_finish_popup_wrap">
+            <div class="send_finish_popup_bg"></div>
+            <div class="send_finish_popup">
+                <p>부모상담을 보냈습니다.</p>
+                <button type="button">확인</button>
+            </div>
+        </div>
+        <!-- //부모상담을 보냈습니다 팝업창 -->
+
+        <!-- 부모상담을 보내겠습니까? 팝업 -->
+        <div class="send_popup_wrap">
+            <div class="send_popup_bg"></div>
+            <div class="send_popup">
+                <p>부모상담을 보내겠습니까?</p>
+                <button type="button" class="send_ask_final">보내기</button>
+                <button type="button" class="send_no">취소</button>
+            </div>
+        </div>
+        <!-- //부모상담을 보내겠습니까? 팝업창 -->
+    </div>
+
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+    <script>
+        $(document).ready(function(){
+            //하트 누르면 색바뀜, 처음부터 하나하나 채워져야함, 중간부터 채울 수 없음
+            $(".heart_off").on("click", function(){
+                $(this).css("background", "url(../images/heart_on.svg) no-repeat");
+            });
+
+            // 저장버튼 누르면 누른 값 만큼 차트로 바뀌고 하단 보내기 버튼만 나타나게
+            $(".btn_save").on("click", function(){
+                $(".chart3_change_wrap").hide();
+                $(".chart3_wrap").show();
+                $(".btn_wrap2").hide();
+                $(".btn_wrap").show();
+            });
+
+            // 보내기 버튼 누르면 보내겠습니까? 팝업 뜨게
+            $(".send_ask").on("click", function(){
+                $(".send_popup_wrap").show();
+            });
+
+            // 보내겠습니까? 팝업에서 취소 누르면 팝업 닫히게
+            $(".send_no").on("click", function(){
+                $(".send_popup_wrap").hide();
+            });
+
+            // 보내겠습니까? 팝업에서 보내기 누르면 보냈습니다 팝업 뜨게
+            $(".send_ask_final").on("click", function(){
+                $(".send_popup_wrap").hide();
+                $(".send_finish_popup_wrap").show();
+            });
+        });
+
+        // 독서 논술 지표 차트
+        var chart = bb.generate({
+        data: {
+            x: "x",
+            columns: [
+            ["x", "듣기", "말하기", "읽기", "쓰기"],
+            ["윤지훈", 10, 40, 11, 5],
+            ["주지훈", 15, 45, 5, 10],
+            ],
+            type: "radar",
+            labels: true
+        },
+        radar: {
+            axis: {
+            max: 48
+            },
+            level: {
+            depth: 10
+            },
+            direction: {
+            clockwise: true
+            }
+        },
+        bindto: "#chart1"
+        });
+
+        // 역량 지표 차트
+        var chart = bb.generate({
+        data: {
+            x: "x",
+            columns: [
+            ["x", "자기관리", "지식정보처리", "창의적 사고", "심미적 감성", "의사소통", "공동체"],
+            ["윤지훈", 10, 40, 11, 5, 10, 8],
+            ],
+            type: "radar",
+            labels: true
+        },
+        radar: {
+            axis: {
+            max: 48
+            },
+            level: {
+            depth: 5
+            },
+            direction: {
+            clockwise: true
+            }
+        },
+        bindto: "#chart2"
+        });
+
+        // 수업 지표 차트
+        var chart = bb.generate({
+        data: {
+            x: "x",
+            columns: [
+            ["x", "참여 지수", "흥미 지수", "자기주도 지수", "완성 지수", "창의력 지수"],
+            ["윤지훈", 1, 2, 2, 5, 3],
+            ],
+            type: "radar",
+            labels: true
+        },
+        radar: {
+            axis: {
+            max: 5
+            },
+            level: {
+            depth: 5
+            },
+            direction: {
+            clockwise: true
+            }
+        },
+        bindto: "#chart3"
+        });
+    </script>
+</body>
+</html>

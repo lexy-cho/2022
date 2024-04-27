@@ -1,0 +1,211 @@
+.usrDraw
+{
+    z-index: 3;
+    position: absolute;
+    top: 12.8%;
+    left: 3.2%;
+}
+#header{
+    z-index: 10;
+    position: absolute;
+}
+.writeBox
+{
+    top: 346px;
+    position: absolute;
+    z-index: 12;
+    left: 92px;
+    width: 1100px;
+    height: 440px;
+}
+.tit
+{
+    background-color: transparent;
+    color: #404040;
+    font-size:28px;
+    font-weight:bold;
+    padding-bottom: 35px;
+    font-family: 'Nanum Barun Gothic OTF';
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.cont
+{
+    background-color: transparent;
+    font-size: 23px;
+    color: #616161;
+    padding-top: 30px;
+    line-height: 30px;
+    overflow-y: scroll;
+    height: 345px;
+    font-family: 'Nanum Barun Gothic OTF';
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.bgWrite
+{
+  /*  background: url(../../images/bookmap/write/leading_write.png) no-repeat;*/
+    width: 1280px;
+    height: 800px;
+    background-size: 100% 100%;
+    z-index: 5;
+    position: absolute;
+}
+
+#btnDelete
+{
+    background: url(../../images/bookmap/write/trashcan.png) no-repeat;
+    width: 51px;
+    height: 61px;
+    position: absolute;
+    top: 28px;
+    left: 43px;
+}
+.titText
+{
+    position: absolute;
+    top: -3px;
+    left: 135px;
+    margin-left:5px; /* 미영 추가 */
+    width: 100%;
+}
+.titText > .text{
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    border:4px solid #f4b318;;
+    background-color: #fefefe;
+    border-radius: 30px;
+    color: #e59e16;
+    font-size: 20px;
+    padding: 0 14px;
+    font-family: 'NanumGothicExtraBold';
+}
+.titText > .titNo {
+    margin-right:8px;
+}
+/*.titText > .titNo
+{
+    background: url('../../images/bookmap/popup/titNo.png') no-repeat;
+    width: 133px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 1.5px;
+    left: 7px;
+    font-size: 15px;
+    font-family: 'NanumGothicExtraBold';
+    text-align: center;
+    color: #e59e16;
+    padding-top: 7px;
+}
+.titText > .titCont
+{
+    background: url('../../images/bookmap/popup/titCont.png') no-repeat;
+    width: 90px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 1.5px;
+    left: 151px;
+    font-size: 15px;
+    font-family: 'NanumGothicExtraBold';
+    text-align: center;
+    color: #e59e16;
+    padding-top: 7px;
+}*/
+.titText > .titQuest_48,
+.titText > .titQuest_51,
+.titText > .titQuest_54,
+.titText > .titQuest_57 {
+    width: 450px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 41px;
+    left: 2px;
+    font-size: 30px;
+    font-family: 'OTE2_YoonSofunny';
+    padding-top: 5px;
+    line-height: 38px;
+    color: #3a3737;
+    margin-top:5px;  /* 미영 추가 */
+}
+
+.titText > .titQuest_60,
+.titText > .titQuest_63,
+.titText > .titQuest_66 {
+    width: 450px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 41px;
+    left: 2px;
+    font-size: 30px;
+    font-family: 'OTE2_YoonSofunny';
+    padding-top: 5px;
+    line-height: 38px;
+    color: #3a3737;
+    margin-top:5px;  /* 미영 추가 */
+}
+
+.titText > .titQuest_84,
+.titText > .titQuest_87,
+.titText > .titQuest_90,
+.titText > .titQuest_93 {
+    width: 880px;
+    height: 34px;
+    position: absolute;
+    z-index: 21;
+    top: 41px;
+    left: 2px;
+    font-size: 30px;
+    font-family: 'OTE2_YoonSofunny';
+    padding-top: 5px;
+    line-height: 38px;
+    color: #3a3737;
+    margin-top:5px;  /* 미영 추가 */
+}
+
+.questHeader{
+    position: absolute;
+    z-index: 10;
+    left: 94px;
+    top: 158px;
+    width: 1080px;
+}
+/* 팝업창 */
+#pupDelPort
+{
+    z-index: 90;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
+#pupDelPort > .dim
+{
+    width: 100%;
+    height: 100%;
+}
+#pupDelPort > .cardBg
+{
+    position: absolute;
+    top: 448px;
+    left: 100px;
+}
+#pupDelPort > .cardBg > #btnYes
+{
+    position: absolute;
+    top: 217px;
+    left: 396px;
+}
+#pupDelPort > .cardBg > #btnNo
+{
+    position: absolute;
+    top: 217px;
+    left: 557px;
+}
+.scrollhidden {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}

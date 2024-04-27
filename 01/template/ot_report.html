@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../js/common.js"></script>
+		<script>
+			$(document).ready(function(){
+			});
+		</script>
+	</head>
+  <body>
+    <!-- Wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+				<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+        <h1>OT 보고</h1>
+        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+      </div>
+      <!-- //header -->
+      <hr/>
+      <!-- container -->
+      <div id="container">
+        <section>
+          <!-- Page Layout -->
+          <div class="otReport">
+						<!------------------------------------------------>
+						<div class="calTit">
+							<span class="calendar_wrap">
+								<button class="cal_arrow_left"><img src="../images/left_1.png" alt="이전달"></button>
+								<em class="cal_txt">2022.02.01-2022.02.28</em>
+								<button class="cal_arrow_right"><img src="../images/right_1.png" alt="다음달"></button>
+							</span>
+							<button class="btnBlue">조회</button>
+							<span class="teacher"><em>교육 6팀(2014) FE-410</em><em>이혜리 다중</em></span>
+						</div>
+						<!------------------------------------------------>
+						<div class="tls">
+							<table>
+								<colgroup>
+									<col width="50">
+									<col width="100">
+									<col width="140">
+									<col width="210">
+									<col width="174">
+									<col width="170">
+									<col width="110">
+									<col width="110">
+									<col width="110">
+									<col width="65">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>아동 명</th>
+										<th>핸드폰</th>
+										<th>주소</th>
+										<th>상세주소</th>
+										<th>교육과목명</th>
+										<th>OT배정일</th>
+										<th>교육시작일</th>
+										<th>OT보고상태</th>
+										<th>비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>다중에듀 3워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>다중에듀 3워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>지혜하우스 워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>다중에듀 3워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>지혜하우스 워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>다중에듀 3워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>지혜하우스 워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>다중에듀 3워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>박다슬기</td>
+										<td>010-1234-5678</td>
+										<td>경기 안양시 동안구 관양동</td>
+										<td>래미안 메가트리아 211-805호</td>
+										<td>지혜하우스 워크시트</td>
+										<td>2020-12-31</td>
+										<td>2020-12</td>
+										<td>미완료</td>
+										<td><a class="doc" href="ot_report_view.html">문서</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!------------------------------------------------>
+          </div>
+          <!-- //page Layout -->
+        </section>
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //Wrap -->
+  </body>
+</html>

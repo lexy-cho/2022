@@ -1,0 +1,119 @@
+#pupDelPort
+{
+	z-index: 90; 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	display: block;
+}
+#pupDelPort > .dim
+{
+	width: 100%;
+	height: 100%;
+}
+#pupDelPort > .cardBg
+{
+	position: absolute;
+	top: 448px;
+	left: 100px;
+}
+#pupDelPort > .cardBg > #btnYes
+{
+	position: absolute;
+	top: 217px;
+	left: 396px;
+}
+#pupDelPort > .cardBg > #btnNo
+{
+	position: absolute;
+	top: 217px;
+	left: 557px;
+}
+@font-face {
+font-family: "nanumgothic";
+src: url("font/nanumgothic.ttf");
+font-weight: bold;
+}
+
+body {
+    top-margin:0; bottom-margin:0; left-margin:0; right-margin:0
+}
+#wrap {
+    width: 1280px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#contents {
+    width: 1000px;
+    height: 562px;
+    top: 101px;
+    left:140px;
+    position: absolute;
+}
+
+#control {
+    position: absolute;
+    top: 510px;
+    left: 140px;
+    width: 1000px;
+    height: 65px;
+}
+
+#timer {
+    position: absolute;
+    top: -103px;
+    left: 359px;
+    font-family: nanumgothic;
+    margin: 14px 20px 0 15px;
+    color: #514141;
+    font-size: 87px;
+    font-weight: 600;
+    width: 293px;
+    letter-spacing: -5px;
+}
+
+#closebtn {
+    position: absolute;
+    left: 1169px;
+    top: 24px;
+}
+
+#play_down {
+    position: absolute;
+    top: 583px;
+    left: 572px;
+}
+
+#pause_down {
+    position: absolute;
+    top: 583px;
+    left: 572px;
+}
+.btn_motion{
+    position: absolute;
+    top: 616px;
+    left: 364px;
+}
+#closebtn > input{
+    position: absolute;
+    left: 1111px;
+    top: 84px;
+}
+#ment_pause{
+    position: absolute;
+    left: 134px;
+    top: 252px;
+}
+#pause_down{
+    position: absolute;
+    left: 571px;
+    top: 584px;
+}
+#play_down{
+    position: absolute;
+    left: 571px;
+    top: 584px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+        <title>KG에듀원 교원임용 희소/쌤플러스</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+        <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/jquery.toast.js"></script>
+        <script type="text/javascript" src="../js/datepicker.min.js"></script>
+        <script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+		<script>
+			$( document ).ready( function() {
+				$("#ipSecurityGo").click(function () {
+					$(this).attr('disabled', true);
+					$(".ipSecurity").show();
+					return false;
+				});
+				$("#ipSecurityOK").click(function () {
+					$(this).hide();
+					$("#ipSecurityRe").show();
+					return false;
+				});
+				$("#ipSecurityGo2").click(function () {
+					$(this).attr('disabled', true);
+					$(".ipSecurity").show();
+					return false;
+				});
+				$("#ipSecurityOK2").click(function () {
+					$(this).hide();
+					$("#ipSecurityRe2").show();
+					return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+        <!-- loginWrap -->
+		<div id="joinWrap">
+			<div class="formBack">
+				<h1><img src="../images/i_logo_login.svg" alt="KG에듀원 쌤플러스" /></h1>
+				<div class="whiteBox">
+					<!-- tab-wrap -->
+					<div class="tabwrap">
+						<!-- tab -->
+						<div class="tabBack">
+							<div class="tabNav">
+								<nav>
+									<ul>
+										<li class="on"><button class="newTab" data-name="0">아이디 찾기</button></li>
+										<li><button data-name="1">비밀번호 재설정</button></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<!--// tab -->
+						<div class="tabLayout">
+							<div class="tabData tData0" style="display:block;">
+								회원인증
+								<div class="basicIp">
+									<span class="ipBtn">
+										<input type="text" placeholder="사내메신저 아이디"/>
+										<button class="btnS" id="ipSecurityGo">인증하기</button>
+									</span>
+									<div class="ipSecurity" style="display:none;">
+										<input type="text" placeholder="인증번호 6자리를 입력해 주세요." />
+										<em><strong>9</strong>분 <strong>59</strong>초</em>
+										<button class="btnS" id="ipSecurityOK">번호인증</button>
+										<button class="btnS black" id="ipSecurityRe" style="display:none;">재전송</button>
+									</div>
+									<p class="infoMsg">사용이 가능한 아이디입니다</p>
+								</div>
+								<a href="login.html" class="btnL wFull">로그인 하기</a>
+							</div>
+							<div class="tabData tData1">
+								회원인증
+								<div class="basicIp">
+									<span class="ipBtn">
+										<input type="text" placeholder="사내메신저 아이디"/>
+										<button class="btnS" id="ipSecurityGo2">인증하기</button>
+									</span>
+									<div class="ipSecurity" style="display:none;">
+										<input type="text" placeholder="인증번호 6자리를 입력해 주세요." />
+										<em><strong>9</strong>분 <strong>59</strong>초</em>
+										<button class="btnS" id="ipSecurityOK2">번호인증</button>
+										<button class="btnS black" id="ipSecurityRe2" style="display:none;">재전송</button>
+									</div>
+									<input type="password" id="" name="" placeholder="비밀번호 (영문, 숫자, 특수기호를 포함하여 8자 이상)"/>
+									<input type="password" id="" name="" placeholder="비밀번호 확인"/>
+								</div>
+								<a href="login.html" class="btnL wFull">완료</a>
+							</div>
+						</div>
+					</div>
+					<!-- //tab-wrap -->
+				</div>
+				<p class="loginFooter">
+					Copyright © KG Eduone . All rights
+				</p>
+			</div>
+		</div>
+        <!-- //loginWrap -->
+	</body>
+</html>

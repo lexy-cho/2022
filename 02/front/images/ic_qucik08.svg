@@ -1,0 +1,12 @@
+<svg id="ic_qucik08" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect id="사각형_19" data-name="사각형 19" width="64" height="64" fill="none"/>
+  <path id="패스_35" data-name="패스 35" d="M1187.991,282.109c-.825-13.527,15.639-13.946,25.85-14.574s21.465-9.631,15.422,10.887S1188.816,295.636,1187.991,282.109Z" transform="translate(-1176.961 -240.033)" fill="#c8dafe"/>
+  <g id="그룹_41" data-name="그룹 41" transform="translate(12 12)">
+    <path id="패스_58" data-name="패스 58" d="M0,0H40V40H0Z" fill="none"/>
+    <path id="패스_59" data-name="패스 59" d="M11.653,5H8.326A3.335,3.335,0,0,0,5,8.343V28.4a3.335,3.335,0,0,0,3.326,3.343H24.959A3.335,3.335,0,0,0,28.285,28.4V8.343A3.335,3.335,0,0,0,24.959,5H22.065" transform="translate(3.357 3.242)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect id="사각형_20" data-name="사각형 20" width="9.871" height="6.91" rx="2" transform="translate(15.378 4.936)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_60" data-name="패스 60" d="M9,20.357V12" transform="translate(6 7.985)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_61" data-name="패스 61" d="M12,17.671V16" transform="translate(8 10.663)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_62" data-name="패스 62" d="M15,19.014V14" transform="translate(10 9.324)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

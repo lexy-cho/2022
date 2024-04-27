@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>생육관리</h2><span><em>영농관리</em><strong>생육관리 등록</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet grid2">
+									<div class="gridItem">
+										<label>기간</label>
+										<span class="calDupSet">
+												<input type="text" class="cal" placeholder="일자 선택"  />
+												<em>-</em>
+												<input type="text" class="cal" placeholder="일자 선택"  />
+										</span>
+									</div>
+								</div>
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>구분</label>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>시간</option>
+											</select>
+										</span>
+										<label class="center wide">하우스/구역</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>A동</option>
+											</select>
+										</span>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>A1동</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>항목</label>
+										<div class="checkCol">
+											<span class="checkSet">
+												<input type="checkbox" id="ch01"/>
+												<label for="ch01"><i></i>온도</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch02"/>
+												<label for="ch02"><i></i>최고온도</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch03"/>
+												<label for="ch03"><i></i>최저온도</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch04"/>
+												<label for="ch04"><i></i>온도차</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch05"/>
+												<label for="ch05"><i></i>습도</label>
+											</span>
+											<span class="checkSet">
+												<input type="checkbox" id="ch06"/>
+												<label for="ch06"><i></i>CO2</label>
+											</span>
+										</div>
+										<button class="btnChart">차트</button>
+									</div>
+								</div>
+								<span class="btn">
+									<button class="btnM">검색</button>
+								</span>
+							</div>
+							<!--//List search-->
+							<br/></br/>
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet grid3-1">
+									<div class="gridItem short">
+										<label>작기</label>
+										<span class="selectSet w80">
+											<select name="" id="">
+												<option value="" selected>2021-</option>
+											</select>
+										</span>
+									</div>
+									<div class="gridItem">
+										<label class="line">하우스/구역</label>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>A동</option>
+											</select>
+										</span>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>A1동</option>
+											</select>
+										</span>
+									</div>
+									<div class="gridItem">
+										<label class="line">작목/품종</label>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>딸기</option>
+											</select>
+										</span>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>Sector 1</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>기간</label>
+										<span class="calDupSet">
+												<input type="text" class="cal" placeholder="일자 선택"  />
+												<em>-</em>
+												<input type="text" class="cal" placeholder="일자 선택"  />
+										</span>
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+								<span class="btn">
+									<button class="btnM line">등록</button>
+									<button class="btnM line">Excel</button>
+								</span>
+							</div>
+							<!--//List search-->
+							<br/></br/>
+							<!-- List search -->
+							<div class="listSearch addBottom">
+								<div class="gridSet grid3-1">
+									<div class="gridItem short">
+										<label>작기</label>
+										<span class="selectSet w80">
+											<select name="" id="">
+												<option value="" selected>2021-</option>
+											</select>
+										</span>
+									</div>
+									<div class="gridItem">
+										<label class="line">하우스/구역</label>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>A동</option>
+											</select>
+										</span>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>A1동</option>
+											</select>
+										</span>
+									</div>
+									<div class="gridItem">
+										<label class="line">작목/품종</label>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>딸기</option>
+											</select>
+										</span>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>Sector 1</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>기간</label>
+										<span class="calDupSet">
+												<input type="text" class="cal" placeholder="일자 선택"  />
+												<em>-</em>
+												<input type="text" class="cal" placeholder="일자 선택"  />
+										</span>
+										<label class="center">구분</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>Interlocking Unit</option>
+											</select>
+										</span>
+										<input type="text" class="w214"/>
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+								<span class="btn">
+									<button class="btnM line">달력</button>
+									<button class="btnM line">등록</button>
+								</span>
+							</div>
+							<!--//List search-->
+							<br/></br/>
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>작목/품종</label>
+										<span class="selectSet w200">
+											<select name="" id="">
+												<option value="" selected>Interlocking Unit</option>
+											</select>
+										</span>
+										<span class="selectSet w200">
+											<select name="" id="">
+												<option value="" selected>Sector 1</option>
+											</select>
+										</span>
+										<label class="center">구분</label>
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>전체</option>
+											</select>
+										</span>
+										<input type="text" class="w214" />
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+								<span class="btn">
+									<a href="qna_write.html" class="btnM line">등록</a>
+								</span>
+							</div>
+							<!--//List search-->
+							<br/><br/>
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>구분</label>
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>전체</option>
+											</select>
+										</span>
+										<input type="text" class="w214" />
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+								<span class="btn">
+									<a href="notice_write.html" class="btnM line">등록</a>
+								</span>
+							</div>
+							<!--//List search-->
+							<br/><br/>
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet grid2">
+									<div class="gridItem">
+										<label>하우스/구역</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>Interlocking Unit</option>
+											</select>
+										</span>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>Sector 1</option>
+											</select>
+										</span>
+									</div>
+									<div class="gridItem">
+										<label class="line">작목/품종</label>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>Interlocking Unit</option>
+											</select>
+										</span>
+										<span class="selectSet w214">
+											<select name="" id="">
+												<option value="" selected>Sector 1</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								<div class="gridSet grid2">
+									<div class="gridItem">
+										<label>기간</label>
+										<span class="calDupSet">
+										    <input type="text" class="cal" placeholder="일자 선택"  />
+										    <em>-</em>
+										    <input type="text" class="cal" placeholder="일자 선택"  />
+										</span>
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+								<span class="btn">
+									<button class="btnM line">달력</button>
+									<button class="btnM line">등록</button>
+								</span>
+							</div>
+							<!--//List search-->
+							<!-- List -->
+			        <div class="tls">
+			          <table>
+			            <colgroup>
+			              <col width=""/>
+				            <col width=""/>
+			              <col width=""/>
+				            <col width=""/>
+			              <col width=""/>
+				            <col width=""/>
+			              <col width=""/>
+				            <col width=""/>
+			              <col width=""/>
+				            <col width=""/>
+			              <col width=""/>
+				            <col width=""/>
+				            <col width=""/>
+			            </colgroup>
+			            <thead class="subHead">
+			              <tr>
+											<th rowspan="2">No</th>
+											<th rowspan="2">조사일</th>
+											<th rowspan="2">하우스</th>
+											<th rowspan="2">구역</th>
+											<th rowspan="2">작목</th>
+											<th colspan="3" class="dubTh">품종</th>
+											<th colspan="3" class="dubTh">공급</th>
+											<th rowspan="2">폐액</th>
+											<th rowspan="2">등록자</th>
+			              </tr>
+			              <tr class="subTh">
+											<th>총공급량(L)</th>
+											<th>EC</th>
+											<th class="noLine">PH</th>
+											<th>총공급량(L)</th>
+											<th>EC</th>
+											<th class="noLine">PH</th>
+			              </tr>
+			            </thead>
+			            <tbody>
+			              <!--Loop-->
+			              <tr>
+			                <td class="no">22</td>
+											<td>2022-07-22</td>
+											<td>Interlocking Unit</td>
+											<td>Sector 1</td>
+											<td>Paprika</td>
+											<td>Other</td>
+											<td>7</td>
+											<td>5</td>
+											<td>7</td>
+											<td>3</td>
+											<td>2</td>
+											<td>3</td>
+											<td>Paprikamer1</td>
+			              </tr>
+			              <!--//Loop-->
+			              <tr>
+			                <td class="no">21</td>
+											<td>2022-07-22</td>
+											<td>Interlocking Unit</td>
+											<td>Sector 1</td>
+											<td>Paprika</td>
+											<td>Other</td>
+											<td>7</td>
+											<td>5</td>
+											<td>7</td>
+											<td>3</td>
+											<td>2</td>
+											<td>3</td>
+											<td>Paprikamer1</td>
+			              </tr>
+			              <tr>
+			                <td class="no">20</td>
+											<td>2022-07-22</td>
+											<td>Interlocking Unit</td>
+											<td>Sector 1</td>
+											<td>Paprika</td>
+											<td>Other</td>
+											<td>7</td>
+											<td>5</td>
+											<td>7</td>
+											<td>3</td>
+											<td>2</td>
+											<td>3</td>
+											<td>Paprikamer1</td>
+			              </tr>
+			              <tr>
+			                <td class="no">19</td>
+											<td>2022-07-22</td>
+											<td>Interlocking Unit</td>
+											<td>Sector 1</td>
+											<td>Paprika</td>
+											<td>Other</td>
+											<td>7</td>
+											<td>5</td>
+											<td>7</td>
+											<td>3</td>
+											<td>2</td>
+											<td>3</td>
+											<td>Paprikamer1</td>
+			              </tr>
+			              <!-- 데이터 없을 경우 -->
+			              <tr><td colspan="13" class="noneData">등록된 데이터가 없습니다.</td></tr>
+			              <!-- //데이터 없을 경우 -->
+			            </tbody>
+			          </table>
+			        </div>
+							<!--//List -->
+							<div data-include="include/paginate.html"></div>
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

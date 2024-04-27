@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>출석통계</h2><span><em>통계관리</em><strong>출석통계</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>기간</label>
+										<span class="calDupSet">
+												<input type="text" class="cal" placeholder="일자 선택"  />
+												<em>-</em>
+												<input type="text" class="cal" placeholder="일자 선택"  />
+										</span>
+										<label class="center">작기</label>
+										<span class="selectSet w150">
+											<select name="" id="">
+												<option value="" selected>2021-</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								<div class="gridSet">
+									<div class="gridItem">
+										<label>구분</label>
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>전체</option>
+											</select>
+										</span>
+										<input type="text" class="w214"/>
+									</div>
+								</div>
+								<span class="btn">
+									<button class="btnM">검색</button>
+									<button class="btnM line" id="basicBtn1">Excel</button>
+								</span>
+							</div>
+							<!--//List search-->
+							<!-- List -->
+			        <div class="tls">
+			          <table>
+			            <colgroup>
+			              <col width=""/>
+				            <col width=""/>
+			              <col width=""/>
+				            <col width=""/>
+			              <col width=""/>
+				            <col width=""/>
+			              <col width=""/>
+				            <col width=""/>
+			            </colgroup>
+			            <thead>
+			              <tr>
+											<th>No</th>
+											<th>기간</th>
+											<th>작기명</th>
+											<th>이름</th>
+											<th>스케줄 수</th>
+											<th>출석일수</th>
+											<th>결석일수</th>
+											<th>출석율</th>
+			              </tr>
+			            </thead>
+			            <tbody>
+			              <!--Loop-->
+			              <tr>
+			                <td class="no">22</td>
+											<td>2021-02-01 ~ 2021-02-18</td>
+											<td>2021-상반기 딸기</td>
+											<td>강감찬</td>
+											<td>15</td>
+											<td>15</td>
+											<td>0</td>
+											<td>100</td>
+			              </tr>
+			              <!--//Loop-->
+			              <tr>
+			                <td class="no">21</td>
+											<td>2021-02-01 ~ 2021-02-18</td>
+											<td>2021-상반기 딸기</td>
+											<td>강감찬</td>
+											<td>15</td>
+											<td>15</td>
+											<td>0</td>
+											<td>100</td>
+			              </tr>
+			              <tr>
+			                <td class="no">20</td>
+											<td>2021-02-01 ~ 2021-02-18</td>
+											<td>2021-상반기 딸기</td>
+											<td>강감찬</td>
+											<td>15</td>
+											<td>15</td>
+											<td>0</td>
+											<td>100</td>
+			              </tr>
+			              <tr>
+			                <td class="no">19</td>
+											<td>2021-02-01 ~ 2021-02-18</td>
+											<td>2021-상반기 딸기</td>
+											<td>강감찬</td>
+											<td>15</td>
+											<td>15</td>
+											<td>0</td>
+											<td>100</td>
+			              </tr>
+			              <!-- 데이터 없을 경우 -->
+			              <tr><td colspan="8" class="noneData">등록된 데이터가 없습니다.</td></tr>
+			              <!-- //데이터 없을 경우 -->
+			            </tbody>
+			          </table>
+			        </div>
+							<!--//List -->
+							<div data-include="../include/paginate.html"></div>
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("basicBtn1","popDim","basicPop1");
+				popupClose("basicPopClose1","popDim","basicPop1");
+				popupClose("basicPopClose2","popDim","basicPop1");
+			});
+		</script>
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none;">
+			<!-- 기본 팝업 -->
+			<div class="basicPop attendancePop" id="basicPop1">
+				<h1 class="tt">2021 11월 출석 통계</h1>
+				<button class="btnPClose" id="basicPopClose2">닫기</button>
+				<div class="pBack">
+					<!-- List -->
+					<div class="tls dataSet">
+						<table>
+							<colgroup>
+								<col width="150"/>
+								<col span="31" width="*"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>1</th>
+									<th>2</th>
+									<th>3</th>
+									<th>4</th>
+									<th>5</th>
+									<th>6</th>
+									<th>7</th>
+									<th>8</th>
+									<th>9</th>
+									<th>10</th>
+									<th>11</th>
+									<th>12</th>
+									<th>13</th>
+									<th>14</th>
+									<th>15</th>
+									<th>16</th>
+									<th>17</th>
+									<th>18</th>
+									<th>19</th>
+									<th>20</th>
+									<th>21</th>
+									<th>22</th>
+									<th>23</th>
+									<th>24</th>
+									<th>25</th>
+									<th>26</th>
+									<th>27</th>
+									<th>28</th>
+									<th>29</th>
+									<th>30</th>
+									<th>31</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--Loop-->
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<!--//Loop-->
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>강감찬</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>
+								<!-- 데이터 없을 경우 -->
+								<!-- <tr><td colspan="32" class="noneData">등록된 데이터가 없습니다.</td></tr> -->
+								<!-- //데이터 없을 경우 -->
+							</tbody>
+						</table>
+					</div>
+					<!--//List -->
+				</div>
+				<div class="pBtn">
+					<button class="btnM line">취소</button>
+					<button class="btnM" id="basicPopClose1">Excel</a></button>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //Data 팝업 -->
+	</body>
+</html>

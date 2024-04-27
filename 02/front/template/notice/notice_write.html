@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>농가알림</h2><span><em>알림</em><strong>농가알림</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- Write -->
+							<div class="tws">
+								<table>
+									<colgroup>
+										<col width="154"/>
+										<col width="40%"/>
+										<col width="154"/>
+										<col width="*"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>제목</th>
+											<td colspan="3"><input type="text" class="wFull"/></td>
+										</tr>
+										<tr>
+											<th>등록자</th>
+											<td>Admin</td>
+											<th>등록일시</th>
+											<td>2021-02-18 11:08:35</td>
+										</tr>
+										<tr>
+											<th>내용</th>
+											<td colspan="3"><textarea class="h20"></textarea></td>
+										</tr>
+										<tr>
+											<th>파일첨부</th>
+											<td colspan="3">
+												<div class="fileSet">
+													<span class="fileFind">
+														<input type="file" id="file1" />
+														<label for="file1">파일찾기</label>
+													</span> <!--파일선택:버튼만있는형식:초록색버전-->
+													<span class="loadIng">업로드 중</span>
+													<button class="loadFail">업로드 실패</button> <!--파일업로드실패-->
+													<div>
+														<strong class="loadEnd">
+															<em>샘플 데이터.png</em>
+															<button>취소</button>
+														</strong>
+														<strong class="loadEnd">
+															<em>샘플 데이터.png</em>
+															<button>취소</button>
+														</strong>
+														<strong class="loadEnd">
+															<em>샘플 데이터.png</em>
+															<button>취소</button>
+														</strong>
+													</div>
+												</div>
+											</td>
+									</tbody>
+								</table>
+							</div>
+							<!--//Write -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="notice.html" class="btnL line">취소</a>
+								<a href="notice_view.html" class="btnL">등록</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

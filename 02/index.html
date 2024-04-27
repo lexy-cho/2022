@@ -1,0 +1,600 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>SmartFarm</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+        <style type="text/css">
+          hr {display: none;}
+          body, div, dl, dt, dd, ul, ol, li, , h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, legend {margin:0;padding:0;font-size:100%;}
+          body, * {font-size:12px;color:#333;font-family:Dotum, sans-serif;}
+
+          #wrap {padding:0;}
+
+          h1 {padding:10px;height:18px;border:2px solid #999;}
+          h1 span {float:left;font-size:150%;color:#333;}
+          h1 em {float:right;font:normal 100%/normal Dotum;}
+
+          table {border-collapse:collapse;table-layout:fixed;border-spacing:0;width:100%;border-top:2px solid #aabdd0;margin-bottom:10px;}
+          th {padding:6px 3px 5px;color:#5a7c9e;border:1px solid #aabdd0;background:#d1dde9;box-sizing:border-box;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+          tbody th {text-align:left;color:#666;background:#f5f6f6;}
+          tbody th.title {background:#d8f1d4;}
+          td {padding:2px 3px 0 10px;line-height:18px;border:1px solid #aabdd0;background:#ffffff;box-sizing:border-box;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+          td.first {text-align:center;}
+          td em {font:normal 100%/normal Dotum;}
+          td .line {text-decoration:line-through;}
+          tr.dim td {color:#aabdd0;background:#ececec}
+          table caption {padding:5px;text-align:left;border:1px solid #aabdd0;border-bottom:0;}
+          table caption span {display:inline-block;margin-left:4px;width:10px;height:10px;font-size:11px;}
+          table caption span.red {background:red;}
+          table caption span.gray {background:#aaa6a8;}
+          table caption span.pink {background:#ffc0c0;}
+          table caption span.new {background:#ff0083;}
+          table caption span.draft {background:#65b300;}
+
+          td strong {display:inline-block;margin-left:5px;vertical-align:middle;font-size:11px;font-family:arial;}
+          td strong.new {color:#ff0083;font-size:11px;}
+          td strong.pink {color:#ffc0c0;font-weight:normal;}
+          td strong.gray {color:#999396;font-weight:normal;}
+          td strong.red {color:red;}
+          td strong.draft {color:#65b300;font-weight:normal;}
+
+          a:link {color:blue;}
+          a:visited {color:#9b2489;}
+
+          h2 {margin:0;padding:5px 0;width:100%;text-align:center;border:1px solid #aaa;background:#eee;}
+          ol {margin:0;padding:5px 0;width:100%;border:1px solid #aaa;border-top:none;}
+          ol li {margin:0 0 0 30px;padding:5px 15px 5px 0;word-break:break-all;}
+          ul {margin:0;padding:0 0 5px 20px;line-height:20px;}
+          ul li {margin:0;}
+          .onlyMobile {display:none;}
+
+          @media (max-width: 900px) {
+            .onlyPc {display:none;}
+            .onlyMobile {display:block;}
+          }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1><span>SmartFarm</span></h1>
+            <ul>
+                <!-- <li>기준 Device : PC (Edge, Chrome, Safari), Mobile (chrome, Safari)</li> -->
+                <!-- <li>기준 Device : Mobile (chrome)</li> -->
+                <li>문서타입 : HTML5 / CSS3</li>
+            </ul>
+            <table>
+                <caption>
+                  <span class="draft"></span>&nbsp; 최초 완료
+                  <span class="new"></span>&nbsp; 전달 시 신규
+                  <span class="gray"></span>&nbsp; 최초 전달 완료
+                  <span class="red"></span>&nbsp; 수정사항
+                  <span class="pink"></span>&nbsp; History
+                </caption>
+                <thead>
+                    <tr>
+                        <th width="4%">ID</th>
+                        <th width="150">1 depth</th>
+                        <th width="120">2 depth</th>
+                        <th width="130">3 depth</th>
+                        <th width="20%">URL</th>
+                        <th>History & Descration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <th colspan="6" class="title">Front</th>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="9">common</td>
+                      <td>Component</td>
+                      <td></td>
+                      <td><a href="front/template/component.html" target="_blank">component.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>Error</td>
+                      <td></td>
+                      <td><a href="front/template/error.html" target="_blank">error.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>Loading</td>
+                      <td></td>
+                      <td><a href="front/template/loading.html" target="_blank">loading.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>Main<br>Sub Layout<br>Header include</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/main.html" target="_blank">main.html</a><br/>
+                        <a href="front/template/layout.html" target="_blank">layout.html</a><br/>
+                        <a href="front/template/include/header.html" target="_blank">header.html</a><br/>
+                        <a href="front/template/include/paginate.html" target="_blank">paginate.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>게시판 공통</td>
+                      <td>목록<br/>상세<br/>쓰기</td>
+                      <td>
+                        <a href="front/template/bbs_list.html" target="_blank">bbs_list.html</a><br/>
+                        <a href="front/template/bbs_view.html" target="_blank">bbs_view.html</a><br/>
+                        <a href="front/template/bbs_write.html" target="_blank">bbs_write.html</a><br/>
+                        <a href="front/template/bbs_search.html" target="_blank">bbs_search.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="4">Member</td>
+                      <td>로그인</td>
+                      <td><a href="front/template/login.html" target="_blank">login.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>회원가입</td>
+                      <td><a href="front/template/join.html" target="_blank">join.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>아이디 찾기</td>
+                      <td><a href="front/template/find_id.html" target="_blank">find_id.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>비밀번호 찾기</td>
+                      <td><a href="front/template/find_pw.html" target="_blank">find_pw.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="2">마이페이지<br/>(mypage)</td>
+                      <td>회원정보</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/mypage/pwOk.html" target="_blank">pwOk.html</a><br/>
+                        <a href="front/template/mypage/pwChange.html" target="_blank">pwChange.html</a><br/>
+                        <a href="front/template/mypage/myInfo.html" target="_blank">myInfo.html</a><br/>
+                        <a href="front/template/mypage/myInfo_modify.html" target="_blank">myInfo_modify.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>회원탈퇴</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/mypage/resign.html" target="_blank">resign.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="2">알림<br/>(notice)</td>
+                      <td>농가알림</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/notice/notice.html" target="_blank">notice.html</a><br/>
+                        <a href="front/template/notice/notice_write.html" target="_blank">notice_write.html</a><br/>
+                        <a href="front/template/notice/notice_view.html" target="_blank">notice_view.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>질문과 답변</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/notice/qna.html" target="_blank">qna.html</a><br/>
+                        <a href="front/template/notice/qna_write.html" target="_blank">qna_write.html</a><br/>
+                        <a href="front/template/notice/qna_view.html" target="_blank">qna_view.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="4">영농관리<br/>(farm)</td>
+                      <td>일정관리</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/farm/schedule.html" target="_blank">schedule.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>영농일지</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/farm/diary.html" target="_blank">diary.html</a>
+                        <a href="front/template/farm/diary_write.html" target="_blank">diary_write.html</a>
+                        <a href="front/template/farm/diary_view.html" target="_blank">diary_view.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>생육관리</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/farm/growth.html" target="_blank">growth.html</a>
+                        <a href="front/template/farm/growth_write.html" target="_blank">growth_write.html</a>
+                        <a href="front/template/farm/growth_view.html" target="_blank">growth_view.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>양액관리</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/farm/nutrient.html" target="_blank">nutrient.html</a>
+                        <a href="front/template/farm/nutrient_write.html" target="_blank">nutrient_write.html</a>
+                        <a href="front/template/farm/nutrient_view.html" target="_blank">nutrient_view.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="2">생산/판매<br/>(pns)</td>
+                      <td>생산관리</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/pns/making.html" target="_blank">making.html</a>
+                        <a href="front/template/pns/making_write.html" target="_blank">making_write.html</a>
+                        <a href="front/template/pns/making_view.html" target="_blank">making_view.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>판매관리</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/pns/sales_write.html" target="_blank">sales_write.html</a>
+                        <!-- <a href="front/template/pns/sales.html" target="_blank">sales.html</a>
+                        <a href="front/template/pns/sales_view.html" target="_blank">sales_view.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="6">환경분석<br/>(analysis)</td>
+                      <td>환경정보</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/analysis/summary.html" target="_blank">summary.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>내부환경분석</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/analysis/indoor.html" target="_blank">indoor.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>외부환경분석</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/analysis/outdoor.html" target="_blank">outdoor.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>양액관리</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/analysis/nutrient.html" target="_blank">nutrient.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>생육분석</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/analysis/growth.html" target="_blank">growth.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>우수 농가 비교</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/analysis/best.html" target="_blank">best.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="4">통계관리<br/>(report)</td>
+                      <td>출석통계</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/report/attendance.html" target="_blank">attendance.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>생산통계</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/report/making.html" target="_blank">making.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>판매통계</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/report/sales.html" target="_blank">sales.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>양액통계</td>
+                      <td></td>
+                      <td>
+                        <!-- <a href="front/template/report/nutrient.html" target="_blank">nutrient</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="3">회원관리<br/>(member)</td>
+                      <td>관리자관리</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/member/manager.html" target="_blank">manager.html</a><br/>
+                        <a href="front/template/member/manager_view.html" target="_blank">manager_view.html</a><br/>
+                        <a href="front/template/member/manager_view2.html" target="_blank">manager_view2.html</a><br/>
+                        <a href="front/template/member/manager_modify.html" target="_blank">manager_modify.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>작업자관리</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/member/worker.html" target="_blank">worker.html</a><br/>
+                        <a href="front/template/member/worker_view.html" target="_blank">worker_view.html</a><br/>
+                        <a href="front/template/member/worker_modify.html" target="_blank">worker_modify.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>일정관리</td>
+                      <td></td>
+                      <td>
+                        <a href="front/template/member/schedule_cal.html" target="_blank">schedule_cal.html</a><br/>
+                        <a href="front/template/member/schedule_list.html" target="_blank">schedule_list.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="6">설정<br/>(setting)</td>
+                      <td>작업관리</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>작기관리</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>하우스 관리</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>기상대 설정</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>거래처관리</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>농장정보</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="4">시스템관리<br/>(system)</td>
+                      <td>농장관리</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>관리자관리</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>작업관리</td>
+                      <td></td>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>코드 관리</td>
+                      <td></td>
+                      <td><a href="front/template/system/codeMgt.html" target="_blank">codeMgt.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="2">대시보드<br/>(dashboard)</td>
+                      <td></td>
+                      <td></td>
+                      <td><a href="front/template/dashBoard/index.html" target="_blank">index.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>팝업 게시판</td>
+                      <td>
+                        <!-- 내부기상 분석 <br/> -->
+                        생산량_총괄표 <br/>
+                        생산량_상세 <br/>
+                        방제 현황 <br/>
+                        병해충 현황 <br/>
+                        내부기상_상세 <br/>
+                        외부기상_상세 <br/>
+                        양액_총괄표 <br/>
+                        양액_상세 <br/>
+                        생육_총괄표 <br/>
+                        생육_상세 <br/>
+                        <!-- Qna -->
+                      </td>
+                      <td>
+                        <!-- <a href="front/template/dashBoard/index.html" target="_blank">index.html</a><br/> -->
+                        <a href="front/template/dashBoard/production_summery.html" target="_blank">production_summery.html</a><br/>
+                        <a href="front/template/dashBoard/production.html" target="_blank">production.html</a><br/>
+                        <a href="front/template/dashBoard/damageReport.html" target="_blank">damageReport.html</a><br/>
+                        <a href="front/template/dashBoard/pestControl.html" target="_blank">pestControl.html</a><br/>
+                        <a href="front/template/dashBoard/inWeather.html" target="_blank">inWeather.html</a><br/>
+                        <a href="front/template/dashBoard/outWeather.html" target="_blank">outWeather.html</a><br/>
+                        <a href="front/template/dashBoard/nutrient_summery.html" target="_blank">nutrient_summery.html</a><br/>
+                        <a href="front/template/dashBoard/nutrient.html" target="_blank">nutrient.html</a><br/>
+                        <a href="front/template/dashBoard/growth_summery.html" target="_blank">growth_summery.html</a><br/>
+                        <a href="front/template/dashBoard/growth.html" target="_blank">growth.html</a><br/>
+                        <!-- <a href="front/template/dashBoard/qna.html" target="_blank">qna.html</a> -->
+                      </td>
+                      <td></td>
+                  </tr>
+                  <!----->
+                  <tr>
+                      <th colspan="6" class="title">Mobile</th>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>Layout</td>
+                      <td>Main<br>Sub Layout<br>Header include</td>
+                      <td></td>
+                      <td>
+                        <a href="mobile/template/main.html" target="_blank">main.html</a><br/>
+                        <a href="mobile/template/layout.html" target="_blank">layout.html</a><br/>
+                        <a href="mobile/template/include/snb.html" target="_blank">snb.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>게시판 공통</td>
+                      <td>목록<br/>공지사항<br/>질문과 답변<br/><br/><br/></td>
+                      <td></td>
+                      <td>
+                        <a href="mobile/template/bbs_list.html" target="_blank">bbs_list.html</a><br/>
+                        <a href="mobile/template/notice_view.html" target="_blank">notice_view.html</a><br/>
+                        <a href="mobile/template/qna_write.html" target="_blank">qna_write.html</a><br/>
+                        <a href="mobile/template/qna_view.html" target="_blank">qna_view.html</a><br/>
+                        <a href="mobile/template/qna_modify.html" target="_blank">qna_modify.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>Member</td>
+                      <td>로그인<br/>회원가입<br/>아이디 찾기<br/>비밀번호 찾기</td>
+                      <td></td>
+                      <td>
+                        <a href="mobile/template/login.html" target="_blank">login.html</a><br/>
+                        <a href="mobile/template/join.html" target="_blank">join.html</a><br/>
+                        <a href="mobile/template/find_id.html" target="_blank">find_id.html</a><br/>
+                        <a href="mobile/template/find_pw.html" target="_blank">find_pw.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>상세화면</td>
+                      <td>작업일정<br/>영농일지<br/><br/>생육관리<br/><br/></td>
+                      <td></td>
+                      <td>
+                        <a href="mobile/template/schedule.html" target="_blank">schedule.html</a><br/>
+                        <a href="mobile/template/diary_write.html" target="_blank">diary_write.html</a><br/>
+                        <a href="mobile/template/diary_view.html" target="_blank">diary_view.html</a><br/>
+                        <a href="mobile/template/growth_write.html" target="_blank">growth_write.html</a><br/>
+                        <a href="mobile/template/growth_view.html" target="_blank">growth_view.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>환경설정</td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <a href="mobile/template/setting.html" target="_blank">setting.html</a>
+                      </td>
+                      <td></td>
+                  </tr>
+                  <!-- <tr>
+                      <th></th>
+                      <td>마이페이지</td>
+                      <td>회원정보<br/><br/><br/>회원탈퇴</td>
+                      <td></td>
+                      <td>
+                        <a href="mobile/template/mypage/pwChange.html" target="_blank">pwChange.html</a><br/>
+                        <a href="mobile/template/mypage/myInfo.html" target="_blank">myInfo.html</a><br/>
+                        <a href="mobile/template/mypage/myInfo_modify.html" target="_blank">myInfo_modify.html</a><br/>
+                        <a href="mobile/template/mypage/resign.html" target="_blank">resign.html</a>
+                      </td>
+                      <td></td>
+                  </tr> -->
+                </tbody>
+            </table>
+
+            <h2> 수정 History detail (날짜주석 참조)</h2>
+            <ol>
+                <li><strong>2022-08-22</strong> 최초 작성</li>
+            </ol>
+        </div>
+    </body>
+</html>

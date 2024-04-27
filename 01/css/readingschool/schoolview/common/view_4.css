@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'NanumSquareRoundBold';
+    font-weight: bold;
+    src: url("../../../../font/NanumSquareRoundOTFEB.otf");
+}
+@font-face{
+    font-family: 'bmjua_otf';
+    src: url("../../../../font/bmjua_otf.OTF");
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+a {
+    text-decoration: none;
+    color:#333;
+}
+body {
+    padding:0;
+    margin:0;
+}
+span {
+    user-select: none;
+}
+input {
+    outline: none;
+    border:none;
+    background-color: transparent;
+}
+button {
+    border:none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+.navbar {
+    height: 80px;
+    padding:23px 43px;
+}
+.reset-button {
+    float: left;
+    margin-right:20px;
+    margin-top: 10px;
+}
+.save-button {
+    float: left;
+    margin-top: 10px;
+}
+.close-button {
+    float: right;
+}
+/*wrap1 {
+    width:1280px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.wrap1 > .title {
+    padding-left: 69px;
+    display: block;
+    margin-top: 10px;
+}
+.wrap1 > .title > p {
+    padding:0;
+    margin:0;
+    margin-left:20px;
+    font-size: 20px;
+    font-family: 'NanumSquareRoundBold';
+    line-height: 1.5;
+}*/
+
+.wrap2 > .title {
+    display: flex;
+    align-items: center;
+    padding-left: 69px;
+    margin-top: 15px;
+}
+.wrap2 > .title > p {
+    padding:0;
+    margin:0;
+    margin-left:35px;
+    font-size: 20px;
+    font-family: 'NanumSquareRoundBold';
+    line-height: 1.5;
+    color:#3f2727;
+    text-indent: -0.9em;
+}
+.content {
+    margin-left: 69px;
+    margin-right: 72px;
+    margin-top:3px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1143px;
+    height: 629px;
+    position: relative;
+}
+.content .box {
+    display: none;
+    position: absolute;
+}
+.recode-button {
+    display: none;
+}
+.content .box > img.bubble {
+    position: absolute;
+/*    transition: all 700ms ease-in-out;*/
+    cursor: pointer;
+}
+/* 말풍선 위치 */
+.content .box > img.first {
+    left: 194px;
+    top: 126px;
+}
+.content .box > img.second {
+    top: 126px;
+    left: 551px;
+}
+
+.content .box_39 > img.first {
+    left: 178px;
+    top: 38px;
+}
+.content .box_39 > img.second {
+    top: 38px;
+    left: 582px;
+}
+.content .box_40 > img.first {
+    left: 178px;
+    top: 38px;
+}
+.content .box_40 > img.second {
+    top: 38px;
+    left: 582px;
+}
+
+.content .box_44 > img.first {
+    top: 125px;
+    left: 360px;
+}
+.content .box_44 > img.second {
+    top: 110px;
+    left: 688px;
+}
+/* // 말풍선 위치 */
+.box > img.active {
+    opacity: 0.5;
+}
+.recode-button {
+    position: absolute;
+    bottom:25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    transition: all 300ms ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+.recode-buttons_44 > img{
+    position: absolute;
+    bottom:25px;
+    left: 16%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    transition: all 300ms ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+.character {
+    position: absolute;
+    pointer-events: none;
+    bottom:0;
+    left:93px;
+    z-index: 0;
+}
+.next-page {
+    position: absolute;
+    right:10px;
+    top:370px;
+}
+.pre-page {
+    position: absolute;
+    left: 10px;
+    top: 370px;
+}
+.character_44{
+    left: 367px;
+}
+
+

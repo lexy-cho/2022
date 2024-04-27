@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+a {
+    text-decoration: none;
+    color:#333;
+}
+body {
+    padding:0;
+    margin:0;
+}
+span {
+    user-select: none;
+}
+input {
+    outline: none;
+    border:none;
+    background-color: transparent;
+}
+li {
+    list-style: none;
+}
+.navbar {
+    height: 80px;
+    padding:23px 43px;
+}
+.navbar > a img{
+    transition: all 300ms ease-in-out;
+}
+
+.reset-button {
+    float: left;
+    margin-right:20px;
+    margin-top: 10px;
+}
+.save-button {
+    float: left;
+    margin-top: 10px;
+}
+.close-button {
+    float: right;
+}
+
+#wrap {
+    width: 1280px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.contents-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 69px;
+    padding-top: 40px;
+    position: absolute;
+
+}
+
+.contents-top .contents-icon {
+    position: relative;
+}
+.contents-top .contents-icon .icons {
+    display: inline-block;
+    position: absolute;
+    width: 120px;
+    top: 15px;
+    left:100px;
+    display: flex;
+    align-items: center;
+    margin-top:3px;
+}
+.contents-top .contents-icon .icons > img:nth-child(1) {
+    width: 60px;
+    display: inline-block;
+    margin-right:7px;
+}
+.contents-top .contents-icon .icons > img:nth-child(2) {
+    width: 45px;
+    right: 20px;
+}
+.contents-title {
+    font-size: 19px;
+    margin-left: 46px;
+    font-weight: 550;
+    padding-right:120px;
+    font-family: 'NanumSquareRoundBold';
+    color: #3F2727;
+    line-height: 1.4;
+    position: relative;
+    text-indent: -1.1em;
+}
+
+.contents-status {
+    height: 68px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-top: 113px;
+}
+.contents-status > input.status {
+    position: absolute;
+    height: 50px;
+    font-size: 36px;
+    color:#d02020;
+    top: 9px;
+    font-family: 'younsofunny';
+}
+.contents-status > input.year {
+    width: 90px;
+    left: 132px;
+}
+.contents-status > input.month {
+    width: 54px;
+    left: 267px;
+}
+.contents-status > input.day {
+    width:50px;
+    left: 367px;
+}
+.contents-status > input.weather {
+    width:300px;
+    left: 562px;
+}
+.weather-select {
+    position: absolute;
+    width: 247px;
+    display: flex;
+    align-items: center;
+    margin-left: 926px;
+    top: 12px;
+    justify-content: space-between;
+}
+.weather-select img {
+    cursor: pointer;
+    margin-right:11px;
+}
+.weather-select > span {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+}
+.contents-main {
+    width: 1150px;
+    height: 497px;
+    position: absolute;
+    margin-top: 205px;
+}
+.contents-main > textarea {
+    position: absolute;
+    resize: none;
+    outline: none;
+    border:none;
+    background-color: transparent;
+    font-size: 30px;
+    overflow: hidden;
+    font-family: 'younsofunny';
+    line-height: 1.5;
+    margin-top: -20px;
+}
+.contents-main > textarea#experience {
+    top: 72px;
+    left:98px;
+    width: 1050px;
+}
+.contents-main > textarea#memory {
+    top: 245px;
+    left: 98px;
+    width: 1050px;
+}
+.contents-main > textarea#wantSay {
+    top: 420px;
+    left: 98px;
+    width: 1050px;
+}
+
+
+.contents-main_45 > textarea#experience4,
+.contents-main_46 > textarea#experience4,
+.contents-main_47 > textarea#experience4,
+.contents-main_48 > textarea#experience4{
+    top: 183px;
+    left: 125px;
+    width: 1050px;
+    font-size: 25px;
+}
+.contents-main_45 > textarea#memory4,
+.contents-main_46 > textarea#memory4,
+.contents-main_47 > textarea#memory4,
+.contents-main_48 > textarea#memory4{
+    top: 440px;
+    left: 125px;
+    width: 1050px;
+    font-size: 25px;
+}
+.contents-main_45 > textarea#wantSay4,
+.contents-main_46 > textarea#wantSay4,
+.contents-main_47 > textarea#wantSay4,
+.contents-main_48 > textarea#wantSay4{
+    top: 309px;
+    left: 125px;
+    width: 1050px;
+    font-size: 25px;
+}
+.contents-main_45 > textarea#title,
+.contents-main_46 > textarea#title,
+.contents-main_47 > textarea#title,
+.contents-main_48 > textarea#title{
+    top: 50px;
+    left: 125px;
+    width: 1050px;
+    font-size: 25px;
+}
+

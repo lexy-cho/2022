@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>작업자관리</h2><span><em>회원관리</em><strong>작업자관리</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<h3>작업자 정보수정</h3>
+							<!-- Write -->
+							<div class="tws">
+								<table>
+									<colgroup>
+										<col width="154"/>
+										<col width="40%"/>
+										<col width="154"/>
+										<col width="*"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>사용자 ID</th>
+											<td colspan="3">abcd123</td>
+										</tr>
+										<tr>
+											<th>이름</th>
+											<td colspan="3">홍길동</td>
+										</tr>
+										<tr>
+											<th>연락처</th>
+											<td><input type="text" value="02-1234-5678"/></td>
+											<th>모바일</th>
+											<td><input type="text" value="010-1234-4567"/></td>
+										</tr>
+										<tr>
+											<th>이메일</th>
+											<td><input type="text" value="aaa@aaa.com"/></td>
+											<th>가입일시</th>
+											<td>2021-02-18 12:12:12</td>
+										</tr>
+										<tr>
+											<th>비고</th>
+											<td colspan="3"><textarea></textarea></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--//Write -->
+							<h3>
+								농장정보
+								<span class="right">
+									<button class="btnM gray" id="basicBtn1">구역추가</button>
+									<button class="btnM gray line">구역삭제</button>
+								</span>
+							</h3>
+							<!-- List -->
+			        <div class="tls">
+			          <table>
+			            <colgroup>
+			              <col width="70">
+				            <col width="*">
+			              <col width="100">
+			              <col width="100">
+			              <col width="140">
+			              <col width="140">
+			              <col width="160">
+			              <col width="130">
+			            </colgroup>
+			            <thead>
+			              <tr>
+											<th>No</th>
+											<th>작기</th>
+											<th>하우스</th>
+											<th>구역</th>
+											<th>작목</th>
+											<th>품종</th>
+											<th>등록일시</th>
+											<th>등록자</th>
+			              </tr>
+			            </thead>
+			            <tbody>
+			              <!--Loop-->
+			              <tr>
+			                <td>
+												<span class="checkSet noLabel">
+													<input type="checkbox" id="ch1"/>
+													<label for="ch1"><i></i></label>
+												</span>
+											</td>
+											<td>2021-상반기 딸기</td>
+											<td>A동</td>
+											<td>A1동</td>
+											<td>딸기</td>
+											<td>기타</td>
+											<td>2021-02-15 12:12:12</td>
+											<td>Admin</td>
+			              </tr>
+			              <!--//Loop-->
+			              <tr>
+			                <td>
+												<span class="checkSet noLabel">
+													<input type="checkbox" id="ch2"/>
+													<label for="ch2"><i></i></label>
+												</span>
+											</td>
+											<td>2021-상반기 딸기</td>
+											<td>A동</td>
+											<td>A1동</td>
+											<td>딸기</td>
+											<td>기타</td>
+											<td>2021-02-15 12:12:12</td>
+											<td>Admin</td>
+			              </tr>
+			              <tr>
+			                <td>
+												<span class="checkSet noLabel">
+													<input type="checkbox" id="ch3"/>
+													<label for="ch3"><i></i></label>
+												</span>
+											</td>
+											<td>2021-상반기 딸기</td>
+											<td>A동</td>
+											<td>A1동</td>
+											<td>딸기</td>
+											<td>기타</td>
+											<td>2021-02-15 12:12:12</td>
+											<td>Admin</td>
+			              </tr>
+			              <!-- 데이터 없을 경우 -->
+			              <tr><td colspan="8" class="noneData">등록된 데이터가 없습니다.</td></tr>
+			              <!-- //데이터 없을 경우 -->
+			            </tbody>
+			          </table>
+			        </div>
+							<!--//List -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="worker.html" class="btnL line">취소</a>
+								<a href="worker_view.html" class="btnL">수정</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("basicBtn1","popDim","basicPop1");
+				popupClose("basicPopClose1","popDim","basicPop1");
+				popupClose("basicPopClose2","popDim","basicPop1");
+			});
+		</script>
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none">
+			<!-- 기본 팝업 -->
+			<div class="basicPop farmAreaPop" id="basicPop1">
+				<h1 class="tt">구역추가</h1>
+				<button class="btnPClose" id="basicPopClose1">닫기</button>
+				<div class="pBack">
+					<div class="tws">
+						<table>
+							<colgroup>
+								<col width="100"/>
+								<col width="*"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>작기</th>
+									<td>
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>2021-상반기 토마토</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>하우스</th>
+									<td>
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>A동</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>구역</th>
+									<td>
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>A1동</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM line">취소</button>
+					<button class="btnM" id="basicPopClose2">등록</button>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //Data 팝업 -->
+	</body>
+</html>

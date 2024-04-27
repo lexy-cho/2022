@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전</button>
+					<h1>질문과 답변</h1>
+					<button class="btnNav">메뉴여닫기</button>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu -->
+			<div id="snb">
+				<section>
+					<div class="c-menu c-menu--slide-right">
+						<button class="c-close gnbClose">닫기</button>
+						<div class="back" data-include="include/snb.html"></div>
+					</div>
+					<div class="c-mask"></div><!-- /c-mask -->
+				</section>
+			</div>
+			<!-- //Sub Menu -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- Write -->
+							<div class="tws">
+							  <dl>
+							    <dt>제목</dt>
+							    <dd><input type="text"/></dd>
+							  </dl>
+							  <dl>
+							    <dt>작목</dt>
+							    <dd>
+							      <span class="selectSet">
+							        <select name="" id="">
+							          <option value="" selected>Interlocking Unit</option>
+							        </select>
+							      </span>
+							    </dd>
+							  </dl>
+							  <dl>
+							    <dt>품종</dt>
+							    <dd>
+							      <span class="selectSet">
+							        <select name="" id="">
+							          <option value="" selected>Sector 1</option>
+							        </select>
+							      </span>
+							    </dd>
+							  </dl>
+								<div class="info">
+								  <dl>
+								    <dt>등록자</dt>
+								    <dd>Admin</dd>
+								  </dl>
+									<dl>
+								    <dt>등록일시</dt>
+								    <dd>2021-02-18 11:08:35</dd>
+								  </dl>
+								</div>
+							  <dl>
+							    <dt>내용</dt>
+							    <dd><textarea class="h20"></textarea></dd>
+							  </dl>
+								<div class="fileSet">
+									<span class="fileFind">
+										<input type="file" id="file1" />
+										<label for="file1">파일첨부</label>
+									</span> <!--파일선택 -->
+									<span class="loadIng">업로드 중</span>
+									<button class="loadFail">업로드 실패</button> <!--파일업로드실패-->
+									<div>
+										<sdlong class="loadEnd">
+											<em>샘플 데이터.png</em>
+											<button>취소</button>
+										</sdlong>
+										<sdlong class="loadEnd">
+											<em>샘플 데이터.png</em>
+											<button>취소</button>
+										</sdlong>
+										<sdlong class="loadEnd">
+											<em>샘플 데이터.png</em>
+											<button>취소</button>
+										</sdlong>
+									</div>
+								</div>
+							</div>
+							<!--//Write -->
+							<!--comment-->
+							<script>
+							$(document).ready(function(){
+								$(".commentInfo").click(function(){
+									$(this).toggleClass('on');
+									$(".commentList").toggle();
+								});
+								$(".btnPost").click(function(){
+									$(".sampleComment").show();
+								});
+								$(".btnReAdd").click(function(){
+									$(this).toggle();
+									$(this).parent().next('.reEditor').toggle();
+								});
+								$(".btnReCancel").click(function(){
+									$(this).parent().prev().children('.btnReAdd').toggle();
+									$(this).parent().toggle();
+								});
+							});
+							</script>
+							<div class="commentSet">
+								<!---->
+								<div class="commentList">
+									<ul>
+										<li style="display:none;" class="sampleComment">
+											<div class="commentBox">
+												<strong>Admin</strong>
+												<button class="btnDelete">삭제</button>
+												<p>새로 등록한 답변글입니다</p>
+												<div class="etc">
+													<em>2020-02-06 13:20</em>
+													<button class="btnReAdd">답글쓰기</button>
+												</div>
+												<div class="reEditor">
+													<textarea></textarea>
+													<button class="btnReSave">등록</button>
+													<button class="btnReCancel">취소</button>
+												</div>
+											</div>
+										</li>
+										<!-- Comment Loop -->
+										<li>
+											<div class="commentBox">
+												<strong>Admin</strong>
+												<button class="btnDelete">삭제</button>
+												<p>관리자가 등록한 답변글 입니다.</p>
+												<div class="etc">
+													<em>2020-02-06 13:20</em>
+													<button class="btnReAdd">답글쓰기</button>
+												</div>
+												<div class="reEditor">
+													<textarea></textarea>
+													<button class="btnReSave">등록</button>
+													<button class="btnReCancel">취소</button>
+												</div>
+											</div>
+										</li>
+										<!-- //Comment Loop -->
+										<li>
+											<div class="commentBox">
+												<strong>Admin</strong>
+												<button class="btnDelete">삭제</button>
+												<p>관리자가 입력하는 답변 글수는 제한이 없는 것 같은데 맞나요?</p>
+												<div class="etc">
+													<em>2020-02-06 13:20</em>
+													<button class="btnReAdd">답글쓰기</button>
+												</div>
+												<div class="reEditor">
+													<textarea></textarea>
+													<button class="btnReSave">등록</button>
+													<button class="btnReCancel">취소</button>
+												</div>
+											</div>
+											<!-- Reply List -->
+											<ol>
+												<!-- Reply Loop -->
+												<li>
+													<div class="commentBox">
+														<strong>등록자ID</strong>
+														<button class="btnDelete">삭제</button>
+														<p>답변글의 답변은 3개까지 가능합니다. 답변글의 답변은 관리자와 질문자 모두 입력이 가능합니다. 답변글의 답변은 3개까지 가능합니다. 답변글의 답변은 관리자와 질문자 모두 입력이 가능합니다. 이게 맞지요?</p>
+														<div class="etc">
+															<em>2020-02-06 13:20</em>
+														</div>
+													</div>
+												</li>
+												<!-- //Reply Loop -->
+												<li>
+													<div class="commentBox">
+														<strong>Admin</strong>
+														<button class="btnDelete">삭제</button>
+														<p>답변글의 답변은 3개까지 가능합니다. 답변글의 답변은 등록한 본인만 삭제 가능합니다.</p>
+														<div class="etc">
+															<em>2020-02-06 13:20</em>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="commentBox">
+														<strong>등록자ID</strong>
+														<button class="btnDelete">삭제</button>
+														<p>답변글의 답변은 다시 답변이 어렵습니다.</p>
+														<div class="etc">
+															<em>2020-02-06 13:20</em>
+														</div>
+													</div>
+												</li>
+											</ol>
+											<!-- //Reply List -->
+										</li>
+									</ul>
+								</div>
+								<!---->
+								<div class="commentWrite">
+									<div>
+										<strong>Admin</strong>
+										<textarea placeholder="Farm1님 에게 답변쓰기"></textarea>
+										<input type="button" value="등록" class="btnM">
+									</div>
+								</div>
+								<!---->
+							</div>
+							<!--//comment-->
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="qna.html" class="btnL white">취소</a>
+								<a href="qna_view.html" class="btnL">등록</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

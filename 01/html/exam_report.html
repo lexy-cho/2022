@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/exam_report.css">
+    <link rel="stylesheet" href="../css/billboard.css">
+</head>
+<body>
+    <div class="all_wrap">
+        <!-- 헤더2 고정 -->
+        <div class="header2">
+            <p class="date_txt">
+                <span class="cal_icon">
+                    <img src="../images/header2_cal.png">
+                </span>
+                2020.12.30 기준
+            </p>
+            <p class="tit_txt">리딩토탈-퍼펙트 리딩03</p>
+            <p class="time_txt">
+                <span class="people_icon">
+                    <img src="../images/header2_people.png">
+                </span>
+                <span class="people_txt">정용찬 아동</span>
+                <span class="alarm_icon">
+                    <img src="../images/header2_alarm.png">
+                </span>
+                <span class="alarm_txt">수요일 14:00</span>
+            </p>
+        </div>
+        <!-- //헤더2 고정 -->
+
+        <!-- 유형별 분포 차트 -->
+        <div class="chart1_wrap">
+            <p>유형별 분포</p>
+            <div id="radarChart"></div>
+        </div>
+        <!-- //유형별 분포 차트 -->
+
+        <!-- 진단평가 AI 분석 결과 창 -->
+        <div class="exam_result_wrap">
+            <p class="exam_result_wrap_tit">진단평가 AI 분석 결과(01~03)</p>
+            <div class="result_1">
+                <p><span class="result_1_icon"></span>종합결과</p>
+                분석한 결과, 문제에 대해 사전적 의미를 이해하고, 문맥을 매우 잘 파악하고 있어요. 다만 글을 전체적으로 이해하고 추론하는 부분에 대해 조금 더 관심이 필요합니다. 역량 다지기 학습에 집중하여 지도해 주세요. 분석한 결과, 문제에 대해 사전적 의미를 이해하고, 문맥을 매우 잘 파악하고 있어요. 다만 글을 전체적으로 이해하고 추론하는 부분에 대해 조금 더 관심이 필요합니다. 역량 다지기 학습에 집중하여 지도해 주세요.
+            </div>
+            <div class="result_1">
+                <p><span class="result_2_icon"></span>어휘와 문장의 이해 결과</p>
+                분석한 결과, 문제에 대해 사전적 의미를 이해하고, 문맥을 매우 잘 파악하고 있어요. 다만 글을 전체적으로 이해하고 추론하는 부분에 대해 조금 더 관심이 필요합니다. 역량 다지기 학습에 집중하여 지도해 주세요. 분석한 결과, 문제에 대해 사전적 의미를 이해하고, 문맥을 매우 잘 파악하고 있어요. 다만 글을 전체적으로 이해하고 추론하는 부분에 대해 조금 더 관심이 필요합니다. 역량 다지기 학습에 집중하여 지도해 주세요.
+            </div>
+            <div class="result_1">
+                <p><span class="result_2_icon"></span>어휘와 문장의 이해 결과</p>
+                분석한 결과, 문제에 대해 사전적 의미를 이해하고, 문맥을 매우 잘 파악하고 있어요. 다만 글을 전체적으로 이해하고 추론하는 부분에 대해 조금 더 관심이 필요합니다. 역량 다지기 학습에 집중하여 지도해 주세요. 분석한 결과, 문제에 대해 사전적 의미를 이해하고, 문맥을 매우 잘 파악하고 있어요. 다만 글을 전체적으로 이해하고 추론하는 부분에 대해 조금 더 관심이 필요합니다. 역량 다지기 학습에 집중하여 지도해 주세요.
+            </div>
+            <div class="result_1">
+                <p><span class="result_2_icon"></span>어휘와 문장의 이해 결과</p>
+                분석한 결과, 문제에 대해 사전적 의미를 이해하고, 문맥을 매우 잘 파악하고 있어요. 다만 글을 전체적으로 이해하고 추론하는 부분에 대해 조금 더 관심이 필요합니다. 역량 다지기 학습에 집중하여 지도해 주세요. 분석한 결과, 문제에 대해 사전적 의미를 이해하고, 문맥을 매우 잘 파악하고 있어요. 다만 글을 전체적으로 이해하고 추론하는 부분에 대해 조금 더 관심이 필요합니다. 역량 다지기 학습에 집중하여 지도해 주세요.
+            </div>
+        </div>
+        <!-- //진단평가 AI 분석 결과 창 -->
+
+        <!-- 하단 버튼 -->
+        <div class="btn_exam">
+            <button type="button">포트폴리오</button>
+            <button type="button">진단평가리포트</button>
+        </div>
+        <!-- //하단 버튼 -->
+    </div>
+
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+    <script>
+        var chart = bb.generate({
+        data: {
+            x: "x",
+            columns: [
+            ["x", "어휘력", "추론력", "비판적 사고력", "창의융합 사고력", "이해력"],
+            ["윤지훈", 10, 250, 400, 300, 50],
+            ],
+            type: "radar",
+            labels: true
+        },
+        radar: {
+            axis: {
+            max: 400
+            },
+            level: {
+            depth: 4
+            },
+            direction: {
+            clockwise: true
+            }
+        },
+        bindto: "#radarChart"
+        });
+    </script>
+</body>
+</html>

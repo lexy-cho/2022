@@ -1,0 +1,222 @@
+/* font */
+@font-face{
+    font-family: 'bmjua';
+    src: url("../../font/BMJUA_otf.woff2");
+}
+@font-face {
+    font-family: 'NanumSquareRoundBold';
+    font-weight: bold;
+    src: url("../../font/NanumSquareRoundOTFEB.otf");
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: bold;
+    src: url("../../font/NanumSquareRoundOTFR.otf");
+}
+@font-face {
+    font-family: 'OTE2_YoonSofunny';
+    font-weight: bold;
+    src: url("../../font/oTE2_YoonSofunny.woff2") format('woff2');
+}
+@font-face {
+    font-family: 'NanumGothicExtraBold';
+    font-weight: bold;
+    src: url("../../font/NanumGothicExtraBold.woff2") format('woff2');
+}
+@font-face {
+    font-family: 'NanumBarunGoth';
+    font-weight: bold;
+    src: url("../../font/NanumBarunGothic.woff2") format('woff2');
+}
+@font-face {
+    font-family: 'NanumGothBold';
+    font-weight: bold;
+    src: url("../../font/NanumGothicBold.woff");
+}
+@font-face {
+    font-family: 'Nanum Barun Gothic OTF';
+    font-weight: bold;
+    src: url("../../font/NanumBarunGothic.woff2") format('woff2');
+}
+@font-face {
+    font-family: 'NanumSquareRoundOTFB';
+    font-weight: bold;
+    src: url("../../font/NanumSquareRoundOTFB.woff2");
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+}
+a {
+    text-decoration: none;
+}
+/* header*/
+#header{
+    position: absolute;
+}
+#header div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.btnHome{
+	position: absolute;
+	left:1170px;
+	top: 24px;
+}
+.btnMain{
+    position: absolute;
+    left:1170px;
+    top: 24px;
+}
+#btnSearch{
+	position: absolute;
+	top: 28px;
+    left: 44px;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: 100px;
+}
+#reportForm {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    left: 43px;
+    top: 18px;
+    width: 1205px;
+}
+.section_area {
+    width: 130px;
+}
+.section_month , .section_week {
+    width: 128px;
+}
+#selectmonth , #selectweek{
+    background: url(../../images/bookmap/report/bg_select_month.png) no-repeat 100% 100%;
+    border-radius: 0px;
+    appearance: none;
+    width: 112px;
+    height: 54px;
+    outline: none;
+    color: #312a20;
+    font-size: 19px;
+    font-family: 'Nanum Square Round OTF Bold';
+    font-weight: bold;
+    padding-left: 24px;
+    border: none;
+    letter-spacing: -1px;
+}
+#delete_btn{
+	position: absolute;
+	top: 24px;
+    left: 56px;
+}
+
+/* search */
+.search_sect
+{
+    position: absolute;
+    top: 80px;
+    left: 184px;
+    z-index: 15;
+}
+#f_book_search
+{
+    background: url('../../images/readingschool/note/bg_input_search.png') no-repeat;
+    width: 829px;
+    height: 120px;
+    padding-left: 78px;
+    padding-right: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 0px !important;
+    
+    font-family: 'NanumGothBold';
+	color: #d5d0d0;
+	font-size: 20px;
+}
+#dim
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1280px;
+	height: 800px;
+	z-index: 11;
+	background: black;
+	opacity: 0.5;
+}
+/* 서비스 준비중 팝업 */
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+}
+.btn{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.popup_wrap{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+/* ================ */
+/* 팝업창 */
+#pupDelPort
+{
+    z-index: 90;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
+#pupDelPort > .dim
+{
+    width: 100%;
+    height: 100%;
+}
+#pupDelPort > .cardBg
+{
+    position: absolute;
+    top: 448px;
+    left: 100px;
+}
+#pupDelPort > .cardBg > #btnYes
+{
+    position: absolute;
+    top: 217px;
+    left: 396px;
+}
+#pupDelPort > .cardBg > #btnNo
+{
+    position: absolute;
+    top: 217px;
+    left: 557px;
+}
+
+.icons_ver2{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 342px;
+    height: 99px;
+    position: absolute;
+    top: 381px;
+    left: 448px;
+}
+/*.icons_ver2 img{
+    width: 60px;
+    height: 60px;
+}*/

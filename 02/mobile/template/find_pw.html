@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전</button>
+					<h1>회원가입</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu :: 비밀번호 찾기 시 없음 -->
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div id="loginWrap" class="findIpCase"><!-- class 없어도 유지 -->
+							<div class="back">
+								<script>
+									$(document).ready(function(){
+										$('#findIdBtn').click(function(){
+											$('form').hide();
+											$('.pwEnd').show();
+										});
+									});
+								</script>
+								<!---->
+								<form>
+									<p>회원정보에 등록되어 있는 이메일 주소를 입력하여 주십시오.</p>
+									<div class="findIp">
+										<div><label>아이디</label><input type="text" id="" name="" /></div>
+										<div><label>이름</label><input type="text" id="" name="" /></div>
+										<div class="emailForm">
+											<label>이메일</label>
+											<input type="text" />
+											<em>@</em>
+											<input type="text" />
+										</div>
+									</div>
+									<button type="button" class="btnL" id="findIdBtn">비밀번호 찾기</button>
+								</form>
+								<!---->
+								<div class="pwEnd" style="display:none;">
+									<p>
+										입력하신 이메일로 <strong>임시 비밀번호가 전송</strong>되었습니다.<br/>
+										임시비밀번호로 로그인 후 반드시 비밀번호를 재설정 해 주십시오.<br/>
+										한번 로그아웃을 하면 임시비밀번호로 로그인이 되지 않습니다.
+									</p>
+									<!-- Btn -->
+									<div class="btnArea">
+										<a href="login.html" class="btnL">로그인</a>
+									</div>
+									<!--//Btn -->
+								</div>
+								<!---->
+							</div>
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

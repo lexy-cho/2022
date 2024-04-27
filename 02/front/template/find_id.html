@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div id="loginWrap" class="findIpCase"><!-- class 없어도 유지 -->
+							<div class="back">
+								<h2>아이디 찾기</h2>
+								<script>
+									$(document).ready(function(){
+										$('#findIdBtn').click(function(){
+											$('form').hide();
+											$('.idEnd').show();
+										});
+									});
+								</script>
+								<!---->
+								<form>
+									<p>회원정보에 등록되어 있는 이름과 휴대폰 번호 또는 이메일을 입력해 주세요</p>
+									<div class="idFindKind">
+										<span class="radioSet">
+											<input type="radio" name="radio1" id="rd1" checked/>
+											<label for="rd1"><i></i>휴대폰</label>
+										</span>
+										<span class="radioSet">
+											<input type="radio" name="radio1" id="rd2"/>
+											<label for="rd2"><i></i>이메일</label>
+										</span>
+									</div>
+									<div class="findIp">
+										<div><label>이름</label><input type="text" id="" name="" /></div>
+										<div><label>휴대폰</label><input type="text" id="" name="" placeholder="(-) 포함 11글자" /></div>
+										<div class="emailForm">
+											<label>이메일</label>
+											<input type="text" />
+											<em>@</em>
+											<input type="text" />
+										</div>
+									</div>
+									<button type="button" class="btnL" id="findIdBtn">아이디 찾기</button>
+								</form>
+								<!---->
+								<div class="idEnd" style="display:none;">
+									<p>회원정보에 등록되어 있는 회원님의 아이디입니다.</p>
+									<div class="findIp">
+										<div><label>ID</label><span class="dt">123456789</span></div>
+										<div><label>등록일</label><span class="dt">2022년 11월 11일</span></div>
+									</div>
+									<!-- Btn -->
+									<div class="btnArea">
+										<a href="login.html" class="btnL">로그인</a>
+										<a href="find_pw.html" class="btnL line">비밀번호 찾기</a>
+									</div>
+									<!--//Btn -->
+								</div>
+								<!---->
+							</div>
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

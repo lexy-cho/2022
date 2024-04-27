@@ -1,0 +1,442 @@
+.all_wrap{
+    position: relative;
+    width: 1280px;
+    height: 800px;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+/* 달력 선택 */
+.cal_wrap{
+    position: absolute;
+    width: 460px;
+    height: 46px;
+    top: 233px;
+    left: 80px;
+}
+.cal_wrap div{
+    display: inline-block;
+    margin-right: 5.8px;
+}
+.cal_wrap div:last-child{
+    margin-right: 0;
+}
+.cal_wrap_front{
+    width: 209px;
+    height: 46px;
+    background: url(../images/ot_cal_bg.svg) no-repeat;
+    font-family: 'NanumGothicExtraBold';
+    font-size: 18px;
+    font-weight: 800;
+    color: #3B3B3B;
+    line-height: 50px;
+    text-align: center;
+}
+.cal_wrap_bar{
+    width: 19px;
+    height: 2px;
+    background: url(../images/ot_cal_bar.svg) no-repeat;
+    padding-bottom: 5px;
+}
+.cal_wrap_back{
+    width: 209px;
+    height: 46px;
+    background: url(../images/ot_cal_bg.svg) no-repeat;
+    font-family: 'NanumGothicExtraBold';
+    font-size: 18px;
+    font-weight: 800;
+    color: #3B3B3B;
+    line-height: 50px;
+    text-align: center;
+}
+.cal_wrap_btn_area{
+    width:85px;
+    height:31px;
+    position:relative;
+    left:9px;
+    top:10px;
+}
+.cal_wrap_btn_area .searchBtn{
+    width:85px;
+    height:31px;
+    background-color:transparent;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.cal_wrap_btn_area .searchBtn img{
+    width:100%;
+    height:100%;
+}
+.cal_wrap_btn_area .btnText{
+    font-size:16px;
+    color:#fff;
+    position:absolute;
+    left:27px;
+    top:8px;
+    font-family: 'NanumGothic';
+}
+/* 달력 */
+.calendar{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 462px;
+    height: 396px;
+    top: 285px;
+    left: 80px;
+    background-color: #0B3861;
+    border-radius: 4px;
+}
+.cal_close{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: url(../images/ot_cal_close.svg) no-repeat;
+    top: 25px;
+    right: 25px;
+}
+.cal_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 462px;
+    height: 34px;
+    top: 55px;
+}
+.cal_head span{
+    margin: 0 10px;
+}
+.cal_head_arrow_left{
+    width: 14px;
+    height: 21px;
+    background: url(../images/ot_cal_left_arrow.svg) no-repeat;
+}
+.cal_head_txt_year{
+    font-family: 'NanumGothic';
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.cal_head_txt_month{
+    font-family: 'NanumGothic';
+    font-size: 26px;
+    color: #FFFFFF;
+}
+.cal_head_arrow_right{
+    width: 14px;
+    height: 21px;
+    background: url(../images/ot_cal_right_arrow.svg) no-repeat;
+}
+.cal_bar{
+    width: 357px;
+    height: 2px;
+    background-color:  #072744;
+    margin: 70px auto 15px;
+}
+.cal_table_wrap{
+    width: 357px;
+    margin: auto;
+}
+.cal_table_wrap table{
+    width: 357px;
+    font-family: 'NanumGothic';
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.cal_table_wrap table thead tr th{
+    height: 42px;
+}
+.cal_table_wrap table tbody tr td{
+    height: 42px;
+}
+.cal_txt_red{
+    color: #EB734D;
+}
+.cal_sel{
+    font-weight: bold;
+    background-color: #FFCA53;
+    border-radius: 2px;
+    /* 달력 선택 시 배경색 바뀜 */
+}
+.time_table_wrap{
+    position: relative;
+    width: 1116px;
+    height: 418px;
+    top: 35px;
+    margin: 0 auto 22px;
+    overflow-y: scroll;
+}
+.time_table_wrap table{
+    width: 1116px;
+    font-family: 'NanumGothic';
+    font-size: 13px;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+    border-collapse: collapse;
+}
+.time_table_wrap table thead th{
+    font-family: 'NanumGothic';
+    font-weight: bold;
+    height: 40px;
+    background-color: #FEFBF9;
+}
+.time_table_wrap table tbody tr td{
+    font-family: 'NanumGothic';
+    font-weight: bold;
+    color: #666666;
+    height: 40px;
+}
+.time_table_wrap table tbody tr:nth-child(odd){
+    background-color: #ffffff;
+}
+.time_table_wrap table tbody tr:nth-child(even){
+    background-color: #FEFBF9;
+}
+.txt_extra{
+    font-family: 'NanumGothicExtraBold' !important;
+}
+.txt_blue{
+    color: #0E2E53 !important;
+}
+.txt_red{
+    color: #DD1717 !important;
+    /* OT 보고 상태가 미완료 일 경우에 글자색 변경 */
+}
+.note_icon{
+    background: url(../images/ot_note_icon.svg) no-repeat 50% 50%;
+    background-size: 15px 20px;
+    /* OT 보고 팝업안의 비고에 내용이 있을 경우에만 아이콘 생김 */
+}
+.addr1{
+    width: 155px;
+    margin: auto;
+}
+.addr2{
+    width: 180px;
+    margin: auto;
+}
+.border_right{
+    border-right: 1px solid #FCF0E8;
+}
+.btn_counseling{
+    width: 98px;
+    height: 23px;
+    font-family: 'NanumGothic';
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 27px;
+    background-color: #45516D;
+    border-radius: 2px;
+    margin-left: 15px;
+}
+.btn_wrap{
+    position: relative;
+    width: 1116px;
+    top: 35px;
+    left: 1015px;
+}
+.btn_wrap button{
+    width: 183px;
+    height: 51px;
+    background-color: #7689B7;
+    font-family: 'NanumGothic';
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+/* 미완료 OT 보고 팝업 */
+.popup_not_finish_all_wrap{
+    display: none;
+}
+.popup_not_finish_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    top: 0;
+    left: 0;
+}
+.popup_not_finish_dim{
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    background-color: #000000B3;
+}
+.popup_not_finish_txt_wrap{
+    position: absolute;
+    width: 1096px;
+    height: 740px;
+    background-color: #FFFFFF;
+}
+.not_finish_close{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: url(../images/ot_pop_close.svg) no-repeat;
+    top: 24px;
+    right: 24px;
+}
+.not_finish_tit{
+    width: 100%;
+    height: 68px;
+    background-color: #0B3861;
+    font-family: 'NanumGothic';
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 68px;
+}
+.not_finish_table_wrap{
+    width: 1040px;
+    height: 488px;
+    margin: 35px auto 0;
+}
+.not_finish_table_wrap table{
+    width: 1040px;
+    font-family: 'NanumGothic';
+    font-size: 18px;
+    font-weight: bold;
+    color: #585858;
+    text-align: center;
+    border-collapse: collapse;
+}
+.not_finish_table_wrap table tbody td{
+    height: 48px;
+}
+.first_td{
+    background-color: #FFEBD6;
+    border: 1px solid #F2BF89;
+}
+.second_td{
+    width: auto;
+    text-align: left; /* 2020-12-18 수정 */
+    padding-left: 15px; /* 2020-12-18 수정 */
+    border: 1px solid #FCF0E8;
+}
+.bg_pink{
+    background-color: #FEFBF9;
+}
+.txt_area textarea{
+    width: 100%;
+    height: 147px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'NanumGothic';
+    font-size: 18px;
+    font-weight: bold;
+    resize: none;
+}
+.txt_area textarea::placeholder{
+    padding-top: 12%;
+    color: #AAAAAA;
+    text-align: center;
+}
+select, input{
+    color: #666666;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+}
+.popup_not_finish_btn_wrap{
+    position: absolute;
+    width: 300px;
+    top: 700px;
+    left: 860px;
+}
+.popup_not_finish_btn_wrap button{
+    width: 144px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    font-family: 'NanumGothic';
+    font-size: 18px;
+    margin-right: 5px;
+}
+.popup_not_finish_btn_wrap button:last-child{
+    color: #FFFFFF;
+    background-color: #7689B7;
+    border: none;
+    margin-right: 0;
+}
+
+/* 완료 OT 보고 팝업 */
+.popup_finish_all_wrap{
+    display: none;
+}
+.popup_finish_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    top: 0;
+    left: 0;
+}
+.popup_finish_dim{
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    background-color: #000000B3;
+}
+.popup_finish_txt_wrap{
+    position: absolute;
+    width: 1096px;
+    height: 740px;
+    background-color: #FFFFFF;
+}
+.finish_close{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: url(../images/ot_pop_close.svg) no-repeat;
+    top: 24px;
+    right: 24px;
+}
+.finish_tit{
+    width: 100%;
+    height: 68px;
+    background-color: #0B3861;
+    font-family: 'NanumGothic';
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 68px;
+}
+.finish_table_wrap{
+    width: 1040px;
+    height: 488px;
+    margin: 35px auto 0;
+}
+.finish_table_wrap table{
+    width: 1040px;
+    font-family: 'NanumGothic';
+    font-size: 18px;
+    font-weight: bold;
+    color: #585858;
+    text-align: center;
+    border-collapse: collapse;
+}
+.finish_table_wrap table tbody td{
+    height: 48px;
+}
+.first_td{
+    background-color: #FFEBD6;
+    border: 1px solid #F2BF89;
+}
+/* .second_td{
+    border: 1px solid #FCF0E8;
+} */
+.bg_pink{
+    background-color: #FEFBF9;
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전</button>
+					<h1>작업일정</h1>
+					<button class="btnNav">메뉴여닫기</button>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu -->
+			<div id="snb">
+				<section>
+					<div class="c-menu c-menu--slide-right">
+						<div class="back" data-include="include/snb.html"></div>
+					</div>
+					<div class="c-mask"></div><!-- /c-mask -->
+				</section>
+			</div>
+			<!-- //Sub Menu -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- List search -->
+							<div class="listSearch scalableCase">
+								<div class="choiceMonth">
+									<button class="prevM">이전달</button>
+									<strong><span>August</span> 2022</strong>
+									<button class="nextM">다음달</button>
+								</div>
+							</div>
+							<!--//List search-->
+							<!-- List -->
+			        <div class="calendarLS">
+								<div class="day">
+									<em>SUN</em>
+									<em>MON</em>
+									<em>TUE</em>
+									<em>WED</em>
+									<em>THU</em>
+									<em>FRI</em>
+									<em>SAT</em>
+								</div>
+								<div class="week_div">
+								  <div class="date notM">
+								    <strong>31</strong>
+								    <!-- <span class="iSc plan">계획</span>
+								    <span class="iSc ing">작업 중</span>
+								    <span class="iSc check">출석</span> -->
+								    <span class="iSc unCheck">결석</span>
+								    <!-- <span class="iSc nutrient">양액 일지</span>
+								    <span class="iSc growth">생육 일지</span>
+								    <span class="iSc diary">영농 일지</span> -->
+								  </div>
+								  <div class="date">
+								    <strong>01</strong>
+								    <!-- <span class="iSc plan">계획</span>
+								    <span class="iSc ing">작업 중</span> -->
+								    <span class="iSc check">출석</span>
+								    <!-- <span class="iSc unCheck">결석</span> -->
+								    <span class="iSc nutrient">양액 일지</span>
+								    <span class="iSc growth">생육 일지</span>
+								    <!-- <span class="iSc diary">영농 일지</span> -->
+								  </div>
+								  <div class="date">
+								    <strong>02</strong>
+								    <span class="iSc unCheck">결석</span>
+								  </div>
+								  <div class="date">
+								    <strong>03</strong>
+								    <span class="iSc unCheck">결석</span>
+								  </div>
+								  <div class="date">
+								    <strong>04</strong>
+								    <span class="iSc unCheck">결석</span>
+								  </div>
+								  <div class="date">
+								    <strong>05</strong>
+								    <span class="iSc unCheck">결석</span>
+								  </div>
+								  <div class="date">
+								    <strong>06</strong>
+								    <span class="iSc unCheck">결석</span>
+								  </div>
+								  <div class="date">
+								    <strong>07</strong>
+								    <span class="iSc unCheck">결석</span>
+								  </div>
+								  <div class="date">
+								    <strong>08</strong>
+								    <span class="iSc unCheck">결석</span>
+								  </div>
+								  <div class="date">
+								    <strong>09</strong>
+								    <span class="iSc check">출석</span>
+								    <span class="iSc nutrient">양액 일지</span>
+								    <span class="iSc growth">생육 일지</span>
+								    <!-- <span class="iSc diary">영농 일지</span> -->
+								  </div>
+								  <div class="date today">
+								    <strong>10</strong>
+								    <span class="iSc ing">작업 중</span>
+								    <span class="iSc nutrient">양액 일지</span>
+								  </div>
+								  <div class="date">
+								    <strong>11</strong>
+								    <span class="iSc plan">계획</span>
+								  </div>
+								  <div class="date">
+								    <strong>12</strong>
+								    <span class="iSc plan">계획</span>
+								  </div>
+								  <div class="date">
+								    <strong>13</strong>
+								    <span class="iSc plan">계획</span>
+								  </div>
+								  <div class="date">
+								    <strong>14</strong>
+								  </div>
+								  <div class="date">
+								    <strong>15</strong>
+								  </div>
+								  <div class="date">
+								    <strong>16</strong>
+								  </div>
+								  <div class="date">
+								    <strong>17</strong>
+								  </div>
+								  <div class="date">
+								    <strong>18</strong>
+								  </div>
+								  <div class="date">
+								    <strong>19</strong>
+								  </div>
+								  <div class="date">
+								    <strong>20</strong>
+								  </div>
+								  <div class="date">
+								    <strong>21</strong>
+								  </div>
+								  <div class="date">
+								    <strong>22</strong>
+								  </div>
+								  <div class="date">
+								    <strong>23</strong>
+								  </div>
+								  <div class="date">
+								    <strong>24</strong>
+								  </div>
+								  <div class="date">
+								    <strong>25</strong>
+								  </div>
+								  <div class="date">
+								    <strong>26</strong>
+								  </div>
+								  <div class="date">
+								    <strong>27</strong>
+								  </div>
+								  <div class="date">
+								    <strong>28</strong>
+								  </div>
+								  <div class="date">
+								    <strong>29</strong>
+								  </div>
+								  <div class="date">
+								    <strong>30</strong>
+								  </div>
+								  <div class="date">
+								    <strong>31</strong>
+								  </div>
+								  <div class="date notM">
+								    <strong>01</strong>
+								  </div>
+								  <div class="date notM">
+								    <strong>02</strong>
+								  </div>
+								  <div class="date notM">
+								    <strong>03</strong>
+								  </div>
+								</div>
+								<div class="iScKind">
+									<label>범례 : </label>
+									<span class="iSc plan">계획</span>
+									<span class="iSc ing">작업 중</span>
+									<span class="iSc check">출석</span>
+									<span class="iSc unCheck">결석</span>
+									<span class="iSc nutrient">양액 일지</span>
+									<span class="iSc growth">생육 일지</span>
+									<span class="iSc diary">영농 일지</span>
+								</div>
+			        </div>
+							<!--//List -->
+							<div class="btnArea">
+								<button class="btnL" id="alertBtn1">등록</button>
+							</div>
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("alertBtn1","alertDim","alertPop1");
+				popupClose("alertPopClose1","","alertPop1");
+				popupOpen("alertPopClose1","","alertPop2");
+				popupClose("alertPopClose2","","alertPop2");
+				popupClose("alertPopClose2_1","","alertPop2");
+				popupOpen("alertPopClose2","","alertPop3");
+				popupClose("alertPopClose3","","alertPop3");
+				popupOpen("alertPopClose3","","alertPop4");
+				popupClose("alertPopClose4","alertDim","alertPop4");
+			});
+		</script>
+		<!-- alert 팝업 -->
+		<div class="alertDim" style="display:none;">
+			<!---->
+			<div class="alertPop" id="alertPop1">
+				<div class="pBack">
+					<div class="pData ttCase">
+						<strong>일정등록</strong>
+						<label>일자 : </label><input type="text" class="cal ml5" value="2021-02-02" />
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM" id="alertPopClose1">등록</button>
+					<button class="btnM line">취소</button>
+				</div>
+			</div>
+			<!---->
+			<div class="alertPop" id="alertPop2">
+				<div class="pBack">
+					<button class="btnPClose" id="alertPopClose2_1">닫기</button>
+					<div class="pData ttCase">
+						<strong>일정 <em>계획</em></strong>
+						<label>일시 : </label><input type="text" class="cal ml5" value="2021-02-02" />
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM" id="alertPopClose2">작업 시작</button>
+					<button class="btnM line">삭제</button>
+				</div>
+			</div>
+			<!---->
+			<div class="alertPop" id="alertPop3">
+				<div class="pBack">
+					<div class="pData ttCase">
+						<strong>일정 <em>작업중</em></strong>
+						<label>일시 : </label><input type="text" class="cal ml5" value="2021-02-02" />
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM" id="alertPopClose3">작업 완료</button>
+					<button class="btnM line">확인</button>
+				</div>
+			</div>
+			<!---->
+			<div class="alertPop" id="alertPop4">
+				<div class="pBack">
+					<div class="pData ttCase">
+						<strong>일정 <em>출석 or 결석</em></strong>
+						<label>일자 : </label><input type="text" class="cal ml5" value="2021-02-02" />
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM" id="alertPopClose4">확인</button>
+				</div>
+			</div>
+			<!---->
+		</div>
+		<!-- //alert 팝업 -->
+	</body>
+</html>

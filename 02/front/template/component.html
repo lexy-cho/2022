@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+    <title>SmartFarm</title>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<style>
+			#wrap {padding:0 0 0 0;text-align:left}
+			.cptTable {padding:10px;}
+			.cptTable table {width:100%;border:1px solid #eee;border-collapse:collapse;}
+			.cptTable table th {border:1px solid #dddddd;padding:0.5rem;text-align:center;font-weight:bold;color:#111;}
+			.cptTable table td {border:1px solid #dddddd;padding:0.5rem;}
+			.cptTable table td > strong {display:inline-block;width:100%;margin:1rem 0;}
+			.cptTable table td button {vertical-align:top;}
+			.inputBox {margin-bottom:4px;}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="cptTable">
+				<table>
+					<tr>
+						<th>BUTTON</th>
+					</tr>
+					<tr>
+						<td>
+							<strong>large</strong>
+							<button class="btnL">BUTTON - Yellow</button>
+							<button class="btnL line">BUTTON - Yellow line</button>
+							<br/><br/>
+							<strong>Medium</strong>
+							<button class="btnM">BUTTON - Yellow</button>
+							<button class="btnM line">BUTTON - Yellow line</button>
+							<br/><br/>
+							<strong>small</strong>
+							<button class="btnS">BUTTON - Yellow</button>
+							<button class="btnS line">BUTTON - Yellow line</button>
+							<br/><br/>
+							<strong>disabled</strong>
+							<button class="btnL" disabled>BUTTON - Yellow</button>
+							<button class="btnM" disabled>BUTTON - Yellow</button>
+							<button class="btnS" disabled>BUTTON - Yellow</button>
+						</td>
+					</tr>
+					<tr>
+						<th>INPUT</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Placeholder"/>
+							<input type="text" placeholder="Placeholder" value="Value"/>
+							<input type="text" placeholder="Readonly" readonly/>
+							<input type="text" placeholder="Disabled" disabled/>
+							<br/><br/>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="no" class="label">선택하세요</option>
+									<option value="" selected>Select Option 1</option>
+									<option value="">Select Option 2</option>
+									<option value="">Select Option 3</option>
+									<option value="">Select Option 4</option>
+								</select>
+							</span>
+							<span class="selectSet">
+								<select name="" id="" disabled>
+									<option value="">Select Option 1</option>
+									<option value="">Select Option 2</option>
+									<option value="">Select Option 3</option>
+									<option value="">Select Option 4</option>
+								</select>
+							</span>
+							<script>
+								$(document).ready(function(){
+									multSelect("btnSelect1");
+									multSelect("btnSelect2");
+								});
+							</script>
+							<div class="multiselectSet" style="width:150px;">
+								<div class="selectSet lCase" id="btnSelect1">
+									<select>
+										<option>Select an option</option>
+									</select>
+									<div class="overSelect"></div>
+								</div>
+								<div class="checkArea" style="display:none">
+									<span class="checkSet">
+										<input type="checkbox" id="one"/>
+										<label for="one"><i></i>First checkbox</label>
+									</span>
+									<span class="checkSet">
+										<input type="checkbox" id="two"/>
+										<label for="two"><i></i>Second checkbox</label>
+									</span>
+									<span class="checkSet">
+										<input type="checkbox" id="three"/>
+										<label for="three"><i></i>Third checkbox</label>
+									</span>
+								</div>
+							</div>
+							<div class="multiselectSet" style="width:160px;">
+								<div class="selectSet" id="btnSelect2">
+									<select>
+										<option>First checkbox 외 2</option>
+									</select>
+									<div class="overSelect"></div>
+								</div>
+								<div class="checkArea" style="display:none">
+									<span class="checkSet">
+										<input type="checkbox" id="one2" checked />
+										<label for="one2"><i></i>First checkbox</label>
+									</span>
+									<span class="checkSet">
+										<input type="checkbox" id="two2" checked />
+										<label for="two2"><i></i>Second checkbox</label>
+									</span>
+									<span class="checkSet">
+										<input type="checkbox" id="three2" checked/>
+										<label for="three2"><i></i>Third checkbox</label>
+									</span>
+								</div>
+							</div>
+							<br/><br/>
+							<span class="checkSet">
+								<input type="checkbox"/>
+								<label for=""><i></i>checkSet</label>
+							</span>
+							<span class="checkSet">
+								<input type="checkbox" checked/>
+								<label for=""><i></i>checkSet</label>
+							</span>
+							<span class="checkSet">
+								<input type="checkbox" disabled/>
+								<label for=""><i></i>checkSet</label>
+							</span>
+							<span class="checkSet">
+								<input type="checkbox" checked disabled/>
+								<label for=""><i></i>checkSet</label>
+							</span>
+							<br/><br/>
+							<span class="radioSet">
+								<input type="radio" name="radio1"/>
+								<label for=""><i></i>radioSet</label>
+							</span>
+							<span class="radioSet">
+								<input type="radio" name="radio1" checked/>
+								<label for=""><i></i>radioSet</label>
+							</span>
+							<span class="radioSet">
+								<input type="radio" name="radio2" disabled/>
+								<label for=""><i></i>radioSet</label>
+							</span>
+							<span class="radioSet">
+								<input type="radio" name="radio2" checked disabled/>
+								<label for=""><i></i>radioSet</label>
+							</span>
+							<br/><br/>
+							<span class="toggleSet">
+								<input type="checkbox" id="push" />
+								<label for="push"><!----></label>
+							</span>
+							<span class="toggleSet">
+								<input type="checkbox" id="push1" checked/>
+								<label for="push1"><!----></label>
+							</span>
+							<span class="toggleSet">
+								<input type="checkbox" id="push2" disabled/>
+								<label for="push2"><!----></label>
+							</span>
+							<span class="toggleSet">
+								<input type="checkbox" id="push3" checked disabled/>
+								<label for="push3"><!----></label>
+							</span>
+							<br/><br/>
+							<!-- <span class="calSet"><input type="tel" placeholder="2020-01-21" /><button>달력열기</button></span>
+							<span class="calDupSet">
+							    <span class="calSet"><input type="tel" placeholder="2020-01-21" /><button>달력열기</button></span>
+							    <em>~</em>
+							    <span class="calSet"><input type="tel" placeholder="2020-01-21" /><button>달력열기</button></span>
+							</span> -->
+							<input type="text" class="cal" placeholder="일자 선택"  />
+							<input type="text" class="multyCal" placeholder="시작일 선택 ~ 종료일 선택" />
+							<span class="calDupSet">
+							    <input type="text" class="cal" placeholder="일자 선택"  />
+							    <em>-</em>
+							    <input type="text" class="cal" placeholder="일자 선택"  />
+							</span>
+							<br/><br/>
+							<span class="ipBtn">
+								<input type="text"/>
+								<button class="btnM line">중복확인</button>
+							</span>
+							<br/><br/>
+							<div class="emailForm">
+								<input type="text" />
+								<em>@</em>
+								<input type="text" />
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>paginate</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="paginate">
+								<span>
+									<a class="first">처음</a>
+									<a class="prev">이전</a>
+									<a class="on">1</a>
+									<a>2</a>
+									<a>3</a>
+									<a>4</a>
+									<a>5</a>
+									<a>6</a>
+									<a>7</a>
+									<a>8</a>
+									<a>9</a>
+									<a>10</a>
+									<a class="next">다음</a>
+									<a class="last">마지막</a>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>TAB</th>
+					</tr>
+					<tr>
+						<td>
+							<!-- tab-wrap -->
+							<div class="tabwrap">
+							    <!-- tab -->
+							    <div class="tabBack">
+							        <div class="tabNav">
+							            <nav>
+							                <ul>
+							                    <li class="on"><button class="newTab" data-name="0">Tab Menu 1</button></li>
+							                    <li><button data-name="1">Tab Menu 2</button></li>
+							                    <li><button data-name="2">Tab Menu 3</button></li>
+							                </ul>
+							            </nav>
+							        </div>
+							    </div>
+							    <!--// tab -->
+							    <div class="tabLayout">
+							        <div class="tabData tData0" style="display:block;">Tab Menu 0 Data</div>
+							        <div class="tabData tData1">Tab Menu 1 Data</div>
+							        <div class="tabData tData2">Tab Menu 2 Data</div>
+							    </div>
+							</div>
+							<!-- //tab-wrap -->
+						</td>
+					</tr>
+					<tr>
+						<th>POPUP</th>
+					</tr>
+					<tr>
+						<td>
+							<button class="btnS" id="alertBtn1">일반 alert 팝업</button>
+							<button class="btnS" id="alertBtn2">타이틀이 있는 alert 팝업</button>
+							<button class="btnS line" id="basicBtn1">layer 팝업</button>
+							<button class="btnS" id="popBtn3">새창 팝업</button>
+							<script>
+								$(document).ready(function(){
+									popupOpen("alertBtn1","alertDim","alertPop1");
+									popupClose("alertPopClose1","alertDim","alertPop1");
+									popupOpen("alertBtn2","alertDim","alertPop2");
+									popupClose("alertPopClose2","alertDim","alertPop2");
+									popupOpen("basicBtn1","popDim","basicPop1");
+									popupClose("basicPopClose1","popDim","basicPop1");
+									popupClose("basicPopClose2","popDim","basicPop1");
+									newPopupOpen("popBtn3","네이버","http://www.naver.com","500","500");
+								});
+							</script>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- alert 팝업 -->
+		<div class="alertDim" style="display:none;">
+			<!-- 기본 팝업 -->
+			<div class="alertPop" id="alertPop1">
+				<div class="pBack">
+					<div class="pData">alert 기본 팝업 입니다. alert 기본 팝업 입니다. alert 기본 팝업 입니다. alert 기본 팝업 입니다. alert 기본 팝업 입니다.</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM line" id="alertPopClose1">취소</button>
+					<a class="btnM" href="format.html">확인</a>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+			<!-- 기본 팝업 -->
+			<div class="alertPop" id="alertPop2">
+				<div class="pBack">
+					<div class="pData ttCase">
+						<strong>타이틀</strong>
+						<p>타이틀이 있는 alert 기본 팝업 입니다. </p>
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM line" id="alertPopClose2">취소</button>
+					<a class="btnM" href="format.html">확인</a>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //alert 팝업 -->
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none;">
+			<!-- 기본 팝업 -->
+			<div class="basicPop" id="basicPop1">
+				<h1 class="tt">Data 기본 팝업</h1>
+				<button class="btnPClose" id="basicPopClose2">닫기</button>
+				<div class="pBack">
+					Data 기본 팝업 내용
+				</div>
+				<div class="pBtn">
+					<button class="btnM line" id="basicPopClose1">취소</button>
+					<a href="category_view.html" class="btnM">등록</a>
+				</div>
+			</div>
+			<!-- //기본 팝업 -->
+		</div>
+		<!-- //Data 팝업 -->
+	</body>
+</html>

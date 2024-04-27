@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>회원가입</h2><span><em>회원가입</em><strong>약관동의</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div class="joinArea step2"><!-- class 없어도 유지 -->
+							<h3>회원정보 등록</h3>
+							<div class="tws">
+								<table>
+									<colgroup>
+										<col width="154"/>
+										<col width="*"/>
+										<col width="154"/>
+										<col width="*"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>사용자 ID <sup>*</sup></th>
+											<td colspan="3"><input type="text"/><button class="btnM line ml1">중복확인</button></td>
+										</tr>
+										<tr>
+											<th>사용자 권한</th>
+											<td colspan="3">
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="" selected>농장관리자</option>
+														<option value="">작업자</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th>이름 <sup>*</sup></th>
+											<td colspan="3"><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>소속</th>
+											<td><input type="text"/></td>
+											<th>직급</th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>연락처 <sup>*</sup></th>
+											<td><input type="text"/></td>
+											<th>모바일 <sup>*</sup></th>
+											<td><input type="text"/></td>
+										</tr>
+										<tr>
+											<th>이메일<sup>*</sup></th>
+											<td colspan="3">
+												<div class="emailForm">
+													<input type="text" />
+													<em>@</em>
+													<input type="text" />
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>농장선택</th>
+											<td colspan="3" class="farmLocation">
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="no" class="label">광역시도</option><!-- 선택하세요만 색상 변경 > 반드시 value는 no 로 적용 -->
+														<option value="">Select Option 1</option>
+														<option value="">Select Option 2</option>
+														<option value="">Select Option 3</option>
+														<option value="">Select Option 4</option>
+													</select>
+												</span>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="no" class="label">시/군/구</option><!-- 선택하세요만 색상 변경 > 반드시 value는 no 로 적용 -->
+														<option value="">Select Option 1</option>
+														<option value="">Select Option 2</option>
+														<option value="">Select Option 3</option>
+														<option value="">Select Option 4</option>
+													</select>
+												</span>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="no" class="label">읍/면/동</option><!-- 선택하세요만 색상 변경 > 반드시 value는 no 로 적용 -->
+														<option value="">Select Option 1</option>
+														<option value="">Select Option 2</option>
+														<option value="">Select Option 3</option>
+														<option value="">Select Option 4</option>
+													</select>
+												</span>
+												<span class="selectSet">
+													<select name="" id="">
+														<option value="no" class="label">농장 선택</option><!-- 선택하세요만 색상 변경 > 반드시 value는 no 로 적용 -->
+														<option value="">Select Option 1</option>
+														<option value="">Select Option 2</option>
+														<option value="">Select Option 3</option>
+														<option value="">Select Option 4</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="join.html" class="btnL line">이전</a>
+								<a href="join3.html" class="btnL">다음</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

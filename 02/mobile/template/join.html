@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전</button>
+					<h1>회원가입</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu :: 회원가입 시 없음 -->
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<script>
+							$(document).ready(function(){
+								$('.agreeMore').click(function(){
+									$(this).toggleClass('on');
+									$(this).parents('.checkSet').next('.agreeData').toggle();
+								});
+							});
+						</script>
+						<!-- page layout -->
+						<div class="joinArea step1"><!-- class 없어도 유지 -->
+							<div class="joinStep">
+								<div>
+									<span><i>1</i><em>약관동의</em></span>
+								</div>
+								<span><i>2</i><em>사용자정보</em></span>
+								<span><i>3</i><em>가입완료</em></span>
+							</div>
+							<div class="agreeBack">
+								<span class="checkSet">
+									<input type="checkbox" id="agree1" />
+									<label for="agree1"><i></i>이용약관 동의</label>
+									<button class="agreeMore">더보기</button>
+								</span>
+								<div class="agreeData" style="display:none;">
+									<div class="back">
+										내용<br/>내용<br/>내용<br/>내용<br/>
+									</div>
+								</div>
+							</div>
+							<div class="agreeBack">
+								<span class="checkSet">
+									<input type="checkbox" id="agree2"/>
+									<label for="agree2"><i></i>정보수집 동의</label>
+									<button class="agreeMore">더보기</button>
+								</span>
+								<div class="agreeData" style="display:none;">
+									<div class="back">
+										내용<br/>내용<br/>내용<br/>내용<br/>
+									</div>
+								</div>
+							</div>
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="join2.html" class="btnL">동의합니다</a>
+								<a href="login.html" class="btnL white">동의하지 않습니다</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

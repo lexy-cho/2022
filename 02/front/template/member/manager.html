@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>관리자관리</h2><span><em>회원관리</em><strong>관리자관리</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet">
+									<div class="gridLine">
+										<div class="gridItem">
+											<label>구분</label>
+											<span class="selectSet">
+												<select name="" id="">
+													<option value="" selected>전체</option>
+												</select>
+											</span>
+											<input type="text" class="w214" />
+											<button class="btnSearch">Search</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--//List search-->
+							<!-- List -->
+			        <div class="tls">
+			          <table>
+			            <colgroup>
+			              <col width="70">
+				            <col width="165">
+			              <col width="130">
+			              <col width="100">
+			              <col width="100">
+			              <col width="160">
+				            <col width="*">
+			              <col width="100">
+			            </colgroup>
+			            <thead>
+			              <tr>
+											<th>No</th>
+											<th>사용자 ID</th>
+											<th>이름</th>
+											<th>소속</th>
+											<th>직급</th>
+											<th>모바일</th>
+											<th>이메일</th>
+											<th>상태</th>
+			              </tr>
+			            </thead>
+			            <tbody>
+			              <!--Loop-->
+			              <tr>
+			                <td class="no">22</td>
+											<td><a href="manager_view.html">abc1234</a></td>
+											<td>강감찬</td>
+											<td>총무부</td>
+											<td>부장</td>
+											<td>010-1234-4567</td>
+											<td>aaa@aaa.com</td>
+											<td class="yet"><a href="manager_view.html">승인대기</a></td>
+			              </tr>
+			              <!--//Loop-->
+			              <tr>
+			                <td class="no">21</td>
+											<td><a href="manager_view2.html">analy999</a></td>
+											<td>홍길동</td>
+											<td>총무부</td>
+											<td>과장</td>
+											<td>010-5555-5555</td>
+											<td>abcds@aaa.com</td>
+											<td>승인완료</td>
+			              </tr>
+			              <tr>
+			                <td class="no">20</td>
+											<td><a href="manager_view2.html">mem001</a></td>
+											<td>이순신</td>
+											<td>초무부</td>
+											<td>대리</td>
+											<td>010-9999-9999</td>
+											<td>fdsjkf@fdfd.co.kr</td>
+											<td>거부</td>
+			              </tr>
+			              <!-- 데이터 없을 경우 -->
+			              <tr><td colspan="8" class="noneData">등록된 데이터가 없습니다.</td></tr>
+			              <!-- //데이터 없을 경우 -->
+			            </tbody>
+			          </table>
+			        </div>
+							<!--//List -->
+							<div data-include="../include/paginate.html"></div>
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

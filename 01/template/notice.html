@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../js/common.js"></script>
+		<script>
+			$(document).ready(function(){
+				// Tab 토글
+				$(".lineTabNav button").click(function () {
+					$(".lineTabNav span").removeClass("on");
+					$(this).parent("span").addClass("on");
+					var activeTab = $(this).attr("data-name");
+					$('.tabData').hide();
+					$('.tData' + activeTab).show();
+				});
+			});
+		</script>
+	</head>
+  <body>
+    <!-- Wrap -->
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+				<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+        <h1>공지 & 자료</h1>
+        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+      </div>
+      <!-- //header -->
+      <hr/>
+      <!-- container -->
+      <div id="container">
+        <section>
+          <!-- Page Layout -->
+          <div class="notice">
+						<!-- tab -->
+						<div class="lineTabNav">
+							<nav>
+								<span class="on"><button data-name="0">공지사항</button></span>
+								<span><button data-name="1">교사 자료실</button></span>
+								<span><button data-name="2">교사 교육</button></span>
+								<span><button data-name="3">신입 교육</button></span>
+							</nav>
+							<div class="search_wrap">
+								<em class="search_icon"></em>
+								<input type="text" placeholder="제목" />
+								<button class="search-btn">검색</button>
+							</div>
+						</div>
+						<!--// tab -->
+						<div class="tabLayout">
+							<div class="tabData tData0">
+								<div class="tls">
+									<table>
+										<colgroup>
+											<col width="100">
+											<col width="500">
+											<col width="100">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>날짜</th>
+												<th>제목</th>
+												<th>게시자</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교과 스쿨 수업 시작을 100% 응원합니다.</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교과 스쿨 수업 시작을 100% 응원합니다.</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교과 스쿨 수업 시작을 100% 응원합니다.</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교과 스쿨 수업 시작을 100% 응원합니다.</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교과 스쿨 수업 시작을 100% 응원합니다.</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교과 스쿨 수업 시작을 100% 응원합니다.</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교과 스쿨 수업 시작을 100% 응원합니다.</td>
+												<td>교사실</td>
+											</tr>
+											<tr class="highlight">
+												<td>2022.06.16</td>
+												<td>교과 스쿨 수업 시작을 100% 응원합니다.</td>
+												<td>교사실</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grayArea">
+									<img src="https://media.istockphoto.com/id/1042359120/ko/%EB%B2%A1%ED%84%B0/%ED%8C%90%EB%A7%A4-%ED%95%A0%EC%9D%B8-%EA%B0%9C%EB%85%90-%EA%B0%80%EB%A1%9C-%EB%B0%B0%EB%84%88-%EB%B2%A1%ED%84%B0-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8-%EB%A0%88%EC%9D%B4-%EC%85%98%EC%9E%85%EB%8B%88%EB%8B%A4-%ED%8A%B9%EB%B3%84-%ED%95%9C-%EC%A0%9C%EA%B3%B5-%EC%B6%94%EC%83%81-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83%EC%9E%85%EB%8B%88%EB%8B%A4-%EC%A7%80%EA%B8%88-%EA%B5%AC%EB%A7%A4-%EA%B7%B8%EB%9E%98%ED%94%BD-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8F%AC%EC%8A%A4%ED%84%B0%EC%9E%85%EB%8B%88%EB%8B%A4.jpg?s=1024x1024&w=is&k=20&c=tS3r7tZstJJA8XQ8QpHGZF8q9WlOgPR0H6EsHWJYDSQ=" alt="">
+								</div>
+							</div>
+							<div class="tabData tData1" style="display:none;">
+								<div class="tls">
+									<table>
+										<colgroup>
+											<col width="100">
+											<col width="100">
+											<col width="450">
+											<col width="100">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>연령</th>
+												<th>과목명</th>
+												<th>차시</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td class="new">토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td>토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td>토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td>토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td>토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td>토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td>토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td>토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+											<tr>
+												<td>교과</td>
+												<td>영아</td>
+												<td>토탈시스템 020</td>
+												<td><button class="btnBlue">선택</button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="pagination">
+									<button class="pPrev">이전</button>
+									<span>
+										<button class="on">1</button>
+										<button>2</button>
+										<button>3</button>
+										<button>4</button>
+										<button>5</button>
+										<button>6</button>
+										<button>7</button>
+										<button>8</button>
+										<button>9</button>
+										<button>10</button>
+									</span>
+									<button class="pNext">다음</button>
+								</div>
+							</div>
+							<div class="tabData tData2" style="display:none;">
+								<div class="tls">
+									<table>
+										<colgroup>
+											<col width="100">
+											<col width="500">
+											<col width="100">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>날짜</th>
+												<th>제목</th>
+												<th>게시자</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교사 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교사 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교사 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교사 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교사 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교사 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">교사 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr class="highlight">
+												<td>2022.06.16</td>
+												<td>교사 교육 08</td>
+												<td>교사실</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grayArea">
+									<img src="#" alt="">
+								</div>
+							</div>
+							<div class="tabData tData3" style="display:none;">
+								<div class="tls">
+									<table>
+										<colgroup>
+											<col width="100">
+											<col width="500">
+											<col width="100">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>날짜</th>
+												<th>제목</th>
+												<th>게시자</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">신입 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">신입 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">신입 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">신입 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">신입 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">신입 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr>
+												<td>2022.06.16</td>
+												<td class="new">신입 교육 08</td>
+												<td>교사실</td>
+											</tr>
+											<tr class="highlight">
+												<td>2022.06.16</td>
+												<td>신입 교육 08</td>
+												<td>교사실</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grayArea">
+									<img src="#" alt="">
+								</div>
+							</div>
+							<!---->
+						</div>
+          </div>
+          <!-- //page Layout -->
+        </section>
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //Wrap -->
+  </body>
+</html>

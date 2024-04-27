@@ -1,0 +1,282 @@
+@import url("font.css");
+@import url("common.css");
+@import url("layout.css");
+
+/*===================================================================
+* INFORMATION
+* -------------------------------------------------------------------
+* @Author : Cho, lexy (lexycho@gmail.com)
+* @File Name: front.css
+* @Description : 일반 화면 정의
+* @Create Date: 2022-09-25
+* @Last Update Date: N/A
+* @History: N/A
+* ====================================================================*/
+
+/* ====================== */
+/* Common Layout */
+/* ====================== */
+/* basic */
+#wrap {position:relative;clear:left;text-align:center;}
+/* header */
+#header {position:relative;top:0;left:0;right:0;z-index:20;padding:0 40px;min-width:1028px;height:80px;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.1);}
+#header h1 {float:left;display:inline-block;padding:27px 0 0;width:318px;text-align:left;box-sizing:border-box;}
+#header h1 a {display:inline-block;width:186px;height:24px;text-indent:9999px;overflow:hidden;background:url("../images/logo.svg") no-repeat top center;}
+#header .globalNav {float:left;display:inline-block;position:absolute;left:358px;top:0;min-width:910px;}
+#header .globalNav ul {max-width:910px;}
+#header .globalNav ul:after {content:"";display:block;clear:both;}
+#header .globalNav ul>li {float:left;position:relative;display:inline-block;width:110px;margin-right:20px;text-align:left;color:#222;font-size:18px;font-weight:500}
+#header .globalNav ul>li a {display:block;height:80px;color:inherit;font-size:inherit;line-height:4.4;box-sizing:border-box;}
+#header .globalNav ul>li.on a {color:#111;border-bottom:3px solid #16923e;}
+#header .globalNav ol {position:absolute;top:80px;z-index:3;display:none;padding:15px 0;}
+#header .globalNav ol li {padding:0 0 10px;}
+#header .globalNav ol li a {padding:5px 0;height:auto;line-height:1;font-size:15px;color:#666;}
+#header .globalNav::after {content:'';position:fixed;top:80px;left:0;right:0;display:none;height:326px;border-top:1px solid #bbb;border-bottom:2px solid #ffc80e;background:#fff;}
+#header .globalNav:hover ol {display:inline-block;}
+#header .globalNav:hover::after {display:block;}
+#header .right {position:absolute;right:0;top:0;}
+#header .right a {float:left;display:inline-block;background:#fff;}
+#header .right [class*=btnLog] {width:140px;height:80px;font-size:16px;line-height:4.7;border-left:1px solid #ddd;}
+#header .right [class*=btnLog]::after {content:'';display:inline-block;width:20px;height:20px;margin-left:10px;vertical-align:middle;background:url("../images/ic_logout.svg") no-repeat center;}
+#header .right strong {float:left;display:inline-block;}
+#header .right strong a {padding:20px;width:139px;height:100px;color:#fff;font-size:16px;background:#ffc80e;}
+#header .right strong a::after {content:'';margin:12px 0 0;display:block;height:26px;background:url("../images/ic_mypage.svg") no-repeat top center;}
+@media (max-width:1400px) {
+  #header h1 {width:300px;}
+  #header .globalNav {left:320px;}
+}
+@media (max-width:1268px) {
+  #header h1 {width:200px;}
+  #header .globalNav {left:280px;}
+}
+/* container */
+#container {position:relative;padding:0;min-height:calc(100vh - 80px);}
+#container .subTit {clear:both;height:166px;text-align:center;background:url("../images/sub_visual.png") no-repeat top center;background-size:cover;}
+#container .subTit:after {content:"";display:block;clear:both;}
+#container .subTit div {position:relative;margin:0 auto;width:1200px;height:136px;}
+#container .subTit div:after {content:"";display:block;clear:both;}
+#container .subTit div h2 {display:inline-block;height:136px;font-size:40px;color:#fff;line-height:3;border-bottom:6px solid #ffc80e;}
+#container .subTit div span {position:absolute;right:0;bottom:30px;margin:5px 0 0 0;padding-left:13px;background:url('../images/ic_nav_home.svg') no-repeat center left;}
+#container .subTit div span::before {content:"";display:inline-block;margin:0 8px 0 4px;display:inline-block;width:8px;height:8px;box-sizing:border-box;border:1px solid #ddd;border-bottom:0;border-left:0;border-radius:1px;transform:rotate(45deg);}
+#container .subTit div span em {font-weight:300;color:#fff;}
+#container .subTit div span em::after {content:"";display:inline-block;margin:0 8px 0 4px;display:inline-block;width:8px;height:8px;box-sizing:border-box;border:1px solid #ddd;border-bottom:0;border-left:0;border-radius:1px;transform:rotate(45deg);}
+#container .subTit div span strong {color:#ffc80e;font-weight:300;}
+#container .content {position:relative;z-index:2;margin:-30px auto 0;width:1200px;padding:50px 40px;text-align:left;background:#fff;}
+#container .content h3 {padding:36px 0 14px 0;font-size:22px;}
+#container .content h3:first-child {padding-top:0;}
+/* ====================== */
+/* Main Layout */
+/* ====================== */
+#wrap.mainCase {position:absolute;top:0;bottom:0;left:0;right:0;min-height:100vh;background:url("../images/bg.png") no-repeat top center;background-size:cover;}
+#wrap.mainCase #header {box-shadow:0 1px 0 rgba(255,255,255,.5);background:none;}
+#wrap.mainCase #header h1 a {background:url("../images/logo_white.svg") no-repeat top center;}
+#wrap.mainCase #header .globalNav ul>li a {color:#fff;}
+#wrap.mainCase #header .right a {background:transparent;}
+#wrap.mainCase #header .right [class*=btnLog] {color:#fff;border-left:1px solid rgba(255,255,255,.5);}
+#wrap.mainCase #header .right [class*=btnLog]::after {background:url("../images/ic_logout_white.svg") no-repeat center;}
+#wrap.mainCase #header .right strong a {background:#ffc80e;}
+#wrap.mainCase #header.over {background:#fff;}
+#wrap.mainCase #header.over h1 a {background:url("../images/logo.svg") no-repeat top center;}
+#wrap.mainCase #header.over .globalNav ul>li a {color:#333;}
+#wrap.mainCase #header.over .right a {background:#fff;}
+#wrap.mainCase #header.over .right [class*=btnLog] {color:#333;border-left:1px solid #ddd;}
+#wrap.mainCase #header.over .right [class*=btnLog]::after {background:url("../images/ic_logout.svg") no-repeat center;}
+#wrap.mainCase #header.over .right strong a {background:#ffc80e;}
+#mainContainer .back {margin:0 auto;width:1200px;padding-bottom:154px;min-height:calc(100vh - 80px);}
+#mainContainer .back::after {content:'';position:fixed;left:0;right:0;bottom:0;z-index:2;display:inline-block;height:154px;background:url("../images/bg_wave.svg") no-repeat top center;background-size:cover;}
+#mainContainer .back .left {padding-top:250px;width:552px;text-align:left;}
+#mainContainer .back .left * {color:#fff;}
+#mainContainer .back .left strong {font-size:60px;font-weight:700;}
+#mainContainer .back .left p {padding:22px 0 74px;font-size:18px;font-weight:300;line-height:1.6;}
+#mainContainer .back .left a {display:inline-block;width:210px;height:50px;font-size:18px;line-height:2.6;text-align:center;border-radius:20px 0px;background:#ffc80e;}
+#mainContainer .back .left a::after {content:'';display:inline-block;width:20px;height:20px;margin-left:10px;vertical-align:middle;background:url("../images/ic_main_appdown.svg") no-repeat center;}
+#mainContainer .back ul {padding-top:215px;width:492px;}
+#mainContainer .back ul li {float:left;display:inline-block;margin:0 4px 4px 0;}
+#mainContainer .back ul li a {display:inline-block;width:160px;height:160px;padding:27px 0 0 24px;text-align:left;background:#fff url("../images/ic_qucik01.svg") no-repeat 76px 82px}
+#mainContainer .back ul li a strong {position:relative;display:inline-block;}
+#mainContainer .back ul li a strong em {position:relative;z-index:2;display:inline-block;font-size:18px;font-weight:600;}
+#mainContainer .back ul li a:hover strong::after {content:'';position:absolute;left:0;right:0;bottom:0;display:block;height:8px;opacity:0.5;background:#FFC80E;}
+#mainContainer .back ul li:first-child a {border-radius:40px 0 0 0;}
+#mainContainer .back ul li:nth-child(2) a {background-image:url("../images/ic_qucik02.svg")}
+#mainContainer .back ul li:nth-child(3) a {background-image:url("../images/ic_qucik03.svg")}
+#mainContainer .back ul li:nth-child(4) a {background-image:url("../images/ic_qucik04.svg")}
+#mainContainer .back ul li:nth-child(5) a {background-image:url("../images/ic_qucik05.svg")}
+#mainContainer .back ul li:nth-child(6) a {background-image:url("../images/ic_qucik06.svg")}
+#mainContainer .back ul li:nth-child(7) a {margin-left:164px;border-radius:0 0 0 0;background-image:url("../images/ic_qucik07.svg")}
+#mainContainer .back ul li:nth-child(8) a {border-radius:0 0 40px 0;background-image:url("../images/ic_qucik08.svg")}
+/* ====================== */
+/* Login Layout */
+/* ====================== */
+#loginWrap {position:relative;padding:130px 0 0;text-align:center;}
+#loginWrap::before,
+#loginWrap::after {content:'';position:fixed;left:0;right:0;bottom:0;z-index:1;display:inline-block;height:154px;}
+#loginWrap::before {
+  background:url("../images/bg_login_wave.svg") no-repeat bottom center;
+  background-size:cover;
+  opacity:0.8;
+}
+#loginWrap::after {
+  background-image:url('../images/bg_login_wave2.svg'), url('../images/bg_login_wave3.svg');
+  background-size:cover, cover;
+  background-position:bottom center, bottom center;
+  background-repeat:no-repeat;
+}
+#loginWrap .back {position:relative;z-index:2;margin:0 auto;width:468px;}
+#loginWrap h2 {padding:0 0 63px;font-size:50px;}
+#loginWrap .basicIp input {margin-bottom:14px;height:64px;padding-left:59px;font-size:20px;font-weight:300;background:#f8f8f8 url("../images/ic_login_id.svg") no-repeat 18px center;}
+#loginWrap .basicIp input:focus {background:#fff url("../images/ic_login_id.svg") no-repeat 18px center;}
+#loginWrap .basicIp input[type="password"] {background:#f8f8f8 url("../images/ic_login_pw.svg") no-repeat 18px center;}
+#loginWrap .basicIp input[type="password"]:focus {background:#fff url("../images/ic_login_pw.svg") no-repeat 18px center;}
+#loginWrap .checkSet {float:left;margin:33px 0 36px;}
+#loginWrap .checkSet label {font-size:16px;}
+#loginWrap .btnL {width:100%;height:66px;font-size:24px;line-height:2.8;}
+#loginWrap .btnGoSign {display:inline-block;margin:40px 0 50px;font-size:20px;color:#F9C000;}
+#loginWrap .goJoin span {position:relative;display:block;}
+#loginWrap .goJoin span a {display:inline-block;margin:0 23px;font-size:16px;color:#999;}
+#loginWrap .goJoin span::after {content:'';position:absolute;left:49%;top:50%;display:inline-block;margin:-2px 0 0 -2px;width:5px;height:5px;vertical-align:middle;border-radius:100%;background:#DDDDDD;overflow:hidden;}
+.joinArea.step1 h3 {margin-bottom:26px;border-bottom:1px solid #bbb;}
+.joinArea.step1 .agreeData {height:468px;padding:32px;overflow:scroll;overflow-x:hidden;border:1px solid #eee;border-bottom:0;}
+.joinArea.step1 .checkSet {display:block;margin:0;}
+.joinArea.step1 .checkSet label {display:block;padding:24px 36px;border:1px solid #eee;}
+.joinArea.step1 .checkSet label i {margin-right:10px}
+.joinArea.step1 .checkSet input:checked + label {border-color:#FFC80E;}
+.joinArea.step3 {position:relative;padding:100px 0 0;text-align:center;}
+.joinArea.step3::before,
+.joinArea.step3::after {content:'';position:fixed;left:0;right:0;bottom:0;z-index:1;display:inline-block;height:154px;}
+.joinArea.step3::before {
+  background:url("../images/bg_login_wave.svg") no-repeat bottom center;
+  background-size:cover;
+  opacity:0.8;
+}
+.joinArea.step3::after {
+  background-image:url('../images/bg_login_wave2.svg'), url('../images/bg_login_wave3.svg');
+  background-size:cover, cover;
+  background-position:bottom center, bottom center;
+  background-repeat:no-repeat;
+}
+.joinArea.step3 .back {position:relative;z-index:2;margin:0 auto;}
+.joinArea.step3 .back p {padding:282px 0 0 0;font-size:31px;background:url("../images/join_illu.svg") no-repeat top center;}
+.joinArea.step3 .back p strong {font-size:34px;color:#F9C000;}
+#loginWrap.findIpCase p {padding-bottom:30px;font-size:16px;font-weight:300;}
+#loginWrap.findIpCase {font-size:16px;}
+#loginWrap.findIpCase .findIp {margin:20px 0;padding:20px 0 10px;border-top:1px solid #bbb;border-bottom:1px solid #ddd;}
+#loginWrap.findIpCase .findIp div {position:relative;padding:0 0 0 80px;margin-bottom:10px;}
+#loginWrap.findIpCase .findIp div label {position:absolute;left:0;top:8px;font-size:16px;}
+#loginWrap.findIpCase .findIp div label::before {content:'';display:inline-block;margin:-5px 12px 0 0;width:6px;height:6px;vertical-align:middle;border-radius:100%;background:#FFC80E;overflow:hidden;}
+#loginWrap.findIpCase .findIp .emailForm {max-width:100%;}
+#loginWrap.findIpCase .findIp .emailForm input {width:178px !important;}
+#loginWrap.findIpCase .radioSet {margin:0 10px;}
+#loginWrap.findIpCase .radioSet label {font-size:16px !important;}
+#loginWrap.findIpCase .idEnd span.dt {display:block;padding:6px 5px 5px 20px;font-size:18px;text-align:left;}
+#loginWrap.findIpCase .idEnd .btnL {width:217px;}
+#loginWrap.findIpCase .idEnd .btnL ~ .btnL {margin-left:20px;}
+#loginWrap.findIpCase .pwEnd p {margin:20px 0;padding:30px 0;line-height:2;font-size:18px;border-top:1px solid #bbb;border-bottom:1px solid #ddd;}
+#loginWrap.findIpCase .pwEnd p strong {font-size:18px;color:#F9C000;}
+/* ====================== */
+/* Sub Layout */
+/* ====================== */
+/* mypage Layout */
+.myInfo_pw {padding:50px;width:600px;margin:100px auto 0;border:1px solid #ddd;}
+.myInfo_pw p {padding-bottom:30px;font-size:16px;font-weight:300;text-align:center;}
+.myInfo_pw div {position:relative;padding:20px 110px 20px 100px;margin-bottom:10px;border-top:1px solid #bbb;border-bottom:1px solid #ddd;}
+.myInfo_pw div label {position:absolute;left:0;top:30px;font-size:16px;}
+.myInfo_pw div label::before {content:'';display:inline-block;margin:-5px 12px 0 0;width:6px;height:6px;vertical-align:middle;border-radius:100%;background:#FFC80E;overflow:hidden;}
+.myInfo_pw div .btnM {position:absolute;right:0;top:20px;}
+.myInfo_pwChange {padding:50px;width:600px;margin:100px auto 0;border:1px solid #ddd;}
+.myInfo_pwChange p {padding-bottom:30px;font-size:16px;font-weight:300;text-align:center;}
+.myInfo_pwChange .inputArea {position:relative;padding:20px 0;margin-bottom:10px;border-top:1px solid #bbb;border-bottom:1px solid #ddd;}
+.myInfo_pwChange .inputArea span {position:relative;display:block;padding:0 0 0 142px;margin-bottom:10px;}
+.myInfo_pwChange .inputArea label {position:absolute;left:0;top:10px;font-size:16px;}
+.myInfo_pwChange .inputArea label::before {content:'';display:inline-block;margin:-5px 12px 0 0;width:6px;height:6px;vertical-align:middle;border-radius:100%;background:#FFC80E;overflow:hidden;}
+.resign {padding:50px;width:600px;margin:100px auto 0;border:1px solid #ddd;}
+.resign p {margin-bottom:30px;padding:20px;line-height:1.8;font-size:16px;text-align:center;background:#fffbee;}
+.resign p strong {font-size:20px;}
+.resign div.inputArea {position:relative;padding:20px 0;border-top:1px solid #bbb;border-bottom:1px solid #ddd;}
+.resign div.inputArea span {position:relative;display:block;padding:10px 110px 10px 100px;margin-bottom:10px;}
+.resign div.inputArea label {position:absolute;left:0;top:18px;font-size:16px;}
+.resign div.inputArea label::before {content:'';display:inline-block;margin:-5px 12px 0 0;width:6px;height:6px;vertical-align:middle;border-radius:100%;background:#FFC80E;overflow:hidden;}
+.resign div.inputArea em {display:block;padding:6px 5px 5px 0;font-size:18px;text-align:left;}
+.resign div.inputArea .btnM {position:absolute;right:0;top:10px;}
+.resign .after {margin:0;border:none;}
+.resign .after p {margin:0;padding:50px;font-size:18px;}
+/* Code Management */
+.codeMgt:after {content:"";display:block;clear:both;}
+.codeMgt>.left {width:500px;}
+.codeMgt .tright {padding-bottom:15px;text-align:right;}
+.codeMgt .left .treeBack {padding:15px;height:550px;border:1px solid #ddd;}
+.codeMgt .left .treeBack #jstree {height:480px;overflow-y:scroll;border-bottom:1px solid #ddd;}
+.codeMgt .left .btnLine {height:40px;border-bottom:1px solid #ddd;}
+.codeMgt .left [class*=btnAll] {padding:5px;border:1px solid #ffc80e;background:#fff;}
+.codeMgt .left .btnLine .right {color:#ffc80e;margin:7px 0 0 0;border:none;border-bottom:1px solid #ffc80e;background:#fff;}
+.codeMgt>.right {padding:30px;width:590px;height:605px;text-align:left;border:1px solid #ddd;}
+.codeMgt>.right .tright {padding:15px 0;text-align:right;}
+/* ====================== */
+/* Popup Layout */
+/* ====================== */
+/* Popup list search */
+.basicPop .listSearch {margin-bottom:15px;}
+.basicPop .listSearch .gridItem {padding:5px 15px 5px 0;}
+.basicPop .listSearch .gridItem:last-child {padding-right:0;}
+.basicPop .listSearch .btn {bottom:5px;}
+.basicPop .tls table thead th {height:42px;}
+.basicPop .tls table td {height:42px;}
+.basicPop .tws table th,
+.basicPop .tws table td {padding:2px 1rem;height:50px;}
+.basicPop .tws table td input[type="text"],
+.basicPop .tws table td .selectSet {width:100%;}
+/**/
+.smsPop {width:910px;}
+.smsPop .tls {max-height:211px;overflow-y:auto;overflow-x:none;}
+.partnerPop {width:690px;}
+.partnerPop .listSearch {margin-bottom:16px;}
+.partnerPop .tls {max-height:211px;overflow-y:auto;overflow-x:none;}
+.chartPop {width:1200px;padding:24px 30px 0 30px}
+.chartPop .pBack {padding:16px 0 0;}
+.attendancePop {width:1226px;}
+.attendancePop .tls {max-height:505px;overflow-y:auto;overflow-x:none;}
+.managerPop {width:468px;}
+.managerPop .pBack div {display:block;}
+.managerPop .pBack div:after {content:"";display:block;clear:both;}
+.managerPop .pBack div label {font-size:16px;line-height:1.8;vertical-align:middle;}
+.managerPop .pBack div input {width:210px;margin:0 10px;}
+.managerPop .pBack p {padding:20px 0;margin-top:15px;font-size:16px;text-align:center;border:1px solid #eee}
+.farmAreaPop {width:410px;}
+.farmAreaPop .pBack {padding:7px 0 8px;}
+.farmAreaPop .pBack .tws table {border:none;}
+.schMgtPop {width:418px;}
+.schMgtPop .pBack {padding:7px 0 8px;}
+.schMgtPop .pBack .tws table {border:none;}
+.schMgtPop .tws table td .ipBtn input[type="text"] {width:168px;margin-right:5px;}
+.schMgtPop .ipBtn button {min-width:50px;}
+.schWorkerPop {width:280px;padding:30px 30px 30px 30px;}
+.schWorkerPop .btnPClose {top:10px;}
+.schWorkerPop .pBack {padding:20px 0 0;}
+.schWorkerPop .pBack div {padding:10px;border:1px solid #ddd;}
+.schWorkerPop .pBack label {display:block;text-align:center;font-size:16px;color:#999;}
+.schWorkerPop .pBack button {margin-top:5px;padding:10px;width:100%;font-size:16px;border:1px solid #ffc80e;background:#fffbee;}
+.codePop {width:450px;}
+.codePop .pBack {padding:7px 0 8px;}
+.codePop .pBack .tws table {border:none;}
+.codePop .pBack .tws table textarea {margin:4px 0 0;height:83px;}
+.growthItemPop {width:560px}
+.growthItemPop .pBack {padding:20px 0 21px;}
+.growthItemPop .pBack div.left,
+.growthItemPop .pBack div.right {width:200px;}
+.growthItemPop .pBack span.left {display:inline-block;padding:60px 0 0;width:100px;text-align:center;}
+.growthItemPop .pBack span.left button {position:relative;margin:5px;display:inline-block;width:40px;height:40px;text-indent:-99999px;border:1px solid #f0c949;overflow:hidden;background:#f9f9f9;}
+.growthItemPop .pBack span.left button:after {position:absolute;right:11px;top:50%;content:'';width:0;height:0;margin-top:-6px;border:6px solid #f0c949;border-top-color:transparent;border-left-color:transparent;z-index:1;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);}
+.growthItemPop .pBack span.left button.choiced:after {right:17px;
+    -webkit-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    transform: rotate(315deg);}
+.growthItemPop .pBack strong {display:block;padding:10px 0 0;height:39px;text-align:center;color:#fff;background:#ffc80e;}
+.growthItemPop .pBack select {width:100%;height:250px;border:1px solid #ffc80e;}
+.growthItemPop .pBack select option {padding:10px;}
+/* .growthItemPop .pBack ul {height:177px;border:1px solid #ffc80e;overflow-x:hidden;overflow-y:auto;}
+.growthItemPop .pBack ul li {height:35px;padding:0 10px;line-height:2.6;border-bottom:1px solid #ffc80e;}
+.growthItemPop .pBack ul li:last-child {border-bottom:0;}
+.growthItemPop .pBack ul li:hover {background:#eee;}
+.growthItemPop .pBack ul li.choice {background:#fbf7e9;} */

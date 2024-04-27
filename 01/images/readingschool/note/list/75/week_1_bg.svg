@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="275" viewBox="0 0 390 275">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffca52;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="43" y="200" width="390" height="275" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="1.486" dy="1.338" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="1"/>
+      <feFlood result="flood" flood-color="#1f060c" flood-opacity="0.15"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="배경" class="cls-1" d="M430,465a7.021,7.021,0,0,1-7,7H50a7.021,7.021,0,0,1-7-7V207a7.02,7.02,0,0,1,7-7H423a7.02,7.02,0,0,1,7,7V465Z" transform="translate(-43 -200)"/>
+</svg>

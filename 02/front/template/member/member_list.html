@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+        <title>KG에듀원 교원임용 희소/쌤플러스</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/sub.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/jquery.toast.js"></script>
+        <script type="text/javascript" src="../../js/datepicker.min.js"></script>
+        <script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+        <script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+        <!-- Wrap -->
+        <div id="wrap">
+            <!-- header -->
+            <div id="header">
+                <header>
+                     <div data-include="../include/header.html"></div>
+                </header>
+            </div>
+            <!-- //header -->
+            <hr/>
+            <!-- Sub Menu -->
+            <div id="snb">
+                <aside>
+					<div data-include="../include/snb.html"></div>
+                </aside>
+            </div>
+            <!-- //Sub Menu -->
+            <hr/>
+            <!-- container -->
+            <div id="container">
+            <section>
+                <h2><strong>회원 조회</strong><span><a href=".html">회원/교수</a><a href=".html">회원 관리</a></span></h2>
+                <div class="content">
+                <article>
+					<!-- page layout -->
+					<div><!-- class 없어도 유지 -->
+						<div class="listSearch">
+							<div class="back">
+								<form>
+									<div>
+										<span class="selectSet lCase">
+											<select name="" id="">
+												<option value="no" class="label">회원구분</option>
+												<option value="">일반</option>
+												<option value="">휴면회원</option>
+												<option value="">탈퇴</option>
+											</select>
+										</span>
+										<span class="selectSet lCase">
+											<select name="" id="">
+												<option value="no" class="label">수강구분</option>
+												<option value="">유료수강</option>
+												<option value="">무료수강</option>
+												<option value="">미수강</option>
+											</select>
+										</span>
+										<span class="selectSet lCase">
+											<select name="" id="">
+												<option value="no" class="label">전공과목</option>
+												<option value="">중등중국어</option>
+											</select>
+										</span>
+										<input type="text" placeholder="이름, 아이디, 휴대폰, IP 검색" />
+									</div>
+									<button class="btnM">검색</button>
+									<button class="btnM">초기화</button>
+								</form>
+							</div>
+						</div>
+						<div class="listSummery">
+							<div class="left">
+								<strong>회원 개인정보 표출</strong>
+								<span class="toggleSet">
+									<input type="checkbox" id="push" />
+									<label for="push"><!--적용여부--></label>
+								</span>
+							</div>
+							<div class="right">
+								<dl>
+									<dt>실시간 가입현황</dt>
+									<dd>당일 <strong>14</strong>명</dd>
+									<dd>당월 <strong>365</strong>명</dd>
+								</dl>
+								<dl>
+									<dt>수강중 인원</dt>
+									<dd><strong>1,240</strong>명</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="tls">
+							<table>
+								<colgroup>
+									<col width="160"/>
+									<col width="160"/>
+									<col width="160"/>
+									<col width="160"/>
+									<col width="160"/>
+									<col width="160"/>
+									<col width="160"/>
+									<col width="160"/>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>회원번호</th>
+										<th>이름/아이디</th>
+										<th>회원구분</th>
+										<th>수강구분</th>
+										<th>준비시험</th>
+										<th>학교/학과</th>
+										<th>휴대폰번호</th>
+										<th>가입일/경로</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="member_view.html">361145</a></td>
+										<td><a href="member_view.html">김*민<br/>(jim******)</a></td>
+										<td>일반</td>
+										<td>유료수강</td>
+										<td>중등중국어</td>
+										<td>서울대학교<br/>중국어교육학과</td>
+										<td>010-****-5678</td>
+										<td>2021-02-25 13:55<br/>모바일 Web</td>
+									</tr>
+									<tr>
+										<td><a href="member_view.html">361144</a></td>
+										<td><a href="member_view.html">김*민<br/>(jim******)</a></td>
+										<td>일반</td>
+										<td>무료수강</td>
+										<td>중등중국어</td>
+										<td>서울대학교<br/>중국어교육학과</td>
+										<td>010-****-5678</td>
+										<td>2021-02-25 13:55<br/>PC</td>
+									</tr>
+									<tr class="disabeld">
+										<td><a href="member_view.html">361144</a></td>
+										<td>-</td>
+										<td>탈퇴</td>
+										<td>미수강</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>수강하려는 강좌가 없음</td>
+									</tr>
+									<tr class="disabeld">
+										<td><a href="member_view.html">361143</a></td>
+										<td><a href="member_view.html">(jim******)</a></td>
+										<td>휴면삭제</td>
+										<td>미수강</td>
+										<td>중등중국어</td>
+										<td>-</td>
+										<td>-</td>
+										<td>2021-02-25 13:55<br/>PC</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div data-include="../include/paginate.html"><!--페이징영역--></div>
+					</div>
+					<!-- //page layout -->
+                </article>
+                </div>
+            </section>
+            </div>
+            <!-- //container -->
+        </div>
+        <!-- //Wrap -->
+	</body>
+</html>

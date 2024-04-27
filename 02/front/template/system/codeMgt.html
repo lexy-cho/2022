@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/tree/themes/default/style.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../../js/tree/jstree.min.js"></script>
+		<script type="text/javascript" src="../../js/tree/codeTree.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" data-include="../include/header.html"></div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="subTit"><div><h2>코드 관리</h2><span><em>시스템관리</em><strong>코드 관리</strong></span></div></div>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div class="codeMgt"><!-- class 없어도 유지 -->
+							<div class="left">
+								<div class="tright">
+									<button class="btnM" id="basicBtn1">추가</button>
+									<button class="btnM">수정</button>
+									<button class="btnM line">삭제</button>
+								</div>
+								<div class="treeBack">
+									<div class="btnLine">
+										<button onclick="chartAllOpen();" class="btnAllOpen">전체 그룹 열기</button>
+										<button onclick="chartAllClose();" class="btnAllClose">전체 그룹 닫기</button>
+										<button class="right">선택 해제</button>
+									</div>
+									<div id="jstree"></div>
+								</div>
+							</div>
+							<div class="right">
+								<div class="tvs">
+									<table>
+										<colgroup>
+											<col width="100"/>
+											<col width="*"/>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>코드</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>코드명</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>설명</th>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tright">
+									<button class="btnM" id="basicBtn2">생육 항목 설정</button>
+								</div>
+								<div class="tvs">
+									<table>
+										<colgroup>
+											<col width="100"/>
+											<col width="*"/>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>생육 항목</th>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(document).ready(function(){
+				popupOpen("basicBtn1","popDim","basicPop1");
+				popupClose("basicPopClose1","popDim","basicPop1");
+				popupOpen("basicBtn2","popDim","basicPop2");
+				popupClose("basicPopClose2","popDim","basicPop2");
+			});
+		</script>
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none">
+			<!-- 코드추가 -->
+			<div class="basicPop codePop" id="basicPop1">
+				<h1 class="tt">코드추가</h1>
+				<button class="btnPClose" id="basicPopClose1">닫기</button>
+				<div class="pBack">
+					<!-- Write -->
+					<div class="tws">
+						<table>
+							<colgroup>
+								<col width="110"/>
+								<col width="*"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>상위코드명</th>
+									<td><input type="text" disabled /></td>
+								</tr>
+								<tr>
+									<th>코 드</th>
+									<td><input type="text" disabled /></td>
+								</tr>
+								<tr>
+									<th>코드명</th>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<th>설 명</th>
+									<td><textarea></textarea></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--//Write -->
+				</div>
+				<div class="pBtn">
+					<button class="btnM line">취소</button>
+					<button class="btnM">등록</button>
+				</div>
+			</div>
+			<!-- //코드추가 -->
+			<!-- 생육 항목 설정  -->
+			<div class="basicPop growthItemPop" id="basicPop2">
+				<h1 class="tt">생육 항목 설정</h1>
+				<button class="btnPClose" id="basicPopClose2">닫기</button>
+				<div class="pBack">
+					<div class="left">
+						<strong>생육 항목 리스트</strong>
+						<select multiple>
+							<option>생장길이</option>
+							<option class="choice">두께</option>
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+					</div>
+					<span class="left">
+						<button>취소</button>
+						<button class="choiced">선택</button>
+					</span>
+					<div class="right">
+						<strong>생육 선택된 항목</strong>
+						<select multiple>
+							<option>화방위치</option>
+							<option>화방수</option>
+							<option>엽폭</option>
+							<option>엽길이</option>
+							<option></option>
+						</select>
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="btnM line">취소</button>
+					<button class="btnM">등록</button>
+				</div>
+			</div>
+			<!-- //생육 항목 설정 -->
+		</div>
+		<!-- //Data 팝업 -->
+	</body>
+</html>

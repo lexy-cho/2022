@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    	<title>토탈시스템 컴포넌트</title>
+	    <link rel="stylesheet" href="../css/newLayout.css">
+	    <link rel="stylesheet" href="../css/popup.css">
+	    <script src="../js/jquery-3.5.1.js"></script>
+			<!-- <link rel="stylesheet" href="../css/jquery-ui.min.css">
+			<link rel="stylesheet" href="../css/common.css" />
+			<script src="../js/jquery-3.6.0.min.js"></script>
+			<script src="../js/jquery-ui.min.js"></script>
+			<script src="../js/common.js"></script> -->
+			<script>
+				$(document).ready(function(){
+				  // Tab 토글
+	        $(".tabEx1 .tabNav button").click(function () {
+	          $(".tabEx1 .tabNav span").removeClass("on");
+	          $(this).parent("span").addClass("on");
+	          var activeTab = $(this).attr("data-name");
+	          $('.tabEx1 .tabData').hide();
+	          $('.tabEx1 .tData' + activeTab).show();
+	        });
+	        $(".tabEx2 .lineTabNav button").click(function () {
+	          $(".tabEx2 .lineTabNav span").removeClass("on");
+	          $(this).parent("span").addClass("on");
+	          var activeTab = $(this).attr("data-name");
+	          $('.tabEx2 .tabData').hide();
+	          $('.tabEx2 .tData' + activeTab).show();
+	        });
+				});
+			</script>
+		<style>
+			body {background:#f8f8f8;}
+			#wrap {margin:0 auto;padding:40px;}
+			.cptTable table {width:100%;border:1px solid #eee;border-collapse:collapse;background:#fff;}
+			.cptTable table th {border:1px solid #dddddd;padding:8px;;text-align:center;font-weight:bold;color:#111;}
+			.cptTable table td {border:1px solid #dddddd;padding:8px;}
+			.cptTable table td strong {display:inline-block;width:100%;margin:1rem 0;}
+			.cptTable table td button {vertical-align:top;}
+			.inputBox {margin-bottom:4px;}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="cptTable">
+				<table>
+					<tr>
+						<th>BUTTON</th>
+					</tr>
+					<tr>
+						<td>
+							<strong>LARGE</strong>
+							<button class="btnL red">BUTTON - red</button>
+							<button class="btnL purple">BUTTON - purple</button>
+							<button class="btnL darkGray">BUTTON - darkGray</button>
+							<button class="btnL gray">BUTTON - gray</button>
+							<br/><br/>
+							<button class="btnL lRed">BUTTON - lRed</button>
+							<button class="btnL lPurple">BUTTON - lPurple</button>
+							<button class="btnL lDarkGray">BUTTON - lDarkGray</button>
+							<button class="btnL lGray">BUTTON - lGray</button>
+							<br/><br/>
+							<strong>REGULAR</strong>
+							<button class="btnM red">BUTTON - red</button>
+							<button class="btnM purple">BUTTON - purple</button>
+							<button class="btnM darkGray">BUTTON - darkGray</button>
+							<button class="btnM gray">BUTTON - gray</button>
+							<br/><br/>
+							<button class="btnM lRed">BUTTON - lRed</button>
+							<button class="btnM lPurple">BUTTON - lPurple</button>
+							<button class="btnM lDarkGray">BUTTON - lDarkGray</button>
+							<button class="btnM lGray">BUTTON - lGray</button>
+							<br/><br/>
+							<strong>TINY</strong>
+							<button class="btnS red">BUTTON - red</button>
+							<button class="btnS purple">BUTTON - purple</button>
+							<button class="btnS darkGray">BUTTON - darkGray</button>
+							<button class="btnS gray">BUTTON - gray</button>
+							<br/><br/>
+							<button class="btnS lRed">BUTTON - lRed</button>
+							<button class="btnS lPurple">BUTTON - lPurple</button>
+							<button class="btnS lDarkGray">BUTTON - lDarkGray</button>
+							<button class="btnS lGray">BUTTON - lGray</button>
+							<br/><br/>
+							<!-- <strong>REGULAR - disabled</strong>
+							<button class="btnM" disabled>BUTTON</button>
+							<button class="btnM green" disabled>BUTTON - green</button>
+							<button class="btnM orange" disabled>BUTTON - orange</button>
+							<button class="btnM gray" disabled>BUTTON - gray</button>
+							<br/><br/>
+							<button class="btnM lPurple" disabled>BUTTON - lPurple</button>
+							<button class="btnM lGreen" disabled>BUTTON - lGreen</button>
+							<button class="btnM lOrange" disabled>BUTTON - lOrange</button>
+							<button class="btnM lGray" disabled>BUTTON - lGray</button> -->
+						</td>
+					</tr>
+					<tr>
+						<th>INPUT</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Placeholder"/>
+							<input type="text" placeholder="Placeholder" value="Value"/>
+							<input type="text" placeholder="Readonly" readonly/>
+							<input type="text" placeholder="Disabled" disabled/>
+							<br/><br/>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="">Select Option 1</option>
+									<option value="">Select Option 2</option>
+									<option value="">Select Option 3</option>
+									<option value="">Select Option 4</option>
+								</select>
+							</span>
+							<span class="selectSet">
+								<select name="" id="" disabled>
+									<option value="">Select Option 1</option>
+									<option value="">Select Option 2</option>
+									<option value="">Select Option 3</option>
+									<option value="">Select Option 4</option>
+								</select>
+							</span>
+							<br/><br/>
+							<span class="checkSet">
+								<input type="checkbox"/>
+								<label for=""><i></i>checkSet</label>
+							</span>
+							<span class="checkSet">
+								<input type="checkbox" checked/>
+								<label for=""><i></i>checkSet</label>
+							</span>
+							<span class="checkSet">
+								<input type="checkbox" disabled/>
+								<label for=""><i></i>checkSet</label>
+							</span>
+							<span class="checkSet">
+								<input type="checkbox" checked disabled/>
+								<label for=""><i></i>checkSet</label>
+							</span>
+							<br/><br/>
+							<span class="radioSet">
+								<input type="radio" name="radio1"/>
+								<label for=""><i></i>radioSet</label>
+							</span>
+							<span class="radioSet">
+								<input type="radio" name="radio1" checked/>
+								<label for=""><i></i>radioSet</label>
+							</span>
+							<span class="radioSet">
+								<input type="radio" name="radio2" disabled/>
+								<label for=""><i></i>radioSet</label>
+							</span>
+							<span class="radioSet">
+								<input type="radio" name="radio2" checked disabled/>
+								<label for=""><i></i>radioSet</label>
+							</span>
+							<br/><br/>
+							<span class="calSet"><input type="tel" placeholder="2020-01-21" /><button>달력열기</button></span>
+							<span class="calDupSet">
+							    <span class="calSet"><input type="tel" placeholder="2020-01-21" /><button>달력열기</button></span>
+							    <em>~</em>
+							    <span class="calSet"><input type="tel" placeholder="2020-01-21" /><button>달력열기</button></span>
+							</span>
+							<br/><br/>
+						</td>
+					</tr>
+					<tr>
+						<th>TAB</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="tabEx1">
+								<!-- tab -->
+								<div class="tabNav">
+									<nav>
+										<span class="on"><button data-name="0">리딩토탈</button></span>
+										<span><button data-name="1">교과토탈</button></span>
+									</nav>
+								</div>
+								<!--// tab -->
+								<div class="tabLayout">
+										<div class="tabData tData0">Tab Menu 1 Data</div>
+										<div class="tabData tData1" style="display:none;">Tab Menu 2 Data</div>
+								</div>
+							</div><br/><br/><br/>
+							<!------------>
+							<div class="tabEx2">
+								<!-- tab -->
+								<div class="lineTabNav">
+									<nav>
+										<span class="on"><button data-name="0">일 별 통계</button></span>
+										<span><button data-name="1">주간통계</button></span>
+										<span><button data-name="2">월간통계</button></span>
+									</nav>
+								</div>
+								<!--// tab -->
+								<div class="tabLayout">
+										<div class="tabData tData0">Tab Menu 1 Data</div>
+										<div class="tabData tData1" style="display:none;">Tab Menu 2 Data</div>
+										<div class="tabData tData2" style="display:none;">Tab Menu 3 Data</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>POPUP</th>
+					</tr>
+					<tr>
+						<td>
+							<strong>Alert Pop</strong>
+							<button class="btnM red" id="popBtn0">기본 템플릿</button>
+							<strong>Basic Pop</strong>
+							<button class="btnM red" id="popBtn1">기본 템플릿</button>
+							<script>
+								$(document).ready(function(){
+									$('#popBtn0').click(function(){
+										$('.alertDim').show();
+										$('#alertSamplePop').show();
+									});
+									$('#popBtn1').click(function(){
+										$('.popDim').show();
+										$('#samplePop').show();
+									});
+									$('.alertPop button, .basicPop button, .pclose').click(function(){
+										$('.popDim, .alertDim').hide();
+										$('.alertPop, .basicPop, pushPreviewPop').hide();
+									});
+								})
+							</script>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- Alert Popup -->
+		<div class="alertDim" style="display:none;">
+	    <div class="alertPop" id="alertSamplePop" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						<h1>팝업 타이틀</h1>
+						<p>내용이 들어갈 영역입니다</p>
+					</div>
+        </div>
+        <div class="pBtn">
+          <button class="cancel">취소</button>
+          <button class="ok">확인</button>
+        </div>
+	    </div>
+		</div>
+		<!-- //Alert Popup -->
+		<!-- Popup -->
+		<div class="popDim" style="display:none;">
+			<!-- 기본 템플릿 -->
+	    <div class="basicPop" id="samplePop" style="display:none;">
+        <div class="pBack">
+	        <h1>팝업 타이틀</h1>
+					<p>내용</p>
+        </div>
+        <div class="pBtn tC">
+        	<button class="ok">확인</button>
+        </div>
+	    </div>
+			<!-- //기본 템플릿 -->
+		</div>
+		<!-- //Popup -->
+	</body>
+</html>

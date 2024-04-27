@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic_co2" transform="translate(0 -3)">
+    <circle id="타원_30" data-name="타원 30" cx="15" cy="15" r="15" transform="translate(0 3)" fill="#ffc80e"/>
+    <g id="그룹_690" data-name="그룹 690" transform="translate(5.603 8.603)">
+      <rect id="사각형_6435" data-name="사각형 6435" width="18.677" height="18.677" transform="translate(0.149 0.121)" fill="none"/>
+      <path id="패스_541" data-name="패스 541" d="M0,0H18.326V18.326H0Z" transform="translate(0.352)" fill="none"/>
+      <path id="패스_542" data-name="패스 542" d="M5.888,14.915A3.517,3.517,0,0,1,2.3,11.478,3.517,3.517,0,0,1,5.888,8.042a4.292,4.292,0,0,1,5.048-3.016,3.889,3.889,0,0,1,3.351,4.543h.764a2.673,2.673,0,1,1,0,5.345" transform="translate(-0.191 -1.17)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <ellipse id="타원_51" data-name="타원 51" cx="0.865" cy="0.865" rx="0.865" ry="0.865" transform="translate(6.055 10.893)" fill="#fff"/>
+      <ellipse id="타원_54" data-name="타원 54" cx="0.433" cy="0.433" rx="0.433" ry="0.433" transform="translate(12.11 11.758)" fill="#fff"/>
+      <ellipse id="타원_57" data-name="타원 57" cy="0.433" ry="0.433" transform="translate(12.975 14.353)" fill="#fff"/>
+      <ellipse id="타원_58" data-name="타원 58" cx="0.433" cy="0.433" rx="0.433" ry="0.433" transform="translate(0 5.703)" fill="#fff"/>
+      <ellipse id="타원_55" data-name="타원 55" cx="0.865" cy="0.865" rx="0.865" ry="0.865" transform="translate(10.38 8.298)" fill="#fff"/>
+      <ellipse id="타원_56" data-name="타원 56" cx="0.865" cy="0.865" rx="0.865" ry="0.865" transform="translate(2.595 3.972)" fill="#fff"/>
+      <ellipse id="타원_52" data-name="타원 52" cx="1.298" cy="1.298" rx="1.298" ry="1.298" transform="translate(7.785 12.623)" fill="#fff"/>
+      <ellipse id="타원_53" data-name="타원 53" cx="1.298" cy="1.298" rx="1.298" ry="1.298" transform="translate(15.57 3.972)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

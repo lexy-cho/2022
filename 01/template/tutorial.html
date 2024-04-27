@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/common.js"></script>
+    <style>
+				.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {width:20px;height:20px;opacity:1;border:1px solid #fff;background:transparent;}
+				.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {border-color:red;background:red;}
+        .tutorialGuide img {width:100vw;height:100vh;display:block;}
+        .tutorialGuide .swiper-pagination {position:fixed;bottom:13px;z-index:10000}
+        .btnGuideClose {position:fixed;bottom:12px;left:61%;z-index:10000;width:71px;height:30px;padding:5px;color:#fff;background:#4e4e4e;border:none;border-radius:8px;}
+    </style>
+	</head>
+  <body>
+	  <div class="tutorialGuide">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../images/newImage/img_tutorial01.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/newImage/img_tutorial02.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/newImage/img_tutorial03.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/newImage/img_tutorial04.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/newImage/img_tutorial05.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/newImage/img_tutorial06.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/newImage/img_tutorial07.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/newImage/img_tutorial08.png" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+	    <button class="btnGuideClose" onclick="history.back()">닫기</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: false,
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable : true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: false,
+                },
+            });
+        });
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="swiper.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="swiper.js"></script>
+    <style>
+        html, body, div, img, p{
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+        }
+
+        html, body{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .swiper-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .swiper-slide{
+            width: 100%;
+            overflow: auto;
+        }
+
+        .swiper-pagination-bullet{
+            background: transparent;
+            border: 1px solid white;
+        }
+
+        .swiper-pagination-bullet-active{
+            background: white;
+        }
+
+        .swiper-slide .swiper-slide-next{
+            display: none !important;
+        }
+
+        .swiper-slide .swiper-slide-prev{
+            display: none !important;
+        }
+
+        .t_close{
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            background: url(x.svg) no-repeat;
+            top: 2%;
+            right: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img01.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img02.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img03.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img04.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img05.png" alt="">
+                <p class="t_close"></p>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: false,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable : true,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: false,
+                },
+            });
+        });
+    </script>
+</body>
+</html> -->

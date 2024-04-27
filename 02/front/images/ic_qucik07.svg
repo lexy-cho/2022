@@ -1,0 +1,11 @@
+<svg id="ic_qucik07" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect id="사각형_19" data-name="사각형 19" width="64" height="64" fill="none"/>
+  <path id="패스_32" data-name="패스 32" d="M1187.991,275.957c-.825,13.527,14.1,16.624,24.313,17.252s23,6.953,16.959-13.565S1188.816,262.429,1187.991,275.957Z" transform="translate(-1176.958 -239.033)" fill="#f9f460"/>
+  <g id="그룹_40" data-name="그룹 40" transform="translate(12 12)">
+    <path id="패스_56" data-name="패스 56" d="M0,0H40V40H0Z" fill="none"/>
+    <line id="선_5" data-name="선 5" y1="10" x2="10" transform="translate(14.966 14.966)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle id="타원_5" data-name="타원 5" cx="1" cy="1" r="1" transform="translate(14.973 14.973)" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle id="타원_6" data-name="타원 6" cx="1" cy="1" r="1" transform="translate(22.959 22.959)" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_57" data-name="패스 57" d="M6.324,9.989A3.665,3.665,0,0,1,9.989,6.324h1.666a3.665,3.665,0,0,0,2.582-1.066L15.4,4.092a3.665,3.665,0,0,1,5.2,0l1.166,1.166a3.665,3.665,0,0,0,2.582,1.066h1.666a3.665,3.665,0,0,1,3.665,3.665v1.666a3.665,3.665,0,0,0,1.066,2.582L31.91,15.4a3.665,3.665,0,0,1,0,5.2l-1.166,1.166a3.665,3.665,0,0,0-1.066,2.582v1.666a3.665,3.665,0,0,1-3.665,3.665H24.347a3.665,3.665,0,0,0-2.582,1.066L20.6,31.91a3.665,3.665,0,0,1-5.2,0l-1.166-1.166a3.665,3.665,0,0,0-2.582-1.066H9.989a3.665,3.665,0,0,1-3.665-3.665V24.347a3.665,3.665,0,0,0-1.066-2.582L4.092,20.6a3.665,3.665,0,0,1,0-5.2l1.166-1.166a3.665,3.665,0,0,0,1.066-2.582V9.989" transform="translate(2.016 2.016)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,321 @@
+.all_wrap{
+    position: relative;
+    width: 1280px;
+    height: 800px;
+    background-color: #FAFAFA;
+    overflow: hidden;
+}
+.btn_close{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: url(../images/parent_close.svg) no-repeat;
+    top: 75px;
+    right: 93px;
+}
+.chart1_wrap{
+    position: absolute;
+    width: 643px;
+    height: 524px;
+    top: 170px;
+    left: 88px;
+    overflow: hidden;
+}
+.chart1_wrap p{
+    height: 46px;
+    background-color: #F2BF89;
+    font-family: 'NanumGothic';
+    font-size: 18px;
+    font-weight: bold;
+    color: #3B3B3B;
+    text-align: center;
+    line-height: 46px;
+}
+#radarChart{
+    position: relative;
+    width: 643px;
+    height: 478px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.exam_result_wrap{
+    position: absolute;
+    width: 441px;
+    height: 522px;
+    background-color: #FFFFFF;
+    top: 170px;
+    left: 755px;
+    border: 1px solid #F4CBA0;
+    border-top: none;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.exam_result_wrap_tit{
+    height: 46px;
+    background-color: #F2BF89;
+    font-family: 'NanumGothic';
+    font-size: 18px;
+    font-weight: bold;
+    color: #3B3B3B;
+    text-align: center;
+    line-height: 46px;
+}
+.result_1{
+    position: relative;
+    width: 395px;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #DFDFDF;
+}
+.result_1 p{
+    font-family: 'NanumGothic';
+    font-size: 16px;
+    font-weight: bold;
+    color: #444444;
+    margin-bottom: 25px;
+}
+.result_1_icon{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background: url(../images/exam_report_first.svg) no-repeat;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+.result_2_icon{
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    background: url(../images/exam_report_bar.svg) no-repeat;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+
+.calendar_wrap{
+    position: absolute;
+    width: 223px;
+    height: 46px;
+    background: url(../images/member_info_calendar_bg.svg) no-repeat;
+    box-shadow: 0px 1px 1px #00000008;
+    top: 56px;
+    left: -2px;
+    margin-bottom: 11px;
+}
+.calendar_wrap ul{
+    padding-left: 12px;
+}
+.calendar_wrap ul li{
+    float: left;
+    height: 46px;
+    line-height: 52px;
+}
+.cal_arrow_left{
+    width: 14px;
+    height: 19px;
+}
+.cal_arrow_left img{
+    width: 100%;
+}
+.cal_txt{
+    font-family: 'NanumGothicExtraBold';
+    font-size: 18px;
+    font-weight: 800;
+    color: #0E2E53;
+    padding-left: 73px;
+}
+.cal_arrow_right{
+    width: 14px;
+    height: 19px;
+    padding-left: 28px;
+}
+.cal_arrow_right img{
+    width: 100%;
+}
+.report_table{
+    position: absolute;
+    width: 643px;
+    height: 397px;
+    top: 113px;
+    overflow-y: scroll;
+    border: 1px solid #F4CCA2;
+}
+.report_table table{
+    width: 643px;
+    border-collapse: collapse;
+}
+.report_table table thead th{
+    height: 58px;
+    background-color: #FEFBF9;
+    font-family: 'NanumGothic';
+    font-size: 18px;
+    font-weight: bold;
+    color: #444444;
+}
+.report_table table tbody tr td{
+    height: 58px;
+    font-family: 'NanumGothic';
+    font-size: 15px;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+}
+.report_table table tbody tr:nth-child(odd){
+    background-color: #ffffff;
+}
+.report_table table tbody tr:nth-child(even){
+    background-color: #FEFBF9;
+}
+.report_num{
+    font-family: 'NanumGothicExtraBold';
+    color: #0E2E53 !important;
+}
+.report_book_title{
+    width: 120px;
+}
+.txt_yello{
+    color: #DFA97A;
+}
+.btn_check{
+    width: 56px;
+    height: 25px;
+    font-family: 'NanumGothic';
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #7689B7;
+    border-radius: 2px;
+    color: #FFFFFF;
+    margin-left: 8px;
+}
+.btn_portfolio{
+    width: 56px;
+    height: 25px;
+    font-family: 'NanumGothic';
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #45516D;
+    border-radius: 2px;
+    color: #FFFFFF;
+}
+.btn_exam{
+    position: absolute;
+    top: 720px;
+    right: 84px;
+}
+.btn_exam button{
+    width: 183px;
+    height: 50px;
+    font-family: 'NanumGothic';
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #7689B7;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+.btn_exam button:last-child{
+    margin-right: 0;
+}
+
+/* 팝업 */
+.pop_up_wrap{
+    display: none;
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.pop_dim{
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    background-color: #000000CC;
+}
+.pop_up{
+    position: absolute;
+    width: 705px;
+    height: 490px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pop_header{
+    position: relative;
+    width: 705px;
+    height: 75px;
+    background-color: #0B3861;
+}
+.pop_h_tit{
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    font-family: 'NanumGothic';
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.pop_h_sub{
+    position: absolute;
+    top: 45px;
+    left: 50px;
+    font-family: 'NanumGothic';
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.pop_h_close{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: url(../images/member_info_pop_close.svg) no-repeat;
+    top: 25px;
+    right: 50px;
+}
+.pop_table_wrap{
+    position: relative;
+    width: 705px;
+    overflow: hidden;
+}
+.pop_table_wrap table{
+    width: 705px;
+    text-align: center;
+    font-family: 'NanumGothic';
+    border-collapse: collapse;
+}
+.pop_table_wrap table thead th{
+    height: 57px;
+    background-color: #FFD8AF;
+    font-size: 18px;
+    font-weight: bold;
+    color: #585858;
+    border-right: 2px solid #FCF0E8;
+    border-bottom: 2px solid #FFD8AF;
+    box-sizing: border-box;
+}
+.pop_table_wrap table tbody tr{
+    height: 45px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666666;
+}
+.pop_table_wrap table tbody tr td{
+    border-right: 2px solid #FCF0E8;
+}
+.pop_table_wrap table tbody tr:nth-child(odd){
+    background-color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+.pop_table_wrap table tbody tr:nth-child(even){
+    background-color: #FEFBF9;
+    border-bottom: 2px solid #FEFBF9;
+}
+.border_right_none{
+    border-right: none !important;
+}
+/* 완료 여부가 미완료일 때 */
+.no_finish{
+    color: #DD1717;
+}

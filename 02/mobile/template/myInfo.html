@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전</button>
+					<h1>내정보</h1>
+					<button class="btnNav">메뉴여닫기</button>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu -->
+			<div id="snb">
+				<section>
+					<div class="c-menu c-menu--slide-right">
+						<button class="c-close gnbClose">닫기</button>
+						<div class="back" data-include="include/snb.html"></div>
+					</div>
+					<div class="c-mask"></div><!-- /c-mask -->
+				</section>
+			</div>
+			<!-- //Sub Menu -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div class="myInfo"><!-- class 없어도 유지 -->
+							<h3>
+								홍길동님 회원정보
+								<a href="resign.html">회원탈퇴</a>
+							</h3>
+							<!-- View -->
+							<div class="tvs">
+								<dl>
+									<dt>아이디</dt>
+									<dd>testID1234</dd>
+								</dl>
+								<dl>
+									<dt>휴대폰</dt>
+									<dd>010 – 1234 - 1234</dd>
+								</dl>
+								<dl>
+									<dt>이 름</dt>
+									<dd>홍 길 동</dd>
+								</dl>
+								<dl>
+									<dt>이메일</dt>
+									<dd>adfads@abc.com</dd>
+								</dl>
+								<dl class="myFarm">
+									<dt>농장정보</dt>
+									<dd>
+										<strong>우리농장</strong>
+										A동 / A-1구역  / 딸기 (설향)
+									</dd>
+								</dl>
+							</dlv>
+							<!--//View -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="pwChange.html" class="btnL">비밀번호 변경</a>
+								<a href="myInfo_modify.html" class="btnL white">회원정보 변경</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

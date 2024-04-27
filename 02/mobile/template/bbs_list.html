@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/front.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../js/i18n/datepicker.kr.js"></script>
+		<script type="text/javascript" src="../js/navmenu.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<h1>게시판 목록</h1>
+					<button class="btnNav">메뉴여닫기</button>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- Sub Menu -->
+			<div id="snb">
+				<section>
+					<div class="c-menu c-menu--slide-right">
+						<button class="c-close gnbClose">닫기</button>
+						<div class="back" data-include="include/snb.html"></div>
+					</div>
+					<div class="c-mask"></div><!-- /c-mask -->
+				</section>
+			</div>
+			<!-- //Sub Menu -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="content">
+					<article>
+						<!-- page layout -->
+						<div><!-- class 없어도 유지 -->
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet multyCase">
+									<div class="gridItem dubChoice">
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>제목</option>
+												<option value="">작업자</option>
+											</select>
+										</span>
+										<input type="text"  />
+									</div>
+								</div>
+								<div class="gridSet">
+									<div class="gridItem">
+										<span class="calDupSet">
+												<input type="text" class="cal" placeholder="일자 선택"  />
+												<em>-</em>
+												<input type="text" class="cal" placeholder="일자 선택"  />
+										</span>
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+							</div>
+							<!--//List search-->
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet">
+									<div class="gridItem dubChoice">
+										<span class="selectSet">
+											<select name="" id="">
+												<option value="" selected>제목</option>
+												<option value="">작업자</option>
+											</select>
+										</span>
+										<input type="text"  />
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+							</div>
+							<!--//List search-->
+							<!-- List search -->
+							<div class="listSearch">
+								<div class="gridSet">
+									<div class="gridItem">
+										<span class="calDupSet">
+												<input type="text" class="cal" placeholder="일자 선택"  />
+												<em>-</em>
+												<input type="text" class="cal" placeholder="일자 선택"  />
+										</span>
+										<button class="btnSearch">Search</button>
+									</div>
+								</div>
+							</div>
+							<!--//List search-->
+							<!-- List -->
+			        <div class="lls">
+								<ul>
+									<!-- Loop -->
+									<li>
+										<a href="">
+											<span class="listT">
+												<span>No1</span>
+												<em class="right">2021-02-26 15:26:26</em>
+											</span>
+											<span class="listD">상세내용이 나올 영역</span>
+										</a>
+									</li>
+									<!-- //Loop -->
+									<li>
+										<a href="">
+											<span class="listT">
+												<span>No1</span>
+												<em class="right">2021-02-26 15:26:26</em>
+											</span>
+											<span class="listD">상세내용이 나올 영역</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="listT">
+												<span>2021-02-10</span>
+												<em class="right">기타</em>
+											</span>
+											<span class="listD">상세내용이 나올 영역</span>
+										</a>
+									</li>
+								</ul>
+								<!---->
+								<br/><br/>
+								<!---->
+								<ul class="tlCase">
+									<!-- Loop -->
+									<li>
+										<a href="">
+											<span class="listT">
+												<span>No1</span>
+												<em class="right">2021-02-26</em>
+											</span>
+											<table>
+												<colgroup>
+													<col span="4" width="25%" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>구분</th>
+														<th>EC</th>
+														<th>PH</th>
+														<th>총액량</th>
+													</tr>
+												</thead>
+												<tbody>
+													<!--Loop-->
+													<tr>
+														<th>공급</th>
+														<td>9</td>
+														<td>9</td>
+														<td>9</td>
+													</tr>
+													<!--//Loop-->
+													<tr>
+														<th>폐액</th>
+														<td>1</td>
+														<td>1</td>
+														<td>1</td>
+													</tr>
+													<tr>
+														<th>차이</th>
+														<td>8.00</td>
+														<td>8.00</td>
+														<td>8.00</td>
+													</tr>
+													<!-- 데이터 없을 경우 -->
+													<!-- <tr><td colspan="4" class="noneData">등록된 데이터가 없습니다.</td></tr> -->
+													<!-- //데이터 없을 경우 -->
+												</tbody>
+											</table>
+										</a>
+									</li>
+									<!-- //Loop -->
+									<li>
+										<a href="">
+											<span class="listT">
+												<span>No1</span>
+												<em class="right">2021-02-26</em>
+											</span>
+											<table>
+												<colgroup>
+													<col span="4" width="25%" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>구분</th>
+														<th>EC</th>
+														<th>PH</th>
+														<th>총액량</th>
+													</tr>
+												</thead>
+												<tbody>
+													<!--Loop-->
+													<tr>
+														<th>공급</th>
+														<td>9</td>
+														<td>9</td>
+														<td>9</td>
+													</tr>
+													<!--//Loop-->
+													<tr>
+														<th>폐액</th>
+														<td>1</td>
+														<td>1</td>
+														<td>1</td>
+													</tr>
+													<tr>
+														<th>차이</th>
+														<td>8.00</td>
+														<td>8.00</td>
+														<td>8.00</td>
+													</tr>
+													<!-- 데이터 없을 경우 -->
+													<!-- <tr><td colspan="4" class="noneData">등록된 데이터가 없습니다.</td></tr> -->
+													<!-- //데이터 없을 경우 -->
+												</tbody>
+											</table>
+										</a>
+									</li>
+								</ul>
+								<!---->
+								<br/><br/>
+								<!---->
+								<ul class="tlCase">
+									<!-- Loop -->
+									<li>
+										<a href="">
+											<span class="listT">
+												<span>No1</span>
+												<em class="right">2021-02-26</em>
+											</span>
+											<table>
+												<colgroup>
+													<col width="25%" />
+													<col width="75%" />
+												</colgroup>
+												<tbody>
+													<!--Loop-->
+													<tr>
+														<th>작기</th>
+														<td>2021 A-1동 딸기</td>
+													</tr>
+													<!--//Loop-->
+													<tr>
+														<th>하우스/구역</th>
+														<td>A동  / A-1구역</td>
+													</tr>
+													<tr>
+														<th>작목/품종</th>
+														<td>
+															딸기 / 설향
+															<em class="iFile">첨부파일</em>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</a>
+									</li>
+									<!-- //Loop -->
+								</ul>
+								<!---->
+								<button class="btnListMore">+ 더보기</button>
+			        </div>
+							<!--//List -->
+							<!-- Btn -->
+							<div class="btnArea">
+								<a href="#" class="btnL">등록</a>
+							</div>
+							<!--//Btn -->
+						</div>
+						<!-- //page layout -->
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //Wrap -->
+	</body>
+</html>

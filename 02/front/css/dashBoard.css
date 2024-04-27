@@ -1,0 +1,157 @@
+@import url("font.css");
+@import url("common.css");
+@import url("layout.css");
+
+/*===================================================================
+* INFORMATION
+* -------------------------------------------------------------------
+* @Author : Cho, lexy (lexycho@gmail.com)
+* @File Name: dashboard.css
+* @Create Date: 2022-09-25
+* @Last Update Date: N/A
+* @History: N/A
+* ====================================================================*/
+body {min-width:1900px;}
+#dbwrap {min-width:1900px;overflow:hidden;background:#f8f8f8;min-height:100vh;}
+#dbwrap #dbHeader {padding:0 40px;height:50px;background:#FFC80E;}
+#dbwrap #dbHeader:after {content:"";display:block;clear:both;}
+#dbwrap #dbHeader * {color:#fff;}
+#dbwrap #dbHeader h1 {float:left;display:inline-block;padding:14px 0 0;width:232px;text-align:left;box-sizing:border-box;}
+#dbwrap #dbHeader h1 a {display:inline-block;width:152px;height:20px;text-indent:9999px;overflow:hidden;background:url("../images/dashboard/logo.svg") no-repeat top center;}
+#dbwrap #dbHeader ul {float:left;}
+#dbwrap #dbHeader ul li {float:left;}
+#dbwrap #dbHeader ul li ~ li {margin-left:50px;}
+#dbwrap #dbHeader ul li a {display:block;height:50px;font-size:16px;line-height:3.2;}
+#dbwrap #dbHeader .right {display:inline-block;padding:14px 0 0;}
+#dbwrap #dbHeader .qnaArea em {padding:1px 0 0 26px;background:url("../images/dashboard/ic_today.svg") no-repeat center left;}
+#dbwrap #dbHeader .qnaArea em::after {content:'';display:inline-block;margin:-16px 16px 0;width:0;height:10px;border-right:1px solid rgba(255,255,255,0.4);}
+#dbwrap #dbHeader .qnaArea button {padding:3px 0 0 26px;border:none;background:url("../images/dashboard/ic_qna.svg") no-repeat center left;}
+#dbwrap #dbHeader .qnaArea button sub {display:inline-block;margin:-1px 0 0 6px;width:15px;height:15px;font-size:11px;line-height:1.5;text-align:center;vertical-align:middle;border-radius:10px;background:#F66363;}
+#dbwrap #dbHeader .loginArea::before {content:'';display:inline-block;margin:-2px 16px 0;width:0;height:16px;vertical-align:middle;border-right:1px solid #fff;}
+#dbwrap #dbHeader .loginArea [class*=go] {position:relative;margin-left:32px;}
+#dbwrap #dbHeader .loginArea [class*=go]::before {content:'';position:absolute;top:4px;left:-16px;display:inline-block;width:0;height:10px;border-right:1px solid rgba(255,255,255,0.4);}
+#dbwrap #dbHeader .loginArea .goMypage {padding:2px 0 2px 26px;background:url("../images/dashboard/ic_mypage.svg") no-repeat center left;}
+#dbwrap .areaChoice {padding:0 40px;height:50px;border-bottom:2px solid #FFC80E;background:#fff;}
+#dbwrap .areaChoice:after {content:"";display:block;clear:both;}
+#dbwrap .areaChoice h2 {float:left;font-size:18px;line-height:2.6;}
+#dbwrap .areaChoice div {float:right;display:inline-block;border-right:1px solid #eee;}
+#dbwrap .areaChoice div .col {float:left;display:inline-block;width:354px;height:48px;padding:3px 0 0 0;border-left:1px solid #eee;}
+#dbwrap .areaChoice div .col label {float:left;display:inline-block;width:64px;line-height:2.9;text-align:center;color:#ECB600;}
+#dbwrap .areaChoice div .col .selectSet {float:left;width:285px;background:#fff;}
+#dbwrap .areaChoice div .col .selectSet select {font-size:16px;border:none;}
+#dbwrap .box {position:relative;float:left;margin:10px;padding:18px 20px 20px;box-shadow:2px 2px 16px rgba(0, 0, 0, 0.06);border-radius:10px;background:#fff;}
+#dbwrap .areaContents {margin:0 auto;padding:12px 30px;width:1920px;}
+#dbwrap .areaContents [class*=line]:after {content:"";display:block;clear:both;}
+#dbwrap .line1 .box {width:424px;height:154px;}
+#dbwrap .line1 .box.col1 {width:466px;}
+#dbwrap .line1 .box.col4 {width:466px;}
+#dbwrap .line2 .box {width:910px;height:380px;}
+#dbwrap .line3 .box {width:466px;height:356px;}
+#dbwrap .line3 .box.col8 {width:868px;}
+#dbwrap h3 {margin-bottom:16px;font-size:16px;font-weight:500;}
+#dbwrap h3::before {content:'';display:inline-block;margin:-4px 6px 0 0;width:6px;height:6px;vertical-align:middle;border-radius:100%;border:2px solid #ffc80e;background:#fff;overflow:hidden;}
+#dbwrap .moreSet {position:absolute;right:15px;top:15px;}
+#dbwrap .moreSet .btnMore {float:left;display:inline-block;margin-left:5px;width:24px;height:24px;text-indent:-9999px;overflow:hidden;border:none;background:url("../images/dashboard/ic_plus.svg") no-repeat center;}
+#dbwrap .moreSet .btnSummery {float:left;display:inline-block;width:80px;height:24px;color:#FFC80E;font-size:12px;line-height:1.9;text-align:center;border-radius:12px;border:1px solid #ECB600;background:#fff;}
+/* 생산 */
+#dbwrap .col1 .back {display:block;}
+#dbwrap .col1 .back:after {content:"";display:block;clear:both;}
+#dbwrap .col1 .back div {float:left;display:table;width:208px;}
+#dbwrap .col1 .back div span {display:table-cell;width:100%;height:74px;padding:6px 20px 0;color:#444;font-size:18px;vertical-align:middle;border:1px solid #ddd;border-radius:10px;}
+#dbwrap .col1 .back div span strong {float:right;display:inline-block;margin:-5px 0 0 0;font-size:24px;}
+#dbwrap .col1 .back div span::before {content:'';display:inline-block;margin:-4px 9px 0 0;width:18px;height:18px;vertical-align:middle;overflow:hidden;background:url("../images/dashboard/ic_thisweek_gray.svg") no-repeat center;background-size:100% auto;}
+#dbwrap .col1 .back div.thisWeek {float:right;}
+#dbwrap .col1 .back div.thisWeek span {border-color:#FFC80E;background:#FFFBEF;}
+#dbwrap .col1 .back div.thisWeek span::before {background-image:url("../images/dashboard/ic_thisweek.svg")}
+#dbwrap .col1 .back div.thisWeek em {display:inline-block;margin:-6px 6px 0 0;vertical-align:middle;color:#F66363;}
+#dbwrap .col1 .back div.thisWeek em::before {content:'';display:inline-block;width:0;height:0;margin:2px 3px 0 0;vertical-align:middle;border:3px solid #F66363;border-top-color:transparent;border-left-color:transparent;z-index:1;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);}
+#dbwrap .col1 .back div.thisWeek em.minus {color:#029af3;}
+#dbwrap .col1 .back div.thisWeek em.minus::before {margin:-5px 3px 0 0;border:3px solid #029af3;border-top-color:transparent;border-left-color:transparent;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);}
+/* 병충해 */
+#dbwrap .col2 ul {display:block;}
+#dbwrap .col2 ul:after {content:"";display:block;clear:both;}
+#dbwrap .col2 ul li {float:left;padding:5px 5px 5px 0;width:50%;color:#444;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#dbwrap .col2 ul li span {display:inline-block;width:40px;color:#999;font-size:12px;}
+#dbwrap .col2 ul li em {display:inline-block;margin:0 5px 0 0;color:#666;}
+/* 병충해 방제 */
+#dbwrap .col3 ul {display:block;}
+#dbwrap .col3 ul:after {content:"";display:block;clear:both;}
+#dbwrap .col3 ul li {float:left;padding:5px 5px 5px 0;width:50%;color:#444;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#dbwrap .col3 ul li span {display:inline-block;width:40px;color:#999;font-size:12px;}
+#dbwrap .col3 ul li em {display:inline-block;margin:0 5px 0 0;color:#666;}
+/* 외부기상 */
+#dbwrap .col4 ul {display:block;}
+#dbwrap .col4 ul:after {content:"";display:block;clear:both;}
+#dbwrap .col4 ul li {float:left;margin:0 0 12px;padding:5px 5px 5px 42px;width:208px;font-weight:bold;font-size:18px;color:#444;height:32px;border-radius:50px;background:#FFFBEF url("../images/dashboard/ic_temp.svg") no-repeat center left;background-size:auto 100%;}
+#dbwrap .col4 ul li:nth-child(2n) {float:right;}
+#dbwrap .col4 ul li.out2 {background-image:url("../images/dashboard/ic_humidity.svg")}
+#dbwrap .col4 ul li.out3 {background-image:url("../images/dashboard/ic_insolation.svg")}
+#dbwrap .col4 ul li.out4 {background-image:url("../images/dashboard/ic_rainfall.svg")}
+/* 주요환경정보 */
+#dbwrap .col5 h3 {margin-bottom:0;}
+#dbwrap .col5 .charset {height:218px;}
+#dbwrap .col5 ul {display:block;padding:25px 0 0 22px;height:90px;border-radius:10px;border:1px solid #FFC80E;background:#FFFBEF;}
+#dbwrap .col5 ul:after {content:"";display:block;clear:both;}
+#dbwrap .col5 ul li {float:left;width:118px;padding:0 0 0 44px;font-weight:bold;font-size:18px;color:#444;background:url("../images/dashboard/ic_temp.svg") no-repeat center left;}
+#dbwrap .col5 ul li span {display:block;color:#777;font-weight:normal;}
+#dbwrap .col5 ul li.point2,
+#dbwrap .col5 ul li.point5 {background-image:url("../images/dashboard/ic_humidity.svg")}
+#dbwrap .col5 ul li.point3 {background-image:url("../images/dashboard/ic_co2.svg")}
+#dbwrap .col5 ul li.point6,
+#dbwrap .col5 ul li.point7 {background-image:url("../images/dashboard/ic_insolation.svg")}
+/* 실시간 환경정보 */
+#dbwrap .col6 .selectSet {position:absolute;right:15px;top:15px;width:130px;background:#fff;}
+#dbwrap .col6 .selectSet select {border-color:#FFC80E;}
+#dbwrap .col6 .selectSet:after {border:3px solid #FFC80E;border-top-color:transparent;border-left-color:transparent;}
+#dbwrap .col6 h3 {margin-bottom:0;}
+/* 양액 */
+#dbwrap .col7 .tls table thead th {height:35px;}
+#dbwrap .col7 .tls table td {padding:0 10px;height:35px;}
+/* 생육 */
+#dbwrap .col8 h3 {margin-bottom:0;}
+/* 이상알림 */
+#dbwrap .col9 ul {display:block;padding:15px 20px 0;height:271px;overflow:hidden;overflow-y:auto;background:#F8F8F8;}
+#dbwrap .col9 ul li {display:block;height:32px;padding:0;width:100%;color:#666;line-height:2.2;border-bottom:1px solid #ddd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#dbwrap .col9 ul li span {display:inline-block;width:85px;color:#ECB600;font-size:12px;}
+/* ====================== */
+/* 팝업게시판 */
+/* ====================== */
+body#windowPop {min-width:auto;}
+.dbPop {min-width:1000px;overflow:hidden;min-height:710px;}
+.dbPop #dbPopHeader {padding:0 20px;height:50px;background:#FFC80E;}
+.dbPop #dbPopHeader:after {content:"";display:block;clear:both;}
+.dbPop #dbPopHeader * {color:#fff;}
+.dbPop #dbPopHeader h1 {float:left;display:inline-block;padding:14px 0 0;width:192px;text-align:left;box-sizing:border-box;}
+.dbPop #dbPopHeader h1 a {display:inline-block;width:152px;height:20px;text-indent:9999px;overflow:hidden;background:url("../images/dashboard/logo.svg") no-repeat top center;}
+.dbPop #dbPopHeader h2 {font-size:24px;font-weight:400;line-height:2;}
+.dbPop #container {padding:20px 20px 10px;}
+.dbPop .pBack {padding:16px 0 0;}
+/* list search */
+.dbPop .listSearch {margin-bottom:15px;}
+.dbPop .listSearch .btn {bottom:5px;}
+.dbPop .listSearch .gridItem {padding:5px 5px 5px 0;}
+.dbPop .listSearch .gridSet:first-child .gridItem {padding-top:0;}
+.dbPop .listSearch .gridItem:last-child {padding-right:0;}
+.dbPop .listSearch .btn.line2Case {bottom:55px;}
+.dbPop .listSearch .checkLong {vertical-align:middle;}
+.dbPop .listSearch .checkLong label {vertical-align:middle;}
+.dbPop .listSearch .checkLong .checkCol {width:650px;padding:5px 0 0;vertical-align:middle;}
+.dbPop .listSearch .checkLong .checkCol .checkSet {margin:0 15px 5px 0;}
+/* Table lIst Style */
+.dbPop .tls.minH {height:253px;overflow-x:auto;overflow-y:auto;}
+.dbPop .tls.dubThH {height:281px;overflow-x:auto;overflow-y:auto;}
+.dbPop .totalTable .tls.dubThH {height:575px;}
+.dbPop .totalTable .tls.dubThH.wideCase {height:634px;max-height:634px;overflow:auto;width:1260px;}
+.dbPop .tls table thead:not(.subHead) th {height:42px;}
+.dbPop .tls table thead:not(.subHead) th::after {margin-top:-10px;height:20px;}
+.dbPop .tls table td {height:42px;}
+.dbPop .tls table td em {color:red;}
+.dbPop .chartLayout {margin-top:15px;margin-bottom:0;}
+.dbPop .damageReportDetail .tls {max-height:580px;overflow-y:auto;}
+.dbPop .pestControlDetail .tls {max-height:590px;overflow-y:auto;}

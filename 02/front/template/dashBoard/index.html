@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+		<title>SmartFarm</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="../../css/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/chart/apexcharts.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/dashBoard.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../../js/datepicker.min.js"></script>
+		<script type="text/javascript" src="../../js/i18n/datepicker.kr.js"></script>
+    <script type="text/javascript" src="../../js/chart/apexcharts.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script>
+			$(document).ready(function(){
+				// newPopupOpen("popBtn1","생산량 총괄표","production_summery.html","1010","550");
+				// newPopupOpen("popBtn2","생산량 상세","production.html","1050","865");
+				// newPopupOpen("popBtn3","방제 현황","damageReport.html","1070","740");
+				// newPopupOpen("popBtn4","병해충 현황","pestControl.html","1070","740");
+				// newPopupOpen("popBtn5","외부기상 현황","outWeather.html","1360","820");
+				// newPopupOpen("popBtn6","내부기상 현황","inWeather.html","1000","865");
+				// newPopupOpen("popBtn7","양액 총괄표","nutrient_summery.html","1010","550");
+				// newPopupOpen("popBtn8","양액 상세","nutrient.html","1050","900");
+				// newPopupOpen("popBtn9","생육 총괄표","growth_summery.html","1300","740");
+				// newPopupOpen("popBtn10","생육 상세","growth.html","1050","900");
+				popupOpen("popBtn1","popDim","basicPop1");
+				popupOpen("popBtn2","popDim","basicPop2");
+				popupOpen("popBtn3","popDim","basicPop3");
+				popupOpen("popBtn4","popDim","basicPop4");
+				popupOpen("popBtn5","popDim","basicPop5");
+				popupOpen("popBtn6","popDim","basicPop6");
+				popupOpen("popBtn7","popDim","basicPop7");
+				popupOpen("popBtn8","popDim","basicPop8");
+				popupOpen("popBtn9","popDim","basicPop9");
+				popupOpen("popBtn10","popDim","basicPop10");
+				popupClose("basicPopClose1","popDim","basicPop1");
+				popupClose("basicPopClose2","popDim","basicPop2");
+				popupClose("basicPopClose3","popDim","basicPop3");
+				popupClose("basicPopClose4","popDim","basicPop4");
+				popupClose("basicPopClose5","popDim","basicPop5");
+				popupClose("basicPopClose6","popDim","basicPop6");
+				popupClose("basicPopClose7","popDim","basicPop7");
+				popupClose("basicPopClose8","popDim","basicPop8");
+				popupClose("basicPopClose9","popDim","basicPop9");
+				popupClose("basicPopClose10","popDim","basicPop10");
+			})
+		</script>
+	</head>
+	<body>
+		<!-- dashBoard_wrap -->
+		<div id="dbwrap">
+			<!-- header -->
+			<div id="dbHeader">
+				<header>
+					<div class="back">
+						<h1><a href="">SmartFarm</a></h1>
+						<div class="dbNav">
+							<ul>
+								<li><a>모니터링</a></li>
+								<li><a>분석서비스</a></li>
+								<li><a>진단서비스</a></li>
+								<li><a>설정</a></li>
+							</ul>
+						</div>
+						<span class="right">
+							<span class="qnaArea">
+								<em>오늘 : 2022-08-05</em>
+								<button>질문과 답변<sub>2</sub></button>
+							</span>
+							<span class="loginArea">
+								<em>admin 님 환영합니다.</em>
+								<a href="" class="goLogin">로그아웃</a>
+								<a href="" class="goMypage">마이페이지</a>
+							</span>
+						</span>
+					</div>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<!---->
+				<div class="areaChoice">
+					<h2>딸기(매향)</h2>
+					<div>
+						<span class="col">
+							<label>작기</label>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="">Season3</option>
+								</select>
+							</span>
+						</span>
+						<span class="col">
+							<label>구역</label>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="">Interlocking Unit - Sector 1</option>
+								</select>
+							</span>
+						</span>
+						<span class="col">
+							<label>농가</label>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="">Denns Q Diano</option>
+								</select>
+							</span>
+						</span>
+					</div>
+				</div>
+				<!---->
+				<div class="areaContents">
+					<div class="line1">
+						<!-- 생산 -->
+						<div class="box col1">
+							<h3>생산</h3>
+							<span class="moreSet">
+								<button class="btnSummery" id="popBtn1">SUMMARY</button>
+								<button class="btnMore" id="popBtn2">More</button>
+							</span>
+							<div class="back">
+								<div class="prevWeek"><span>지난주 <strong>2</strong></span></div>
+								<div class="thisWeek"><span>이번주 <strong><em>+2</em>4</strong></span></div>
+								<!-- <div class="thisWeek"><span>이번주 <strong><em class="minus">-2</em>4</strong></span></div> -->
+							</div>
+						</div>
+						<!-- 병충해 -->
+						<div class="box col2">
+							<h3>병충해</h3>
+							<span class="moreSet">
+								<!-- <button class="btnSummery">SUMMARY</button> -->
+								<button class="btnMore" id="popBtn3">More</button>
+							</span>
+							<div>
+								<ul>
+									<li><span>07.08</span><em>[딸기]</em>GrassHopper GrassHopper</li>
+									<li><span>07.08</span><em>[딸기]</em>GrassHopper</li>
+									<li><span>07.04</span><em>[딸기]</em>개미</li>
+									<li><span>07.04</span><em>[딸기]</em>개미</li>
+									<li><span>06.28</span><em>[딸기]</em>GrassHopper</li>
+									<li><span>06.28</span><em>[딸기]</em>GrassHopper</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 병충해 방제 -->
+						<div class="box col3">
+							<h3>병충해 방제</h3>
+							<span class="moreSet">
+								<!-- <button class="btnSummery">SUMMARY</button> -->
+								<button class="btnMore" id="popBtn4">More</button>
+							</span>
+							<div>
+								<ul>
+									<li><span>07.08</span><em>[페퍼]</em>Killbug</li>
+									<li><span>07.08</span><em>[딸기]</em>GrassHopper</li>
+									<li><span>07.04</span><em>[파프리카]</em>ADX</li>
+									<li><span>07.04</span><em>[파프리카]</em>ADX</li>
+									<li><span>06.28</span><em>[딸기]</em>GrassHopper</li>
+									<li><span>06.28</span><em>[파프리카]</em>ADX</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 외부기상 -->
+						<div class="box col4">
+							<h3>외부기상</h3>
+							<span class="moreSet">
+								<button class="btnMore" id="popBtn5">More</button>
+							</span>
+							<div>
+								<ul>
+									<li class="out1">25.8<em>℃</em></li>
+									<li class="out2">74<em>%</em></li>
+									<li class="out3">571<em>W/m²</em></li>
+									<li class="out4">0.68<em>mm</em></li>
+								</ul>
+							</div>
+						</div>
+						<!--//-->
+					</div>
+					<div class="line2">
+						<!-- 주요환경정보 -->
+						<div class="box col5">
+							<h3>주요환경정보</h3>
+							<span class="moreSet">
+								<!-- <button class="btnSummery">SUMMARY</button> -->
+								<button class="btnMore" id="popBtn6">More</button>
+							</span>
+							<div id="chart" class="charset"></div>
+							<script>
+								var options = {
+										series: [{
+										name: "내부기온",
+										data: [5,6,10,11,16,8,10]
+									}, {
+										name: "내부습도",
+										data: [-1,-5,-10,-6,-4,-3,-1,]
+									}, {
+										name: "CO2",
+										data: [3,3,3,3,3,3,3,]
+									}, {
+										name: "외부온도",
+										data: [1,2,3,2,1,3,2]
+									}, {
+										name: "외부습도",
+										data: [3,3,4,3,4,3,4]
+									}, {
+										name: "일사량",
+										data: [3,3,4,3,4,3,4]
+									}, {
+										name: "누적일사량",
+										data: [3,3,4,3,4,3,4]
+									}],
+										chart: {
+										height: 218,
+										type: 'line',
+										zoom: {
+											enabled: false
+										},
+										toolbar: {
+											show: false
+										}
+									},
+									grid: {
+										show: true,
+					          row: {
+					            colors: ['#f3f3f3', 'transparent'],
+					            opacity: 0.5
+					          }
+									},
+									dataLabels: {
+										enabled: false
+									},
+									stroke: {
+										curve: 'straight',
+										width: 2
+									},
+									colors: ['#4F81BD', '#BF4F4C', '#9BBB59', '#8064A2', '#4BACC6', '#FFC80E', '#96C037'],
+									xaxis: {
+										categories: ['11.11','11.12','11.13','11.14','11.15','11.16','11.17'],
+									},
+									yaxis: {
+										min: -20,
+										max: 20,
+										tickAmount: 6,
+										labels: {
+											style: {
+												fontWeight: 600,
+											}
+										},
+									},
+									legend: {
+										position: 'top',
+										height: 20
+									}
+								};
+								var chart = new ApexCharts(document.querySelector("#chart"), options);
+								chart.render();
+							</script>
+							<div>
+								<ul>
+									<li class="point1"><span>내부기온</span>25.8<em>℃</em></li>
+									<li class="point2"><span>내부습도</span>70<em>%</em></li>
+									<li class="point3"><span>CO2</span>20<em>ppm</em></li>
+									<li class="point4"><span>외부온도</span>25.8<em>℃</em></li>
+									<li class="point5"><span>외부습도</span>50<em>%</em></li>
+									<li class="point6"><span>일사량</span>571<em>W/m²</em></li>
+									<li class="point7"><span>누적일사량</span>571<em>W/m²</em></li>
+								</ul>
+							</div>
+						</div>
+						<!-- 실시간 환경정보 -->
+						<div class="box col6">
+							<h3>실시간 환경정보</h3>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="">온도</option>
+								</select>
+							</span>
+							<div id="chart2" class="charset"></div>
+							<script>
+								var options2 = {
+										series: [{
+										name: "기준(하)",
+										data: [-1,-5,-10,-6,-4,-3,-1,]
+									}, {
+										name: "기준(상)",
+										data: [5,6,10,11,16,8,10]
+									}, {
+										name: "온도",
+										data: [3,3,3,3,3,3,3,]
+									}],
+										chart: {
+										height: 330,
+										type: 'line',
+										zoom: {
+											enabled: false
+										},
+										toolbar: {
+											show: false
+										}
+									},
+									grid: {
+										show: true,
+					          row: {
+					            colors: ['#f3f3f3', 'transparent'],
+					            opacity: 0.5
+					          }
+									},
+									dataLabels: {
+										enabled: false
+									},
+									stroke: {
+										curve: 'straight',
+										width: 2
+									},
+									colors: ['#91D3F1', '#FD8B7C', '#96C037'],
+									xaxis: {
+										categories: ['11.11','11.12','11.13','11.14','11.15','11.16','11.17'],
+									},
+									yaxis: {
+										min: -20,
+										max: 20,
+										tickAmount: 6,
+										labels: {
+											style: {
+												fontWeight: 600,
+											}
+										},
+									},
+									legend: {
+										position: 'top',
+										height: 20
+									}
+								};
+								var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+								chart2.render();
+							</script>
+						</div>
+						<!--//-->
+					</div>
+					<div class="line3">
+						<!-- 양액 -->
+						<div class="box col7">
+							<h3>양액</h3>
+							<span class="moreSet">
+								<button class="btnSummery" id="popBtn7">SUMMARY</button>
+								<button class="btnMore" id="popBtn8">More</button>
+							</span>
+							<div class="tls dataSet">
+								<table>
+									<colgroup>
+										<col width="86"/>
+										<col width="98"/>
+										<col span="3" width="*"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th colspan="2">항목</th>
+											<th>공급</th>
+											<th>폐액</th>
+											<th>증감</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th rowspan="3">어제</th>
+											<td>양(L)</td>
+											<td>O</td>
+											<td>O</td>
+											<td>O</td>
+										</tr>
+										<tr>
+											<td>EC(L)</td>
+											<td>O</td>
+											<td>O</td>
+											<td>O</td>
+										</tr>
+										<tr>
+											<td>PH(L)</td>
+											<td>O</td>
+											<td>O</td>
+											<td>O</td>
+										</tr>
+										<tr>
+											<th rowspan="3">오늘</th>
+											<td>양(L)</td>
+											<td>O</td>
+											<td>O</td>
+											<td>O</td>
+										</tr>
+										<tr>
+											<td>EC(L)</td>
+											<td>O</td>
+											<td>O</td>
+											<td>O</td>
+										</tr>
+										<tr>
+											<td>PH(L)</td>
+											<td>O</td>
+											<td>O</td>
+											<td>O</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 생육 -->
+						<div class="box col8">
+							<h3>생육</h3>
+							<span class="moreSet">
+								<button class="btnSummery" id="popBtn9">SUMMARY</button>
+								<button class="btnMore" id="popBtn10">More</button>
+							</span>
+							<div id="chart3" class="charset"></div>
+							<script>
+								var options3 = {
+										series: [{
+										name: "2주 전",
+										data: [1,5,10,6,4,3,1,]
+									}, {
+										name: "전주",
+										data: [5,6,10,11,16,8,10]
+									}, {
+										name: "금주",
+										data: [3,3,3,3,3,3,3,]
+									}],
+										chart: {
+										height: 310,
+										type: 'bar',
+										zoom: {
+											enabled: false
+										},
+										toolbar: {
+											show: false
+										}
+									},
+									grid: {
+										show: true,
+					          row: {
+					            colors: ['#f3f3f3', 'transparent'],
+					            opacity: 0.5
+					          }
+									},
+									dataLabels: {
+										enabled: false
+									},
+									stroke: {
+										curve: 'straight',
+										width: 2
+									},
+									colors: ['#8AD1F1', '#FFC80E', '#96C037'],
+									xaxis: {
+										categories: ['11.11','11.12','11.13','11.14','11.15','11.16','11.17'],
+									},
+									yaxis: {
+										min: 0,
+										max: 20,
+										tickAmount: 6,
+										labels: {
+											style: {
+												fontWeight: 600,
+											}
+										},
+									},
+									legend: {
+										position: 'top',
+										height: 20
+									}
+								};
+								var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+								chart3.render();
+							</script>
+						</div>
+						<!-- 이상알림 -->
+						<div class="box col9">
+							<h3>이상알림</h3>
+							<div>
+								<ul>
+									<li><span>09/06 15:13</span>[최고기온] 40.0 ℃</li>
+									<li><span>09/06 15:13</span>[최저습도] 52%</li>
+									<li><span>09/06 15:13</span>[최고CO2] 88%</li>
+									<li><span>09/06 15:13</span>[최고일사량] 200 W/m²</li>
+									<li><span>09/06 15:13</span>[최고기온] 38.0 ℃</li>
+									<li><span>09/06 15:13</span>[최고CO2] 70%</li>
+								</ul>
+							</div>
+						</div>
+						<!--//-->
+					</div>
+				</div>
+				<!--//-->
+			</section>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //dashBoard_wrap -->
+		<!-- Data 팝업 -->
+		<div class="popDim" style="display:none;">
+			<!-- 생산량 총괄표 -->
+			<div class="basicPop dbPop" id="basicPop1">
+				<h1 class="tt">생산량 총괄표</h1>
+				<button class="btnPClose" id="basicPopClose1">닫기</button>
+				<div class="pBack">
+					<div data-include="production_summery.html"></div>
+				</div>
+			</div>
+			<!-- //생산량 총괄표 -->
+			<!--생산량 상세-->
+			<div class="basicPop dbPop" id="basicPop2">
+				<h1 class="tt">생산량 상세</h1>
+				<button class="btnPClose" id="basicPopClose2">닫기</button>
+				<div class="pBack">
+					<div data-include="production.html"></div>
+				</div>
+			</div>
+			<!-- //생산량 상세 -->
+			<!-- 방제 현황 -->
+			<div class="basicPop dbPop" id="basicPop3">
+				<h1 class="tt">방제 현황</h1>
+				<button class="btnPClose" id="basicPopClose3">닫기</button>
+				<div class="pBack">
+					<div data-include="damageReport.html"></div>
+				</div>
+			</div>
+			<!-- //방제 현황 -->
+			<!-- 병해충 현황 -->
+			<div class="basicPop dbPop" id="basicPop4">
+				<h1 class="tt">병해충 현황</h1>
+				<button class="btnPClose" id="basicPopClose4">닫기</button>
+				<div class="pBack">
+					<div data-include="pestControl.html"></div>
+				</div>
+			</div>
+			<!-- //병해충 현황 -->
+			<!-- 외부기상 현황 -->
+			<div class="basicPop dbPop" id="basicPop5">
+				<h1 class="tt">외부기상 현황</h1>
+				<button class="btnPClose" id="basicPopClose5">닫기</button>
+				<div class="pBack">
+					<div data-include="outWeather.html"></div>
+				</div>
+			</div>
+			<!-- //외부기상 현황 -->
+			<!-- 내부기상 현황 -->
+			<div class="basicPop dbPop" id="basicPop6">
+				<h1 class="tt">내부기상 현황</h1>
+				<button class="btnPClose" id="basicPopClose6">닫기</button>
+				<div class="pBack">
+					<div data-include="inWeather.html"></div>
+				</div>
+			</div>
+			<!-- //내부기상 현황 -->
+			<!-- 양액 총괄표 -->
+			<div class="basicPop dbPop" id="basicPop7">
+				<h1 class="tt">양액 총괄표</h1>
+				<button class="btnPClose" id="basicPopClose7">닫기</button>
+				<div class="pBack">
+					<div data-include="nutrient_summery.html"></div>
+				</div>
+			</div>
+			<!-- //양액 총괄표 -->
+			<!-- 양액 상세 -->
+			<div class="basicPop dbPop" id="basicPop8">
+				<h1 class="tt">양액 상세</h1>
+				<button class="btnPClose" id="basicPopClose8">닫기</button>
+				<div class="pBack">
+					<div data-include="nutrient.html"></div>
+				</div>
+			</div>
+			<!-- //양액 상세 -->
+			<!-- 생육 총괄표 -->
+			<div class="basicPop dbPop" id="basicPop9">
+				<h1 class="tt">생육 총괄표</h1>
+				<button class="btnPClose" id="basicPopClose9">닫기</button>
+				<div class="pBack">
+					<div data-include="growth_summery.html"></div>
+				</div>
+			</div>
+			<!-- //생육 총괄표 -->
+			<!-- 생육 상세 -->
+			<div class="basicPop dbPop" id="basicPop10">
+				<h1 class="tt">생육 상세</h1>
+				<button class="btnPClose" id="basicPopClose10">닫기</button>
+				<div class="pBack">
+					<div data-include="growth.html"></div>
+				</div>
+			</div>
+			<!-- //생육 상세 -->
+		</div>
+		<!-- //Data 팝업 -->
+	</body>
+</html>
