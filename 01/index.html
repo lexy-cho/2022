@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>토탈시스템 교사앱</title>
+        <title>토탈시스템 부모앱</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
         <style type="text/css">
           hr {display: none;}
@@ -52,10 +52,10 @@
     </head>
     <body>
         <div id="wrap">
-            <h1><span>토탈시스템 교사앱</span></h1>
+            <h1><span>토탈시스템 부모앱</span></h1>
             <ul>
                 <!-- <li>기준 Device : PC (Edge, Chrome, Safari), Mobile (chrome, Safari)</li> -->
-                <li>기준 Device : Tablet (chrome, Safari)</li>
+                <li>기준 Device : Mobile (chrome)</li>
                 <li>문서타입 : HTML5 / CSS3</li>
             </ul>
             <table>
@@ -68,256 +68,346 @@
                 <thead>
                     <tr>
                         <th width="4%">ID</th>
-                        <th width="100">1 depth</th>
-                        <th width="120">2 depth</th>
-                        <th width="120">3 depth</th>
-                        <th width="150">4 depth</th>
+                        <th width="120">1 depth</th>
+                        <th width="150">2 depth</th>
+                        <th width="150">3 depth</th>
                         <th width="56">구분</th>
                         <th width="200">URL</th>
                         <th>History & Descration</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th colspan="8" class="title">공통</th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td rowspan="2">common</td>
-                        <td>Component</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="template/component.html" target="_blank">component.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>Layout</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="template/layout.html" target="_blank">layout.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th colspan="8" class="title">화면</th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td rowspan="19">메인</td>
-                        <td>시간표</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="new2">신규</strong></td>
-                        <td><a href="template/schedule.html" target="_blank">schedule.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td rowspan="2">업무관리(OT보고)</td>
-                        <td>목록</td>
-                        <td></td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/ot_report.html" target="_blank">ot_report.html</a></td>
-                        <td>리딩용 참조</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>상세</td>
-                        <td></td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/ot_report_view.html" target="_blank">ot_report_view.html</a></td>
-                        <td>리딩용 참조</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>납입 현황</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/pay_state.html" target="_blank">pay_state.html</a></td>
-                        <td>리딩용 참조</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>공지사항</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/notice.html" target="_blank">notice.html</a></td>
-                        <td>리딩용 참조</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td rowspan="3">부모 상담 리스트</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="new2">신규</strong></td>
-                        <td><a href="template/parent_counsel_list.html" target="_blank">parent_counsel_list.html</a></td>
-                        <td>리딩용 참조</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>리딩토탈</td>
-                        <td></td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/parent_counsel_reading.html" target="_blank">parent_counsel_reading.html</a></td>
-                        <td>리딩용 참조</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>교과토탈</td>
-                        <td></td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/parent_counsel_study.html" target="_blank">parent_counsel_study.html</a></td>
-                        <td>기존 방문수업 결과 발송 참조</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td rowspan="11">회원관리</td>
-                        <td rowspan="4">리딩토탈</td>
-                        <td>목록</td>
-                        <td><strong class="gray">완료</strong></td>
-                        <td><a href="template/new_main.html" target="_blank">new_main.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>회원정보</td>
-                        <td><strong class="gray">완료</strong></td>
-                        <td><a href="template/main_member.html" target="_blank">main_member.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>리딩스쿨</td>
-                        <td><strong class="gray">미진행</strong></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>학습 리포트</td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/reading_report.html" target="_blank">reading_report.html</a></td>
-                        <td>리딩용 참조</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td rowspan="7">토탈 시스템</td>
-                        <td>목록</td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/new_main.html" target="_blank">new_main.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>회원정보</td>
-                        <td><strong class="gray">완료</strong></td>
-                        <td><a href="template/main_member.html" target="_blank">main_member.html</a></td>
-                        <td>리딩토탈과 동일하여 생략</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>선물하기 (팝업)</td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/new_main.html" target="_blank">new_main.html</a></td>
-                        <td>메인에 포함 (기존 방문수업 내 소스 참조)</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>진단검사</td>
-                        <td><strong class="new2">신규</strong></td>
-                        <td><a href="template/study_reach.html" target="_blank">study_reach.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>학습 리포트</td>
-                        <td><strong class="red">수정</strong></td>
-                        <td><a href="template/study_report.html" target="_blank">study_report.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td><del>방문수업</del></td>
-                        <td><strong class="gray">완료</strong></td>
-                        <td>
-                          <a href="template/study_visiting.html" target="_blank">study_visiting.html</a><br/>
-                          <a href="template/study_visiting_result.html" target="_blank">study_visiting_result.html</a>
-                        </td>
-                        <td>이전 버전으로 사용하지 않음</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td><del>(구) 학습 리포트</del></td>
-                        <td><strong class="gray">완료</strong></td>
-                        <td><a href="template/study_report_back.html" target="_blank">study_report_back.html</a></td>
-                        <td>이전 버전으로 사용하지 않음</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>LNB</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="new2">신규</strong></td>
-                        <td><a href="template/new_main.html" target="_blank">new_main.html</a></td>
-                        <td>메인에 포함</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td rowspan="5">기타</td>
-                        <td><del>splash</del></td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="gray">생략</strong></td>
-                        <td></td>
-                        <td>APP 개발시 적용</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>로그인</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="new2">신규</strong></td>
-                        <td><a href="template/login.html" target="_blank">login.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>네트워크 연결 체크</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="new2">신규</strong></td>
-                        <td><a href="template/check_warning.html" target="_blank">check_warning.html</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>앱 접근권한 안내</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="new2">신규</strong></td>
-                        <td><a href="template/login.html" target="_blank">login.html</a></td>
-                        <td>로그인에 포함</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>튜토리얼</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong class="new2">신규</strong></td>
-                        <td><a href="template/tutorial.html" target="_blank">tutorial.html</a></td>
-                        <td></td>
-                    </tr>
+                  <tr>
+                      <th colspan="7" class="title">공통</th>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td rowspan="2">common</td>
+                      <td>Component</td>
+                      <td></td>
+                      <td></td>
+                      <td><a href="template/component.html" target="_blank">component.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th></th>
+                      <td>Layout</td>
+                      <td></td>
+                      <td></td>
+                      <td><a href="template/layout.html" target="_blank">layout.html</a></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th colspan="7" class="title">화면</th>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td><del>splash</del></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong class="gray">생략</strong></td>
+                    <td></td>
+                    <td>APP 개발시 적용</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="3">로그인</td>
+                    <td>로그인</td>
+                    <td></td>
+                    <td><strong class="gray">완료</strong></td>
+                    <td><a href="template/login.html" target="_blank">login.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>아이디 찾기</td>
+                    <td></td>
+                    <td><strong class="red">수정</strong></td>
+                    <td><a href="template/find_id.html" target="_blank">find_id.html</a></td>
+                    <td>리딩용 참조</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>비밀번호 찾기</td>
+                    <td></td>
+                    <td><strong class="red">수정</strong></td>
+                    <td>
+                      <a href="template/find_pw.html" target="_blank">find_pw.html</a><br/>
+                      <a href="template/change_pw.html" target="_blank">change_pw.html</a>
+                    </td>
+                    <td>리딩용 참조</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="4">리딩토탈</td>
+                    <td>메인 UI</td>
+                    <td></td>
+                    <td><strong class="red">수정</strong></td>
+                    <td><a href="template/reading_main.html" target="_blank">reading_main.html</a></td>
+                    <td>리딩용 참조</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>독서현황</td>
+                    <td></td>
+                    <td><strong class="red">수정</strong></td>
+                    <td><a href="template/reading_status.html" target="_blank">reading_status.html</a></td>
+                    <td>리딩용 참조</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>리딩스쿨</td>
+                    <td></td>
+                    <td><strong class="red">수정</strong></td>
+                    <td><a href="template/reading_school.html" target="_blank">reading_school.html</a></td>
+                    <td>리딩용 참조</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>진단평가</td>
+                    <td></td>
+                    <td><strong class="red">수정</strong></td>
+                    <td><a href="template/reading_appraisal.html" target="_blank">reading_appraisal.html</a></td>
+                    <td>리딩용 참조</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="8">토탈 시스템</td>
+                    <td rowspan="2">메인 UI</td>
+                    <td></td>
+                    <td><strong class="red">수정</strong></td>
+                    <td><a href="template/study_main.html" target="_blank">study_main.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td></td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/study_main2.html" target="_blank">study_main2.html</a></td>
+                    <td>화상</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="2">학습 리포트</td>
+                    <td>기존</td>
+                    <td><strong class="gray">완료</strong></td>
+                    <td><a href="template/study_report.html" target="_blank">study_report.html</a></td>
+                    <td>신규페이지로 진행예정</td>
+                  </tr>
+                  <!-- <tr>
+                    <th></th>
+                    <td>출석 달력</td>
+                    <td><strong class="red">수정</strong></td>
+                    <td></td>
+                    <td>기존 참조</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>전체 학습 진도</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td></td>
+                    <td>신규페이지로 진행예정</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>이용 시간 통계</td>
+                    <td><strong class="red">수정</strong></td>
+                    <td></td>
+                    <td>기존 참조</td>
+                  </tr> -->
+                  <tr>
+                    <th></th>
+                    <td>신규</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/study_premium.html" target="_blank">study_premium.html</a></td>
+                    <td>출석달력 / 전체 학습진도 / 이용시간통계 모두 통함</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>방문수업</td>
+                    <td></td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/study_visting.html" target="_blank">study_visting.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>인증평가</td>
+                    <td></td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/study_testReport.html" target="_blank">study_testReport.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>학습 데이터</td>
+                    <td></td>
+                    <td><strong class="gray">보류</strong></td>
+                    <td></td>
+                    <td>기획상세, 디자인없음.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>마이 클래스</td>
+                    <td></td>
+                    <td><strong class="gray">보류</strong></td>
+                    <td></td>
+                    <td>기획상세, 디자인없음.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="14">LNB</td>
+                    <td>메인 UI</td>
+                    <td></td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/study_main.html" target="_blank">study_main.html</a></td>
+                    <td>메인에 포함</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>MY 페이지</td>
+                    <td></td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/mypage.html" target="_blank">mypage.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>채팅</td>
+                    <td></td>
+                    <td><strong class="gray">보류</strong></td>
+                    <td></td>
+                    <td>기획상세, 디자인없음.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="2">공지&amp;이벤트</td>
+                    <td>목록</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/mypage.html" target="_blank">notice.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>상세</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td>
+                      <a href="template/news_view.html" target="_blank">news_view.html</a><br/>
+                      <a href="template/event_view.html" target="_blank">event_view.html</a>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="2">FAQ</td>
+                    <td>목록</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/faq.html" target="_blank">faq.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>상세</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/faq_view.html" target="_blank">faq_view.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>육아 정보 마당</td>
+                    <td></td>
+                    <td><strong class="gray">보류</strong></td>
+                    <td></td>
+                    <td>기획상세, 디자인없음.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>오늘의 육아 정보</td>
+                    <td></td>
+                    <td><strong class="gray">보류</strong></td>
+                    <td></td>
+                    <td>기획상세, 디자인없음.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>고객센터</td>
+                    <td></td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/study_main.html" target="_blank">study_main.html</a></td>
+                    <td>팝업으로 진행</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="4">설정</td>
+                    <td>메인 UI	</td>
+                    <td><strong class="red">수정</strong></td>
+                    <td><a href="template/setting.html" target="_blank">setting.html</a></td>
+                    <td>리딩용 참조</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>이용 약관</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/terms_policy.html" target="_blank">terms_policy.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>튜토리얼</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td>
+                      <a href="template/tutorial.html" target="_blank">tutorial.html</a><br/>
+                      <a href="template/tutorial_study.html" target="_blank">tutorial_study.html</a>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>교과토탈이용관리</td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/timeSetting.html" target="_blank">timeSetting.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>선물하기</td>
+                    <td>선물하기</td>
+                    <td></td>
+                    <td><strong class="gray">완료</strong></td>
+                    <td><a href="template/study_main.html" target="_blank">study_main.html</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td rowspan="2">etc</td>
+                    <td>앱 접근권한 안내</td>
+                    <td></td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td><a href="template/access.html" target="_blank">access.html</a></td>
+                    <td></td>
+                  </tr>
+                  <!-- <tr>
+                    <th></th>
+                    <td>점검 안내</td>
+                    <td></td>
+                    <td><strong class="new2">신규</strong></td>
+                    <td></td>
+                    <td></td>
+                  </tr> -->
+                  <tr>
+                    <th></th>
+                    <td>네트워크 환경 확인</td>
+                    <td></td>
+                    <td><strong class="gray">생략</strong></td>
+                    <td></td>
+                    <td>APP 개발시 적용</td>
+                  </tr>
                 </tbody>
             </table>
             <h2> 수정 History detail (날짜주석 참조)</h2>
             <ol>
               <li><strong>2023-03-17</strong> 기획변경 업데이트</li>
-              <li><strong>2022-06-24</strong> 최초 작성</li>
+              <li><strong>2022-06-27</strong> 최초 작성</li>
             </ol>
         </div>
     </body>

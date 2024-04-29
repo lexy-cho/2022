@@ -1,7 +1,0 @@
-<svg id="ic_pagenation_next" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path id="패스_374" data-name="패스 374" d="M24,0H0V24H24Z" fill="none"/>
-  <g id="그룹_338" data-name="그룹 338" transform="translate(10 8)">
-    <line id="선_89" data-name="선 89" x1="4" y2="4" transform="translate(0 4)" fill="none" stroke="#ffc80e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-    <line id="선_90" data-name="선 90" x1="4" y1="4" fill="none" stroke="#ffc80e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  </g>
-</svg>

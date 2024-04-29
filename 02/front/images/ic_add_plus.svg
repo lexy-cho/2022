@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-  <g id="ic_add_plus" transform="translate(-0.475 -0.404)">
-    <path id="패스_356" data-name="패스 356" d="M0,0H35V35H0Z" transform="translate(0.475 0.404)" fill="rgba(0,0,0,0)"/>
-    <g id="그룹_319" data-name="그룹 319" transform="translate(1 2)">
-      <path id="패스_362" data-name="패스 362" d="M17.975,8.4v20" transform="translate(-0.929 34.379) rotate(-90)" fill="none" stroke="#51b4ff" stroke-linecap="round" stroke-width="1"/>
-      <path id="패스_363" data-name="패스 363" d="M17.975,8.4v20" transform="translate(-0.5 -2)" fill="none" stroke="#51b4ff" stroke-linecap="round" stroke-width="1"/>
-    </g>
-  </g>
-</svg>

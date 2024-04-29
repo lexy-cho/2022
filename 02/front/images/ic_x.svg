@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-  <g id="ic_x" transform="translate(1.5 3.5)">
-    <rect id="사각형_6391" data-name="사각형 6391" width="20" height="20" transform="translate(-1.5 -3.5)" fill="none"/>
-    <path id="패스_500" data-name="패스 500" d="M0,0V22.627" transform="translate(16.5 -1.5) rotate(45)" fill="none" stroke="#bbb" stroke-width="1.5"/>
-    <path id="패스_501" data-name="패스 501" d="M0,0V22.627" transform="translate(0.5 -1.5) rotate(-45)" fill="none" stroke="#bbb" stroke-width="1.5"/>
-  </g>
-</svg>

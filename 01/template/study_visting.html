@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/billboard.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" class="subCase">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+					<h1>방문수업</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<!-- 달력 영역 -->
+		    <div class="tap_condi_header">
+	        <div>
+						<button class="cal_arrow_left">이전달</button>
+		        <em class="now-month-mon">10월</em>
+		        <button class="cal_arrow_right">다음달</button>
+					</div>
+					<span>
+						<em>출석</em>
+						<em>Today</em>
+					</span>
+		    </div>
+				<div class="attendance">
+					<table>
+						<thead>
+							<tr>
+								<th>월</th>
+								<th>화</th>
+								<th>수</th>
+								<th>목</th>
+								<th>금</th>
+								<th>토</th>
+								<th>일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span></span></td>
+								<td class="check"><span>1</span></td><!-- 출석완료인 경우 check class 추가 -->
+								<td class="check"><span>2</span></td><!-- 출석완료인 경우 check class 추가 -->
+								<td><span>3</span></td>
+								<td><span>4</span></td>
+								<td><span>5</span></td>
+								<td><span>6</span></td>
+							</tr>
+							<tr>
+								<td><span>7</span></td>
+								<td><span>8</span></td>
+								<td><span>9</span></td>
+								<td><span>10</span></td>
+								<td><span>11</span></td>
+								<td><span>12</span></td>
+								<td><span>13</span></td>
+							</tr>
+							<tr>
+								<td><span>14</span></td>
+								<td><span>15</span></td>
+								<td class="check"><span>16</span></td><!-- 출석완료인 경우 check class 추가 -->
+								<td class="check"><span>17</span></td><!-- 출석완료인 경우 check class 추가 -->
+								<td><span>18</span></td>
+								<td><span>19</span></td>
+								<td><span>20</span></td>
+							</tr>
+							<tr>
+								<td><span>21</span></td>
+								<td><span>22</span></td>
+								<td><span>23</span></td>
+								<td><span>24</span></td>
+								<td class="check today"><span>25</span></td><!-- 출석완료인 경우 check class 추가 // 당일 인 경우 today 추가 -->
+								<td class="check"><span>26</span></td><!-- 출석완료인 경우 check class 추가 -->
+								<td><span>27</span></td>
+							</tr>
+							<tr>
+								<td><span>28</span></td>
+								<td><span>29</span></td>
+								<td><span>30</span></td>
+								<td><span>31</span></td>
+								<td><span></span></td>
+								<td><span></span></td>
+								<td><span></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //달력 영역 -->
+				<div class="studyVisting">
+					<div class="monthChoice">
+						<div class="back">
+							<h2>12월 수업 완료 현황</h2>
+							<div>
+								<span class="selectSet">
+									<select name="" id="">
+										<option value="">12월 06일 (00:00~00:00)</option>
+									</select>
+								</span>
+								<em>최근 완료 수업</em>
+							</div>
+						</div>
+					</div>
+					<div class="vistingback">
+						<strong class="date">12월 1일 방문 수업 결과</strong>
+						<div class="curriInfo">
+							<strong>국어<br/>1단계</strong>
+							<div>
+								<dl class="ib">
+									<dt>IB학제</dt>
+									<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+								</dl>
+								<dl>
+									<dt>대주제</dt>
+									<dd>낱말 학습</dd>
+								</dl>
+								<dl>
+									<dt>소주제</dt>
+									<dd>탈것의 이름 알기</dd>
+								</dl>
+							</div>
+						</div>
+						<p><span>박지연 선생님</span><em>2022.10.18</em></p>
+					</div>
+					<div class="polygonArea" id="chart2"></div>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(window).scroll(function (event) {
+        if($(this).scrollTop() > 0){
+          $(".pageTop").fadeIn();
+					$('#header').addClass('on');
+        }else{
+          $(".pageTop").fadeOut();
+					$('#header').removeClass('on');
+        }
+			});
+			/***/
+			$(document).ready(function(){
+			   // 페이지 제일 위로 이동
+		    $(".pageTop").click(function(){
+		        $("html, body").animate({
+		            scrollTop : 0
+		        }, 300);
+		    });
+			});
+			// 역량 지표 차트
+			var chart = bb.generate({
+				data: {
+					x: "x",
+					columns: [
+						["x", "참여 지수", "흥미 지수", "자기주도 지수", "완성 지수", "창의력 지수"],
+						["윤지훈", 10, 40, 11, 5, 10],
+					],
+					type: "radar",
+					labels: false
+				},
+				radar: {
+					axis: {
+						max: 48
+					},
+					level: {
+						depth: 5
+					},
+					width: 100,
+					direction: {
+						clockwise: true
+					}
+				},
+				legend: {
+					show: false
+				},
+				bindto: "#chart2"
+			});
+		</script>
+  </body>
+</html>

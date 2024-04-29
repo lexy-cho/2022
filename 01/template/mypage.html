@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/billboard.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" class="subCase">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+					<h1>마이 페이지</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="mypage">
+					 <h2>회원 정보</h2>
+					 <div>
+						 <dl>
+							 <dt>부모 명</dt>
+							 <dd>김리딩토탈</dd>
+						 </dl>
+						 <dl>
+							 <dt>부모 ID</dt>
+							 <dd>reading_total</dd>
+						 </dl>
+						 <dl>
+							 <dt>아동 명</dt>
+							 <dd>김다슬기</dd>
+						 </dl>
+						 <dl>
+							 <dt>아동 ID</dt>
+							 <dd>tuser0009</dd>
+						 </dl>
+						 <dl>
+							 <dt>전화번호</dt>
+							 <dd>010-1234-5678</dd>
+						 </dl>
+						 <dl>
+							 <dt>이메일 주소</dt>
+							 <dd>reading_total@reading.com</dd>
+						 </dl>
+						 <dl>
+							 <dt>집주소</dt>
+							 <dd>서울시 종로구 세종로 1 청와대 1204 동 1234 호</dd>
+						 </dl>
+					 </div>
+ 					 <h2>계약 정보</h2>
+ 					 <div>
+ 						 <dl>
+ 							 <dt>계약상품</dt>
+ 							 <dd>리딩토탈 퍼펙트</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>계약일</dt>
+ 							 <dd>yyyy.mm.dd</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>약정기간</dt>
+ 							 <dd>36 개월</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>월납부금액</dt>
+ 							 <dd>169,000원</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>배송지 주소</dt>
+ 							 <dd>서울시 종로구 세종로 1 청와대 1204동 1234호</dd>
+ 						 </dl>
+						 <h3>결제 계좌</h3>
+ 						 <dl>
+ 							 <dt>결제 은행</dt>
+ 							 <dd>농협은행</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>계좌 번호</dt>
+ 							 <dd>000-000-000000</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>출금일</dt>
+ 							 <dd>15일</dd>
+ 						 </dl>
+ 					 </div>
+ 					 <h2>배송 정보</h2>
+ 					 <div>
+ 						 <dl>
+ 							 <dt>현재 배송 완료</dt>
+ 							 <dd>리딩토탈 0480-050</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>다음 배송 예정</dt>
+ 							 <dd>리딩토탈 051-053</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>배송 예정일</dt>
+ 							 <dd>yyyy.mm.dd</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>배송지 주소</dt>
+ 							 <dd>서울시 종로구 세종로 1 청와대 1204동 1234호</dd>
+ 						 </dl>
+ 					 </div>
+ 					 <h2>수업 정보</h2>
+ 					 <div>
+ 						 <dl>
+ 							 <dt>신청 수업 명</dt>
+ 							 <dd>토탈 시스템 퍼펙트</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>월 수업료</dt>
+ 							 <dd>70,000원</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>선생님 정보</dt>
+ 							 <dd>홍길동 선생님</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>수업 과목</dt>
+ 							 <dd>국어, 수학, 사회, 과학, 예술</dd>
+ 						 </dl>
+ 						 <dl>
+ 							 <dt>수업 요일</dt>
+ 							 <dd>월요일, 금요일</dd>
+ 						 </dl>
+ 					 </div>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(window).scroll(function (event) {
+        if($(this).scrollTop() > 0){
+          $(".pageTop").fadeIn();
+					$('#header').addClass('on');
+        }else{
+          $(".pageTop").fadeOut();
+					$('#header').removeClass('on');
+        }
+			});
+			/***/
+			$(document).ready(function(){
+			   // 페이지 제일 위로 이동
+		    $(".pageTop").click(function(){
+		        $("html, body").animate({
+		            scrollTop : 0
+		        }, 300);
+		    });
+			});
+		</script>
+  </body>
+</html>

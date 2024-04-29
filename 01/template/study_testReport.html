@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <!-- <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/billboard.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" class="subCase">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+					<h1>인증평가</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="testReportFilter">
+					<span class="selectSet">
+						<select name="" id="">
+							<option value="">국어</option>
+						</select>
+					</span>
+					<span class="selectSet">
+						<select name="" id="">
+							<option value="">1단계</option>
+						</select>
+					</span>
+					<span class="selectSet">
+						<select name="" id="">
+							<option value="">1차 평가 (2023.01.05)</option>
+						</select>
+					</span>
+				</div>
+				<div class="testReportResult">
+					<p class="noLine">인증평가 이력이 없습니다.</p>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(window).scroll(function (event) {
+        if($(this).scrollTop() > 0){
+          $(".pageTop").fadeIn();
+					$('#header').addClass('on');
+        }else{
+          $(".pageTop").fadeOut();
+					$('#header').removeClass('on');
+        }
+			});
+			/***/
+			$(document).ready(function(){
+			  // 오늘의 학습 과목 별 토글
+        $(".todayKind button").click(function () {
+          $(".todayKind button").removeClass("on");
+          $(this).addClass("on");
+          var activeTab = $(this).attr("data-name");
+          $('.graphBack').hide();
+          $('.todayGraph' + activeTab).show();
+					if( activeTab == 1){
+						draw(56, '.pc1', '#00a89c', '#bceae7');
+					} else if(activeTab == 2){
+						draw(101, '.pc2', '#00a89c', '#bceae7');
+					} else {
+						draw(0, '.pc3', '#00a89c', '#bceae7');
+					}
+        });
+			   // 페이지 제일 위로 이동
+		    $(".pageTop").click(function(){
+		        $("html, body").animate({
+		            scrollTop : 0
+		        }, 300);
+		    });
+			});
+		</script>
+  </body>
+</html>

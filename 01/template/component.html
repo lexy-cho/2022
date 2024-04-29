@@ -17,19 +17,12 @@
 			<script>
 				$(document).ready(function(){
 				  // Tab 토글
-	        $(".tabEx1 .tabNav button").click(function () {
-	          $(".tabEx1 .tabNav span").removeClass("on");
+	        $(".tabNav button").click(function () {
+	          $(".tabNav span").removeClass("on");
 	          $(this).parent("span").addClass("on");
 	          var activeTab = $(this).attr("data-name");
-	          $('.tabEx1 .tabData').hide();
-	          $('.tabEx1 .tData' + activeTab).show();
-	        });
-	        $(".tabEx2 .lineTabNav button").click(function () {
-	          $(".tabEx2 .lineTabNav span").removeClass("on");
-	          $(this).parent("span").addClass("on");
-	          var activeTab = $(this).attr("data-name");
-	          $('.tabEx2 .tabData').hide();
-	          $('.tabEx2 .tData' + activeTab).show();
+	          $('.tabData').hide();
+	          $('.tData' + activeTab).show();
 	        });
 				});
 			</script>
@@ -48,45 +41,12 @@
 		<div id="wrap">
 			<div class="cptTable">
 				<table>
-					<tr>
+					<!-- <tr>
 						<th>BUTTON</th>
 					</tr>
 					<tr>
 						<td>
-							<strong>LARGE</strong>
-							<button class="btnL red">BUTTON - red</button>
-							<button class="btnL purple">BUTTON - purple</button>
-							<button class="btnL darkGray">BUTTON - darkGray</button>
-							<button class="btnL gray">BUTTON - gray</button>
-							<br/><br/>
-							<button class="btnL lRed">BUTTON - lRed</button>
-							<button class="btnL lPurple">BUTTON - lPurple</button>
-							<button class="btnL lDarkGray">BUTTON - lDarkGray</button>
-							<button class="btnL lGray">BUTTON - lGray</button>
-							<br/><br/>
-							<strong>REGULAR</strong>
-							<button class="btnM red">BUTTON - red</button>
-							<button class="btnM purple">BUTTON - purple</button>
-							<button class="btnM darkGray">BUTTON - darkGray</button>
-							<button class="btnM gray">BUTTON - gray</button>
-							<br/><br/>
-							<button class="btnM lRed">BUTTON - lRed</button>
-							<button class="btnM lPurple">BUTTON - lPurple</button>
-							<button class="btnM lDarkGray">BUTTON - lDarkGray</button>
-							<button class="btnM lGray">BUTTON - lGray</button>
-							<br/><br/>
-							<strong>TINY</strong>
-							<button class="btnS red">BUTTON - red</button>
-							<button class="btnS purple">BUTTON - purple</button>
-							<button class="btnS darkGray">BUTTON - darkGray</button>
-							<button class="btnS gray">BUTTON - gray</button>
-							<br/><br/>
-							<button class="btnS lRed">BUTTON - lRed</button>
-							<button class="btnS lPurple">BUTTON - lPurple</button>
-							<button class="btnS lDarkGray">BUTTON - lDarkGray</button>
-							<button class="btnS lGray">BUTTON - lGray</button>
-							<br/><br/>
-							<!-- <strong>REGULAR - disabled</strong>
+							<strong>REGULAR - disabled</strong>
 							<button class="btnM" disabled>BUTTON</button>
 							<button class="btnM green" disabled>BUTTON - green</button>
 							<button class="btnM orange" disabled>BUTTON - orange</button>
@@ -95,9 +55,9 @@
 							<button class="btnM lPurple" disabled>BUTTON - lPurple</button>
 							<button class="btnM lGreen" disabled>BUTTON - lGreen</button>
 							<button class="btnM lOrange" disabled>BUTTON - lOrange</button>
-							<button class="btnM lGray" disabled>BUTTON - lGray</button> -->
+							<button class="btnM lGray" disabled>BUTTON - lGray</button>
 						</td>
-					</tr>
+					</tr> -->
 					<tr>
 						<th>INPUT</th>
 					</tr>
@@ -173,36 +133,17 @@
 					</tr>
 					<tr>
 						<td>
-							<div class="tabEx1">
-								<!-- tab -->
-								<div class="tabNav">
-									<nav>
-										<span class="on"><button data-name="0">리딩토탈</button></span>
-										<span><button data-name="1">교과토탈</button></span>
-									</nav>
-								</div>
-								<!--// tab -->
-								<div class="tabLayout">
-										<div class="tabData tData0">Tab Menu 1 Data</div>
-										<div class="tabData tData1" style="display:none;">Tab Menu 2 Data</div>
-								</div>
-							</div><br/><br/><br/>
-							<!------------>
-							<div class="tabEx2">
-								<!-- tab -->
-								<div class="lineTabNav">
-									<nav>
-										<span class="on"><button data-name="0">일 별 통계</button></span>
-										<span><button data-name="1">주간통계</button></span>
-										<span><button data-name="2">월간통계</button></span>
-									</nav>
-								</div>
-								<!--// tab -->
-								<div class="tabLayout">
-										<div class="tabData tData0">Tab Menu 1 Data</div>
-										<div class="tabData tData1" style="display:none;">Tab Menu 2 Data</div>
-										<div class="tabData tData2" style="display:none;">Tab Menu 3 Data</div>
-								</div>
+							<!-- tab -->
+							<div class="tabNav">
+								<nav>
+									<span class="on"><button data-name="0">리딩토탈</button></span>
+									<span><button data-name="1">교과토탈</button></span>
+								</nav>
+							</div>
+							<!--// tab -->
+							<div class="tabLayout">
+									<div class="tabData tData0">Tab Menu 1 Data</div>
+									<div class="tabData tData1" style="display:none;">Tab Menu 2 Data</div>
 							</div>
 						</td>
 					</tr>

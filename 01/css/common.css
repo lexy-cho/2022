@@ -1,9 +1,5 @@
 /* font */
 @font-face{
-    font-family: 'NanumGothicLight';
-    src: url("../font/NanumGothicLight.woff");
-}
-@font-face{
     font-family: 'NanumGothic';
     src: url("../font/NanumGothic.woff");
 }
@@ -15,13 +11,27 @@
     font-family: 'NanumGothicExtraBold';
     src: url("../font/NanumGothicExtraBold.woff");
 }
+@font-face{
+    font-family: 'NanumGothicLight';
+    src: url("../font/NanumGothicLight.woff");
+}
+@font-face {
+    font-family: 'younsofunny';
+    font-weight: bold;
+    src: url("../font/oTE2_YoonSofunny.woff2") format('woff2');
+}
 
 /* css reset */
-html, body, div, img, p, span, h1, h2, ul, li, dl, dt, dd, form, fieldset, legend, input, button, table, thead, tbody, th, tr, td, option, select, textarea{
+html, body, div, img, p, span, h1, ul, li, input, button, table, tbody, tr, td, a{
     margin: 0;
     padding: 0;
     outline: none;
     border: none;
+    border-radius: 0;
+    vertical-align: baseline; /* 2020-12-21 수정 */
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    appearance: none;
 }
 
 body{
@@ -34,6 +44,10 @@ body{
 	user-select: none;
 }
 
+html{
+    font-size: 62.5%; /* 2020-12-21 수정 */
+}
+
 ul, li{
     list-style: none;
 }
@@ -44,199 +58,167 @@ a{
     -webkit-tap-highlight-color: transparent;
 }
 
-/* 공지사항, 교사지침서, 코디상담자료, 교사교육, 신입교육 페이지 header */
+/* 모든 페이지 전체 감싸고 있는 div 클래스 명은 all_wrap으로 통일 */
+.all_wrap{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%; /* 2020-12-21 수정 */
+    height: 100vh; /* 2020-12-21 수정 */
+    overflow: hidden; /* 2020-12-21 수정 */
+}
+
+/* 인트로, 로그인, 아이디, 비밀번호 찾기 페이지 외 모든 페이지 공통 헤더, 콘텐츠 영역, 푸터 */
+.header_wrap{
+    flex-shrink: 0; /* 2020-12-21 수정 */
+    position: fixed; /* 2020-12-21 수정 */
+    width: 100%; /* 2020-12-21 수정 */
+    background: #C41925; /* 2020-12-21 수정 */
+    font-family: 'NanumGothic'; /* 2020-12-21 수정 */
+    color: #FFFFFF; /* 2020-12-21 수정 */
+}
 .header{
-    position: relative;
-    width: 1280px;
-    height: 170px;
+    display: flex; /* 2020-12-21 수정 */
+    justify-content: space-between; /* 2020-12-21 수정 */
+    align-items: center; /* 2020-12-21 수정 */
+    width: 100%; /* 2020-12-21 수정 */
+    border-bottom: 1px solid #FFFFFF;
+    padding: 12px 13px; /* 2020-12-21 수정 */
+    box-sizing: border-box; /* 2020-12-21 수정 */
 }
 .home{
-    position: relative;
-    width: 28px;
-    height: 28px;
-    top: 66px;
-    left: 92px;
+    width: 26px; /* 2020-12-21 수정 */
+    height: 26px; /* 2020-12-21 수정 */
+    background: url(../images/home_bt.svg) no-repeat;
+    background-size: cover; /* 2020-12-21 수정 */
 }
-.offline-button{
-    position: absolute;
-    top: 63px;
-    left: 155px;
-}
-.offline-button img{
-    height: 35px;
-}
-.home img{
-    width: 100%;
-}
-.header h1{
-    position: relative;
-    width: 151px;
-    font-family: 'NanumGothic';
-    font-size: 40px;
+h1{
+    width: 60%;
+    text-align: right; /* 2020-12-21 수정 */
+    font-size: 2.1rem; /* 2020-12-21 수정 */
     font-weight: bold;
-    color: #0E2E53;
-    top: 30px;
-    margin: auto;
 }
-.notice_wrap{
-    position: relative;
-    width: 334px;
-    height: 35px;
-    background: url(../images/m_Notice.png) no-repeat;
-    background-size: contain;
-    top: -10px;
-    left: 796px;
-    font-family: 'NanumGothic';
-    font-size: 13px;
+.mypage{
+    width: 27px; /* 2020-12-21 수정 */
+    height: 26px; /* 2020-12-21 수정 */
+    background: url(../images/mypage_bt.svg) no-repeat; /* 2020-12-21 수정 */
+    background-size: cover; /* 2020-12-21 수정 */
+}
+.setting{
+    width: 26px; /* 2020-12-21 수정 */
+    height: 26px; /* 2020-12-21 수정 */
+    background: url(../images/setting_bt.svg) no-repeat; /* 2020-12-21 수정 */
+    background-size: cover; /* 2020-12-21 수정 */
+}
+
+
+/* 2021-01-21 수정 */
+.profile{
+    padding: 29px 0;
+    text-align: center;
+}
+.profile_info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.profile_picture{
+    display: inline-block;
+    vertical-align: middle;
+    width: 84px;
+    height: 84px;
+    background: url(../images/profile.svg) no-repeat;
+    background-size: cover;
+}
+.profile_name{
+    font-size: 27px;
     font-weight: bold;
-    color: #464646;
-    line-height: 35px;
+    margin-bottom: 10px;
+    text-align: left;
 }
-.notice_wrap > div{
-    width: 280px;
-    padding-left: 15px;
-    box-sizing: border-box;
+.profile_subject{
+    width: 200px;
+    font-size: 12px;
+    text-align: left;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
 }
-.red_txt{
-    color: #E8380D;
-}
-.notice_more{
-    position: absolute;
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    background: url(../images/m_more_btn.png) no-repeat;
-    background-size: contain;
-    top: 6px;
-    right: 8px;
-}
-.logout{
-    position: relative;
-    width: 35px;
-    height: 35px;
-    top: -45px;
-    left: 1164.7px;
-}
-.logout img{
-    width: 100%;
-}
+/* 2021-01-21 수정 */
 
-/* 진단평가 리포트, 부모상담 페이지 header */
-.header2{
+.tap_menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 3px solid #ECECEC;
+    background: #FFFFFF;
+    font-size: 1.8rem; /* 2020-12-21 수정 */
+    font-weight: bold;
+    color: #BBBBBB;
+    text-align: center;
+    line-height: 58px;
+}
+.tap_menu > span{
+    width: 25%;
+    height: 50px;
+}
+.con_wrap{
+    flex-grow: 1;
+    overflow: auto;
+    z-index: 1;
     position: relative;
-    width: 1280px;
-    height: 170px;
-}
-.date_txt{
-    position: absolute;
-    top: 79px;
-    left: 122px;
-    font-family: 'NanumGothic';
-    font-size: 15px;
-    font-weight: bold;
-    color: #0E2E53;
-}
-.cal_icon{
-    display: inline-block;
-    width: 15px;
-    vertical-align: text-top;
-    margin-right: 5px;
-}
-.cal_icon img{
+    margin-top: 246px; /* 2021-01-21 수정 */
     width: 100%;
 }
-.tit_txt{
-      position: absolute;
-    top: 69px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'NanumGothic';
-    font-size: 26px;
-    font-weight: bold;
-    color: #0E2E53;
-}
-.time_txt{
-    position: absolute;
-    top: 79px;
-    left: 122px;
-    font-family: 'NanumGothic';
-    font-size: 15px;
-    font-weight: bold;
-    color: #0E2E53;
-}
-.people_icon{
-    display: inline-block;
-    width: 10px;
-    vertical-align: text-top;
-    margin-right: 5px;
-}
-.people_icon img{
+.footer_wrap{
+    flex-shrink: 0;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
+    height: 64px;
+    background: url(../images/footer_bg.svg) repeat-x; /* 2020-12-21 수정 */
 }
-.people_txt{
-    border-right: 1px solid #707070;
-    margin-right: 13px;
-    padding-right: 13px;
+.foot_card_news{
+    width: 85px;
+    height: 58px;
+    background: url(../images/foot_card_news_off.svg) no-repeat;
+    background-size: cover;
 }
-.alarm_icon{
-    display: inline-block;
-    width: 13px;
-    vertical-align: text-top;
-    margin-right: 5px;
+.foot_card_news:hover{
+    width: 85px;
+    height: 58px;
+    background: url(../images/foot_card_news_on.svg) no-repeat;
 }
-.alarm_icon img{
-    width: 100%;
+.foot_event{
+    width: 85px;
+    height: 58px;
+    background: url(../images/foot_event_off.svg) no-repeat;
 }
-
-.time_header_wrap{
-    position: relative;
-    width: 1116px;
-    height: 56px;
-    background-color: #F2BF89;
-    margin: 0 auto 24px;
-    overflow: hidden;
-    border-radius: 2px;
+.foot_event:hover{
+    width: 85px;
+    height: 58px;
+    background: url(../images/foot_event_on.svg) no-repeat;
 }
-.time_header_wrap div{
-    width: 320px;
-    margin: auto;
+.foot_center{
+    width: 85px;
+    height: 58px;
+    background: url(../images/foot_center_off.svg) no-repeat;
 }
-.time_header_wrap div p{
-    display: inline-block;
+.foot_center:hover{
+    width: 85px;
+    height: 58px;
+    background: url(../images/foot_center_on.svg) no-repeat;
 }
-.date_sel_left{
-    width: 12px;
-    height: 20px;
-    line-height: 63px;
+.foot_notice_talk{
+    width: 85px;
+    height: 58px;
+    background: url(../images/foot_notice_talk_off.svg) no-repeat;
 }
-.date_sel_left img{
-    width: 100%;
-}
-.date_title{
-    font-family: 'NanumGothicExtraBold';
-    font-size: 22px;
-    font-weight: 800;
-    color: #3B3B3B;
-    line-height: 63px;
-    margin: 0 57px;
-}
-.date_sel_right{
-    width: 12px;
-    height: 20px;
-    line-height: 63px;
-}
-.date_sel_right img{
-    width: 100%;
-}
-.time_header_wrap span{
-    position: absolute;
-    font-family: 'NanumGothic';
-    font-size: 15px;
-    font-weight: bold;
-    color: #3B3B3B;
-    top: 20px;
-    right: 30px;
+.foot_notice_talk:hover{
+    width: 85px;
+    height: 58px;
+    background: url(../images/foot_notice_talk_on.svg) no-repeat;
 }

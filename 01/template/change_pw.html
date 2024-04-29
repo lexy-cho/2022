@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+		<script src="../js/jquery-3.5.1.js"></script>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<div class="findTit">
+				<h1>비밀번호 변경</h1>
+				<p>
+					새로운 비밀번호 변경 후 <br/>서비스를 이용해주세요.
+				</p>
+			</div>
+			<!---->
+			<div class="findForm">
+				<div>
+					<label for="userpw">새 비밀번호</label>
+					<input id="userpw" type="password" name="userpw" required="required"/>
+				</div>
+				<div>
+					<label for="userpwchk">새 비밀번호 확인</label>
+					<input id="userpwchk" type="password" name="userpwchk" required="required"/>
+					<p>6~10자리 영문, 숫자로 입력해주세요.</p>
+				</div>
+			</div>
+			<!--//-->
+			<div class="findBtn">
+				<button class="cancel" onclick="location.href='login.html'">취소</button>
+				<button class="ok" onclick="chk_btn();">수정</button>
+			</div>
+    </div>
+		<!-- //Wrap -->
+		<!-- Alert Popup -->
+		<div class="alertDim" style="display:none;">
+			<!-- 인증번호 발송 -->
+	    <div class="alertPop" id="findPop1" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						비밀번호가 변경되었습니다.
+					</div>
+        </div>
+        <div class="pBtn tC">
+          <button class="ok" onclick="btn0();">로그인 하기</button>
+        </div>
+	    </div>
+			<!-- //인증번호 발송 -->
+			<!-- 인증실패 -->
+	    <div class="alertPop" id="findPop2" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						비밀번호가 일치하지 않습니다.
+					</div>
+        </div>
+        <div class="pBtn tC">
+          <button class="ok" onclick="btn1();">확인</button>
+        </div>
+	    </div>
+			<!-- //인증실패 -->
+		</div>
+		<!-- //Alert Popup -->
+		<script>
+				function chk_btn(){
+						$('.alertDim').fadeIn();
+						$('#findPop1').fadeIn();
+				};
+				function btn0(){
+						$('#findPop1').fadeOut();
+						$('#findPop2').fadeIn();
+				};
+				function btn1(){
+						$('.alertDim').fadeOut();
+						$('#findPop2').fadeOut();
+				};
+		</script>
+  </body>
+</html>

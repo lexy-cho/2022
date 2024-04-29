@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/billboard.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" class="subCase">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+					<h1>진단평가</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<div class="readingAppraisal">
+					<h2>진단 평가 AI 분석 결과</h2>
+					<article>
+						<h3><strong>종합결과</strong></h3>
+						<div class="back">
+							<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+						</div>
+					</article>
+					<article>
+						<h3><strong>어휘력</strong></h3>
+						<div class="back">
+							<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+						</div>
+					</article>
+					<article>
+						<h3><strong>이해력</strong></h3>
+						<div class="back">
+							<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+						</div>
+					</article>
+					<article>
+						<h3><strong>추론력</strong></h3>
+						<div class="back">
+							<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+						</div>
+					</article>
+					<article>
+						<h3><strong>비판적 사고력</strong></h3>
+						<div class="back">
+							<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+						</div>
+					</article>
+					<article>
+						<h3><strong>창의 융합 사고력</strong></h3>
+						<div class="back">
+							<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+						</div>
+					</article>
+					<article>
+						<h3><strong>유형별 분포</strong></h3>
+						<div class="back last">
+							<div class="polygonArea" id="appraisal_sub_chart"></div>
+						</div>
+					</article>
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(window).scroll(function (event) {
+        if($(this).scrollTop() > 0){
+          $(".pageTop").fadeIn();
+					$('#header').addClass('on');
+        }else{
+          $(".pageTop").fadeOut();
+					$('#header').removeClass('on');
+        }
+			});
+			/***/
+			$(document).ready(function(){
+			   // 페이지 제일 위로 이동
+		    $(".pageTop").click(function(){
+		        $("html, body").animate({
+		            scrollTop : 0
+		        }, 300);
+		    });
+			});
+
+
+			// 유형별 분포 차트
+			var chart = bb.generate({
+			data: {
+					x: "x",
+					columns: [
+					["x", "어휘력", "추론력", "비판적 사고력", "창의융합 사고력", "이해력"],
+					["윤지훈", 10, 20, 30, 40, 50],
+					],
+					type: "radar",
+					labels: true
+			},
+			radar: {
+					axis: {
+					max: 50
+					},
+					level: {
+					depth: 5
+					},
+					direction: {
+					clockwise: true
+					}
+			},
+			legend: {
+				show: false
+			},
+			bindto: "#appraisal_sub_chart"
+			});
+		</script>
+  </body>
+</html>

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-  <g id="ic_plus_sizeup" transform="translate(0 -1)">
-    <path id="패스_561" data-name="패스 561" d="M0,0H20V20H0Z" transform="translate(0 1)" fill="none"/>
-    <circle id="타원_59" data-name="타원 59" cx="9" cy="9" r="9" transform="translate(1 2)" fill="#fff"/>
-    <path id="합치기_4" data-name="합치기 4" d="M3,9V5H-1V3H3V-1H5V3H9V5H5V9Z" transform="translate(6 7)" fill="#ffc80e"/>
-  </g>
-</svg>

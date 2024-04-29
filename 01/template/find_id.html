@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+		<script src="../js/jquery-3.5.1.js"></script>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<div class="findTit">
+				<h1>아이디 찾기</h1>
+				<p>
+					회원 정보에 등록되어 있는<br/>
+					<strong>부모님 휴대전화</strong> 로 인증합니다.
+				</p>
+			</div>
+			<!---->
+			<div class="findForm">
+				<div>
+					<label for="name">부모님 이름</label>
+					<input id="name" type="text" name="name" required="required"/>
+				</div>
+				<div>
+					<label for="phone">휴대폰 번호 ("-" 없이 입력해주세요)</label>
+					<input id="phone" type="tel" name="phone" required="required"/>
+					<span>
+						<button type="button" onclick="chk_num_btn();">인증번호</button>
+					</span>
+				</div>
+				<div>
+					<label for="phone_chck">인증번호 (숫자 6자리)</label>
+					<input id="phone_chck" type="text" name="phone_chck" required="required"/>
+					<span><em>0:00</em></span>
+				</div>
+			</div>
+			<!--//-->
+			<div class="findBtn">
+				<button class="cancel" onclick="cancle_btn();">취소</button>
+				<button class="ok" onclick="chk_btn();">확인</button>
+			</div>
+    </div>
+		<!-- //Wrap -->
+		<!-- Alert Popup -->
+		<div class="alertDim" style="display:block;">
+			<!-- 인증번호 발송 -->
+	    <div class="alertPop" id="findPop1" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						인증번호가 발송되었습니다.
+					</div>
+        </div>
+        <div class="pBtn tC">
+          <button class="ok" onclick="btn0();">확인</button>
+        </div>
+	    </div>
+			<!-- //인증번호 발송 -->
+			<!-- 인증실패 -->
+	    <div class="alertPop" id="findPop2" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						입력하신 정보와 일치하는 아이디를<br/>
+						찾을수 없습니다.<br/>
+						고객센터로 문의해주세요.<br/>
+						<strong>1566-0800</strong>
+					</div>
+        </div>
+        <div class="pBtn tC">
+          <button class="ok" onclick="btn1();">확인</button>
+        </div>
+	    </div>
+			<!-- //인증실패 -->
+			<!-- 인증완료 -->
+	    <div class="alertPop" id="findPop3" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+							회원님 아이디는<br/> <strong>dspar01</strong>입니다.
+					</div>
+        </div>
+        <div class="pBtn">
+          <button class="cancel btn2">로그인</button>
+          <button class="ok btn3">비밀번호 찾기</button>
+        </div>
+	    </div>
+			<!-- //인증완료 -->
+			<!-- 인증완료 _여러개 아이디 230424 -->
+	    <div class="alertPop" id="findPop3" style="display:block;">
+        <div class="pBack">
+					<div class="va">
+						 로그인 할 아이디를 선택해주세요.
+						 <div class="multyId">
+							 <span class="radioSet">
+								 <input type="radio" name="radio2" checked/>
+								 <label for=""><i></i>radioSet1</label>
+							 </span>
+							 <span class="radioSet">
+								 <input type="radio" name="radio2"/>
+								 <label for=""><i></i>ttuser002p</label>
+						 </span>
+						 </div>
+					</div>
+        </div>
+        <div class="pBtn">
+          <button class="cancel btn2">로그인</button>
+          <button class="ok btn3">비밀번호 찾기</button>
+        </div>
+	    </div>
+			<!-- //인증완료 _여러개 아이디 230424 -->
+		</div>
+		<!-- //Alert Popup -->
+		<script>
+				function chk_num_btn(){
+						$('.alertDim').fadeIn();
+						$('#findPop1').fadeIn();
+				};
+				function chk_btn(){
+						const useName = document.getElementById('name');
+						const usePhone = document.getElementById('phone');
+						const usePhone_chk = document.getElementById('phone_chck');
+						if(!useName.value || !usePhone.value || !usePhone_chk.value){
+								$('.alertDim').fadeIn();
+								$('#findPop2').fadeIn();
+								return false;
+						};
+				};
+				function btn0(){
+						$('.alertDim').fadeOut();
+						$('#findPop1').fadeOut();
+				};
+				function btn1(){
+						$('#findPop2').fadeOut();
+						$('#findPop3').fadeIn();
+				};
+				$(function(){
+						login_url = "../template/login.html"; // 로그인 페이지로 이동
+						find_id_url = "../template/find_id.html" // 아이디 찾기 페이지로 이동
+						find_pw_url = "../template/find_pw.html"; // 비밀번호 찾기 페이지로 이동
+						$(".btn2").click(function(){
+							 location.href = login_url;
+					 });
+						$(".btn3").click(function(){
+							 location.href = find_pw_url;
+					 });
+				});
+		</script>
+  </body>
+</html>

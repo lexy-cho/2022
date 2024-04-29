@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/billboard.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<h1>토탈시스템</h1>
+					<span class="right">
+		        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+					</span>
+					<div class="newProfile">
+						<span>
+							<strong><em><img src="../images/sample_profile.png" alt="" /></em>김교과토탈</strong>
+							<i>리딩토탈 리딩토탈</i>
+						</span>
+					</div>
+				</header>
+			</div>
+			<div id="header" class="subCase" style="display:none;">
+				<header>
+					<button class="btnPrev">이전 화면으로 이동</button>
+					<h1>독서현황</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+				<!-- 리딩메인 //////////////////////// -->
+				<section id="main_wrap">
+					<div class="studyMainLayout">
+						<!--/////////////////////-->
+						<div class="mTit">
+							<h2>독서 현황 <em>2022.10.18 현재</em></h2>
+							<a class="goCondition">더보기</a>
+							<!-- <a href="reading_status.html">더보기</a> -->
+						</div>
+						<div class="sMData readingBook">
+							<div class="monthBook">이 달의<br/>새로 읽은 책<strong>5<em>권</em></strong></div>
+							<div class="totalBook">누적 독서량<strong>100<em>권</em></strong></div>
+						</div>
+						<!--/////////////////////-->
+						<div class="mTit">
+							<h2>9월 리딩스쿨 <em>2022.10.18 현재</em></h2>
+							<a class="goReadingSchool">더보기</a>
+							<!-- <a href="reading_school.html">더보기</a> -->
+						</div>
+						<div class="sMData">
+							<div class="noLine" style="display:none;">
+								<strong>리딩스쿨 수업 이력이 없습니다.</strong>
+								수업 신청은 고객센터로 문의해주세요.
+							</div>
+	            <div class="readingSchoolBg">
+								<div class="txt">
+									<strong>나와 가족</strong>
+									가족 간의 구조 / 가족 간의 예절
+									<p><span>박지연 선생님</span><em>2022.10.18</em></p>
+		            </div>
+								<div class="polygonArea" id="chart2"></div>
+	            </div>
+						</div>
+						<!--/////////////////////-->
+            <!-- 진단 평가 -->
+						<div class="mTit">
+							<h2>진단평가 <em>051</em></h2>
+							<a class="goAppraisal">더보기</a>
+							<!-- <a href="reading_appraisal.html">더보기</a> -->
+						</div>
+						<div class="sMData">
+							<div class="noLine" style="display:none;">
+								진단평가 이력이 없습니다.
+							</div>
+	            <div class="appraisal_bg">
+								<strong class="chartTit">독서 논술 지표</strong>
+	            	<div class="polygonArea" id="essay_chart"></div>
+	            </div>
+						</div>
+						<!--/////////////////////-->
+					</div>
+				</section>
+				<!-- end 리딩메인 //////////////////////// -->
+				<!-- 독서현황 //////////////////////// -->
+				<section id="tap_condition" class="subContents" style="display:none;">
+					<!-- 출석 달력 -->
+					<article class="readingCal">
+						<div class="tap_condi_header">
+							<div>
+								<button class="cal_arrow_left">이전달</button>
+								<em class="now-month-mon">10월</em>
+								<button class="cal_arrow_right">다음달</button>
+							</div>
+						</div>
+						<div class="attendance">
+							<table>
+								<!-- <thead> 생략 -->
+								<tbody>
+									<tr>
+										<td><span></span></td>
+										<td class="check"><span>1</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td class="check"><span>2</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>3</span></td>
+										<td><span>4</span></td>
+										<td><span>5</span></td>
+										<td><span>6</span></td>
+									</tr>
+									<tr>
+										<td><span>7</span></td>
+										<td><span>8</span></td>
+										<td><span>9</span></td>
+										<td><span>10</span></td>
+										<td><span>11</span></td>
+										<td><span>12</span></td>
+										<td><span>13</span></td>
+									</tr>
+									<tr>
+										<td><span>14</span></td>
+										<td><span>15</span></td>
+										<td class="check"><span>16</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td class="check"><span>17</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>18</span></td>
+										<td><span>19</span></td>
+										<td><span>20</span></td>
+									</tr>
+									<tr>
+										<td><span>21</span></td>
+										<td><span>22</span></td>
+										<td><span>23</span></td>
+										<td><span>24</span></td>
+										<td class="check today"><span>25</span></td><!-- 출석완료인 경우 check class 추가 // 당일 인 경우 today 추가 -->
+										<td class="check"><span>26</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>27</span></td>
+									</tr>
+									<tr>
+										<td><span>28</span></td>
+										<td><span>29</span></td>
+										<td><span>30</span></td>
+										<td><span>31</span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="legend">
+								<em>출석</em>
+								<em>Today</em>
+							</div>
+							<p>
+								<em>출석률 <strong>19.4</strong></em>
+								<span>총 <strong>31</strong>일 학습일 중 <strong>6</strong>일 출석<span>
+							</p>
+						</div>
+					</article>
+					<!-- //출석 달력 -->
+					<!-- 리딩리포트 -->
+					<article class="readingReport">
+						<h2>리딩리포트</h2>
+						<div class="back">
+							<p><strong>정용찬</strong>의<strong> 독서 두뇌</strong> 리포트</p>
+							<div id="report_chart0"></div>
+						</div>
+						<div class="back">
+							<p><strong>정용찬</strong>의<strong> 창의융합 역량</strong> 리포트</p>
+							<div id="report_chart1"></div>
+						</div>
+					</article>
+					<!-- //리딩리포트 -->
+				</section>
+				<!-- end 독서현황 //////////////////////// -->
+				<!-- 리딩스쿨 //////////////////////// -->
+				<section id="tap_reading_school" class="subContents" style="display:none;">
+					<!-- 출석 달력 -->
+					<article class="readingCal">
+						<div class="tap_condi_header">
+							<div>
+								<button class="cal_arrow_left">이전달</button>
+								<em class="now-month-mon">10월</em>
+								<button class="cal_arrow_right">다음달</button>
+							</div>
+							<span>
+								<em>출석</em>
+								<em>Today</em>
+							</span>
+						</div>
+						<div class="attendance">
+							<table>
+								<!-- <thead> 생략 -->
+								<tbody>
+									<tr>
+										<td><span></span></td>
+										<td class="check"><span>1</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td class="check"><span>2</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>3</span></td>
+										<td><span>4</span></td>
+										<td><span>5</span></td>
+										<td><span>6</span></td>
+									</tr>
+									<tr>
+										<td><span>7</span></td>
+										<td><span>8</span></td>
+										<td><span>9</span></td>
+										<td><span>10</span></td>
+										<td><span>11</span></td>
+										<td><span>12</span></td>
+										<td><span>13</span></td>
+									</tr>
+									<tr>
+										<td><span>14</span></td>
+										<td><span>15</span></td>
+										<td class="check"><span>16</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td class="check"><span>17</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>18</span></td>
+										<td><span>19</span></td>
+										<td><span>20</span></td>
+									</tr>
+									<tr>
+										<td><span>21</span></td>
+										<td><span>22</span></td>
+										<td><span>23</span></td>
+										<td><span>24</span></td>
+										<td class="check today"><span>25</span></td><!-- 출석완료인 경우 check class 추가 // 당일 인 경우 today 추가 -->
+										<td class="check"><span>26</span></td><!-- 출석완료인 경우 check class 추가 -->
+										<td><span>27</span></td>
+									</tr>
+									<tr>
+										<td><span>28</span></td>
+										<td><span>29</span></td>
+										<td><span>30</span></td>
+										<td><span>31</span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
+					<!-- //출석 달력 -->
+					<div class="monthChoice">
+						<div class="back">
+							<h2>12월 수업 완료 현황</h2>
+							<div>
+								<span class="selectSet">
+									<select name="" id="">
+										<option value="">12월 06일 (00:00~00:00)</option>
+									</select>
+								</span>
+								<em>최근 완료 수업</em>
+							</div>
+						</div>
+					</div>
+					<!-- 부모상담 -->
+					<article class="parentCounseling">
+						<h2><strong>12월 1주</strong>리딩스쿨 부모상담</h2>
+						<h3>북맵 활동</h3>
+						<ul>
+							<li>
+								<span class="img"><img src="../images/bookmap/books/1000.png" alt=""></span>
+								<span>
+									야옹이가 좋아요
+									<a href="">더보기</a>
+								</span>
+							</li>
+							<li>
+								<span class="img"><img src="../images/bookmap/books/1003.png" alt=""></span>
+								<span>
+									바다에 꽃이 피었습니다
+									<a href="">더보기</a>
+								</span>
+							</li>
+						</ul>
+						<h3>주차별 활동</h3>
+						<ul>
+							<li>
+								<span class="img"><img src="../images/bookmap/books/1000.png" alt=""></span>
+								<span>
+									야옹이가 좋아요
+									<a href="">더보기</a>
+								</span>
+							</li>
+						</ul>
+					</article>
+					<!-- //부모상담 -->
+					<!-- 지표 -->
+					<article class="counselingChart">
+						<strong class="chartTit">독서 논술 지표</strong>
+						<div class="polygonArea" id="essay_chart2"></div>
+						<strong class="chartTit">역량 지표</strong>
+						<div class="polygonArea" id="able_chart"></div>
+						<strong class="chartTit">수업 지표</strong>
+						<div class="polygonArea" id="lesson_chart"></div>
+					</article>
+					<!-- //지표 -->
+				</section>
+				<!-- end 리딩스쿨 //////////////////////// -->
+				<!-- 진단평가 //////////////////////// -->
+				<section id="tap_appraisal" class="subContents" style="display:none;">
+					<div class="readingAppraisal">
+						<h2>진단 평가 AI 분석 결과</h2>
+						<article>
+							<h3><strong>종합결과</strong></h3>
+							<div class="back">
+								<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+							</div>
+						</article>
+						<article>
+							<h3><strong>어휘력</strong></h3>
+							<div class="back">
+								<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+							</div>
+						</article>
+						<article>
+							<h3><strong>이해력</strong></h3>
+							<div class="back">
+								<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+							</div>
+						</article>
+						<article>
+							<h3><strong>추론력</strong></h3>
+							<div class="back">
+								<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+							</div>
+						</article>
+						<article>
+							<h3><strong>비판적 사고력</strong></h3>
+							<div class="back">
+								<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+							</div>
+						</article>
+						<article>
+							<h3><strong>창의 융합 사고력</strong></h3>
+							<div class="back">
+								<p>분석한 결과, 글의 내용을 이해하여 정서적으로 반응하고, 자신의 배경지식을 바탕으로 새로운 결론을 도출할 수 있습니다. 하지만 문장에서 단어의 쓰임을 알고 글의 내용을 논리 적으로 파악하는 능력이 조금 부족합니다. ‘독서하기’와 ‘역량다지기’에 집중하여 어휘와 문장의 관계를 이해하며 글을 읽고, 이해한 내용을 알맞은 단어로 조리 있게 표현하는 능력이 향상될 수 있도록 지도해 주세요.</p>
+							</div>
+						</article>
+						<article>
+							<h3><strong>유형별 분포</strong></h3>
+							<div class="back last">
+								<div class="polygonArea" id="appraisal_sub_chart"></div>
+							</div>
+						</article>
+					</div>
+				</section>
+				<!-- end 진단평가 //////////////////////// -->
+			</div>
+			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
+			<!--LNB -->
+			<div id="lnb" style="display:none;">
+				<div class="lnbNav">
+					<ul>
+						<li class="on"><a href="mypage.html" class="new">마이페이지</a><!-- 신규 내용이 있을 경우 new 추가 --></li>
+						<li><a href="notice.html">공지&amp;이벤트</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><button class="btncs">고객센터</button></li>
+						<li><a href="setting.html">설정</a></li>
+					</ul>
+				</div>
+				<div class="dim"></div>
+			</div>
+			<!--//LNB -->
+		</div>
+		<!-- //Wrap -->
+		<!-- Alert Popup -->
+		<div class="alertDim" style="display:none;">
+			<!-- 고객센터 -->
+	    <div class="basicPop csCenterPop" style="display:none;">
+        <div class="pBack">
+					<span>
+						프뢰벨 고객센터<br/>
+						<strong>1566-0800</strong>
+					</span>
+					<p>
+						<strong>평일</strong> 09:00~17:00<br>
+						<em>(점심시간 12:30~13:30)</em>
+						<strong>주말 · 공휴일</strong> 휴무
+					</p>
+        </div>
+        <div class="pBtn">
+        	<button class="cancel">닫기</button>
+        	<a class="ok" href='tel:000-0000-0000'>통화</a>
+        </div>
+	    </div>
+			<!-- //고객센터 -->
+		</div>
+		<!-- //Alert Popup -->
+  </body>
+	<script>
+		$(window).scroll(function (event) {
+			if($(this).scrollTop() > 0){
+				$(".pageTop").fadeIn();
+				$('#header').addClass('on');
+			}else{
+				$(".pageTop").fadeOut();
+				$('#header').removeClass('on');
+			}
+		});
+		/***/
+		$(document).ready(function(){
+			// lnb
+			$('.btnLnb').click(function(){
+				$('#lnb').fadeIn();
+				$('body').addClass('lnbOn');
+			});
+			$('#lnb .dim').click(function(){
+				$('#lnb').fadeOut();
+				$('body').removeClass('lnbOn');
+			});
+			//고객센터
+			$('.btncs').click(function(){
+				$('.popDim').fadeIn();
+				$('.csCenterPop').fadeIn()
+			});
+			$('.csCenterPop .cancel').click(function(){
+				$('.popDim').fadeOut();
+				$('.csCenterPop').fadeOut()
+			});
+			// 메인화면에서 서브로 이동시
+			$('.goCondition').on('click', function(){
+				$('#header').hide();
+				$('#header.subCase').show();
+				$('#header.subCase h1').text('독서현황');
+				$('#main_wrap').hide();
+				$('.subContents').hide();
+				$('#tap_condition').show();
+				$("html, body").animate({scrollTop : 0}, 300);
+
+				// 독서 두뇌 리포트 차트
+				google.charts.load('current', {'packages':['bar']});
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
+						var data = google.visualization.arrayToDataTable([
+								['', ''],
+								['논픽션', 50],
+								['창작', 5],
+								['사회', 60],
+								['고전', 20],
+								['인성', 25],
+								['과학', 46],
+								['언어', 20]
+						]);
+						var options = {
+								//width:'100%',
+								bars:'horizontal', // Required for Material Bar Charts.
+								isStacked: 'percent',
+								legend: { position: 'none' },
+								colors: ['#00A89C'],
+								hAxis: {
+										format: '#\'%\'',
+										viewWindowMode:'maximized',
+										viewWindow:{
+											 max:100,
+											 min:0,
+										}
+								},
+						};
+					var chart = new google.charts.Bar(document.getElementById('report_chart0'));
+					chart.draw(data, google.charts.Bar.convertOptions(options));
+					window.addEventListener('resize',drawChart, true);
+				};
+				// 창의융합 역량 리포트 차트
+				google.charts.load('current', {'packages':['bar']});
+				google.charts.setOnLoadCallback(drawChart2);
+				function drawChart2() {
+					var data = google.visualization.arrayToDataTable([
+						 ['', ''],
+						['공동체', 20],
+						['자기관리', 20],
+						['의사소통', 46],
+						['지식정보처리', 20],
+						['심미적감성', 20],
+						['창의적사고', 46],
+					]);
+					var options = {
+						//width:'100%',
+						bars:'horizontal', // Required for Material Bar Charts.
+						isStacked: 'percent',
+							legend: { position: 'none' },
+							colors: ['#00A89C'],
+							 hAxis: {
+
+										format: '#\'%\'',
+										 viewWindowMode:'maximized',
+										 viewWindow:{
+											 max:100,
+											 min:0
+										 }
+							}
+					};
+					var chart = new google.charts.Bar(document.getElementById('report_chart1'));
+					chart.draw(data, google.charts.Bar.convertOptions(options));
+					window.addEventListener('resize', drawChart2, true);
+				};
+			});
+			$('.goReadingSchool').on('click', function(){
+				$('#header').hide();
+				$('#header.subCase').show();
+				$('#header.subCase h1').text('리딩스쿨');
+				$('#main_wrap').hide();
+				$('.subContents').hide();
+				$('#tap_reading_school').show();
+				$("html, body").animate({scrollTop : 0}, 300);
+
+				// 독서 논술 지표 차트
+				var chart = bb.generate({
+					data: {
+							x: "x",
+							columns: [
+							["x", "듣기", "말하기", "읽기", "쓰기"],
+							["윤지훈", 20, 40, 30, 20],
+							],
+							type: "radar",
+							labels: true
+					},
+					radar: {
+							axis: {
+							max: 48
+							},
+							level: {
+							depth: 8
+							},
+							direction: {
+							clockwise: true
+							}
+					},
+					legend: {
+						show: false
+					},
+					bindto: "#essay_chart2"
+				});
+				// 역량 지표 차트
+				var chart = bb.generate({
+					data: {
+							x: "x",
+							columns: [
+							["x", "자기관리", "지식정보처리", "창의적사고", "심미적감성", "의사소통", "공동체"],
+							["윤지훈", 10, 20, 30, 40, 50, 40],
+							],
+							type: "radar",
+							labels: true
+					},
+					radar: {
+							axis: {
+							max: 50
+							},
+							level: {
+							depth: 5
+							},
+							direction: {
+							clockwise: true
+							}
+					},
+					legend: {
+						show: false
+					},
+					bindto: "#able_chart"
+				});
+				// 수업 지표 차트
+				var chart = bb.generate({
+					data: {
+							x: "x",
+							columns: [
+							["x", "참여 지수", "흥미 지수", "자기주도 지수", "완성 지수", "창의력 지수"],
+							["윤지훈", 10, 20, 30, 40, 50],
+							],
+							type: "radar",
+							labels: true
+					},
+					radar: {
+							axis: {
+							max: 50
+							},
+							level: {
+							depth: 5
+							},
+							direction: {
+							clockwise: true
+							}
+					},
+					legend: {
+						show: false
+					},
+					bindto: "#lesson_chart"
+				});
+			});
+			$('.goAppraisal').on('click', function(){
+				$('#header').hide();
+				$('#header.subCase').show();
+				$('#header.subCase h1').text('진단평가');
+				$('#main_wrap').hide();
+				$('.subContents').hide();
+				$('#tap_appraisal').show();
+				$("html, body").animate({scrollTop : 0}, 300);
+				// 유형별 분포 차트
+				var chart = bb.generate({
+					data: {
+							x: "x",
+							columns: [
+							["x", "어휘력", "추론력", "비판적 사고력", "창의융합 사고력", "이해력"],
+							["윤지훈", 10, 20, 30, 40, 50],
+							],
+							type: "radar",
+							labels: true
+					},
+					radar: {
+							axis: {
+							max: 50
+							},
+							level: {
+							depth: 5
+							},
+							direction: {
+							clockwise: true
+							}
+					},
+					legend: {
+						show: false
+					},
+					bindto: "#appraisal_sub_chart"
+				});
+			});
+			$('.btnPrev').on('click', function(){
+				$('#header').show();
+				$('#main_wrap').show();
+				$('#header.subCase').hide();
+				$('.subContents').hide();
+				$("html, body").animate({scrollTop : 0}, 300);
+			});
+			 // 페이지 제일 위로 이동
+			$(".pageTop").click(function(){
+					$("html, body").animate({
+							scrollTop : 0
+					}, 300);
+			});
+			//오늘의 학습
+			draw(56, '.pc1', '#00a89c', '#bceae7');
+		});
+		function draw(max, classname, colorname, colorname2){
+			 var i=1;
+				var func1 = setInterval(function(){
+					if(i<max){
+							color1(i,classname,colorname, colorname2);
+							i++;
+					} else{
+						clearInterval(func1);
+					}
+				},10);
+		}
+		function color1(i, classname,colorname,colorname2){
+			 $(classname).css({
+					"background":"conic-gradient("+colorname+" 0% "+i+"%, "+colorname2+" " +i+"% 100%)"
+			 });
+		}
+		// 역량 지표 차트
+		var chart = bb.generate({
+			data: {
+				x: "x",
+				columns: [
+					["x", "참여 지수", "흥미 지수", "자기주도 지수", "완성 지수", "창의력 지수"],
+					["윤지훈", 10, 40, 11, 5, 10],
+				],
+				type: "radar",
+				labels: false
+			},
+			radar: {
+				axis: {
+					max: 48
+				},
+				level: {
+					depth: 5
+				},
+				width: 100,
+				direction: {
+					clockwise: true
+				}
+			},
+			legend: {
+				show: false
+			},
+			bindto: "#chart2"
+		});
+    // 독서 논술 지표 차트
+    var chart = bb.generate({
+    data: {
+        x: "x",
+        columns: [
+        ["x", "듣기", "말하기", "읽기", "쓰기"],
+        ["윤지훈", 20, 40, 30, 20],
+        ],
+        type: "radar",
+        labels: true
+    },
+    radar: {
+        axis: {
+        max: 48
+        },
+        level: {
+        depth: 8
+        },
+        direction: {
+        clockwise: true
+        }
+	    },
+			legend: {
+				show: false
+			},
+	    bindto: "#essay_chart"
+    });
+	</script>
+</html>

@@ -6,37 +6,406 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/billboard.css">
     <link rel="stylesheet" href="../css/newLayout.css">
     <link rel="stylesheet" href="../css/popup.css">
-    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
 		<script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="../js/common.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" class="subCase">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+					<h1>학습 리포트</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<!-- 달력 영역 -->
+				<article>
+			    <div class="tap_condi_header">
+		        <div>
+							<button class="cal_arrow_left">이전달</button>
+			        <em class="now-month-mon">10월</em>
+			        <button class="cal_arrow_right">다음달</button>
+						</div>
+						<span>
+							<em>출석</em>
+							<em>Today</em>
+						</span>
+			    </div>
+					<div class="attendance">
+						<table>
+							<thead>
+								<tr>
+									<th>월</th>
+									<th>화</th>
+									<th>수</th>
+									<th>목</th>
+									<th>금</th>
+									<th>토</th>
+									<th>일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span></span></td>
+									<td class="check"><span>1</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td class="check"><span>2</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td><span>3</span></td>
+									<td><span>4</span></td>
+									<td><span>5</span></td>
+									<td><span>6</span></td>
+								</tr>
+								<tr>
+									<td><span>7</span></td>
+									<td><span>8</span></td>
+									<td><span>9</span></td>
+									<td><span>10</span></td>
+									<td><span>11</span></td>
+									<td><span>12</span></td>
+									<td><span>13</span></td>
+								</tr>
+								<tr>
+									<td><span>14</span></td>
+									<td><span>15</span></td>
+									<td class="check"><span>16</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td class="check"><span>17</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td><span>18</span></td>
+									<td><span>19</span></td>
+									<td><span>20</span></td>
+								</tr>
+								<tr>
+									<td><span>21</span></td>
+									<td><span>22</span></td>
+									<td><span>23</span></td>
+									<td><span>24</span></td>
+									<td class="check today"><span>25</span></td><!-- 출석완료인 경우 check class 추가 // 당일 인 경우 today 추가 -->
+									<td class="check"><span>26</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td><span>27</span></td>
+								</tr>
+								<tr>
+									<td><span>28</span></td>
+									<td><span>29</span></td>
+									<td><span>30</span></td>
+									<td><span>31</span></td>
+									<td><span></span></td>
+									<td><span></span></td>
+									<td><span></span></td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<em>출석률 <strong>19.4</strong></em>
+							<span>총 <strong>31</strong>일 학습일 중 <strong>6</strong>일 출석<span>
+						</p>
+					</div>
+				</article>
+				<!-- //달력 영역 -->
+				<div class="studyReportLayout">
+					<!-- 전체 학습 진도 -->
+					<article class="allProcess">
+						<h2>전체 학습 진도</h2>
+						<div class="pSelecter">
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="">1단계</option>
+									<option value="">2단계</option>
+									<option value="">3단계</option>
+									<option value="">4단계</option>
+								</select>
+							</span>
+							<span class="selectSet">
+								<select name="" id="">
+									<option value="">1~12 주</option>
+								</select>
+							</span>
+							<span class="kind">
+								<button data-name="1" class="on">국어</button>
+								<button data-name="2">수학</button>
+								<button data-name="3">영어</button>
+							</span>
+						</div>
+						<div class="processDetail">
+							<ul>
+								<!-- Loop -->
+								<li>
+									<div class="weekState">
+										<strong>1주</strong>
+										<div>
+											<span class="end">1일차</span>
+											<span class="end">2일차</span>
+											<span class="end">3일차</span>
+											<span class="end">4일차</span>
+											<span class="end">5일차</span>
+											<span class="end">숙제</span>
+										</div>
+									</div>
+									<div class="back">
+										<div class="curriInfo">
+											<strong>1단계</strong>
+											<div>
+												<dl class="ib">
+													<dt>IB학제</dt>
+													<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+												</dl>
+												<dl class="topic">
+													<dt>대주제</dt>
+													<dd>낱말 학습</dd>
+												</dl>
+												<dl class="topic">
+													<dt>소주제</dt>
+													<dd>탈것의 이름 알기</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+								<!-- //Loop -->
+								<li>
+									<div class="weekState">
+										<strong>2주</strong>
+										<div>
+											<span class="end">1일차</span>
+											<span class="end">2일차</span>
+											<span class="on">3일차</span>
+											<span>4일차</span>
+											<span>5일차</span>
+											<span>숙제</span>
+										</div>
+									</div>
+									<div class="back">
+										<div class="curriInfo">
+											<strong>1단계</strong>
+											<div>
+												<dl class="ib">
+													<dt>IB학제</dt>
+													<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+												</dl>
+												<dl class="topic">
+													<dt>대주제</dt>
+													<dd>낱말 학습</dd>
+												</dl>
+												<dl class="topic">
+													<dt>소주제</dt>
+													<dd>탈것의 이름 알기</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="weekState">
+										<strong>3주</strong>
+										<div>
+											<span>1일차</span>
+											<span>2일차</span>
+											<span>3일차</span>
+											<span>4일차</span>
+											<span>5일차</span>
+											<span>숙제</span>
+										</div>
+									</div>
+									<div class="back">
+										<div class="curriInfo">
+											<strong>1단계</strong>
+											<div>
+												<dl class="ib">
+													<dt>IB학제</dt>
+													<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+												</dl>
+												<dl class="topic">
+													<dt>대주제</dt>
+													<dd>낱말 학습</dd>
+												</dl>
+												<dl class="topic">
+													<dt>소주제</dt>
+													<dd>탈것의 이름 알기</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</article>
+					<!-- //전체 학습 진도 -->
+					<!-- 이용 시간 통계 -->
+					<article class="studyTime">
+						<h2>이용 시간 통계</h2>
+						<!-- tab -->
+						<div class="lineTabNav">
+							<nav>
+								<span class="on"><button data-name="0">일 별 통계</button></span>
+								<span><button data-name="1">주간통계</button></span>
+								<span><button data-name="2">월간통계</button></span>
+							</nav>
+						</div>
+						<!--// tab -->
+						<div class="tabLayout">
+							<!---->
+							<div class="tabData tData0">
+								<span class="kind">
+									<button class="on">국어</button>
+									<button>수학</button>
+									<button>영어</button>
+								</span>
+								<span class="chartDate">
+									<em>2022년</em>
+									<span class="selectSet">
+										<select>
+											<option>3 월</option>
+										</select>
+									</span>
+									<span class="selectSet">
+										<select>
+											<option>1 주</option>
+											<option>2 주</option>
+											<option>3 주</option>
+											<option>4 주</option>
+											<option>5 주</option>
+										</select>
+									</span>
+								</span>
+								<div class="legend">
+									<span>
+										<em>김교과토탈 어린이 : 1h 25min</em>
+										<em>어린이 평균 : 1h 25min</em>
+									</span>
+								</div>
+								<div class="chartArea" id="chart1"></div>
+							</div>
+							<!---->
+							<div class="tabData tData1" style="display:none;">
+								<span class="kind">
+									<button class="on">국어</button>
+									<button>수학</button>
+									<button>영어</button>
+								</span>
+								<span class="chartDate">
+									<em>2022년</em>
+									<span class="selectSet">
+										<select>
+											<option>3 월</option>
+										</select>
+									</span>
+								</span>
+								<div class="legend">
+									<span>
+										<em>김교과토탈 어린이 : 1h 25min</em>
+										<em>어린이 평균 : 1h 25min</em>
+									</span>
+								</div>
+								<div class="chartArea" id="chart2"></div>
+							</div>
+							<!---->
+							<div class="tabData tData2" style="display:none;">
+								<span class="kind">
+									<button class="on">국어</button>
+									<button>수학</button>
+									<button>영어</button>
+								</span>
+								<span class="chartDate"><em>2022년</em></span>
+								<div class="legend">
+									<span>
+										<em>김교과토탈 어린이 : 1h 25min</em>
+										<em>어린이 평균 : 1h 25min</em>
+									</span>
+								</div>
+								<div class="chartArea" id="chart3"></div>
+							</div>
+							<!---->
+						</div>
+					</article>
+					<!-- //이용 시간 통계 -->
+				</div>
+			</section>
+			</div>
+			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
+		</div>
+		<!-- //Wrap -->
 		<script>
+			$(window).scroll(function (event) {
+        if($(this).scrollTop() > 0){
+          $(".pageTop").fadeIn();
+					$('#header').addClass('on');
+        }else{
+          $(".pageTop").fadeOut();
+					$('#header').removeClass('on');
+        }
+			});
+			/***/
 			$(document).ready(function(){
+			  // 오늘의 학습 과목 별 토글
+        // $(".todayKind button").click(function () {
+        //   $(".todayKind button").removeClass("on");
+        //   $(this).addClass("on");
+        //   var activeTab = $(this).attr("data-name");
+        //   $('.graphBack').hide();
+        //   $('.todayGraph' + activeTab).show();
+				// 	if( activeTab == 1){
+				// 		draw(56, '.pc1', '#00a89c', '#bceae7');
+				// 	} else if(activeTab == 2){
+				// 		draw(101, '.pc2', '#00a89c', '#bceae7');
+				// 	} else {
+				// 		draw(0, '.pc3', '#00a89c', '#bceae7');
+				// 	}
+        // });
+			  // 주별 상세내용
+        $(".weekState strong").click(function () {
+          $(this).parent().next('div').toggle();
+        });
+			   // 페이지 제일 위로 이동
+		    $(".pageTop").click(function(){
+		        $("html, body").animate({
+		            scrollTop : 0
+		        }, 300);
+		    });
+			  //
 				google.charts.load('current', {'packages':['bar']});
 				google.charts.setOnLoadCallback(drawChart);
 				function drawChart() {
 					var data = google.visualization.arrayToDataTable([
 						['', '박다희 아동', '사용자 평균'],
-						['MM.DD', 45, 23.5],
-						['MM.DD', 45, 23.5],
-						['MM.DD', 45, 23.5],
-						['MM.DD', 45, 23.5],
-						['MM.DD', 45, 23.5],
-						['MM.DD', 45, 23.5],
-						['MM.DD', 45, 23.5]
+						['월', 45, 23.5],
+						['화', 45, 23.5],
+						['수', 45, 23.5],
+						['목', 45, 23.5],
+						['금', 45, 23.5],
+						['토', 45, 23.5],
+						['일', 45, 23.5]
 					]);
 					var options = {
-						title: ' ',
-						colors: ['#6c5dd3', '#a0d7e7'],
+						//title: ' ',
+						colors: ['#c41925', '#00a89c'],
 						legend : {position: 'none'},
-						bar: {groupWidth: "15%"},
+						bar: {groupWidth: "30%"},
 						vAxis: {
 							format: '#m',
 							viewWindowMode:'explicit',
 							viewWindow: {
 									min: 0,
-									max: 60
+									max: 50
 							}
 						}
 					};
@@ -63,8 +432,8 @@
 							['5주차', 45, 23.5]
 						]);
 						var options = {
-							title: ' ',
-							colors: ['#6c5dd3', '#a0d7e7'],
+							//title: ' ',
+							colors: ['#c41925', '#00a89c'],
 							legend : {position: 'none'},
 							bar: {groupWidth: "15%"},
 							vAxis: {
@@ -97,8 +466,8 @@
 							['12월', 45, 23.5],
 						]);
 						var options = {
-							title: ' ',
-							colors: ['#6c5dd3', '#a0d7e7'],
+							//title: ' ',
+							colors: ['#c41925', '#00a89c'],
 							legend : {position: 'none'},
 							bar: {groupWidth: "20%"},
 							vAxis: {
@@ -114,355 +483,7 @@
 						chart3.draw(data, google.charts.Bar.convertOptions(options));
 					}
 				});
-				$('.btnReDetail').click(function(){
-					$('.popDim').fadeIn();
-					$('.studyStepPop').fadeIn();
-				});
-				$('.longOk').click(function(){
-					$('.popDim').fadeOut();
-					$('.studyStepPop').fadeOut();
-				});
 			});
 		</script>
-	</head>
-  <body>
-    <!-- Wrap -->
-    <div id="wrap">
-      <!-- header -->
-      <div id="header">
-				<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
-        <h1>교과토탈 학습 리포트</h1>
-        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
-      </div>
-      <!-- //header -->
-      <hr/>
-      <!-- container -->
-      <div id="container">
-        <section>
-          <!-- Page Layout -->
-          <div class="studyReport">
-						<div class="studyInfo">
-							<em>박다희 아동</em><em>월요일 10:00</em><em>[방문]토탈 시스템 BA - 국어(A-01)</em>
-						</div>
-						<!------------------------------------------------>
-						<div class="srTit">
-							<h2>학습리포트</h2>
-							<span class="selectSet bigCase">
-								<select>
-									<option>A</option>
-									<option>B</option>
-									<option>C</option>
-								</select>
-							</span>
-						</div>
-						<div class="tls">
-							<table>
-								<colgroup>
-									<col width="130">
-									<col>
-									<col width="180">
-								</colgroup>
-								<thead>
-									<tr>
-										<th>교재</th>
-										<th>소주제</th>
-										<th>학습 진행현황</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>A-01</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-02</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-										<td>A-03</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-04</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-05</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-06</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-07</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-08</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-08</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-09</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>3/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-10</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>1/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-11</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>2/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-									<tr>
-										<td>A-12</td>
-										<td>큰 무게는 무엇일까1</td>
-										<td>
-											<strong>0/3</strong><button class="btnReDetail">보기</button>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!------------------------------------------------>
-						<div class="srTit">
-							<h2>출석현황</h2>
-							<span class="calendar_wrap">
-								<button class="cal_arrow_left"><img src="../images/left_1.png" alt="이전달"></button>
-								<em class="cal_txt">2022.03</em>
-								<button class="cal_arrow_right"><img src="../images/right_1.png" alt="다음달"></button>
-							</span>
-						</div>
-						<div class="attendance">
-							<table>
-								<thead>
-									<tr>
-										<th>월</th>
-										<th>화</th>
-										<th>수</th>
-										<th>목</th>
-										<th>금</th>
-										<th>토</th>
-										<th>일</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><span></span></td>
-										<td class="check"><span>1</span></td><!-- 출석완료인 경우 check class 추가 -->
-										<td class="check"><span>2</span></td><!-- 출석완료인 경우 check class 추가 -->
-										<td><span>3</span></td>
-										<td><span>4</span></td>
-										<td><span>5</span></td>
-										<td><span>6</span></td>
-									</tr>
-									<tr>
-										<td><span>7</span></td>
-										<td><span>8</span></td>
-										<td><span>9</span></td>
-										<td><span>10</span></td>
-										<td><span>11</span></td>
-										<td><span>12</span></td>
-										<td><span>13</span></td>
-									</tr>
-									<tr>
-										<td><span>14</span></td>
-										<td><span>15</span></td>
-										<td class="check"><span>16</span></td><!-- 출석완료인 경우 check class 추가 -->
-										<td class="check"><span>17</span></td><!-- 출석완료인 경우 check class 추가 -->
-										<td><span>18</span></td>
-										<td><span>19</span></td>
-										<td><span>20</span></td>
-									</tr>
-									<tr>
-										<td><span>21</span></td>
-										<td><span>22</span></td>
-										<td><span>23</span></td>
-										<td><span>24</span></td>
-										<td class="check"><span>25</span></td><!-- 출석완료인 경우 check class 추가 -->
-										<td class="check"><span>26</span></td><!-- 출석완료인 경우 check class 추가 -->
-										<td><span>27</span></td>
-									</tr>
-									<tr>
-										<td><span>28</span></td>
-										<td><span>29</span></td>
-										<td><span>30</span></td>
-										<td><span>31</span></td>
-										<td><span></span></td>
-										<td><span></span></td>
-										<td><span></span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!------------------------------------------------>
-						<h2>이용 시간 통계</h2>
-						<!-- tab -->
-						<div class="lineTabNav">
-							<nav>
-								<span class="on"><button data-name="0">일 별 통계</button></span>
-								<span><button data-name="1">주간통계</button></span>
-								<span><button data-name="2">월간통계</button></span>
-							</nav>
-							<strong>모든 통계는 매일 00 시를 기준으로 집계됩니다</strong>
-						</div>
-						<!--// tab -->
-						<div class="tabLayout">
-								<span class="legend">
-									<em>박다희 아동</em>
-									<em>사용자 평균</em>
-								</span>
-								<!---->
-								<div class="tabData tData0">
-									<span class="chartSort">
-										<button class="on">국어</button>
-										<button>수학</button>
-										<button>영어</button>
-									</span>
-									<span class="chartDate">
-										<em>2022년</em>
-										<span class="selectSet">
-											<select>
-												<option>3 월</option>
-											</select>
-										</span>
-										<span class="selectSet">
-											<select>
-												<option>1 주</option>
-												<option>2 주</option>
-												<option>3 주</option>
-												<option>4 주</option>
-												<option>5 주</option>
-											</select>
-										</span>
-									</span>
-									<div class="chartArea" id="chart1"></div>
-								</div>
-								<!---->
-								<div class="tabData tData1" style="display:none;">
-									<span class="chartSort">
-										<button class="on">국어</button>
-										<button>수학</button>
-										<button>영어</button>
-									</span>
-									<span class="chartDate">
-										<em>2022년</em>
-										<span class="selectSet">
-											<select>
-												<option>3 월</option>
-											</select>
-										</span>
-									</span>
-									<div class="chartArea" id="chart2"></div>
-								</div>
-								<!---->
-								<div class="tabData tData2" style="display:none;">
-									<span class="chartSort">
-										<button class="on">국어</button>
-										<button>수학</button>
-										<button>영어</button>
-									</span>
-									<span class="chartDate"><em>2022년</em></span>
-									<div class="chartArea" id="chart3"></div>
-								</div>
-								<!---->
-						</div>
-						<!------------------------------------------------>
-          </div>
-          <!-- //page Layout -->
-        </section>
-      </div>
-      <!-- //container -->
-    </div>
-    <!-- //Wrap -->
-		<!-- Popup -->
-		<div class="popDim" style="display:none;">
-			<!-- 학습 진행현황 -->
-	    <div class="basicPop studyStepPop" style="display:none;">
-				<h1>
-					A-01<br/>
-					학습 목표(소주제) 표시 Text
-				</h1>
-        <div class="pBack">
-					<div class="tls">
-						<table>
-							<colgroup>
-								<col width="150">
-								<col>
-								<col width="143">
-							</colgroup>
-							<thead>
-								<tr>
-									<th>콘텐츠</th>
-									<th>최근 학습 날짜</th>
-									<th>완료 여부</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>어휘 쑥쑥1</td>
-									<td></td>
-									<td><span>학습 전</span></td>
-								</tr>
-								<tr>
-									<td>어휘 쑥쑥2</td>
-									<td>2022-09-24</td>
-									<td><span class="ing">[60]% 진행 중</span></td>
-								</tr>
-								<tr>
-									<td>어휘 쑥쑥3</td>
-									<td>2022-09-24</td>
-									<td><span class="end">완료</span></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-        </div>
-        <div class="pBtn tC">
-        	<button class="longOk">확인</button>
-        </div>
-	    </div>
-			<!-- //학습 진행현황 -->
-		</div>
-		<!-- //Popup -->
   </body>
 </html>

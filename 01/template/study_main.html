@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/billboard.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header">
+				<header>
+					<h1>토탈시스템</h1>
+					<span class="right">
+						<button class="btnGift" id="giftBtn">선물하기</button>
+		        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+					</span>
+					<div class="newProfile">
+						<span>
+							<strong><em><img src="../images/sample_profile.png" alt="" /></em>김교과토탈</strong>
+							<i>교과토탈PE 교과토탈PE 교과토탈PE<br/>
+							교과토탈PE 교과토탈PE 교과토탈PE<br/>
+							교과토탈PE 교과토탈PE 교과토탈PE</i>
+						</span>
+					</div>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+				<section>
+					<div class="studyMainLayout">
+						<!--/////////////////////-->
+						<div class="mTit">
+							<h2>학습 리포트 <em>2022.10.18 현재</em></h2>
+							<a href="study_report.html">더보기</a>
+						</div>
+						<div class="sMData today">
+							<div class="todayKind">
+								<strong>오늘의 학습</strong>
+								<span class="kind">
+									<button data-name="1" class="on">국어</button>
+									<button data-name="2">수학</button>
+									<button data-name="3">영어</button>
+								</span>
+							</div>
+							<!--- 국어 --->
+							<div class="tgBack todayGraph1">
+								<!-- 학습완료율 -->
+								<div class="graphBack">
+									<div>
+										<span class="pieChart pc1"><span><strong>56</strong>5/10</span></span>
+									</div>
+									<!-- <p>오늘의 학습을 모두 완료했습니다!<br/>칭찬을 아끼지 말아주세요.</p>
+									<p>아직 학습을 시작하지 않았습니다.<br/>학습을 시작하도록 지도해주세요.</p> -->
+									<p>학습을 끝까지 진행할 수 있도록<br/>격려해주세요.</p>
+								</div>
+								<!-- //학습완료율 -->
+								<!--- 수업있는날 --->
+								<div class="graphBack todayGraph2">
+									<div>
+										<span class="vistingDay"><span><strong>방문 수업</strong></span></span>
+									</div>
+									<p>오늘은 <strong>방문수업</strong>이 있는 날입니다.</p>
+								</div>
+								<!--- //수업있는날 --->
+								<!--- 수업없는날 --->
+								<div class="graphBack todayGraph3">
+									<div>
+										<span class="notClass"><span><strong>수업 없는 날</strong></span></span>
+									</div>
+									<p><strong>복습</strong>을 할 수 있도록 지도해주세요.</p>
+								</div>
+								<!--- //수업없는날 --->
+							</div>
+							<!--- //국어 --->
+							<!--- 수학 --->
+							<div class="tgBack todayGraph2" style="display:none;">
+								<!-- 학습완료율 -->
+								<div class="graphBack">
+									<div>
+										<span class="pieChart pc2"><span><strong>100</strong>10/10</span></span>
+									</div>
+									<p>오늘의 학습을 모두 완료했습니다!<br/>칭찬을 아끼지 말아주세요.</p>
+									<!-- <p>아직 학습을 시작하지 않았습니다.<br/>학습을 시작하도록 지도해주세요.</p>
+									<p>학습을 끝까지 진행할 수 있도록<br/>격려해주세요.</p> -->
+								</div>
+								<!-- //학습완료율 -->
+							</div>
+							<!--- //수학 --->
+							<!--- 영어 --->
+							<div class="tgBack todayGraph3" style="display:none;">
+								<!-- 학습완료율 -->
+								<div class="graphBack">
+									<div>
+										<span class="pieChart pc3"><span><strong>0</strong>0/10</span></span>
+									</div>
+									<!-- <p>오늘의 학습을 모두 완료했습니다!<br/>칭찬을 아끼지 말아주세요.</p>-->
+									<p>아직 학습을 시작하지 않았습니다.<br/>학습을 시작하도록 지도해주세요.</p>
+									<!-- <p>학습을 끝까지 진행할 수 있도록<br/>격려해주세요.</p> -->
+								</div>
+								<!-- //학습완료율 -->
+							</div>
+							<!--- //영어 --->
+						</div>
+						<!--/////////////////////-->
+						<div class="mTit">
+							<h2>방문 수업</h2>
+							<a href="study_visting.html">더보기</a>
+						</div>
+						<div class="sMData visting">
+							<div class="vistingback">
+								<div class="curriInfo">
+									<strong>국어<br/>1단계</strong>
+									<div>
+										<dl class="ib">
+											<dt>IB학제</dt>
+											<dd>우리는 우리 자신을 어떻게 표현하는가</dd>
+										</dl>
+										<dl>
+											<dt>대주제</dt>
+											<dd>낱말 학습</dd>
+										</dl>
+										<dl>
+											<dt>소주제</dt>
+											<dd>탈것의 이름 알기</dd>
+										</dl>
+									</div>
+								</div>
+								<p><span>박지연 선생님</span><em>2022.10.18</em></p>
+							</div>
+							<div class="polygonArea" id="chart2"></div>
+						</div>
+						<!--/////////////////////-->
+						<div class="mTit">
+							<h2>인증 평가</h2>
+							<a href="study_testReport.html">더보기</a>
+						</div>
+						<div class="sMData testReport">
+							<span class="txt">다음 인증평가까지 n개의 학습 소주제가 남았습니다.</span>
+							<p>인증평가 이력이 없습니다.</p>
+						</div>
+						<!--/////////////////////-->
+					</div>
+				</section>
+			</div>
+			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
+			<!--LNB -->
+			<div id="lnb" style="display:none;">
+				<div class="lnbNav">
+					<ul>
+						<li class="on"><a href="mypage.html" class="new">마이페이지</a><!-- 신규 내용이 있을 경우 new 추가 --></li>
+						<li><a href="notice.html">공지&amp;이벤트</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><button class="btncs">고객센터</button></li>
+						<li><a href="setting.html">설정</a></li>
+					</ul>
+				</div>
+				<div class="dim"></div>
+			</div>
+			<!--//LNB -->
+		</div>
+		<!-- //Wrap -->
+		<!-- Alert Popup -->
+		<div class="alertDim" style="display:none;">
+			<!-- 선물하기 확인 시 -->
+	    <div class="alertPop giftEndPop" style="display:none;">
+        <div class="pBack">
+					<div class="va">
+						<h1>선물하기</h1>
+						<p class="txt1">박다희 아동에게 선물을 보내시겠어요?</p>
+						<div class="choiced">
+							<span><img src="../images/sample_gift1_01.png" alt="" /></span>
+							<strong>100</strong>
+						</div>
+						<p class="txt2">박다희 아동에게 선물하기 이용 차감 내역</p>
+						<div class="choicedEnd">
+							<strong>아이템</strong> 1개 <em>(잔여 0개)</em><br/>
+							<strong>포인트</strong> 100 point <em>(잔여 900 point)</em>
+						</div>
+					</div>
+        </div>
+        <div class="pBtn">
+          <button class="cancel">취소</button>
+          <button class="ok">확인</button>
+        </div>
+	    </div>
+		</div>
+		<!-- //Alert Popup -->
+		<!-- Popup -->
+		<div class="popDim" style="display:none;">
+			<!-- 고객센터 -->
+	    <div class="basicPop csCenterPop" style="display:none;">
+        <div class="pBack">
+					<span>
+						프뢰벨 고객센터<br/>
+						<strong>1566-0800</strong>
+					</span>
+					<p>
+						<strong>평일</strong> 09:00~17:00<br>
+						<em>(점심시간 12:30~13:30)</em>
+						<strong>주말 · 공휴일</strong> 휴무
+					</p>
+        </div>
+        <div class="pBtn">
+        	<button class="cancel">닫기</button>
+        	<a class="ok" href='tel:000-0000-0000'>통화</a>
+        </div>
+	    </div>
+			<!-- //고객센터 -->
+			<!-- 선물하기 -->
+	    <div class="basicPop giftPop" style="display:none;">
+				<h1>선물하기</h1>
+        <div class="pBack">
+					<div class="giftItemChoice">
+						<div class="giftCtTab">
+							<span class="giftCt0 new on"><button data-name="0">헤어</button></span><!--신규 아이템이 있을 경우 class="new" 추가 -->
+							<span class="giftCt1"><button data-name="1">얼굴</button></span>
+							<span class="giftCt2"><button data-name="2">상의</button></span>
+							<span class="giftCt3"><button data-name="3">하의</button></span>
+							<span class="giftCt4"><button data-name="4">악세사리</button></span>
+							<span class="giftCt5"><button data-name="5">신발</button></span>
+						</div>
+						<div class="giftItemList">
+							<div>
+								<ul class="giftItemData giData0">
+									<li><input type="radio" name="gil0" id="gil001" /><label><img src="../images/sample_gift1_01.png" alt="" /></label></li>
+									<li class="new"><input type="radio" name="gil0" id="gil002" /><label><img src="../images/sample_gift1_02.png" alt="" /></label></li><!--신규 아이템인 경우 class="new" 추가 -->
+									<li><input type="radio" name="gil0" id="gil003" /><label><img src="../images/sample_gift1_03.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil004" /><label><img src="../images/sample_gift1_04.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil005" /><label><img src="../images/sample_gift1_05.png" alt="" /></label></li>
+									<li class="own"><input type="radio" name="gil0" id="gil006" disabled /><label><img src="../images/sample_gift1_06.png" alt="" /></label></li><!--보유한 아이템을 경우 class="own" 추가 -->
+									<li><input type="radio" name="gil0" id="gil007" /><label><img src="../images/sample_gift1_07.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil008" /><label><img src="../images/sample_gift1_08.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil009" /><label><img src="../images/sample_gift1_09.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil010" /><label><img src="../images/sample_gift1_10.png" alt="" /></label></li>
+									<li class="own"><input type="radio" name="gil0" id="gil011" disabled /><label><img src="../images/sample_gift1_11.png" alt="" /></label></li>
+									<li><input type="radio" name="gil0" id="gil012" /><label><img src="../images/sample_gift1_12.png" alt="" /></label></li>
+								</ul>
+								<ul class="giftItemData giData1" style="display:none;">
+									<li><input type="radio" name="gil1" id="gil101" /><label><img src="../images/sample_gift1_10.png" alt="" /></label></li>
+									<li><input type="radio" name="gil1" id="gil102" /><label><img src="../images/sample_gift1_07.png" alt="" /></label></li>
+								</ul>
+								<ul class="giftItemData giData2" style="display:none;">
+									<li><input type="radio" name="gil2" id="gil201" /><label><img src="../images/sample_gift2_01.png" alt="" /></label></li>
+									<li class="own"><input type="radio" name="gil2" id="gil202" disabled /><label><img src="../images/sample_gift2_02.png" alt="" /></label></li><!--보유한 아이템을 경우 class="own" 추가 -->
+									<li class="new"><input type="radio" name="gil2" id="gil203" /><label><img src="../images/sample_gift2_03.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil204" /><label><img src="../images/sample_gift2_04.png" alt="" /></label></li>
+									<li class="own"><input type="radio" name="gil2" id="gil205" disabled /><label><img src="../images/sample_gift2_05.png" alt="" /></label></li><!--보유한 아이템을 경우 class="own" 추가 -->
+									<li><input type="radio" name="gil2" id="gil206" /><label><img src="../images/sample_gift2_06.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil207" /><label><img src="../images/sample_gift2_07.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil208" /><label><img src="../images/sample_gift2_08.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil209" /><label><img src="../images/sample_gift2_09.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil210" /><label><img src="../images/sample_gift2_10.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil211" /><label><img src="../images/sample_gift2_11.png" alt="" /></label></li>
+									<li><input type="radio" name="gil2" id="gil212" /><label><img src="../images/sample_gift2_12.png" alt="" /></label></li>
+								</ul>
+								<ul class="giftItemData giData3" style="display:none;">
+									<li class="noLine">아이템 준비중입니다.</li>
+								</ul>
+								<ul class="giftItemData giData4" style="display:none;">
+									<li><input type="radio" name="gil5" id="gil401" /><label><img src="../images/sample_gift2_04.png" alt="" /></label></li>
+								</ul>
+								<ul class="giftItemData giData5" style="display:none;">
+									<li><input type="radio" name="gil5" id="gil501" /><label><img src="../images/sample_gift2_01.png" alt="" /></label></li>
+									<li><input type="radio" name="gil5" id="gil502" /><label><img src="../images/sample_gift1_02.png" alt="" /></label></li>
+									<li><input type="radio" name="gil5" id="gil503" /><label><img src="../images/sample_gift2_03.png" alt="" /></label></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!---->
+					<div class="pointChoice">
+						<strong>선물할 포인트</strong>
+						<div class="pointIn"><input type="text" placeholder="1포인트 이상 입력해주세요."></div>
+						<div class="pointInfo">
+							<span>선물가능 포인트 <i>2,500</i></span>
+							<span class="right">선물 후 포인트 <i>1,500</i></span>
+						</div>
+						<span class="write"><textarea></textarea><span><em>0</em>/60</span></span>
+					</div>
+					<!---->
+        </div>
+        <div class="pBtn">
+        	<button class="cancel">닫기</button>
+        	<button class="ok">보내기</button>
+        </div>
+	    </div>
+			<!-- //선물하기 -->
+		</div>
+		<!-- //Popup -->
+  </body>
+	<script>
+		$(window).scroll(function (event) {
+			if($(this).scrollTop() > 0){
+				$(".pageTop").fadeIn();
+				$('#header').addClass('on');
+			}else{
+				$(".pageTop").fadeOut();
+				$('#header').removeClass('on');
+			}
+		});
+		/***/
+		$(document).ready(function(){
+			// lnb
+			$('.btnLnb').click(function(){
+				$('#lnb').fadeIn();
+				$('body').addClass('lnbOn');
+			});
+			$('#lnb .dim').click(function(){
+				$('#lnb').fadeOut();
+				$('body').removeClass('lnbOn');
+			});
+			//고객센터
+			$('.btncs').click(function(){
+				$('.popDim').fadeIn();
+				$('.csCenterPop').fadeIn()
+			});
+			$('.csCenterPop .cancel').click(function(){
+				$('.popDim').fadeOut();
+				$('.csCenterPop').fadeOut()
+			});
+			// 선물하기 팝업
+			$('#giftBtn').click(function(){
+				$('.popDim').fadeIn();
+				$('.giftPop').fadeIn()
+			});
+			$('.giftPop .ok').click(function(){
+				$('.alertDim').fadeIn();
+				$('.giftEndPop').fadeIn();
+			});
+			$('.giftPop .cancel').click(function(){
+				$('.popDim').fadeOut();
+				$('.giftPop').fadeOut()
+			});
+			$('.giftEndPop .cancel').click(function(){
+				$('.alertDim').fadeOut();
+				$('.giftEndPop').fadeOut();
+			});
+			$('.giftEndPop .ok').click(function(){
+				$('.alertDim').fadeOut();
+				$('.giftEndPop').fadeOut();
+				$('.popDim').fadeOut();
+				$('.giftPop').fadeOut();
+			});
+			// 선물하기 아이템 카테고리 토글
+			$(".giftCtTab button").click(function () {
+				$(".giftCtTab span").removeClass("on");
+				$(this).parent("span").addClass("on");
+				var activeTab = $(this).attr("data-name");
+				$('.giftItemData').hide();
+				$('.giftItemData.giData' + activeTab).show();
+			});
+			// 오늘의 학습 과목 별 토글
+			$(".todayKind button").click(function () {
+				$(".todayKind button").removeClass("on");
+				$(this).addClass("on");
+				var activeTab = $(this).attr("data-name");
+				//$('.graphBack').hide();
+				$('.tgBack').hide();
+				$('.todayGraph' + activeTab).show();
+				if( activeTab == 1){
+					draw(56, '.pc1', '#00a89c', '#bceae7');
+				} else if(activeTab == 2){
+					draw(101, '.pc2', '#00a89c', '#bceae7');
+				} else {
+					draw(0, '.pc3', '#00a89c', '#bceae7');
+				}
+			});
+			 // 페이지 제일 위로 이동
+			$(".pageTop").click(function(){
+					$("html, body").animate({
+							scrollTop : 0
+					}, 300);
+			});
+			//오늘의 학습
+			draw(56, '.pc1', '#00a89c', '#bceae7');
+		});
+		function draw(max, classname, colorname, colorname2){
+			 var i=1;
+				var func1 = setInterval(function(){
+					if(i<max){
+							color1(i,classname,colorname, colorname2);
+							i++;
+					} else{
+						clearInterval(func1);
+					}
+				},10);
+		}
+		function color1(i, classname,colorname,colorname2){
+			 $(classname).css({
+					"background":"conic-gradient("+colorname+" 0% "+i+"%, "+colorname2+" " +i+"% 100%)"
+			 });
+		}
+		// 역량 지표 차트
+		var chart = bb.generate({
+			data: {
+				x: "x",
+				columns: [
+					["x", "참여 지수", "흥미 지수", "자기주도 지수", "완성 지수", "창의력 지수"],
+					["윤지훈", 10, 40, 11, 5, 10],
+				],
+				type: "radar",
+				labels: false
+			},
+			radar: {
+				axis: {
+					max: 48
+				},
+				level: {
+					depth: 5
+				},
+				width: 100,
+				direction: {
+					clockwise: true
+				}
+			},
+			legend: {
+				show: false
+			},
+			bindto: "#chart2"
+		});
+	</script>
+</html>

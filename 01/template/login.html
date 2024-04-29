@@ -7,67 +7,69 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 		<title>토탈시스템</title>
     <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
     <link rel="stylesheet" href="../css/newLayout.css">
     <link rel="stylesheet" href="../css/popup.css">
-    <script src="../js/jquery-3.5.1.js"></script>
-    <script src="../js/common.js"></script>
-	</head>
+		<script src="../js/jquery-3.5.1.js"></script>
+  </head>
   <body>
-		<div id="wrap" class="loginCase">
+		<div id="wrap">
       <div class="login_wrap">
-        <h1>교과토탈 로그인</h1>
-        <form action="" method="POST">
-          <fieldset>
-            <legend>로그인</legend>
-            <div class="input_id_wrap">
-                <input type="text" placeholder="사번">
-                <input type="password" placeholder="주민번호 뒷자리">
-            </div>
-            <button type="button" class="btn_login">로그인</button>
-            <div class="checkArea">
-              <span class="checkSet"><input type="checkbox" name="radio1" id="radio1"><label for="radio1"><i></i>로그인 상태 유지</label></span>
-            </div>
-          </fieldset>
-        </form>
+        <h1>토탈시스템</h1>
+        <div class="loginInput">
+          <span><input type="text" name="user_cd" id="user_cd" placeholder="부모님 아이디"></span>
+          <span><input type="password" name="user_ps" id="user_ps"  placeholder="비밀번호"></span>
+        </div>
+        <button type="button" class="btn_login" onclick="chk_form();">로그인</button>
+        <div class="save_id_wrap">
+          <span><input type="checkbox" class="input-radio" name="radio1" id="radio1"><label for="radio1" class="form-radio"> 로그인 상태 유지</label></span>
+        </div>
+        <div class="goFind">
+          <button type="button" onclick="location.href='find_id.html'">아이디 찾기</button>
+          <button type="button" onclick="location.href='find_pw.html'">비밀번호 찾기</button>
+        </div>
+        <p>학습앱에서 회원 가입 시 <em>부모님의 아이디와 비밀번호를 생성</em>해야 접속할 수 있습니다.</p>
+        <!-- 임시 로그인 ---->
+        <br/><br/><br/><br/>
+        <button type="button" onclick="location.href='study_main.html'">교과 임시 로그인</button>
       </div>
-    </div>
-		<!-- 앱 접근권한 -->
-		<div class="popDim" style="display:block;">
-	    <div class="basicPop appAccessPop" style="display:block;">
-        <div class="pBack">
-					<h1>
-						앱 접근권한 안내
-						<span>서비스 이용을 위해 권한 허용이 필요합니다.</span>
-					</h1>
-					<div>
-						<p>필수 접근권한</p>
-						<dl class="access1">
-							<dt>저장공간</dt>
-							<dd>콘텐츠를 읽거나, 내용을 수정 · 삭제하기 위한 권한입니다.</dd>
-						</dl>
-						<dl class="access2">
-							<dt>카메라</dt>
-							<dd>사진을 촬영하거나 동영상을 녹화하기 위한 권한입니다.</dd>
-						</dl>
-						<dl class="access3">
-							<dt>마이크</dt>
-							<dd>오디오 녹음을 위한 권한입니다.</dd>
-						</dl>
+
+			<!-- 유효성 검사 팝업 -->
+			<div class="alertDim" style="display:none;">
+				<div class="alertPop" id="alertSamplePop">
+					<div class="pBack">
+						<div class="va">
+							<p>아이디와 비밀번호를 모두 입력해주세요.</p>
+						</div>
 					</div>
-        </div>
-        <div class="pBtn tC">
-        	<button class="ok">확인</button>
-        </div>
+					<div class="pBtn tC">
+						<button class="ok">확인</button>
+					</div>
+				</div>
 			</div>
-		</div>
-		<!-- //앱 접근권한 -->
+			<!-- //유효성 검사 팝업 -->
+    </div>
+
     <script>
-  		$(document).ready(function(){
-				$('.appAccessPop .ok').click(function(){
-					$('.popDim').fadeOut();
-					$('.appAccessPop').fadeOut();
-				});
-			});
-		</script>
+        //로그인 유효성 검사
+        function chk_form(){
+            const uid = document.getElementById('user_cd');
+            const upw = document.getElementById('user_ps');
+
+            if(!uid.value || !upw.value){
+                $('.alertDim').show();
+                return false;
+            } else {
+							location.href = "main.html";
+            };
+        };
+
+        // 팝업 확인버튼 누르면 팝업 닫힘
+        $(document).ready(function(){
+            $('.alertPop button').on('click', function(){
+                $('.alertDim').hide();
+            });
+        });
+    </script>
   </body>
 </html>

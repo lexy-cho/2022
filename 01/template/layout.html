@@ -6,34 +6,86 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 		<title>토탈시스템</title>
+    <!-- <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css"> -->
     <link rel="stylesheet" href="../css/newLayout.css">
-    <script src="../js/jquery-3.5.1.js"></script>
-    <script src="../js/common.js"></script>
-	</head>
+    <link rel="stylesheet" href="../css/popup.css">
+		<script src="../js/jquery-3.5.1.js"></script>
+  </head>
   <body>
 		<!-- Wrap -->
 		<div id="wrap">
 			<!-- header -->
 			<div id="header">
-				<h1>토탈시스템</h1>
-				<button class="snbBtn on">SNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+				<header>
+					<h1>토탈시스템</h1>
+					<span class="right">
+						<button class="btnGift">선물하기</button>
+		        <button class="btnLnb on">LNB Opner</button><!-- 신규 내용이 있을 경우 on 추가 -->
+					</span>
+					<div class="profile">
+						<span>
+							<strong><em><img src="../images/sample_profile.png" alt="" /></em>김교과토탈</strong>
+							<i>교과토탈PE 교과토탈PE 교과토탈PE<br/>
+							교과토탈PE 교과토탈PE 교과토탈PE<br/>
+							교과토탈PE 교과토탈PE 교과토탈PE</i>
+						</span>
+					</div>
+				</header>
 			</div>
+			<!-- //header -->
+			<!-- header -->
+			<!-- <div id="header" class="subCase">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+					<h1>학습 리포트</h1>
+				</header>
+			</div> -->
 			<!-- //header -->
 			<hr/>
 			<!-- container -->
 			<div id="container">
-			<section>
-				<!-------------------------------- 모든 페이지는 이곳부터 분리됩니다. -------------------------------->
-				<!-- Page Layout -->
-				<div class="pageLayout">
-					콘텐츠 본문입니다
-				</div>
-				<!-- //page Layout -->
-				<!-------------------------------- 모든 페이지는 이곳부터 분리됩니다. -------------------------------->
-			</section>
+				<section>
+					start
+					<div class="mainLayout" style="height:965px;">
+						<h2>학습 리포트 <a href="">더보기</a></h2>
+						<div>
+							메인화면 입니다.
+						</div>
+						<!---->
+						<h2>방문 수업 <a href="">더보기</a></h2>
+						<div>
+							메인화면 입니다.
+						</div>
+						<!---->
+						<h2>인증 평가 <a href="">더보기</a></h2>
+						<div>
+							메인화면 입니다.
+						</div>
+						<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>end
+					</div>
+				</section>
 			</div>
 			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
 		</div>
 		<!-- //Wrap -->
+		<script>
+			$(window).scroll(function (event) {
+				// var sc = $(window).scrollTop();
+				// if(sc > 195){
+				// 	$('#header').addClass('on');
+				// } else {
+				// 	$('#header').removeClass('on');
+				// }
+        if($(this).scrollTop() > 0){
+          $(".pageTop").fadeIn();
+					$('#header').addClass('on');
+        }else{
+          $(".pageTop").fadeOut();
+					$('#header').removeClass('on');
+        }
+			});
+		</script>
   </body>
 </html>

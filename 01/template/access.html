@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+		<script src="../js/jquery-3.5.1.js"></script>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<div class="accessLayout">
+				<div class="accessTit">
+					<h1>앱 접근권한 안내</h1>
+					<p>
+						서비스 이용을 위해 권한 허용이 필요합니다.<br>
+						허용하지 않아도 앱 이용은 가능하나 일부 서비스 이용에 제한이 있을 수 있습니다.
+					</p>
+				</div>
+				<!---->
+				<div class="accessDetail">
+					<span>선택 접근권한</span>
+					<dl>
+						<dt>전화</dt>
+						<dd>고객센터 연결을 위한 권한입니다.</dd>
+					</dl>
+					<dl>
+						<dt>알림</dt>
+						<dd>푸시 및 이벤트 알림을 받기 위한 권한입니다.</dd>
+					</dl>
+				</div>
+				<!--//-->
+				<div class="accessBtn tC">
+					<button class="ok" onclick="chk_btn();">확인</button>
+				</div>
+			</div>
+    </div>
+		<!-- //Wrap -->
+		<!-- Alert Popup -->
+		<div class="alertDim" style="display:none;">
+			<!-- 승인여부팝업 -->
+			<div class="alertPop" id="accessPop1" style="display:none;">
+				<div class="pBack">
+					<div class="va">
+						<em>마케팅 정보 수신에 동의 하시겠습니까?</em>
+						다양한 이벤트 및 혜택에 대한 알림을 <br>받으실 수 있습니다.
+					</div>
+				</div>
+				<div class="pBtn">
+					<button class="cancel" onclick="btn0();">거부</button>
+					<button class="ok" onclick="btn1();">동의</button>
+				</div>
+			</div>
+			<!-- //승인여부팝업 -->
+			<!-- 승인완료 -->
+			<div class="alertPop accessTossPop" id="accessPop2" style="display:none;">
+				<div class="pBack">
+					<p><strong>마케팅/혜택 알림 수신 동의</strong> 처리가 완료되었습니다.</p>
+					<em>수신 동의일 : 2021년 06월 25일</em>
+				</div>
+			</div>
+			<!-- //승인완료 -->
+			<!-- 승인거부 -->
+			<div class="alertPop accessTossPop" id="accessPop3" style="display:none;">
+				<div class="pBack">
+					<p><strong class="not">마케팅/혜택 알림 수신 거부</strong> 처리가 완료되었습니다.</p>
+					<em>수신 거부일 : 2021년 06월 25일</em>
+				</div>
+			</div>
+			<!-- //승인거부 -->
+		</div>
+		<!-- //Alert Popup -->
+		<script>
+				login_url = "../template/login.html"; // 로그인 페이지로 이동
+
+				function chk_btn(){
+						$('.alertDim').fadeIn();
+						$('#accessPop1').fadeIn();
+				};
+				function btn0(){
+						$('#accessPop1').fadeOut();
+						$('#accessPop3').fadeIn(function(){
+							setTimeout(function(){
+							    $('.alertDim').fadeOut();
+							    $('#accessPop3').fadeOut();
+									location.href = login_url;
+							}, 3000);
+						});
+				};
+				function btn1(){
+						$('#accessPop1').fadeOut();
+						$('#accessPop2').fadeIn(function(){
+							setTimeout(function(){
+							    $('.alertDim').fadeOut();
+							    $('#accessPop2').fadeOut();
+									location.href = login_url;
+							}, 3000);
+						});
+				};
+		</script>
+  </body>
+</html>

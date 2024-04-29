@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>토탈시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/billboard.css">
+    <link rel="stylesheet" href="../css/newLayout.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../js/billboard.js"></script>
+    <script src="../js/billboard.pkgd.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="../js/jquery-3.5.1.js"></script>
+    <style>
+        .bb-chart-radars .bb-levels text{
+            display: none;
+        }
+        .bb-chart-radar > polygon{
+            fill: transparent !important;
+        }
+    </style>
+  </head>
+  <body>
+		<!-- Wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<div id="header" class="subCase">
+				<header>
+					<button class="btnPrev" onclick="history.back()">이전 화면으로 이동</button>
+					<h1>독서현황</h1>
+				</header>
+			</div>
+			<!-- //header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+			<section>
+				<!-- 출석 달력 -->
+				<article class="readingCal">
+					<div class="tap_condi_header">
+						<div>
+							<button class="cal_arrow_left">이전달</button>
+							<em class="now-month-mon">10월</em>
+							<button class="cal_arrow_right">다음달</button>
+						</div>
+					</div>
+					<div class="attendance">
+						<table>
+							<!-- <thead> 생략 -->
+							<tbody>
+								<tr>
+									<td><span></span></td>
+									<td class="check"><span>1</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td class="check"><span>2</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td><span>3</span></td>
+									<td><span>4</span></td>
+									<td><span>5</span></td>
+									<td><span>6</span></td>
+								</tr>
+								<tr>
+									<td><span>7</span></td>
+									<td><span>8</span></td>
+									<td><span>9</span></td>
+									<td><span>10</span></td>
+									<td><span>11</span></td>
+									<td><span>12</span></td>
+									<td><span>13</span></td>
+								</tr>
+								<tr>
+									<td><span>14</span></td>
+									<td><span>15</span></td>
+									<td class="check"><span>16</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td class="check"><span>17</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td><span>18</span></td>
+									<td><span>19</span></td>
+									<td><span>20</span></td>
+								</tr>
+								<tr>
+									<td><span>21</span></td>
+									<td><span>22</span></td>
+									<td><span>23</span></td>
+									<td><span>24</span></td>
+									<td class="check today"><span>25</span></td><!-- 출석완료인 경우 check class 추가 // 당일 인 경우 today 추가 -->
+									<td class="check"><span>26</span></td><!-- 출석완료인 경우 check class 추가 -->
+									<td><span>27</span></td>
+								</tr>
+								<tr>
+									<td><span>28</span></td>
+									<td><span>29</span></td>
+									<td><span>30</span></td>
+									<td><span>31</span></td>
+									<td><span></span></td>
+									<td><span></span></td>
+									<td><span></span></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="legend">
+							<em>출석</em>
+							<em>Today</em>
+						</div>
+						<p>
+							<em>출석률 <strong>19.4</strong></em>
+							<span>총 <strong>31</strong>일 학습일 중 <strong>6</strong>일 출석<span>
+						</p>
+					</div>
+				</article>
+				<!-- //출석 달력 -->
+				<!-- 리딩리포트 -->
+				<article class="readingReport">
+					<h2>리딩리포트</h2>
+					<div class="back">
+						<p><strong>정용찬</strong>의<strong> 독서 두뇌</strong> 리포트</p>
+						<div id="report_chart0"></div>
+					</div>
+					<div class="back">
+						<p><strong>정용찬</strong>의<strong> 창의융합 역량</strong> 리포트</p>
+						<div id="report_chart1"></div>
+					</div>
+				</article>
+				<!-- //리딩리포트 -->
+			</section>
+			</div>
+			<!-- //container -->
+			<div class="pageTop"><button>상단으로</button></div>
+		</div>
+		<!-- //Wrap -->
+		<script>
+			$(window).scroll(function (event) {
+        if($(this).scrollTop() > 0){
+          $(".pageTop").fadeIn();
+					$('#header').addClass('on');
+        }else{
+          $(".pageTop").fadeOut();
+					$('#header').removeClass('on');
+        }
+			});
+			/***/
+			$(document).ready(function(){
+			   // 페이지 제일 위로 이동
+		    $(".pageTop").click(function(){
+		        $("html, body").animate({
+		            scrollTop : 0
+		        }, 300);
+		    });
+			});
+      // 독서 두뇌 리포트 차트
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+              ['', ''],
+              ['논픽션', 50],
+              ['창작', 5],
+              ['사회', 60],
+              ['고전', 20],
+              ['인성', 25],
+              ['과학', 46],
+              ['언어', 20]
+          ]);
+          var options = {
+              //width:'100%',
+              bars:'horizontal', // Required for Material Bar Charts.
+              isStacked: 'percent',
+              legend: { position: 'none' },
+              colors: ['#00A89C'],
+              hAxis: {
+                  format: '#\'%\'',
+                  viewWindowMode:'maximized',
+                  viewWindow:{
+                     max:100,
+                     min:0,
+                  }
+              },
+          };
+        var chart = new google.charts.Bar(document.getElementById('report_chart0'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+        window.addEventListener('resize',drawChart, true);
+      };
+			// 창의융합 역량 리포트 차트
+			google.charts.load('current', {'packages':['bar']});
+			google.charts.setOnLoadCallback(drawChart2);
+			function drawChart2() {
+				var data = google.visualization.arrayToDataTable([
+					 ['', ''],
+					['공동체', 20],
+					['자기관리', 20],
+					['의사소통', 46],
+					['지식정보처리', 20],
+					['심미적감성', 20],
+					['창의적사고', 46],
+				]);
+				var options = {
+					//width:'100%',
+					bars:'horizontal', // Required for Material Bar Charts.
+					isStacked: 'percent',
+						legend: { position: 'none' },
+						colors: ['#00A89C'],
+						 hAxis: {
+
+									format: '#\'%\'',
+									 viewWindowMode:'maximized',
+									 viewWindow:{
+										 max:100,
+										 min:0
+									 }
+						}
+				};
+				var chart = new google.charts.Bar(document.getElementById('report_chart1'));
+				chart.draw(data, google.charts.Bar.convertOptions(options));
+				window.addEventListener('resize', drawChart2, true);
+			};
+		</script>
+  </body>
+</html>

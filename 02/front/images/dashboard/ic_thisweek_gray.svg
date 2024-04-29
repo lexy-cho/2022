@@ -1,8 +1,0 @@
-<svg id="ic_thisweek" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
-  <path id="패스_192" data-name="패스 192" d="M0,0H26V26H0Z" fill="none"/>
-  <rect id="사각형_62" data-name="사각형 62" width="17.5" height="18" rx="2" transform="translate(4 5)" fill="#fff" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-  <line id="선_64" data-name="선 64" y2="4" transform="translate(17.66 3.5)" fill="none" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-  <line id="선_65" data-name="선 65" y2="4" transform="translate(8.83 3.5)" fill="none" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-  <line id="선_66" data-name="선 66" x2="17.5" transform="translate(4 12.264)" fill="none" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-  <rect id="사각형_63" data-name="사각형 63" width="2" height="2" transform="translate(8.816 16.163)" fill="none" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-</svg>

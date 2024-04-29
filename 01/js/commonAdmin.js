@@ -1,14 +1,16 @@
-/* 업데이트,점검
-*  로그 찍히지 않게 ajaxCallPost 안씀
-* */
+/* 업데이트,점검 */
 var notice_popup_idx = 0;
-$(function(){
-    check_apk();
 
+$(function(){
+
+
+    cehck_apk();
     var time = 1000 * 60 * 30;
     setInterval(function(){
-        check_apk();
+        cehck_apk();
     }, time);
+
+
 
 });
 
@@ -16,7 +18,7 @@ $(function(){
 function cehck_apk_notice(){
 
     var param = {
-        "app_type" : 'TEACHER'
+        "app_type" : 'PARENT'
         ,"apk_gb" : 'APK'
         ,"notice_type" : "일반팝업"
     }
@@ -28,7 +30,8 @@ function cehck_apk_notice(){
         dataType : "JSON",
         data : JSON.stringify(param),
         success : function(res) {
-            $('.notice-wrap').show();
+            console.log("일반 공지 팝업");
+            $('.popup_wrap8').show();
             $('.notice-title').text(res.data.notice_title);
             $('.notice-content-desc').html(res.data.notice_desc);
             notice_popup_idx = res.data.idx;
@@ -36,11 +39,10 @@ function cehck_apk_notice(){
     });
 }
 
-/* 일반 공지 쿠기 확인 */
 function cehck_apk_notice_cookie(){
 
     var param = {
-        "app_type" : 'TEACHER'
+        "app_type" : 'PARENT'
         ,"apk_gb" : 'APK'
         ,"notice_type" : "일반팝업"
     }
@@ -63,10 +65,10 @@ function cehck_apk_notice_cookie(){
 }
 
 /* 시스템 점검 */
-function check_apk(){
+function cehck_apk(){
 
     var param = {
-        "app_type" : 'TEACHER'
+        "app_type" : 'PARENT'
         ,"apk_gb" : 'APK'
         ,"notice_type" : "시스템팝업"
     }
@@ -78,17 +80,17 @@ function check_apk(){
         dataType : "JSON",
         data : JSON.stringify(param),
         success : function(res) {
-            location.href = realPath+"/admin/checkinfo?noticedesc="+res.data.notice_desc+"&noticetitle="+res.data.notice_title;
+            location.href = realPath+"/admin/check?notice="+res.data.notice_desc+"&noticetitle="+res.data.notice_title;
         }
     });
+
 }
 
-/* 업데이트 팝업 */
 function check_apk_version(version,gb){
 
     var param ={
         "apk_version" : version
-        , "app_type" : 'TEACHER'
+        , "app_type" : 'PARENT'
         , "apk_gb" : gb
     }
 
@@ -100,7 +102,7 @@ function check_apk_version(version,gb){
         data : JSON.stringify(param),
         success : function(res) {
             var url = res.data.apk_file_path + res.data.package_name;
-            location.href = realPath+"/admin/updateinfo?apkdesc="+res.data.apk_desc+"&apktitle="+res.data.apk_title+"&url="+url;
+            location.href = realPath+"/admin/update?apkdesc="+res.data.apk_desc+"&apktitle="+res.data.apk_title+"&url="+url;
         }
     });
 }
